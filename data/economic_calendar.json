@@ -682,6 +682,7 @@
   "event": "美国截至8月7日当周API汽油库存变动(万桶)",
   "forecast": "nan",
   "previous": "15.6"
+<<<<<<< HEAD
  },
  {
   "date": "2026-08-12",
@@ -718,5 +719,7 @@
   "event": "美国截至8月7日当周API库欣原油库存变动(万桶)",
   "forecast": "nan",
   "previous": "235.8"
+=======
+>>>>>>> 208db42bc49b428cb7f3d955ee3dd91a4fdbe2e2
  }
 ]
