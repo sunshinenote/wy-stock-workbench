@@ -126,6 +126,15 @@ button.danger{color:var(--danger)}
 .val-track{flex:1;height:10px;background:var(--bg);border-radius:5px;overflow:hidden}
 .val-fill{height:100%;border-radius:5px}
 .val-num{flex:none;width:150px;text-align:right;font-size:12px;color:var(--txt2);font-variant-numeric:tabular-nums}
+
+/* niusan tabs */
+.ns-chips{display:flex;gap:6px;overflow-x:auto;padding-bottom:6px;margin-bottom:8px;-webkit-overflow-scrolling:touch}
+.ns-chip{flex:none;min-height:36px;padding:7px 12px;border-radius:20px;border:1px solid var(--line2);background:#fff;font-size:14px;color:var(--txt2);cursor:pointer;white-space:nowrap;transition:all .15s}
+.ns-chip b{font-variant-numeric:tabular-nums}
+.ns-chip .ns-hot{color:var(--up);font-weight:600;margin-left:2px}
+.ns-chip.active{background:var(--brand);border-color:var(--brand);color:#fff}
+.ns-chip.active .ns-hot{color:#ffdcdc}
+.ns-summary{display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-bottom:8px;font-size:13px;color:var(--txt2)}
 .chip{display:inline-block;font-size:12px;padding:1px 8px;border-radius:6px;background:var(--bg);border:1px solid var(--line);color:var(--txt2)}
 .chip.red{background:var(--up-soft);color:var(--up);border-color:transparent}
 .chip.green{background:var(--down-soft);color:var(--down);border-color:transparent}
@@ -448,10 +457,10 @@ function demoData(){
         {code:'600900',name:'长江电力',year_avg:4.85,div_count:27,list_years:23.1},
         {code:'600036',name:'招商银行',year_avg:3.1,div_count:24,list_years:24.2},
         {code:'688981',name:'中芯国际',year_avg:0,div_count:0,list_years:6.2} ] },
-    niusan:{ report:daysFromNow(-150).slice(0,7), niusan:[ {name:'徐开东',count:37,stocks:[{code:'000825',name:'太钢不锈',change:'增加',value:1.77,ann_date:daysFromNow(-3)},{code:'600100',name:'同方股份',change:'增加',value:1.44,ann_date:daysFromNow(-3)},{code:'601106',name:'中国一重',change:'增加',value:1.21,ann_date:daysFromNow(-2)}]},
-      {name:'陈发树',count:7,stocks:[{code:'600887',name:'伊利股份',change:'新进',value:15.93,ann_date:daysFromNow(-5)},{code:'301050',name:'雷电微力',change:'不变',value:10.08,ann_date:daysFromNow(-4)},{code:'002264',name:'新华都',change:'不变',value:4.88,ann_date:daysFromNow(-4)}]},
-      {name:'葛卫东',count:4,stocks:[{code:'603986',name:'兆易创新',change:'减少',value:38.72,ann_date:daysFromNow(-3)},{code:'688051',name:'优刻得',change:'新进',value:1.06,ann_date:daysFromNow(-2)},{code:'688651',name:'微电生理',change:'不变',value:0.78,ann_date:daysFromNow(-2)}]},
-      {name:'章建平',count:5,stocks:[{code:'600111',name:'北方稀土',change:'新进',value:34.45,ann_date:daysFromNow(-6)},{code:'601137',name:'东材科技',change:'增加',value:7.59,ann_date:daysFromNow(-6)},{code:'002149',name:'西部材料',change:'新进',value:5.08,ann_date:daysFromNow(-5)}]} ] }
+    niusan:{ report:daysFromNow(-150).slice(0,7), niusan:[ {name:'徐开东',count:37,summary:{新进:2,增加:20,不变:12,减少:3},stocks:[{code:'000825',name:'太钢不锈',change:'增加',value:1.77,shares:1.2e8,ann_date:daysFromNow(-3)},{code:'600100',name:'同方股份',change:'增加',value:1.44,shares:8e7,ann_date:daysFromNow(-3)},{code:'601106',name:'中国一重',change:'增加',value:1.21,shares:6.5e7,ann_date:daysFromNow(-2)},{code:'000701',name:'厦门信达',change:'新进',value:0.98,shares:5e7,ann_date:daysFromNow(-2)}]},
+      {name:'陈发树',count:7,summary:{新进:1,增加:0,不变:6,减少:0},stocks:[{code:'600887',name:'伊利股份',change:'新进',value:15.93,shares:5e7,ann_date:daysFromNow(-5)},{code:'301050',name:'雷电微力',change:'不变',value:10.08,shares:2e7,ann_date:daysFromNow(-4)},{code:'002264',name:'新华都',change:'不变',value:4.88,shares:1.5e7,ann_date:daysFromNow(-4)}]},
+      {name:'葛卫东',count:4,summary:{新进:1,增加:0,不变:2,减少:1},stocks:[{code:'603986',name:'兆易创新',change:'减少',value:38.72,shares:3e7,ann_date:daysFromNow(-3)},{code:'688051',name:'优刻得',change:'新进',value:1.06,shares:1e7,ann_date:daysFromNow(-2)},{code:'688651',name:'微电生理',change:'不变',value:0.78,shares:8e6,ann_date:daysFromNow(-2)}]},
+      {name:'章建平',count:5,summary:{新进:4,增加:1,不变:0,减少:0},stocks:[{code:'600111',name:'北方稀土',change:'新进',value:34.45,shares:1e8,ann_date:daysFromNow(-6)},{code:'601137',name:'东材科技',change:'增加',value:7.59,shares:5e7,ann_date:daysFromNow(-6)},{code:'002149',name:'西部材料',change:'新进',value:5.08,shares:3e7,ann_date:daysFromNow(-5)}]} ] }
   };
 }
 
@@ -693,21 +702,35 @@ function renderDivyield(){
   const mineHtml = (d.mine||[]).map(x => '<span class="chip ' + (x.div_count >= 10 ? 'blue' : '') + '">' + esc(x.name) + ' ' + x.div_count + '次</span>').join(' ') || '—';
   box.innerHTML = rows + '<div class="senti-ind"><span>我的自选分红次数：</span>' + mineHtml + '</div>';
 }
+let curNs = '';
 function renderNiusan(){
   const d = DATA.niusan || {};
   const box = $('niusanBox');
   const list = (d.niusan||[]).filter(n => n.count > 0);
   if(!list.length){ box.innerHTML = '<div class="empty">暂无牛散持仓数据（季报披露期结束后更新）</div>'; return; }
+  if(!curNs || !list.some(n => n.name === curNs)) curNs = list[0].name;
   const chCls = {新进:'red',增加:'amber',不变:'blue',减少:'green'};
   const chTxt = {新进:'新进',增加:'加仓',不变:'持有',减少:'减仓'};
-  const html = list.map(n => {
-    const stocks = (n.stocks||[]).map(s =>
-      '<div class="rank-row" style="padding:6px 0"><span style="flex:none;width:16px;font-size:12px;color:var(--txt3)">·</span><div class="val-name" style="width:76px">' + esc(s.name) + '</div><span class="chip ' + (chCls[s.change]||'blue') + '">' + (chTxt[s.change]||s.change||'持有') + '</span><span class="val-num" style="width:110px">' + s.value + '亿 · ' + (s.ann_date||'').slice(5) + '</span></div>'
-    ).join('');
-    return '<div style="margin-bottom:6px"><div style="font-weight:600;font-size:14px;color:var(--txt);margin:8px 0 2px">' + esc(n.name) + ' <span class="chip red">' + n.count + '只</span></div>' + stocks + '</div>';
-  }).join('');
-  box.innerHTML = '<div style="font-size:13px;color:var(--txt2);margin-bottom:4px">报告期 ' + esc(d.report||'') + ' · 十大流通股东</div>' + html;
+  const chips = list.map(n =>
+    '<button class="ns-chip' + (n.name === curNs ? ' active' : '') + '" onclick="switchNiusan(\'' + n.name + '\')">' + esc(n.name) + ' <b>' + n.count + '只</b>' + ((n.summary&&n.summary['新进']) ? ' <span class="ns-hot">↑' + n.summary['新进'] + '</span>' : '') + '</button>'
+  ).join('');
+  const cur = list.find(n => n.name === curNs);
+  const sm = cur.summary || {};
+  const summaryHtml =
+    (sm['新进'] ? '<span class="chip red">新进 ' + sm['新进'] + '</span>' : '') +
+    (sm['增加'] ? '<span class="chip amber">加仓 ' + sm['增加'] + '</span>' : '') +
+    (sm['不变'] ? '<span class="chip blue">持有 ' + sm['不变'] + '</span>' : '') +
+    (sm['减少'] ? '<span class="chip green">减仓 ' + sm['减少'] + '</span>' : '');
+  const fmtShares = s => s >= 1e8 ? (s/1e8).toFixed(2) + '亿股' : (s/1e4).toFixed(1) + '万股';
+  const rows = cur.stocks.map(s =>
+    '<tr><td><b>' + esc(s.name) + '</b></td><td style="color:var(--txt2)">' + esc(s.code) + '</td><td><span class="chip ' + (chCls[s.change]||'blue') + '">' + (chTxt[s.change]||s.change||'持有') + '</span></td><td class="num" style="font-weight:600">' + s.value + '亿</td><td class="num" style="color:var(--txt2)">' + fmtShares(s.shares) + '</td><td class="num" style="color:var(--txt3)">' + (s.ann_date||'').slice(5) + '</td></tr>'
+  ).join('');
+  box.innerHTML =
+    '<div class="ns-chips">' + chips + '</div>' +
+    '<div class="ns-summary"><span>报告期 ' + esc(d.report||'') + ' · ' + esc(cur.name) + ' 全部持仓 ' + cur.stocks.length + ' 只：</span>' + summaryHtml + '</div>' +
+    '<div class="tbl-wrap"><table class="tbl"><thead><tr><th>名称</th><th>代码</th><th>变动</th><th class="num">市值</th><th class="num">持股</th><th class="num">公告</th></tr></thead><tbody>' + rows + '</tbody></table></div>';
 }
+function switchNiusan(name){ curNs = name; renderNiusan(); }
 function renderLong(){
   const earn = (DATA.earn||[]).slice(0,15);
   $('earnTbl').innerHTML = '<thead><tr><th>代码</th><th>名称</th><th>类型</th><th class="num">变动幅度</th><th>原因摘要</th><th>公告日</th></tr></thead><tbody>' + earn.map(r =>

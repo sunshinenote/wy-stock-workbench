@@ -536,7 +536,13 @@ def collect_niusan():
     for ns in NIUSAN_LIST:
         stocks = groups.get(ns, [])
         stocks.sort(key=lambda x: x["value"], reverse=True)
-        result.append({"name": ns, "count": len(stocks), "stocks": stocks[:8]})
+        summary = {"新进": 0, "增加": 0, "不变": 0, "减少": 0}
+        for s in stocks:
+            summary[s["change"]] = summary.get(s["change"], 0) + 1
+        result.append({
+            "name": ns, "count": len(stocks),
+            "summary": summary, "stocks": stocks,   # 全部持仓，前端 Tab 切换展示
+        })
     return {"report": f"{report[:4]}-{report[4:6]}-{report[6:]}", "niusan": result}
 
 
