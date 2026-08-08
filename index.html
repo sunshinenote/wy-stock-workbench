@@ -722,9 +722,9 @@ function renderExecHold(){
     const m = s.first_date ? Math.floor((Date.now() - new Date(s.first_date).getTime()) / 2629800000) : null;
     const tag = m == null ? '—' : (m >= 24 ? '持续' + Math.floor(m/12) + '年+' : (m >= 12 ? '1年前开始' : (m >= 6 ? '半年前开始' : m + '个月前开始')));
     const cls = m == null ? 'blue' : (m < 6 ? 'red' : (m < 12 ? 'amber' : 'blue'));
-    return '<div class="rank-row"><span class="rank-no' + (i===0?' top':'') + '">' + (i+1) + '</span><div><div class="rank-name">' + esc(s.name) + '</div><div class="rank-sub">' + esc(s.code) + ' · 首次增持 ' + (s.first_date||'—') + '</div></div><div class="rank-sum"><b style="color:var(--brand)">' + s.count + '</b> <span>次/半年</span></div><span class="chip ' + cls + '" style="align-self:center">' + tag + '</span></div>';
+    return '<div class="rank-row"><span class="rank-no' + (i===0?' top':'') + '">' + (i+1) + '</span><div><div class="rank-name">' + esc(s.name) + '</div><div class="rank-sub">' + esc(s.code) + ' · 本轮起点 ' + (s.first_date||'—') + '</div></div><div class="rank-sum"><b style="color:var(--brand)">' + s.count + '</b> <span>次/半年</span></div><span class="chip ' + cls + '" style="align-self:center">' + tag + '</span></div>';
   }).join('');
-  box.innerHTML = '<div style="font-size:13px;color:var(--txt2);margin-bottom:4px">近半年增持 ≥5 次 · 标签=首次增持距今（蓝=长期持续 / 琥珀=一年左右 / 红=刚启动）</div>' + rows;
+  box.innerHTML = '<div style="font-size:13px;color:var(--txt2);margin-bottom:4px">近半年增持 ≥5 次 · 标签=本轮连续增持起点（间隔 &gt;60 天算中断，不追溯断档前）</div>' + rows;
 }
 function renderNiusan(){
   const d = DATA.niusan || {};

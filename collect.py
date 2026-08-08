@@ -587,23 +587,44 @@ def collect_exec_hold():
                 last_date[code] = d
         names[code] = str(row.get("SECURITY_NAME", "") or "")
     hot = {c: names.get(c, c) for c in cnt if cnt[c] >= 5}
+
+    def _consec_first_date(code):
+        """拉该股全部增持记录，找【本轮连续增持】的起点（相邻间隔>60天视为中断）"""
+        rows = []
+        for page in (1, 3):
+            params = {
+                "reportName": "RPT_EXECUTIVE_HOLD_DETAILS", "columns": "ALL",
+                "filter": f'(SECURITY_CODE="{code}")(CHANGE_SHARES>0)',
+                "pageSize": "500", "pageNumber": str(page),
+                "sortColumns": "CHANGE_DATE", "sortTypes": "1",   # 最早在前
+                "source": "WEB", "client": "WEB",
+            }
+            try:
+                r = requests.get(url, params=params, headers=UA, timeout=15)
+                data = r.json().get("result")
+            except Exception:
+                break
+            if not data or not data.get("data"):
+                break
+            rows.extend(data["data"])
+            if len(data["data"]) < 500:
+                break
+        dates = sorted({str(x.get("CHANGE_DATE", "") or "")[:10] for x in rows if x.get("CHANGE_DATE")})
+        if not dates:
+            return ""
+        # 从最近一笔往前，找连续段起点（间隔 ≤ 60 天视为连续）
+        start = dates[-1]
+        for i in range(len(dates) - 1, 0, -1):
+            gap = (datetime.strptime(dates[i], "%Y-%m-%d") - datetime.strptime(dates[i - 1], "%Y-%m-%d")).days
+            if gap > 60:
+                start = dates[i]
+                break
+            start = dates[i - 1]
+        return start
+
     result = []
     for code in sorted(hot, key=lambda c: -cnt[c])[:30]:
-        first_date = ""
-        params = {
-            "reportName": "RPT_EXECUTIVE_HOLD_DETAILS", "columns": "ALL",
-            "filter": f'(SECURITY_CODE="{code}")(CHANGE_SHARES>0)',
-            "pageSize": "500", "pageNumber": "1",
-            "sortColumns": "CHANGE_DATE", "sortTypes": "1",   # 最早在前
-            "source": "WEB", "client": "WEB",
-        }
-        try:
-            r = requests.get(url, params=params, headers=UA, timeout=15)
-            data = r.json().get("result")
-            if data and data.get("data"):
-                first_date = str(data["data"][0].get("CHANGE_DATE", "") or "")[:10]
-        except Exception:
-            pass
+        first_date = _consec_first_date(code)
         time.sleep(0.12)
         result.append({
             "code": code, "name": hot[code], "count": cnt[code],
