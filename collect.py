@@ -547,6 +547,72 @@ def collect_niusan():
     return {"report": f"{report[:4]}-{report[4:6]}-{report[6:]}", "niusan": result}
 
 
+# ---------- 5.9 高管增持榜（近半年增持≥5次，追溯首次增持时间） ----------
+def collect_exec_hold():
+    """Step1 拉近一年高管增持 → Step2 筛近半年≥5次 → Step3 反查每只股票首次增持日期"""
+    from collections import defaultdict
+    url = "https://datacenter-web.eastmoney.com/api/data/v1/get"
+    since = (NOW - timedelta(days=365)).strftime("%Y-%m-%d")
+    records = []
+    for page in range(1, 60):
+        params = {
+            "reportName": "RPT_EXECUTIVE_HOLD_DETAILS", "columns": "ALL",
+            "filter": f"(CHANGE_SHARES>0)(CHANGE_DATE>='{since}')",
+            "pageSize": "500", "pageNumber": str(page),
+            "sortColumns": "CHANGE_DATE", "sortTypes": "-1",
+            "source": "WEB", "client": "WEB",
+        }
+        try:
+            r = requests.get(url, params=params, headers=UA, timeout=20)
+            data = r.json().get("result")
+        except Exception:
+            break
+        if not data or not data.get("data"):
+            break
+        records.extend(data["data"])
+        if len(data["data"]) < 500:
+            break
+    if not records:
+        return {}
+    half = (NOW - timedelta(days=180)).strftime("%Y-%m-%d")
+    cnt, last_date, names = defaultdict(int), {}, {}
+    for row in records:
+        code = str(row.get("SECURITY_CODE", "") or "")
+        if not code:
+            continue
+        d = str(row.get("CHANGE_DATE", "") or "")[:10]
+        if d >= half:
+            cnt[code] += 1
+            if d > last_date.get(code, ""):
+                last_date[code] = d
+        names[code] = str(row.get("SECURITY_NAME", "") or "")
+    hot = {c: names.get(c, c) for c in cnt if cnt[c] >= 5}
+    result = []
+    for code in sorted(hot, key=lambda c: -cnt[c])[:30]:
+        first_date = ""
+        params = {
+            "reportName": "RPT_EXECUTIVE_HOLD_DETAILS", "columns": "ALL",
+            "filter": f'(SECURITY_CODE="{code}")(CHANGE_SHARES>0)',
+            "pageSize": "500", "pageNumber": "1",
+            "sortColumns": "CHANGE_DATE", "sortTypes": "1",   # 最早在前
+            "source": "WEB", "client": "WEB",
+        }
+        try:
+            r = requests.get(url, params=params, headers=UA, timeout=15)
+            data = r.json().get("result")
+            if data and data.get("data"):
+                first_date = str(data["data"][0].get("CHANGE_DATE", "") or "")[:10]
+        except Exception:
+            pass
+        time.sleep(0.12)
+        result.append({
+            "code": code, "name": hot[code], "count": cnt[code],
+            "first_date": first_date, "last_date": last_date.get(code, ""),
+        })
+    result.sort(key=lambda x: x["count"], reverse=True)
+    return {"stocks": result[:15]}
+
+
 # ---------- 6. 机构调研排行（东财 datacenter 直连，近7天 TOP8） ----------
 def collect_research():
     """按股票聚合近7天机构调研：SUM=单次调研机构家数峰值，count=调研批次"""
@@ -738,6 +804,9 @@ def main():
 
     niusan_data = safe(collect_niusan) or {}
     save_json("niusan.json", niusan_data)
+
+    exec_hold_data = safe(collect_exec_hold) or {}
+    save_json("exec_hold.json", exec_hold_data)
 
     earn_data = safe(collect_earnings) or []
     save_json("earnings.json", earn_data)
