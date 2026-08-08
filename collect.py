@@ -179,7 +179,55 @@ def collect_unlock():
     return result[:25]
 
 
-# ---------- 5. 业绩预告（东财） ----------
+# ---------- 5. 机构调研排行（东财 datacenter 直连，近7天 TOP8） ----------
+def collect_research():
+    """按股票聚合近7天机构调研：SUM=单次调研机构家数峰值，count=调研批次"""
+    url = "https://datacenter-web.eastmoney.com/api/data/v1/get"
+    since = (NOW - timedelta(days=7)).strftime("%Y-%m-%d")
+    agg = {}
+    for page in (1, 2):
+        params = {
+            "sortColumns": "NOTICE_DATE,SUM,RECEIVE_START_DATE,SECURITY_CODE",
+            "sortTypes": "-1,-1,-1,1", "pageSize": "500", "pageNumber": str(page),
+            "reportName": "RPT_ORG_SURVEYNEW", "columns": "ALL",
+            "quoteColumns": "f2~01~SECURITY_CODE~CLOSE_PRICE,f3~01~SECURITY_CODE~CHANGE_RATE",
+            "source": "WEB", "client": "WEB",
+            "filter": f'(NUMBERNEW="1")(IS_SOURCE="1")(NOTICE_DATE>\'{since}\')',
+        }
+        r = requests.get(url, params=params, headers=UA, timeout=15)
+        data = r.json().get("result")
+        if not data or not data.get("data"):
+            break
+        for row in data["data"]:
+            code = str(row.get("SECURITY_CODE", "") or "")
+            if not code:
+                continue
+            item = agg.setdefault(code, {
+                "code": code, "name": str(row.get("SECURITY_NAME_ABBR", "") or ""),
+                "sum": 0, "count": 0, "date": "", "price": None, "pct": None,
+            })
+            try:
+                item["sum"] = max(item["sum"], int(row.get("SUM", 0) or 0))
+            except Exception:
+                pass
+            item["count"] += 1
+            d = str(row.get("RECEIVE_START_DATE", "") or "")[:10]
+            if d > item["date"]:
+                item["date"] = d
+            try:
+                item["price"] = round(float(row.get("CLOSE_PRICE", 0) or 0), 2)
+                item["pct"] = round(float(row.get("CHANGE_RATE", 0) or 0), 2)
+            except Exception:
+                pass
+        if len(data["data"]) < 500:
+            break
+    result = sorted(agg.values(), key=lambda x: x["sum"], reverse=True)[:8]
+    for it in result:
+        it["sum"] = int(it["sum"])
+    return result
+
+
+# ---------- 6. 业绩预告（东财） ----------
 def collect_earnings():
     year = NOW.year
     result = []
@@ -216,7 +264,7 @@ def collect_earnings():
     return result[:15]
 
 
-# ---------- 6. 自选股池行情（腾讯批量接口） ----------
+# ---------- 7. 自选股池行情（腾讯批量接口） ----------
 def read_watchlist():
     path = os.path.join(DATA_DIR, "watchlist.txt")
     codes = []
@@ -307,6 +355,9 @@ def main():
 
     earn_data = safe(collect_earnings) or []
     save_json("earnings.json", earn_data)
+
+    research_data = safe(collect_research) or []
+    save_json("research_rank.json", research_data)
 
     wl_data = safe(collect_watchlist) or []
     save_json("watchlist_quotes.json", wl_data)

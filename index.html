@@ -91,6 +91,19 @@ button.danger{color:var(--danger)}
 .ev-low summary::before{content:"▸ ";color:var(--txt3)}
 .ev-low[open] summary::before{content:"▾ "}
 .ev-low .ev-row{font-size:13px;color:var(--txt2)}
+
+/* research rank */
+.rank-row{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid var(--line)}
+.rank-row:last-child{border-bottom:none}
+.rank-no{flex:none;width:26px;height:26px;border-radius:8px;background:var(--bg);color:var(--txt2);display:flex;align-items:center;justify-content:center;font-weight:600;font-size:13px}
+.rank-no.top{background:var(--up);color:#fff}
+.rank-no.top2{background:var(--warn);color:#fff}
+.rank-name{font-weight:600;font-size:15px}
+.rank-sub{font-size:12px;color:var(--txt3);margin-top:1px}
+.rank-sum{margin-left:auto;text-align:right;white-space:nowrap}
+.rank-sum b{font-size:20px;color:var(--up);font-weight:700;font-variant-numeric:tabular-nums}
+.rank-sum span{font-size:12px;color:var(--txt2)}
+.rank-pct{flex:none;width:62px;text-align:right;font-size:13px;font-weight:600;font-variant-numeric:tabular-nums}
 .chip{display:inline-block;font-size:12px;padding:1px 8px;border-radius:6px;background:var(--bg);border:1px solid var(--line);color:var(--txt2)}
 .chip.red{background:var(--up-soft);color:var(--up);border-color:transparent}
 .chip.green{background:var(--down-soft);color:var(--down);border-color:transparent}
@@ -192,10 +205,13 @@ svg text{font-family:inherit}
   <div class="tl" id="econList"></div>
 
   <div class="tbl-wrap desktop-tbl">
-    <h3>限售解禁 · 未来 45 天市值榜</h3>
+    <h3>限售解禁 · 未来市值榜 TOP6</h3>
     <table class="tbl desktop" id="unlockTbl"></table>
     <table class="tbl mobile-cards" id="unlockCards"></table>
   </div>
+
+  <h3>机构调研 · 近 7 天 TOP8 <span style="font-weight:400;font-size:12px;color:var(--txt3)">机构正在关注谁</span></h3>
+  <div id="researchList"></div>
 
   <h3>业绩预告 · 最近披露</h3>
   <div class="tbl-wrap">
@@ -305,13 +321,21 @@ function demoData(){
     watch:[ {code:'600519',name:'贵州茅台',price:1688.0,pct:0.85,chg:14.22,turnover:0.32,amount:42.1,pe:24.6,pb:8.9,ytd:-4.2},
       {code:'300750',name:'宁德时代',price:196.32,pct:3.12,chg:5.94,turnover:1.85,amount:58.3,pe:21.4,pb:4.6,ytd:12.8},
       {code:'688981',name:'中芯国际',price:78.55,pct:5.62,chg:4.18,turnover:2.42,amount:66.7,pe:78.3,pb:3.2,ytd:35.6} ],
-    history: (()=>{ const arr=[]; for(let i=89;i>=0;i--){ const d=new Date(); d.setDate(d.getDate()-i); arr.push({date:d.toISOString().slice(5,10), '上证指数':3260+Math.sin(i/6)*30+i*1.4}); } return arr; })()
+    history: (()=>{ const arr=[]; for(let i=89;i>=0;i--){ const d=new Date(); d.setDate(d.getDate()-i); arr.push({date:d.toISOString().slice(5,10), '上证指数':3260+Math.sin(i/6)*30+i*1.4}); } return arr; })(),
+    research:[ {code:'605499',name:'东鹏饮料',sum:275,count:1,date:t0,price:122.8,pct:1.58},
+      {code:'600885',name:'宏发股份',sum:158,count:1,date:t0,price:35.41,pct:-0.39},
+      {code:'688235',name:'百济神州',sum:152,count:2,date:t1,price:299.33,pct:11.28},
+      {code:'300285',name:'国瓷材料',sum:152,count:1,date:t0,price:70.88,pct:1.94},
+      {code:'688005',name:'容百科技',sum:139,count:1,date:t0,price:27.75,pct:-0.54},
+      {code:'688313',name:'仕佳光子',sum:98,count:3,date:t0,price:127.7,pct:7.54},
+      {code:'688266',name:'泽璟制药',sum:97,count:1,date:t0,price:121.7,pct:8.45},
+      {code:'688062',name:'迈威生物',sum:93,count:1,date:t0,price:30.51,pct:7.62} ]
   };
 }
 
 /* ================= 数据加载 ================= */
 async function loadAll(){
-  const files = ['index_snapshot','sector_rank','economic_calendar','unlock_calendar','earnings','watchlist_quotes','history','last_update'];
+  const files = ['index_snapshot','sector_rank','economic_calendar','unlock_calendar','earnings','watchlist_quotes','history','research_rank','last_update'];
   const map = {};
   let gotAny = false;
   await Promise.all(files.map(async f => {
@@ -324,7 +348,7 @@ async function loadAll(){
     DATA = {
       index: map.index_snapshot || [], sector: map.sector_rank || [], econ: map.economic_calendar || [],
       unlock: map.unlock_calendar || [], earn: map.earnings || [], watch: map.watchlist_quotes || [],
-      history: map.history || [], upd: map.last_update && map.last_update.time || ''
+      history: map.history || [], research: map.research_rank || [], upd: map.last_update && map.last_update.time || ''
     };
   }else{
     DATA = demoData();
@@ -449,11 +473,17 @@ function renderAhead(){
   $('econList').innerHTML = tl || '<div class="empty">暂无财经日历数据</div>';
 
   // 解禁表
-  $('unlockTbl').innerHTML = '<thead><tr><th>日期</th><th>代码</th><th>名称</th><th class="num">解禁市值(亿)</th><th class="num">占流通比</th><th>类型</th><th></th></tr></thead><tbody>' + unlock.map(u => {
+  $('unlockTbl').innerHTML = '<thead><tr><th>日期</th><th>代码</th><th>名称</th><th class="num">解禁市值(亿)</th><th class="num">占流通比</th><th>类型</th><th></th></tr></thead><tbody>' + unlock.slice(0,6).map(u => {
     const inWatch = lsGet(LS.watch,[]).includes(u.code);
     return '<tr><td>' + u.date + ' ' + cdBadge(u.date) + '</td><td>' + u.code + '</td><td><b>' + u.name + '</b>' + (inWatch?' <span class="chip red">自选</span>':'') + '</td><td class="num" style="font-weight:600">' + u.unlock_value.toFixed(1) + '</td><td class="num">' + u.ratio.toFixed(1) + '%</td><td>' + esc(u.type) + '</td><td>' + (inWatch?'':'<button class="btn-sm" onclick="addWatch(\''+u.code+'\',\''+u.name+'\')">关注</button>') + '</td></tr>';
   }).join('') + '</tbody>';
-  $('unlockCards').innerHTML = unlock.map(u => '<div class="t-item" style="margin-bottom:8px"><div class="t-body"><div class="t-title">' + u.name + ' <span class="chip red">' + u.unlock_value.toFixed(1) + '亿</span></div><div class="t-sub">' + u.date + ' · ' + esc(u.type) + ' · 占流通 ' + u.ratio.toFixed(1) + '%</div></div>' + cdBadge(u.date) + '</div>').join('');
+  $('unlockCards').innerHTML = unlock.slice(0,6).map(u => '<div class="t-item" style="margin-bottom:8px"><div class="t-body"><div class="t-title">' + u.name + ' <span class="chip red">' + u.unlock_value.toFixed(1) + '亿</span></div><div class="t-sub">' + u.date + ' · ' + esc(u.type) + ' · 占流通 ' + u.ratio.toFixed(1) + '%</div></div>' + cdBadge(u.date) + '</div>').join('');
+
+  // 机构调研排行（近7天 TOP8）
+  $('researchList').innerHTML = (DATA.research||[]).slice(0,8).map((r,i) => {
+    const noCls = i === 0 ? ' top' : (i < 3 ? ' top2' : '');
+    return '<div class="rank-row"><span class="rank-no' + noCls + '">' + (i+1) + '</span><div><div class="rank-name">' + esc(r.name) + '</div><div class="rank-sub">' + esc(r.code) + ' · ' + esc(r.date||'') + ' · ' + r.count + ' 批调研</div></div><div class="rank-sum"><b>' + r.sum + '</b> <span>家机构</span></div><span class="rank-pct ' + clsPct(r.pct) + '">' + fmtPct(r.pct) + '</span></div>';
+  }).join('') || '<div class="empty">暂无机构调研数据</div>';
 
   // 业绩预告表
   $('earnTbl').innerHTML = '<thead><tr><th>代码</th><th>名称</th><th>类型</th><th class="num">变动幅度</th><th>原因摘要</th><th>公告日</th></tr></thead><tbody>' + earn.map(r =>
@@ -639,7 +669,6 @@ function doClearAll(){
 
 /* ================= 渲染 ================= */
 function renderAll(){ renderToday(); renderAhead(); renderReview(); renderNotes(); }
-
 /* ================= 启动 ================= */
 initNoteDate();
 loadAll();
