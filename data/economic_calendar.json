@@ -1,41 +1,5 @@
 [
  {
-  "date": "2026-08-09",
-  "time": "09:30",
-  "country": "中国",
-  "importance": "高",
-  "event": "中国7月PPI年率(%)",
-  "forecast": "3.8",
-  "previous": "4.1"
- },
- {
-  "date": "2026-08-09",
-  "time": "09:30",
-  "country": "中国",
-  "importance": "高",
-  "event": "中国7月CPI年率(%)",
-  "forecast": "0.8",
-  "previous": "1.0"
- },
- {
-  "date": "2026-08-09",
-  "time": "09:30",
-  "country": "中国",
-  "importance": "高",
-  "event": "中国7月CPI月率(%)",
-  "forecast": "0.2",
-  "previous": "-0.3"
- },
- {
-  "date": "2026-08-09",
-  "time": "09:30",
-  "country": "中国",
-  "importance": "高",
-  "event": "中国7月PPI月率(%)",
-  "forecast": "nan",
-  "previous": "-0.3"
- },
- {
   "date": "2026-08-10",
   "time": "02:26",
   "country": "俄罗斯",
@@ -718,5 +682,41 @@
   "event": "美国截至8月7日当周API汽油库存变动(万桶)",
   "forecast": "nan",
   "previous": "15.6"
+ },
+ {
+  "date": "2026-08-12",
+  "time": "04:30",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国截至8月7日当周API每周成品油进口(万桶)",
+  "forecast": "nan",
+  "previous": "-20.6"
+ },
+ {
+  "date": "2026-08-12",
+  "time": "04:30",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国截至8月7日当周API每周原油进口(万桶)",
+  "forecast": "nan",
+  "previous": "17.2"
+ },
+ {
+  "date": "2026-08-12",
+  "time": "04:30",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国截至8月7日当周API每周投产原油量(万桶)",
+  "forecast": "nan",
+  "previous": "-11.2"
+ },
+ {
+  "date": "2026-08-12",
+  "time": "04:30",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国截至8月7日当周API库欣原油库存变动(万桶)",
+  "forecast": "nan",
+  "previous": "235.8"
  }
 ]
