@@ -319,6 +319,80 @@ def collect_fundflow():
     return {"industry_in": industry_in, "industry_out": industry_out, "stock_in": stock_in}
 
 
+# ---------- 5.5 龙虎榜拆解（东财，最近交易日） ----------
+def _find_lhb_date():
+    """返回最近一个有龙虎榜数据的交易日"""
+    for i in range(0, 12):
+        d = (NOW - timedelta(days=i)).strftime("%Y%m%d")
+        try:
+            df = ak.stock_lhb_detail_em(start_date=d, end_date=d)
+            if df is not None and not df.empty:
+                return d, df
+        except Exception:
+            continue
+    return None, None
+
+
+def collect_lhb():
+    """龙虎榜：个股聚合净买额，净买入TOP8 + 净卖出TOP3（直连东财 datacenter，akshare 封装偶发挂起）"""
+    url = "https://datacenter-web.eastmoney.com/api/data/v1/get"
+    rows = []
+    for i in range(0, 12):
+        d = (NOW - timedelta(days=i)).strftime("%Y-%m-%d")
+        got = False
+        for page in (1, 2):
+            params = {
+                "reportName": "RPT_DAILYBILLBOARD_DETAILSNEW",
+                "columns": "ALL",
+                "filter": f"(TRADE_DATE='{d}')",
+                "pageSize": "500", "pageNumber": str(page),
+                "sortColumns": "SECURITY_CODE", "sortTypes": "1",
+                "source": "WEB", "client": "WEB",
+            }
+            try:
+                r = requests.get(url, params=params, headers=UA, timeout=15)
+                data = r.json().get("result")
+            except Exception:
+                break
+            if not data or not data.get("data"):
+                break
+            rows.extend(data["data"])
+            got = True
+            if len(data["data"]) < 500:
+                break
+        if got and rows:
+            break
+    if not rows:
+        return {}
+    agg = {}
+    for row in rows:
+        code = str(row.get("SECURITY_CODE", "") or "")
+        if not code:
+            continue
+        item = agg.setdefault(code, {
+            "code": code, "name": str(row.get("SECURITY_NAME_ABBR", "") or ""),
+            "net": 0.0, "pct": _parse_pct(row.get("CHANGE_RATE", 0)),
+            "reason": str(row.get("EXPLANATION", "") or "")[:24],
+            "after1d": None,
+        })
+        try:
+            item["net"] += float(row.get("BILLBOARD_NET_AMT", 0) or 0) / 1e8
+        except (ValueError, TypeError):
+            pass
+        a = row.get("D1_CLOSE_ADJCHRATE")
+        try:
+            if a is not None:
+                item["after1d"] = round(float(a), 2)
+        except (ValueError, TypeError):
+            pass
+    result = sorted(agg.values(), key=lambda x: x["net"], reverse=True)
+    buy = [x for x in result[:8] if x["net"] > 0]
+    sell = [x for x in result[::-1][:4] if x["net"] < 0]
+    for x in buy + sell:
+        x["net"] = round(x["net"], 2)
+    return {"date": rows[0].get("TRADE_DATE", "")[:10], "buy": buy, "sell": sell}
+
+
 # ---------- 6. 机构调研排行（东财 datacenter 直连，近7天 TOP8） ----------
 def collect_research():
     """按股票聚合近7天机构调研：SUM=单次调研机构家数峰值，count=调研批次"""
@@ -498,6 +572,9 @@ def main():
 
     fundflow_data = safe(collect_fundflow) or {}
     save_json("fundflow.json", fundflow_data)
+
+    lhb_data = safe(collect_lhb) or {}
+    save_json("lhb.json", lhb_data)
 
     earn_data = safe(collect_earnings) or []
     save_json("earnings.json", earn_data)

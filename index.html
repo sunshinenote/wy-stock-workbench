@@ -294,9 +294,10 @@ svg text{font-family:inherit}
     <div id="sentimentBox"></div>
     <h3>主力资金流向 <span style="font-weight:400;font-size:12px;color:var(--txt3)">钱往哪去</span></h3>
     <div id="fundflowBox"></div>
+    <h3>龙虎榜 · 机构游资动向 <span style="font-weight:400;font-size:12px;color:var(--txt3)">谁在主导</span></h3>
+    <div id="lhbBox"></div>
     <h3>机构调研 · 近 7 天 TOP8 <span style="font-weight:400;font-size:12px;color:var(--txt3)">机构正在关注谁</span></h3>
     <div id="researchList"></div>
-    <div class="plan-hint">建设中（按计划推进）：<br>③ 龙虎榜拆解 —— 游资 / 机构席位动向</div>
   </section>
 </div>
 
@@ -402,13 +403,21 @@ function demoData(){
       industry_out:[ {name:'银行',net:-26.14,pct:0.5},{name:'IT服务',net:-28.54,pct:-1.2},{name:'软件开发',net:-31.94,pct:-1.8} ],
       stock_in:[ {code:'600276',name:'恒瑞医药',net:19.24,pct:4.82},{code:'603259',name:'药明康德',net:13.88,pct:8.49},
         {code:'603986',name:'兆易创新',net:11.92,pct:8.32},{code:'600363',name:'联创光电',net:10.53,pct:2.8},
-        {code:'300476',name:'胜宏科技',net:10.4,pct:12.01},{code:'002156',name:'通富微电',net:10.3,pct:6.17} ] }
+        {code:'300476',name:'胜宏科技',net:10.4,pct:12.01},{code:'002156',name:'通富微电',net:10.3,pct:6.17} ] },
+    lhb:{ date:daysFromNow(-1), buy:[ {code:'000831',name:'中国稀土',net:6.32,pct:10.0,after1d:null,reason:'日涨幅偏离值达到7%的前5只证券'},
+      {code:'301707',name:'展芯股份',net:3.16,pct:396.89,after1d:null,reason:'无价格涨跌幅限制的证券'},
+      {code:'688655',name:'红板科技',net:2.64,pct:15.3,after1d:null,reason:'日涨幅达到15%的前5只证券'},
+      {code:'001267',name:'汇绿生态',net:2.53,pct:10.0,after1d:null,reason:'日涨幅偏离值达到7%的前5只证券'},
+      {code:'002988',name:'贤丰控股',net:2.1,pct:9.97,after1d:null,reason:'日涨幅偏离值达到7%的前5只证券'},
+      {code:'002827',name:'高争民爆',net:2.05,pct:10.0,after1d:null,reason:'连续三个交易日内涨幅偏离值累计达到20%'} ],
+      sell:[ {code:'300247',name:'名家汇',net:-2.67,pct:-7.1},{code:'002212',name:'天融信',net:-2.5,pct:-5.2},
+        {code:'300903',name:'泰晶科技',net:-1.64,pct:-9.9},{code:'301217',name:'铜冠铜箔',net:-1.51,pct:-8.5} ] }
   };
 }
 
 /* ================= 数据加载 ================= */
 async function loadAll(){
-  const files = ['index_snapshot','sector_rank','economic_calendar','unlock_calendar','earnings','watchlist_quotes','history','research_rank','sentiment','fundflow','last_update'];
+  const files = ['index_snapshot','sector_rank','economic_calendar','unlock_calendar','earnings','watchlist_quotes','history','research_rank','sentiment','fundflow','lhb','last_update'];
   const map = {};
   let gotAny = false;
   await Promise.all(files.map(async f => {
@@ -422,7 +431,8 @@ async function loadAll(){
       index: map.index_snapshot || [], sector: map.sector_rank || [], econ: map.economic_calendar || [],
       unlock: map.unlock_calendar || [], earn: map.earnings || [], watch: map.watchlist_quotes || [],
       history: map.history || [], research: map.research_rank || [], sentiment: map.sentiment || {},
-      fundflow: map.fundflow || {}, upd: map.last_update && map.last_update.time || ''
+      fundflow: map.fundflow || {}, lhb: map.lhb || {},
+      upd: map.last_update && map.last_update.time || ''
     };
   }else{
     DATA = demoData();
@@ -591,6 +601,20 @@ function renderFundflow(){
     '<div class="senti-ind"><span>净流出：</span>' + outHtml + '</div>' +
     '<div style="font-size:13px;color:var(--txt2);margin:12px 0 4px">个股净流入 TOP10</div>' +
     '<div class="tbl-wrap"><table class="tbl"><thead><tr><th>#</th><th>名称</th><th>代码</th><th class="num">净流入</th><th class="num">涨跌幅</th></tr></thead><tbody>' + stkHtml + '</tbody></table></div>';
+}
+function renderLhb(){
+  const l = DATA.lhb || {};
+  const box = $('lhbBox');
+  const buy = l.buy || [];
+  if(!buy.length){ box.innerHTML = '<div class="empty">暂无龙虎榜数据（交易日收盘后更新）</div>'; return; }
+  const stkHtml = buy.map((s,i) =>
+    '<tr><td style="color:var(--txt3)">' + (i+1) + '</td><td><b>' + esc(s.name) + '</b></td><td class="num ' + clsPct(s.pct) + '">' + fmtPct(s.pct) + '</td><td class="num" style="color:var(--up);font-weight:600">+' + s.net + '亿</td><td class="num" style="color:' + ((s.after1d||0)>=0?'var(--up)':'var(--down)') + '">' + (s.after1d!=null ? (s.after1d>=0?'+':'') + s.after1d + '%' : '—') + '</td><td style="font-size:12px;color:var(--txt2);white-space:normal;min-width:130px">' + esc(s.reason) + '</td></tr>'
+  ).join('');
+  const sellHtml = (l.sell||[]).map(x => '<span class="chip green">' + esc(x.name) + ' ' + x.net + '亿</span>').join(' ');
+  box.innerHTML =
+    '<div style="font-size:13px;color:var(--txt2);margin-bottom:4px">净买入 TOP8 · ' + esc(l.date||'') + '</div>' +
+    '<div class="tbl-wrap"><table class="tbl"><thead><tr><th>#</th><th>名称</th><th class="num">涨跌幅</th><th class="num">净买额</th><th class="num">次日</th><th>上榜原因</th></tr></thead><tbody>' + stkHtml + '</tbody></table></div>' +
+    '<div class="senti-ind"><span>净卖出：</span>' + sellHtml + '</div>';
 }
 function renderResearch(){
   $('researchList').innerHTML = (DATA.research||[]).slice(0,8).map((r,i) => {
@@ -829,7 +853,7 @@ function restoreTab(){
 }
 
 /* ================= 渲染 ================= */
-function renderAll(){ renderToday(); renderAhead(); renderReview(); renderSentiment(); renderFundflow(); renderResearch(); renderLong(); renderNotes(); }
+function renderAll(){ renderToday(); renderAhead(); renderReview(); renderSentiment(); renderFundflow(); renderLhb(); renderResearch(); renderLong(); renderNotes(); }
 /* ================= 启动 ================= */
 initNoteDate();
 restoreTab();
