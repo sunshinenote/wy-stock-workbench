@@ -575,18 +575,26 @@ def collect_exec_hold():
     if not records:
         return {}
     half = (NOW - timedelta(days=180)).strftime("%Y-%m-%d")
-    cnt, last_date, names = defaultdict(int), {}, {}
+    cnt, dec_cnt, last_date, names = defaultdict(int), defaultdict(int), {}, {}
     for row in records:
         code = str(row.get("SECURITY_CODE", "") or "")
         if not code:
             continue
         d = str(row.get("CHANGE_DATE", "") or "")[:10]
+        try:
+            shares = float(row.get("CHANGE_SHARES", 0) or 0)
+        except (ValueError, TypeError):
+            shares = 0
         if d >= half:
-            cnt[code] += 1
-            if d > last_date.get(code, ""):
-                last_date[code] = d
+            if shares > 0:
+                cnt[code] += 1
+                if d > last_date.get(code, ""):
+                    last_date[code] = d
+            elif shares < 0:
+                dec_cnt[code] += 1
         names[code] = str(row.get("SECURITY_NAME", "") or "")
-    hot = {c: names.get(c, c) for c in cnt if cnt[c] >= 5}
+    # 入选条件：近半年增持≥5次 且 减持<5次（过滤边增边减的内部人分歧股）
+    hot = {c: names.get(c, c) for c in cnt if cnt[c] >= 5 and dec_cnt[c] < 5}
 
     def _consec_first_date(code):
         """拉该股全部增持记录，找【本轮连续增持】的起点（相邻间隔>60天视为中断）"""
@@ -628,7 +636,7 @@ def collect_exec_hold():
         time.sleep(0.12)
         result.append({
             "code": code, "name": hot[code], "count": cnt[code],
-            "first_date": first_date, "last_date": last_date.get(code, ""),
+            "dec_count": dec_cnt[code], "first_date": first_date, "last_date": last_date.get(code, ""),
         })
     result.sort(key=lambda x: x["count"], reverse=True)
     return {"stocks": result[:15]}

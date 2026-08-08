@@ -465,12 +465,12 @@ function demoData(){
       {name:'章建平',count:5,summary:{新进:4,增加:1,不变:0,减少:0},stocks:[{code:'600111',name:'北方稀土',change:'新进',value:34.45,shares:1e8,ann_date:daysFromNow(-6)},{code:'601137',name:'东材科技',change:'增加',value:7.59,shares:5e7,ann_date:daysFromNow(-6)},{code:'002149',name:'西部材料',change:'新进',value:5.08,shares:3e7,ann_date:daysFromNow(-5)}]},
       {name:'刘鑫',count:7,summary:{新进:4,增加:1,不变:1,减少:1},stocks:[{code:'300342',name:'天银机电',change:'新进',value:7.25,shares:4e7,ann_date:daysFromNow(-3)},{code:'000517',name:'荣安地产',change:'新进',value:3.12,shares:2e7,ann_date:daysFromNow(-3)},{code:'300070',name:'碧水源',change:'不变',value:2.88,shares:1.8e7,ann_date:daysFromNow(-4)}]},
       {name:'张素芬',count:22,summary:{新进:3,增加:10,不变:5,减少:4},stocks:[{code:'000563',name:'陕国投A',change:'增加',value:2.17,shares:5e7,ann_date:daysFromNow(-3)},{code:'600644',name:'乐山电力',change:'新进',value:1.85,shares:4e7,ann_date:daysFromNow(-3)},{code:'600575',name:'淮河能源',change:'不变',value:1.66,shares:4.5e7,ann_date:daysFromNow(-4)}]} ] },
-    execHold:{ stocks:[ {code:'002637',name:'赞宇科技',count:67,first_date:daysFromNow(-4745),last_date:daysFromNow(-17)},
-      {code:'603098',name:'森特股份',count:42,first_date:daysFromNow(-3285),last_date:daysFromNow(-30)},
-      {code:'002832',name:'比音勒芬',count:39,first_date:daysFromNow(-2920),last_date:daysFromNow(-25)},
-      {code:'600328',name:'中盐化工',count:34,first_date:daysFromNow(-670),last_date:daysFromNow(-12)},
-      {code:'301429',name:'森泰股份',count:22,first_date:daysFromNow(-61),last_date:daysFromNow(-9)},
-      {code:'600873',name:'梅花生物',count:18,first_date:daysFromNow(-849),last_date:daysFromNow(-20)} ] }
+    execHold:{ stocks:[ {code:'002637',name:'赞宇科技',count:67,dec_count:0,first_date:daysFromNow(-143),last_date:daysFromNow(-17)},
+      {code:'603098',name:'森特股份',count:42,dec_count:0,first_date:daysFromNow(-224),last_date:daysFromNow(-30)},
+      {code:'002832',name:'比音勒芬',count:39,dec_count:0,first_date:daysFromNow(-156),last_date:daysFromNow(-25)},
+      {code:'600328',name:'中盐化工',count:34,dec_count:0,first_date:daysFromNow(-86),last_date:daysFromNow(-12)},
+      {code:'301429',name:'森泰股份',count:22,dec_count:0,first_date:daysFromNow(-61),last_date:daysFromNow(-9)},
+      {code:'600873',name:'梅花生物',count:18,dec_count:0,first_date:daysFromNow(-108),last_date:daysFromNow(-20)} ] }
   };
 }
 
@@ -722,9 +722,9 @@ function renderExecHold(){
     const m = s.first_date ? Math.floor((Date.now() - new Date(s.first_date).getTime()) / 2629800000) : null;
     const tag = m == null ? '—' : (m >= 24 ? '持续' + Math.floor(m/12) + '年+' : (m >= 12 ? '1年前开始' : (m >= 6 ? '半年前开始' : m + '个月前开始')));
     const cls = m == null ? 'blue' : (m < 6 ? 'red' : (m < 12 ? 'amber' : 'blue'));
-    return '<div class="rank-row"><span class="rank-no' + (i===0?' top':'') + '">' + (i+1) + '</span><div><div class="rank-name">' + esc(s.name) + '</div><div class="rank-sub">' + esc(s.code) + ' · 本轮起点 ' + (s.first_date||'—') + '</div></div><div class="rank-sum"><b style="color:var(--brand)">' + s.count + '</b> <span>次/半年</span></div><span class="chip ' + cls + '" style="align-self:center">' + tag + '</span></div>';
+    return '<div class="rank-row"><span class="rank-no' + (i===0?' top':'') + '">' + (i+1) + '</span><div><div class="rank-name">' + esc(s.name) + '</div><div class="rank-sub">' + esc(s.code) + ' · 本轮起点 ' + (s.first_date||'—') + ' · 近半年减持 ' + (s.dec_count||0) + '次</div></div><div class="rank-sum"><b style="color:var(--brand)">' + s.count + '</b> <span>次增/半年</span></div><span class="chip ' + cls + '" style="align-self:center">' + tag + '</span></div>';
   }).join('');
-  box.innerHTML = '<div style="font-size:13px;color:var(--txt2);margin-bottom:4px">近半年增持 ≥5 次 · 标签=本轮连续增持起点（间隔 &gt;60 天算中断，不追溯断档前）</div>' + rows;
+  box.innerHTML = '<div style="font-size:13px;color:var(--txt2);margin-bottom:4px">近半年增持 ≥5 次 且 减持 &lt;5 次 · 标签=本轮连续增持起点（间隔 &gt;60 天算中断）</div>' + rows;
 }
 function renderNiusan(){
   const d = DATA.niusan || {};
