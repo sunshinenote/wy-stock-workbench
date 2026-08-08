@@ -179,6 +179,69 @@ def collect_unlock():
     return result[:25]
 
 
+# ---------- 4.5 情绪温度计（涨停/跌停/炸板池，自动回退最近交易日） ----------
+def _find_zt_date():
+    """返回最近一个有涨停池数据的交易日 (date_str, df)"""
+    for i in range(0, 12):
+        d = (NOW - timedelta(days=i)).strftime("%Y%m%d")
+        try:
+            df = ak.stock_zt_pool_em(date=d)
+            if df is not None and not df.empty:
+                return d, df
+        except Exception:
+            continue
+    return None, None
+
+
+def collect_sentiment():
+    date_str, zt_df = _find_zt_date()
+    if not date_str:
+        return {}
+    zt = len(zt_df)
+    dt = zb = 0
+    try:
+        df = ak.stock_zt_pool_dtgc_em(date=date_str)
+        dt = len(df) if df is not None else 0
+    except Exception:
+        pass
+    try:
+        df = ak.stock_zt_pool_zbgc_em(date=date_str)
+        zb = len(df) if df is not None else 0
+    except Exception:
+        pass
+    # 连板分布
+    lb_dist = {}
+    if "连板数" in zt_df.columns:
+        for v in zt_df["连板数"].dropna():
+            v = int(v)
+            lb_dist[v] = lb_dist.get(v, 0) + 1
+    max_lb = max(lb_dist.keys(), default=1)
+    # 炸板率
+    zb_rate = round(zb / (zt + zb) * 100, 1) if (zt + zb) else 0.0
+    # 情绪评分：涨停家数50% + 最高板30% + 炸板率20%
+    zt_score = min(100, zt * 1.2)
+    lb_score = min(100, max_lb * 14)
+    zb_score = max(0, 100 - zb_rate * 3)
+    score = round(0.5 * zt_score + 0.3 * lb_score + 0.2 * zb_score)
+    level = "过热" if score >= 85 else ("高潮" if score >= 70 else ("发酵" if score >= 55 else ("复苏" if score >= 40 else "冰点")))
+    note = ""
+    if zb_rate > 40:
+        note = "炸板率偏高，注意分歧"
+    if dt >= 10:
+        note = (note + "；" if note else "") + "跌停家数较多，情绪走弱"
+    # 涨停行业分布 TOP6
+    industries = []
+    if "所属行业" in zt_df.columns:
+        for name, cnt in zt_df["所属行业"].value_counts().head(6).items():
+            industries.append({"name": str(name), "count": int(cnt)})
+    return {
+        "date": f"{date_str[:4]}-{date_str[4:6]}-{date_str[6:]}",
+        "zt": zt, "dt": dt, "zb": zb, "zb_rate": zb_rate,
+        "max_lb": max_lb, "lb_dist": [{"lb": k, "count": v} for k, v in sorted(lb_dist.items())],
+        "score": score, "level": level, "note": note, "industries": industries,
+    }
+
+
 # ---------- 5. 机构调研排行（东财 datacenter 直连，近7天 TOP8） ----------
 def collect_research():
     """按股票聚合近7天机构调研：SUM=单次调研机构家数峰值，count=调研批次"""
@@ -352,6 +415,9 @@ def main():
 
     unlock_data = safe(collect_unlock) or []
     save_json("unlock_calendar.json", unlock_data)
+
+    sentiment_data = safe(collect_sentiment) or {}
+    save_json("sentiment.json", sentiment_data)
 
     earn_data = safe(collect_earnings) or []
     save_json("earnings.json", earn_data)

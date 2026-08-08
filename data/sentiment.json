@@ -1,0 +1,55 @@
+{
+ "date": "2026-08-08",
+ "zt": 74,
+ "dt": 4,
+ "zb": 26,
+ "zb_rate": 26.0,
+ "max_lb": 4,
+ "lb_dist": [
+  {
+   "lb": 1,
+   "count": 61
+  },
+  {
+   "lb": 2,
+   "count": 6
+  },
+  {
+   "lb": 3,
+   "count": 2
+  },
+  {
+   "lb": 4,
+   "count": 5
+  }
+ ],
+ "score": 66,
+ "level": "发酵",
+ "note": "",
+ "industries": [
+  {
+   "name": "元件",
+   "count": 11
+  },
+  {
+   "name": "医疗服务",
+   "count": 8
+  },
+  {
+   "name": "化学制药",
+   "count": 6
+  },
+  {
+   "name": "通信设备",
+   "count": 4
+  },
+  {
+   "name": "半导体",
+   "count": 4
+  },
+  {
+   "name": "化学制品",
+   "count": 3
+  }
+ ]
+}

@@ -104,6 +104,20 @@ button.danger{color:var(--danger)}
 .rank-sum b{font-size:20px;color:var(--up);font-weight:700;font-variant-numeric:tabular-nums}
 .rank-sum span{font-size:12px;color:var(--txt2)}
 .rank-pct{flex:none;width:62px;text-align:right;font-size:13px;font-weight:600;font-variant-numeric:tabular-nums}
+
+/* sentiment thermometer */
+.senti-main{display:flex;align-items:center;gap:16px;background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:14px;margin-bottom:10px}
+.senti-score{flex:none;width:82px;height:82px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#fff;border:4px solid #999;color:#555}
+.senti-score b{font-size:28px;line-height:1.1;font-weight:700}
+.senti-score span{font-size:11px;color:var(--txt3);margin-top:2px}
+.senti-info{flex:1;min-width:0}
+.senti-level{font-size:17px;font-weight:600}
+.senti-meta{font-size:12px;color:var(--txt3);margin-left:6px}
+.senti-note{font-size:13px;color:var(--danger);margin-top:4px}
+.senti-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(96px,1fr));gap:8px;margin-bottom:10px}
+.senti-grid .stat{padding:10px}
+.senti-grid .stat .v{font-size:19px}
+.senti-ind{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px;align-items:center;font-size:13px;color:var(--txt2)}
 .chip{display:inline-block;font-size:12px;padding:1px 8px;border-radius:6px;background:var(--bg);border:1px solid var(--line);color:var(--txt2)}
 .chip.red{background:var(--up-soft);color:var(--up);border-color:transparent}
 .chip.green{background:var(--down-soft);color:var(--down);border-color:transparent}
@@ -255,9 +269,11 @@ svg text{font-family:inherit}
 <div class="tab-panel" id="panel-short">
   <section class="card">
     <h2>短期机会 <span class="tag red">情绪+资金</span></h2>
+    <h3>情绪温度计 · 最近交易日 <span style="font-weight:400;font-size:12px;color:var(--txt3)">短线市场热度</span></h3>
+    <div id="sentimentBox"></div>
     <h3>机构调研 · 近 7 天 TOP8 <span style="font-weight:400;font-size:12px;color:var(--txt3)">机构正在关注谁</span></h3>
     <div id="researchList"></div>
-    <div class="plan-hint">建设中（按计划推进）：<br>① 情绪温度计 —— 涨停 / 跌停 / 炸板数、连板高度、情绪五档评级<br>② 主力资金流向 —— 净流入板块 / 个股榜<br>③ 龙虎榜拆解 —— 游资 / 机构席位动向</div>
+    <div class="plan-hint">建设中（按计划推进）：<br>② 主力资金流向 —— 净流入板块 / 个股榜<br>③ 龙虎榜拆解 —— 游资 / 机构席位动向</div>
   </section>
 </div>
 
@@ -350,13 +366,16 @@ function demoData(){
       {code:'688005',name:'容百科技',sum:139,count:1,date:t0,price:27.75,pct:-0.54},
       {code:'688313',name:'仕佳光子',sum:98,count:3,date:t0,price:127.7,pct:7.54},
       {code:'688266',name:'泽璟制药',sum:97,count:1,date:t0,price:121.7,pct:8.45},
-      {code:'688062',name:'迈威生物',sum:93,count:1,date:t0,price:30.51,pct:7.62} ]
+      {code:'688062',name:'迈威生物',sum:93,count:1,date:t0,price:30.51,pct:7.62} ],
+    sentiment:{ date:daysFromNow(-1), zt:74, dt:4, zb:26, zb_rate:26, max_lb:4,
+      lb_dist:[{lb:1,count:61},{lb:2,count:6},{lb:3,count:2},{lb:4,count:5}],
+      score:66, level:'发酵', note:'', industries:[{name:'元件',count:11},{name:'医疗服务',count:8},{name:'化学制药',count:6},{name:'通信设备',count:4},{name:'半导体',count:4},{name:'化学制品',count:3}] }
   };
 }
 
 /* ================= 数据加载 ================= */
 async function loadAll(){
-  const files = ['index_snapshot','sector_rank','economic_calendar','unlock_calendar','earnings','watchlist_quotes','history','research_rank','last_update'];
+  const files = ['index_snapshot','sector_rank','economic_calendar','unlock_calendar','earnings','watchlist_quotes','history','research_rank','sentiment','last_update'];
   const map = {};
   let gotAny = false;
   await Promise.all(files.map(async f => {
@@ -369,7 +388,8 @@ async function loadAll(){
     DATA = {
       index: map.index_snapshot || [], sector: map.sector_rank || [], econ: map.economic_calendar || [],
       unlock: map.unlock_calendar || [], earn: map.earnings || [], watch: map.watchlist_quotes || [],
-      history: map.history || [], research: map.research_rank || [], upd: map.last_update && map.last_update.time || ''
+      history: map.history || [], research: map.research_rank || [], sentiment: map.sentiment || {},
+      upd: map.last_update && map.last_update.time || ''
     };
   }else{
     DATA = demoData();
@@ -501,6 +521,24 @@ function renderAhead(){
 }
 
 /* ================= 短期机会 ================= */
+function renderSentiment(){
+  const s = DATA.sentiment || {};
+  const box = $('sentimentBox');
+  if(!s || !s.date){ box.innerHTML = '<div class="empty">暂无情绪数据（交易日收盘后更新）</div>'; return; }
+  const colors = {冰点:'#6b7a8d',复苏:'#185FA5',发酵:'#BA7517',高潮:'#d93a3a',过热:'#8b1a1a'};
+  const c = colors[s.level] || '#555';
+  const lbHtml = (s.lb_dist||[]).map(d => '<span class="chip" style="color:' + c + ';background:rgba(0,0,0,.04)">' + d.lb + '板 ×' + d.count + '</span>').join('') || '—';
+  const indHtml = (s.industries||[]).map(i => '<span class="chip amber">' + esc(i.name) + ' ' + i.count + '家</span>').join('') || '—';
+  box.innerHTML =
+    '<div class="senti-main"><div class="senti-score" style="border-color:' + c + ';color:' + c + '"><b>' + s.score + '</b><span>情绪分</span></div>' +
+    '<div class="senti-info"><div><span class="senti-level" style="color:' + c + '">' + esc(s.level) + '</span><span class="senti-meta">' + esc(s.date) + ' · 最近交易日</span></div>' +
+    (s.note ? '<div class="senti-note">⚠ ' + esc(s.note) + '</div>' : '') + '</div></div>' +
+    '<div class="senti-grid">' +
+    stat('涨停', s.zt, '家') + stat('跌停', s.dt, '家') + stat('炸板', s.zb, '家 · 炸板率 ' + s.zb_rate + '%') + stat('最高连板', s.max_lb, '板') +
+    '</div>' +
+    '<div style="font-size:13px;color:var(--txt2)">连板梯队：' + lbHtml + '</div>' +
+    '<div class="senti-ind">涨停集中行业：' + indHtml + '</div>';
+}
 function renderResearch(){
   $('researchList').innerHTML = (DATA.research||[]).slice(0,8).map((r,i) => {
     const noCls = i === 0 ? ' top' : (i < 3 ? ' top2' : '');
@@ -727,7 +765,7 @@ function restoreTab(){
 }
 
 /* ================= 渲染 ================= */
-function renderAll(){ renderToday(); renderAhead(); renderReview(); renderResearch(); renderLong(); renderNotes(); }
+function renderAll(){ renderToday(); renderAhead(); renderReview(); renderSentiment(); renderResearch(); renderLong(); renderNotes(); }
 /* ================= 启动 ================= */
 initNoteDate();
 restoreTab();
