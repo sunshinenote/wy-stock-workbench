@@ -189,68 +189,89 @@ svg text{font-family:inherit}
 
 <div id="demoBanner" class="banner hidden">当前展示<b>示例数据</b>。运行数据采集脚本（collect.py / GitHub Actions）后自动切换为真实数据。</div>
 
-<!-- ============ 今天要处理 ============ -->
-<section class="card" id="todaySec">
-  <h2>今天要处理 <span class="tag blue">置顶</span></h2>
-  <div class="today-grid" id="todayList"></div>
-</section>
+<!-- ============ Tab 导航 ============ -->
+<nav class="tabs">
+  <button class="tab active" data-tab="review" onclick="switchTab('review')">今日复盘</button>
+  <button class="tab" data-tab="ahead" onclick="switchTab('ahead')">大事前瞻</button>
+  <button class="tab" data-tab="short" onclick="switchTab('short')">短期机会</button>
+  <button class="tab" data-tab="long" onclick="switchTab('long')">长期机会</button>
+</nav>
 
-<!-- ============ 未来大事前瞻（重点） ============ -->
-<section class="card" id="aheadSec">
-  <h2>未来大事前瞻 <span class="tag red">重点</span></h2>
+<!-- ============ 今日复盘 ============ -->
+<div class="tab-panel active" id="panel-review">
+  <section class="card" id="todaySec">
+    <h2>今天要处理 <span class="tag blue">置顶</span></h2>
+    <div class="today-grid" id="todayList"></div>
+  </section>
 
-  <div class="stats" id="aheadStats"></div>
-
-  <h3>财经日历 · 宏观数据发布</h3>
-  <div class="tl" id="econList"></div>
-
-  <div class="tbl-wrap desktop-tbl">
-    <h3>限售解禁 · 未来市值榜 TOP6</h3>
-    <table class="tbl desktop" id="unlockTbl"></table>
-    <table class="tbl mobile-cards" id="unlockCards"></table>
-  </div>
-
-  <h3>机构调研 · 近 7 天 TOP8 <span style="font-weight:400;font-size:12px;color:var(--txt3)">机构正在关注谁</span></h3>
-  <div id="researchList"></div>
-
-  <h3>业绩预告 · 最近披露</h3>
-  <div class="tbl-wrap">
-    <table class="tbl" id="earnTbl"></table>
-  </div>
-</section>
-
-<!-- ============ 每日复盘 ============ -->
-<section class="card" id="reviewSec">
-  <h2>每日复盘 <span class="tag blue">昨日回顾</span></h2>
-
-  <div class="stats" id="indexStats"></div>
-
-  <h3>上证指数 · 近 90 日走势</h3>
-  <div class="chart-box" id="trendChart"></div>
-
-  <div class="tbl-wrap">
+  <section class="card" id="reviewSec">
+    <h2>大盘总览 <span class="tag blue">昨日回顾</span></h2>
+    <div class="stats" id="indexStats"></div>
+    <h3>上证指数 · 近 90 日走势</h3>
+    <div class="chart-box" id="trendChart"></div>
     <h3>板块涨幅榜 TOP10</h3>
     <div id="sectorList"></div>
-  </div>
+    <h3>自选股盈亏 <span style="font-size:12px;color:var(--txt3);font-weight:400">（成本价存本地，随导出备份）</span></h3>
+    <div class="tbl-wrap">
+      <table class="tbl desktop" id="watchTbl"></table>
+      <table class="tbl mobile-cards" id="watchCards"></table>
+    </div>
+    <p class="empty" id="watchEmpty" style="display:none">暂无自选股。点下方「加入自选」添加，或编辑 data/watchlist.txt 后重新采集。</p>
+  </section>
 
-  <h3>自选股行情 <span style="font-size:12px;color:var(--txt3);font-weight:400">（成本价存本地，随导出备份）</span></h3>
-  <div class="tbl-wrap">
-    <table class="tbl desktop" id="watchTbl"></table>
-    <table class="tbl mobile-cards" id="watchCards"></table>
-  </div>
-  <p class="empty" id="watchEmpty" style="display:none">暂无自选股。点下方「加入自选」添加，或编辑 data/watchlist.txt 后重新采集。</p>
-</section>
+  <section class="card" id="notesSec">
+    <h2>复盘笔记 <span class="tag blue">结构化模板</span></h2>
+    <div class="note-form">
+      <input type="date" id="noteDate" value="">
+      <div class="note-fields">
+        <input type="text" id="noteAction" placeholder="当日操作：买入 / 卖出 / 加仓 / 减仓 / 持仓不动…">
+        <textarea id="noteMarket" placeholder="市场观察：盘面怎么走的？主线板块在哪？量能如何？"></textarea>
+        <textarea id="noteReflect" placeholder="操作反思：今天做对了什么？做错了什么？"></textarea>
+        <textarea id="notePlan" placeholder="明日计划：关注哪些事件 / 准备怎么操作…"></textarea>
+      </div>
+      <button class="primary" onclick="saveNote()" style="align-self:flex-end">保存笔记</button>
+    </div>
+    <div id="noteList"></div>
+  </section>
+</div>
 
-<!-- ============ 复盘笔记 ============ -->
-<section class="card" id="notesSec">
-  <h2>复盘笔记 <span class="tag blue">自动归档</span></h2>
-  <div class="note-form">
-    <input type="date" id="noteDate" value="">
-    <textarea id="noteText" placeholder="写下今天的复盘：盘面总结、操作得失、明日计划…"></textarea>
-    <button class="primary" onclick="saveNote()" style="align-self:flex-end">保存笔记</button>
-  </div>
-  <div id="noteList"></div>
-</section>
+<!-- ============ 大事前瞻 ============ -->
+<div class="tab-panel" id="panel-ahead">
+  <section class="card">
+    <h2>大事前瞻 <span class="tag red">重点</span></h2>
+    <div class="stats" id="aheadStats"></div>
+    <h3>财经日历 · 宏观数据发布</h3>
+    <div class="tl" id="econList"></div>
+    <h3>限售解禁 · 未来市值榜 TOP6</h3>
+    <div class="tbl-wrap desktop-tbl">
+      <table class="tbl desktop" id="unlockTbl"></table>
+      <table class="tbl mobile-cards" id="unlockCards"></table>
+    </div>
+    <div class="plan-hint">即将新增：新股申购 / 上市日历、分红除权提醒（数据接口就绪后加入）</div>
+  </section>
+</div>
+
+<!-- ============ 短期机会 ============ -->
+<div class="tab-panel" id="panel-short">
+  <section class="card">
+    <h2>短期机会 <span class="tag red">情绪+资金</span></h2>
+    <h3>机构调研 · 近 7 天 TOP8 <span style="font-weight:400;font-size:12px;color:var(--txt3)">机构正在关注谁</span></h3>
+    <div id="researchList"></div>
+    <div class="plan-hint">建设中（按计划推进）：<br>① 情绪温度计 —— 涨停 / 跌停 / 炸板数、连板高度、情绪五档评级<br>② 主力资金流向 —— 净流入板块 / 个股榜<br>③ 龙虎榜拆解 —— 游资 / 机构席位动向</div>
+  </section>
+</div>
+
+<!-- ============ 长期机会 ============ -->
+<div class="tab-panel" id="panel-long">
+  <section class="card">
+    <h2>长期机会 <span class="tag" style="background:var(--down-soft);color:var(--down)">业绩+估值</span></h2>
+    <h3>业绩预告 · 最近披露</h3>
+    <div class="tbl-wrap">
+      <table class="tbl" id="earnTbl"></table>
+    </div>
+    <div class="plan-hint">建设中（按计划推进）：<br>① 估值分位 —— PE / PB 历史分位（低估信号）<br>② 高股息精选 —— 股息率 + ROE 筛选<br>③ 牛散持仓 —— 季报期结束后追踪徐开东 / 葛卫东 / 赵建平等牛散动向</div>
+  </section>
+</div>
 
 <footer>
   数据来源：AKShare 聚合的公开免费接口（东方财富/新浪等），仅供个人研究参考，不构成投资建议。<br>
@@ -432,7 +453,6 @@ function renderToday(){
 function renderAhead(){
   const econ = (DATA.econ||[]).sort((a,b)=>a.date.localeCompare(b.date));
   const unlock = (DATA.unlock||[]).sort((a,b)=>b.unlock_value-a.unlock_value);
-  const earn = (DATA.earn||[]).slice(0,15);
 
   // 按天分组（统计卡与时间线共用）
   const groups = {};
@@ -447,7 +467,7 @@ function renderAhead(){
     stat('宏观事件', econ.length + ' 项', '覆盖 ' + dates.length + ' 天'),
     stat('未来 7 天节点', weekEvents + ' 项', '高重要性 ' + highCount + ' 项'),
     stat('解禁市值 TOP5', unlockTotal.toFixed(1) + ' 亿', ''),
-    stat('业绩预告样本', earn.length + ' 条', '')
+    stat('即将发生', highCount ? highCount + ' 项高重要' : '暂无高重要事件', '')
   ].join('');
 
   // 财经日历时间线（按天分组，重要性色阶，紧急高亮）
@@ -478,14 +498,19 @@ function renderAhead(){
     return '<tr><td>' + u.date + ' ' + cdBadge(u.date) + '</td><td>' + u.code + '</td><td><b>' + u.name + '</b>' + (inWatch?' <span class="chip red">自选</span>':'') + '</td><td class="num" style="font-weight:600">' + u.unlock_value.toFixed(1) + '</td><td class="num">' + u.ratio.toFixed(1) + '%</td><td>' + esc(u.type) + '</td><td>' + (inWatch?'':'<button class="btn-sm" onclick="addWatch(\''+u.code+'\',\''+u.name+'\')">关注</button>') + '</td></tr>';
   }).join('') + '</tbody>';
   $('unlockCards').innerHTML = unlock.slice(0,6).map(u => '<div class="t-item" style="margin-bottom:8px"><div class="t-body"><div class="t-title">' + u.name + ' <span class="chip red">' + u.unlock_value.toFixed(1) + '亿</span></div><div class="t-sub">' + u.date + ' · ' + esc(u.type) + ' · 占流通 ' + u.ratio.toFixed(1) + '%</div></div>' + cdBadge(u.date) + '</div>').join('');
+}
 
-  // 机构调研排行（近7天 TOP8）
+/* ================= 短期机会 ================= */
+function renderResearch(){
   $('researchList').innerHTML = (DATA.research||[]).slice(0,8).map((r,i) => {
     const noCls = i === 0 ? ' top' : (i < 3 ? ' top2' : '');
     return '<div class="rank-row"><span class="rank-no' + noCls + '">' + (i+1) + '</span><div><div class="rank-name">' + esc(r.name) + '</div><div class="rank-sub">' + esc(r.code) + ' · ' + esc(r.date||'') + ' · ' + r.count + ' 批调研</div></div><div class="rank-sum"><b>' + r.sum + '</b> <span>家机构</span></div><span class="rank-pct ' + clsPct(r.pct) + '">' + fmtPct(r.pct) + '</span></div>';
   }).join('') || '<div class="empty">暂无机构调研数据</div>';
+}
 
-  // 业绩预告表
+/* ================= 长期机会 ================= */
+function renderLong(){
+  const earn = (DATA.earn||[]).slice(0,15);
   $('earnTbl').innerHTML = '<thead><tr><th>代码</th><th>名称</th><th>类型</th><th class="num">变动幅度</th><th>原因摘要</th><th>公告日</th></tr></thead><tbody>' + earn.map(r =>
     '<tr><td>' + r.code + '</td><td><b>' + r.name + '</b></td><td><span class="chip blue">' + esc(r.type) + '</span></td><td class="num" style="font-weight:600;color:' + ((r.change||'').includes('-')?'var(--down)':'var(--up)') + '">' + esc(r.change) + '</td><td style="white-space:normal;min-width:220px;color:var(--txt2)">' + esc(r.reason) + '</td><td>' + esc(r.ann_date) + '</td></tr>'
   ).join('') + '</tbody>';
@@ -596,35 +621,56 @@ function editCost(code){
   lsSet(LS.cost, costs); renderAll();
 }
 
-/* ================= 笔记 ================= */
+/* ================= 笔记（结构化模板） ================= */
 function scrollToNotes(){ $('notesSec').scrollIntoView({behavior:'smooth'}); }
 function initNoteDate(){ $('noteDate').value = todayStr; }
+function noteFields(){
+  return {
+    action: $('noteAction').value.trim(),
+    market: $('noteMarket').value.trim(),
+    reflect: $('noteReflect').value.trim(),
+    plan: $('notePlan').value.trim()
+  };
+}
+function clearNoteFields(){ $('noteAction').value=''; $('noteMarket').value=''; $('noteReflect').value=''; $('notePlan').value=''; }
 function saveNote(){
-  const d = $('noteDate').value || todayStr, t = $('noteText').value.trim();
-  if(!t){ alert('笔记内容不能为空'); return; }
+  const d = $('noteDate').value || todayStr;
+  const f = noteFields();
+  if(!f.action && !f.market && !f.reflect && !f.plan){ alert('至少填写一个字段'); return; }
   let notes = lsGet(LS.notes, []);
   const idx = notes.findIndex(n=>n.date===d);
-  if(idx >= 0){ notes[idx].text = t; notes[idx].ts = Date.now(); }
-  else notes.push({date:d, text:t, ts:Date.now()});
+  if(idx >= 0){ notes[idx].action=f.action; notes[idx].market=f.market; notes[idx].reflect=f.reflect; notes[idx].plan=f.plan; notes[idx].ts=Date.now(); }
+  else notes.push({date:d, action:f.action, market:f.market, reflect:f.reflect, plan:f.plan, ts:Date.now()});
   notes.sort((a,b)=>b.date.localeCompare(a.date));
   lsSet(LS.notes, notes);
-  $('noteText').value = '';
+  clearNoteFields();
   renderNotes(); renderToday();
   alert('已保存 ' + d + ' 的复盘笔记');
 }
 function renderNotes(){
   const notes = lsGet(LS.notes, []);
-  $('noteList').innerHTML = notes.length ? notes.map(n =>
-    '<div class="note-item"><div class="d">' + n.date + '</div><div class="c">' + esc(n.text) + '</div><div class="ops"><button class="btn-sm" onclick="editNote(\'' + n.date + '\')">编辑</button><button class="btn-sm danger" onclick="delNote(\'' + n.date + '\')">删除</button></div></div>'
-  ).join('') : '<div class="empty">还没有复盘笔记，从今天开始记录吧</div>';
+  $('noteList').innerHTML = notes.length ? notes.map(n => {
+    let body = '';
+    // 兼容旧格式：只有 text 字段的旧笔记
+    if(n.text){ body = '<div class="fld"><b>内容</b><span>' + esc(n.text) + '</span></div>'; }
+    if(n.market) body += '<div class="fld"><b>观察</b><span>' + esc(n.market) + '</span></div>';
+    if(n.action) body += '<div class="fld"><b>操作</b><span>' + esc(n.action) + '</span></div>';
+    if(n.reflect) body += '<div class="fld"><b>反思</b><span>' + esc(n.reflect) + '</span></div>';
+    if(n.plan) body += '<div class="fld"><b>计划</b><span>' + esc(n.plan) + '</span></div>';
+    return '<div class="note-item"><div class="d">' + n.date + '</div>' + body + '<div class="ops"><button class="btn-sm" onclick="editNote(\'' + n.date + '\')">编辑</button><button class="btn-sm danger" onclick="delNote(\'' + n.date + '\')">删除</button></div></div>';
+  }).join('') : '<div class="empty">还没有复盘笔记，从今天开始记录吧</div>';
 }
 function editNote(d){
   const notes = lsGet(LS.notes, []);
   const n = notes.find(x=>x.date===d);
   if(!n) return;
-  $('noteDate').value = d; $('noteText').value = n.text;
+  $('noteDate').value = d;
+  $('noteAction').value = n.action||'';
+  $('noteMarket').value = n.market||(n.text||'');
+  $('noteReflect').value = n.reflect||'';
+  $('notePlan').value = n.plan||'';
   $('notesSec').scrollIntoView({behavior:'smooth'});
-  $('noteText').focus();
+  $('noteMarket').focus();
 }
 function delNote(d){
   if(!confirm('删除 ' + d + ' 的笔记？')) return;
@@ -667,10 +713,24 @@ function doClearAll(){
   alert('已清空本地个人数据');
 }
 
+/* ================= Tab 切换 ================= */
+function switchTab(name){
+  document.querySelectorAll('.tab').forEach(b => b.classList.toggle('active', b.dataset.tab === name));
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.toggle('active', p.id === 'panel-' + name));
+  try{ localStorage.setItem('wb_stock_tab', name); }catch(e){}
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+function restoreTab(){
+  let saved = null;
+  try{ saved = localStorage.getItem('wb_stock_tab'); }catch(e){}
+  if(saved && ['review','ahead','short','long'].includes(saved)) switchTab(saved);
+}
+
 /* ================= 渲染 ================= */
-function renderAll(){ renderToday(); renderAhead(); renderReview(); renderNotes(); }
+function renderAll(){ renderToday(); renderAhead(); renderReview(); renderResearch(); renderLong(); renderNotes(); }
 /* ================= 启动 ================= */
 initNoteDate();
+restoreTab();
 loadAll();
 </script>
 </body>
