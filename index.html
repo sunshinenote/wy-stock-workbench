@@ -321,7 +321,8 @@ svg text{font-family:inherit}
     <div class="tbl-wrap">
       <table class="tbl" id="earnTbl"></table>
     </div>
-    <div class="plan-hint">建设中（按计划推进）：<br>③ 牛散持仓 —— 季报期结束后追踪徐开东 / 葛卫东 / 赵建平等牛散动向</div>
+    <h3>牛散持仓追踪 <span style="font-weight:400;font-size:12px;color:var(--txt3)">季报披露完更新 · 新进/加仓标红</span></h3>
+    <div id="niusanBox"></div>
   </section>
 </div>
 
@@ -446,13 +447,17 @@ function demoData(){
         {code:'600519',name:'贵州茅台',year_avg:2.8,div_count:29,list_years:25.1},
         {code:'600900',name:'长江电力',year_avg:4.85,div_count:27,list_years:23.1},
         {code:'600036',name:'招商银行',year_avg:3.1,div_count:24,list_years:24.2},
-        {code:'688981',name:'中芯国际',year_avg:0,div_count:0,list_years:6.2} ] }
+        {code:'688981',name:'中芯国际',year_avg:0,div_count:0,list_years:6.2} ] },
+    niusan:{ report:daysFromNow(-150).slice(0,7), niusan:[ {name:'徐开东',count:37,stocks:[{code:'000825',name:'太钢不锈',change:'增加',value:1.77,ann_date:daysFromNow(-3)},{code:'600100',name:'同方股份',change:'增加',value:1.44,ann_date:daysFromNow(-3)},{code:'601106',name:'中国一重',change:'增加',value:1.21,ann_date:daysFromNow(-2)}]},
+      {name:'陈发树',count:7,stocks:[{code:'600887',name:'伊利股份',change:'新进',value:15.93,ann_date:daysFromNow(-5)},{code:'301050',name:'雷电微力',change:'不变',value:10.08,ann_date:daysFromNow(-4)},{code:'002264',name:'新华都',change:'不变',value:4.88,ann_date:daysFromNow(-4)}]},
+      {name:'葛卫东',count:4,stocks:[{code:'603986',name:'兆易创新',change:'减少',value:38.72,ann_date:daysFromNow(-3)},{code:'688051',name:'优刻得',change:'新进',value:1.06,ann_date:daysFromNow(-2)},{code:'688651',name:'微电生理',change:'不变',value:0.78,ann_date:daysFromNow(-2)}]},
+      {name:'章建平',count:5,stocks:[{code:'600111',name:'北方稀土',change:'新进',value:34.45,ann_date:daysFromNow(-6)},{code:'601137',name:'东材科技',change:'增加',value:7.59,ann_date:daysFromNow(-6)},{code:'002149',name:'西部材料',change:'新进',value:5.08,ann_date:daysFromNow(-5)}]} ] }
   };
 }
 
 /* ================= 数据加载 ================= */
 async function loadAll(){
-  const files = ['index_snapshot','sector_rank','economic_calendar','unlock_calendar','earnings','watchlist_quotes','history','research_rank','sentiment','fundflow','lhb','valuation','divyield','last_update'];
+  const files = ['index_snapshot','sector_rank','economic_calendar','unlock_calendar','earnings','watchlist_quotes','history','research_rank','sentiment','fundflow','lhb','valuation','divyield','niusan','last_update'];
   const map = {};
   let gotAny = false;
   await Promise.all(files.map(async f => {
@@ -466,7 +471,7 @@ async function loadAll(){
       index: map.index_snapshot || [], sector: map.sector_rank || [], econ: map.economic_calendar || [],
       unlock: map.unlock_calendar || [], earn: map.earnings || [], watch: map.watchlist_quotes || [],
       history: map.history || [], research: map.research_rank || [], sentiment: map.sentiment || {},
-      fundflow: map.fundflow || {}, lhb: map.lhb || {}, valuation: map.valuation || {}, divyield: map.divyield || {},
+      fundflow: map.fundflow || {}, lhb: map.lhb || {}, valuation: map.valuation || {},       divyield: map.divyield || {}, niusan: map.niusan || {},
       upd: map.last_update && map.last_update.time || ''
     };
   }else{
@@ -687,6 +692,21 @@ function renderDivyield(){
   }).join('');
   const mineHtml = (d.mine||[]).map(x => '<span class="chip ' + (x.div_count >= 10 ? 'blue' : '') + '">' + esc(x.name) + ' ' + x.div_count + '次</span>').join(' ') || '—';
   box.innerHTML = rows + '<div class="senti-ind"><span>我的自选分红次数：</span>' + mineHtml + '</div>';
+}
+function renderNiusan(){
+  const d = DATA.niusan || {};
+  const box = $('niusanBox');
+  const list = (d.niusan||[]).filter(n => n.count > 0);
+  if(!list.length){ box.innerHTML = '<div class="empty">暂无牛散持仓数据（季报披露期结束后更新）</div>'; return; }
+  const chCls = {新进:'red',增加:'amber',不变:'blue',减少:'green'};
+  const chTxt = {新进:'新进',增加:'加仓',不变:'持有',减少:'减仓'};
+  const html = list.map(n => {
+    const stocks = (n.stocks||[]).map(s =>
+      '<div class="rank-row" style="padding:6px 0"><span style="flex:none;width:16px;font-size:12px;color:var(--txt3)">·</span><div class="val-name" style="width:76px">' + esc(s.name) + '</div><span class="chip ' + (chCls[s.change]||'blue') + '">' + (chTxt[s.change]||s.change||'持有') + '</span><span class="val-num" style="width:110px">' + s.value + '亿 · ' + (s.ann_date||'').slice(5) + '</span></div>'
+    ).join('');
+    return '<div style="margin-bottom:6px"><div style="font-weight:600;font-size:14px;color:var(--txt);margin:8px 0 2px">' + esc(n.name) + ' <span class="chip red">' + n.count + '只</span></div>' + stocks + '</div>';
+  }).join('');
+  box.innerHTML = '<div style="font-size:13px;color:var(--txt2);margin-bottom:4px">报告期 ' + esc(d.report||'') + ' · 十大流通股东</div>' + html;
 }
 function renderLong(){
   const earn = (DATA.earn||[]).slice(0,15);
@@ -917,7 +937,7 @@ function restoreTab(){
 }
 
 /* ================= 渲染 ================= */
-function renderAll(){ renderToday(); renderAhead(); renderReview(); renderSentiment(); renderFundflow(); renderLhb(); renderResearch(); renderValuation(); renderDivyield(); renderLong(); renderNotes(); }
+function renderAll(){ renderToday(); renderAhead(); renderReview(); renderSentiment(); renderFundflow(); renderLhb(); renderResearch(); renderValuation(); renderDivyield(); renderNiusan(); renderLong(); renderNotes(); }
 /* ================= 启动 ================= */
 initNoteDate();
 restoreTab();

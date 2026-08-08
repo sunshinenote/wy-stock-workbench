@@ -475,6 +475,71 @@ def collect_divyield():
     return {"top10": top10, "mine": mine}
 
 
+# ---------- 5.8 牛散持仓追踪（十大流通股东，季报披露完才更新） ----------
+NIUSAN_LIST = ["徐开东", "陈发树", "葛卫东", "赵建平", "章建平", "赵强", "王玉", "袁喜保"]
+
+
+def _latest_report_period():
+    """根据当前日期返回最近已完整披露的季度报告期（牛散数据只在季报披露完后更新）"""
+    m = NOW.month
+    y = NOW.year
+    if 5 <= m <= 8:
+        return f"{y}0331"      # 一季报（4/30披露完）
+    if 9 <= m <= 10:
+        return f"{y}0630"      # 中报（8/31披露完）
+    if 11 <= m <= 12:
+        return f"{y}0930"      # 三季报（10/31披露完）
+    return f"{y - 1}0930"      # 1-4月：上一年的三季报
+
+
+def _match_niusan(holder_name):
+    """股东名称是否命中牛散名单（精确或前缀，防误匹配）"""
+    name = str(holder_name or "").replace(" ", "")
+    for ns in NIUSAN_LIST:
+        if name == ns or name.startswith(ns):
+            return ns
+    return None
+
+
+def _fnum(v):
+    """安全转 float，NaN/None → 0"""
+    try:
+        f = float(v)
+        return f if f == f else 0.0
+    except (ValueError, TypeError):
+        return 0.0
+
+
+def collect_niusan():
+    report = _latest_report_period()
+    try:
+        df = ak.stock_gdfx_free_holding_detail_em(date=report)
+    except Exception:
+        return {}
+    if df is None or df.empty:
+        return {}
+    groups = {}
+    for _, r in df.iterrows():
+        ns = _match_niusan(r.get("股东名称", ""))
+        if not ns:
+            continue
+        item = {
+            "code": str(r.get("股票代码", "") or ""),
+            "name": str(r.get("股票简称", "") or ""),
+            "shares": _fnum(r.get("期末持股-数量", 0)),
+            "change": str(r.get("期末持股-持股变动", "") or ""),
+            "value": round(_fnum(r.get("期末持股-流通市值", 0)) / 1e8, 2),  # 亿元
+            "ann_date": str(r.get("公告日", "") or "")[:10],
+        }
+        groups.setdefault(ns, []).append(item)
+    result = []
+    for ns in NIUSAN_LIST:
+        stocks = groups.get(ns, [])
+        stocks.sort(key=lambda x: x["value"], reverse=True)
+        result.append({"name": ns, "count": len(stocks), "stocks": stocks[:8]})
+    return {"report": f"{report[:4]}-{report[4:6]}-{report[6:]}", "niusan": result}
+
+
 # ---------- 6. 机构调研排行（东财 datacenter 直连，近7天 TOP8） ----------
 def collect_research():
     """按股票聚合近7天机构调研：SUM=单次调研机构家数峰值，count=调研批次"""
@@ -663,6 +728,9 @@ def main():
 
     divyield_data = safe(collect_divyield) or {}
     save_json("divyield.json", divyield_data)
+
+    niusan_data = safe(collect_niusan) or {}
+    save_json("niusan.json", niusan_data)
 
     earn_data = safe(collect_earnings) or []
     save_json("earnings.json", earn_data)
