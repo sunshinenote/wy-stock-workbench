@@ -118,6 +118,14 @@ button.danger{color:var(--danger)}
 .senti-grid .stat{padding:10px}
 .senti-grid .stat .v{font-size:19px}
 .senti-ind{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px;align-items:center;font-size:13px;color:var(--txt2)}
+
+/* valuation rank */
+.val-row{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid var(--line)}
+.val-row:last-child{border-bottom:none}
+.val-name{flex:none;width:88px;font-weight:600;font-size:14px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.val-track{flex:1;height:10px;background:var(--bg);border-radius:5px;overflow:hidden}
+.val-fill{height:100%;border-radius:5px}
+.val-num{flex:none;width:150px;text-align:right;font-size:12px;color:var(--txt2);font-variant-numeric:tabular-nums}
 .chip{display:inline-block;font-size:12px;padding:1px 8px;border-radius:6px;background:var(--bg);border:1px solid var(--line);color:var(--txt2)}
 .chip.red{background:var(--up-soft);color:var(--up);border-color:transparent}
 .chip.green{background:var(--down-soft);color:var(--down);border-color:transparent}
@@ -305,11 +313,13 @@ svg text{font-family:inherit}
 <div class="tab-panel" id="panel-long">
   <section class="card">
     <h2>长期机会 <span class="tag" style="background:var(--down-soft);color:var(--down)">业绩+估值</span></h2>
+    <h3>估值分位 · 自选股（近十年） <span style="font-weight:400;font-size:12px;color:var(--txt3)">PE/PB 历史百分位，越低越便宜</span></h3>
+    <div id="valuationBox"></div>
     <h3>业绩预告 · 最近披露</h3>
     <div class="tbl-wrap">
       <table class="tbl" id="earnTbl"></table>
     </div>
-    <div class="plan-hint">建设中（按计划推进）：<br>① 估值分位 —— PE / PB 历史分位（低估信号）<br>② 高股息精选 —— 股息率 + ROE 筛选<br>③ 牛散持仓 —— 季报期结束后追踪徐开东 / 葛卫东 / 赵建平等牛散动向</div>
+    <div class="plan-hint">建设中（按计划推进）：<br>② 高股息精选 —— 股息率 + ROE 筛选<br>③ 牛散持仓 —— 季报期结束后追踪徐开东 / 葛卫东 / 赵建平等牛散动向</div>
   </section>
 </div>
 
@@ -411,13 +421,21 @@ function demoData(){
       {code:'002988',name:'贤丰控股',net:2.1,pct:9.97,after1d:null,reason:'日涨幅偏离值达到7%的前5只证券'},
       {code:'002827',name:'高争民爆',net:2.05,pct:10.0,after1d:null,reason:'连续三个交易日内涨幅偏离值累计达到20%'} ],
       sell:[ {code:'300247',name:'名家汇',net:-2.67,pct:-7.1},{code:'002212',name:'天融信',net:-2.5,pct:-5.2},
-        {code:'300903',name:'泰晶科技',net:-1.64,pct:-9.9},{code:'301217',name:'铜冠铜箔',net:-1.51,pct:-8.5} ] }
+        {code:'300903',name:'泰晶科技',net:-1.64,pct:-9.9},{code:'301217',name:'铜冠铜箔',net:-1.51,pct:-8.5} ] },
+    valuation:{ stocks:[ {code:'600519',name:'贵州茅台',pe:19.8,pe_pct:4.1,pb:6.04,pb_pct:5.6,avg_pct:4.8,state:'低估'},
+      {code:'000858',name:'五粮液',pe:23.1,pe_pct:42,pb:2.28,pb_pct:1.2,avg_pct:21.6,state:'偏低'},
+      {code:'300750',name:'宁德时代',pe:21.1,pe_pct:15.5,pb:4.73,pb_pct:25.1,avg_pct:20.3,state:'偏低'},
+      {code:'601318',name:'中国平安',pe:7.3,pe_pct:5.3,pb:0.95,pb_pct:15.9,avg_pct:10.6,state:'低估'},
+      {code:'600036',name:'招商银行',pe:6.5,pe_pct:20.9,pb:0.86,pb_pct:6.2,avg_pct:13.5,state:'低估'},
+      {code:'600900',name:'长江电力',pe:18.8,pe_pct:52.5,pb:2.98,pb_pct:71.7,avg_pct:62.1,state:'偏高'},
+      {code:'002594',name:'比亚迪',pe:29.8,pe_pct:31.3,pb:3.54,pb_pct:35.3,avg_pct:33.3,state:'偏低'},
+      {code:'688981',name:'中芯国际',pe:218,pe_pct:93,pb:7.34,pb_pct:92,avg_pct:92.5,state:'高估'} ] }
   };
 }
 
 /* ================= 数据加载 ================= */
 async function loadAll(){
-  const files = ['index_snapshot','sector_rank','economic_calendar','unlock_calendar','earnings','watchlist_quotes','history','research_rank','sentiment','fundflow','lhb','last_update'];
+  const files = ['index_snapshot','sector_rank','economic_calendar','unlock_calendar','earnings','watchlist_quotes','history','research_rank','sentiment','fundflow','lhb','valuation','last_update'];
   const map = {};
   let gotAny = false;
   await Promise.all(files.map(async f => {
@@ -431,7 +449,7 @@ async function loadAll(){
       index: map.index_snapshot || [], sector: map.sector_rank || [], econ: map.economic_calendar || [],
       unlock: map.unlock_calendar || [], earn: map.earnings || [], watch: map.watchlist_quotes || [],
       history: map.history || [], research: map.research_rank || [], sentiment: map.sentiment || {},
-      fundflow: map.fundflow || {}, lhb: map.lhb || {},
+      fundflow: map.fundflow || {}, lhb: map.lhb || {}, valuation: map.valuation || {},
       upd: map.last_update && map.last_update.time || ''
     };
   }else{
@@ -624,6 +642,23 @@ function renderResearch(){
 }
 
 /* ================= 长期机会 ================= */
+function renderValuation(){
+  const v = DATA.valuation || {};
+  const box = $('valuationBox');
+  const stocks = (v.stocks||[]).slice(0,10);
+  if(!stocks.length){ box.innerHTML = '<div class="empty">暂无估值数据（需先运行采集）</div>'; return; }
+  const stateCls = {低估:'green',偏低:'blue',合理:'amber',偏高:'amber',高估:'red'};
+  const stateColor = {低估:'var(--down)',偏低:'#1d9e75',合理:'var(--warn)',偏高:'var(--warn)',高估:'var(--up)'};
+  const rows = stocks.map(s => {
+    const p = s.avg_pct == null ? 50 : s.avg_pct;
+    const c = p < 20 ? 'var(--down)' : (p < 40 ? '#1d9e75' : (p < 60 ? 'var(--warn)' : (p < 80 ? '#d87820' : 'var(--up)')));
+    const cls = stateCls[s.state] || 'blue';
+    const peStr = s.pe != null ? 'PE ' + s.pe + '·' + s.pe_pct + '%' : '';
+    const pbStr = s.pb != null ? ' PB ' + s.pb + '·' + s.pb_pct + '%' : '';
+    return '<div class="val-row"><span class="val-name">' + esc(s.name) + '</span><span class="chip ' + cls + '">' + esc(s.state||'—') + '</span><div class="val-track"><div class="val-fill" style="width:' + p + '%;background:' + c + '"></div></div><span class="val-num">' + peStr + pbStr + '</span></div>';
+  }).join('');
+  box.innerHTML = '<div style="font-size:13px;color:var(--txt2);margin-bottom:2px">分位条越靠左越低估（绿）· 越靠右越高估（红）</div>' + rows;
+}
 function renderLong(){
   const earn = (DATA.earn||[]).slice(0,15);
   $('earnTbl').innerHTML = '<thead><tr><th>代码</th><th>名称</th><th>类型</th><th class="num">变动幅度</th><th>原因摘要</th><th>公告日</th></tr></thead><tbody>' + earn.map(r =>
@@ -853,7 +888,7 @@ function restoreTab(){
 }
 
 /* ================= 渲染 ================= */
-function renderAll(){ renderToday(); renderAhead(); renderReview(); renderSentiment(); renderFundflow(); renderLhb(); renderResearch(); renderLong(); renderNotes(); }
+function renderAll(){ renderToday(); renderAhead(); renderReview(); renderSentiment(); renderFundflow(); renderLhb(); renderResearch(); renderValuation(); renderLong(); renderNotes(); }
 /* ================= 启动 ================= */
 initNoteDate();
 restoreTab();

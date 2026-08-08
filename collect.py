@@ -20,6 +20,7 @@ import traceback
 from datetime import datetime, timedelta
 
 import akshare as ak
+import pandas as pd
 import requests
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -393,6 +394,49 @@ def collect_lhb():
     return {"date": rows[0].get("TRADE_DATE", "")[:10], "buy": buy, "sell": sell}
 
 
+# ---------- 5.6 估值分位（百度估值，自选股 PE/PB 历史分位） ----------
+def _pct_rank(series, cur):
+    """当前值在历史序列中的百分位（0-100，越小越低估）"""
+    vals = pd.to_numeric(series, errors="coerce").dropna()
+    if len(vals) < 30 or cur is None:
+        return None
+    return round(float((vals <= cur).mean() * 100), 1)
+
+
+def collect_valuation():
+    """遍历自选股池，计算 PE(TTM)/PB 近十年分位"""
+    codes = read_watchlist()
+    if not codes:
+        return {}
+    stocks = []
+    for code in codes:
+        item = {"code": code, "name": code, "pe": None, "pe_pct": None, "pb": None, "pb_pct": None}
+        try:
+            df_pe = ak.stock_zh_valuation_baidu(symbol=code, indicator="市盈率(TTM)", period="近十年")
+            if df_pe is not None and not df_pe.empty:
+                item["pe"] = round(float(df_pe.iloc[-1]["value"]), 1)
+                item["pe_pct"] = _pct_rank(df_pe["value"], item["pe"])
+        except Exception:
+            pass
+        time.sleep(0.2)
+        try:
+            df_pb = ak.stock_zh_valuation_baidu(symbol=code, indicator="市净率", period="近十年")
+            if df_pb is not None and not df_pb.empty:
+                item["pb"] = round(float(df_pb.iloc[-1]["value"]), 2)
+                item["pb_pct"] = _pct_rank(df_pb["value"], item["pb"])
+        except Exception:
+            pass
+        time.sleep(0.2)
+        if item["pe_pct"] is not None or item["pb_pct"] is not None:
+            # 综合分位 = PE/PB 分位均值；缺失取其一
+            pcts = [p for p in (item["pe_pct"], item["pb_pct"]) if p is not None]
+            avg = sum(pcts) / len(pcts)
+            item["avg_pct"] = round(avg, 1)
+            item["state"] = "高估" if avg >= 80 else ("偏高" if avg >= 60 else ("合理" if avg >= 40 else ("偏低" if avg >= 20 else "低估")))
+            stocks.append(item)
+    return {"stocks": stocks}
+
+
 # ---------- 6. 机构调研排行（东财 datacenter 直连，近7天 TOP8） ----------
 def collect_research():
     """按股票聚合近7天机构调研：SUM=单次调研机构家数峰值，count=调研批次"""
@@ -575,6 +619,9 @@ def main():
 
     lhb_data = safe(collect_lhb) or {}
     save_json("lhb.json", lhb_data)
+
+    valuation_data = safe(collect_valuation) or {}
+    save_json("valuation.json", valuation_data)
 
     earn_data = safe(collect_earnings) or []
     save_json("earnings.json", earn_data)
