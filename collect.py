@@ -242,7 +242,84 @@ def collect_sentiment():
     }
 
 
-# ---------- 5. 机构调研排行（东财 datacenter 直连，近7天 TOP8） ----------
+# ---------- 5. 主力资金流向（同花顺，行业+个股） ----------
+def _parse_yi(s):
+    """解析 "45.63" / "2.17亿" / "-7587.95万" → 亿元数值"""
+    s = str(s or "0").replace(",", "").strip()
+    if "亿" in s:
+        try:
+            return round(float(s.replace("亿", "")), 2)
+        except ValueError:
+            return 0.0
+    if "万" in s:
+        try:
+            return round(float(s.replace("万", "")) / 10000, 2)
+        except ValueError:
+            return 0.0
+    try:
+        return round(float(s), 2)
+    except ValueError:
+        return 0.0
+
+
+def _parse_pct(v):
+    """解析 "8.34" / "-0.47%" → 百分比数值"""
+    try:
+        return round(float(str(v).replace("%", "")), 2)
+    except (ValueError, TypeError):
+        return 0.0
+
+
+def collect_fundflow():
+    """行业净流入TOP8/净流出TOP3 + 个股净流入TOP10"""
+    try:
+        ind = ak.stock_fund_flow_industry(symbol="即时")
+    except Exception:
+        ind = None
+    industry_in, industry_out = [], []
+    if ind is not None and not ind.empty:
+        ind = ind.copy()
+        ind["_net"] = ind["净额"].map(_parse_yi)
+        ind = ind.sort_values("_net", ascending=False)
+        for _, r in ind.head(8).iterrows():
+            industry_in.append({
+                "name": str(r.get("行业", "")),
+                "net": float(r["_net"]),
+                "pct": _parse_pct(r.get("行业-涨跌幅", 0)),
+                "leader": str(r.get("领涨股", "") or ""),
+                "leader_pct": _parse_pct(r.get("领涨股-涨跌幅", 0)),
+            })
+        for _, r in ind.tail(3).iterrows():
+            industry_out.append({
+                "name": str(r.get("行业", "")),
+                "net": float(r["_net"]),
+                "pct": _parse_pct(r.get("行业-涨跌幅", 0)),
+            })
+    try:
+        stk = ak.stock_fund_flow_individual(symbol="即时")
+    except Exception:
+        stk = None
+    stock_in = []
+    if stk is not None and not stk.empty:
+        stk = stk.copy()
+        stk["_net"] = stk["净额"].map(_parse_yi)
+        stk = stk.sort_values("_net", ascending=False)
+        for _, r in stk.head(30).iterrows():   # 取前30再过滤异常值
+            net = float(r["_net"])
+            if net > 100:   # 单日个股净流入超过100亿属脏数据
+                continue
+            stock_in.append({
+                "code": str(r.get("股票代码", "") or ""),
+                "name": str(r.get("股票简称", "") or ""),
+                "net": net,
+                "pct": _parse_pct(r.get("涨跌幅", 0)),
+            })
+            if len(stock_in) >= 10:
+                break
+    return {"industry_in": industry_in, "industry_out": industry_out, "stock_in": stock_in}
+
+
+# ---------- 6. 机构调研排行（东财 datacenter 直连，近7天 TOP8） ----------
 def collect_research():
     """按股票聚合近7天机构调研：SUM=单次调研机构家数峰值，count=调研批次"""
     url = "https://datacenter-web.eastmoney.com/api/data/v1/get"
@@ -418,6 +495,9 @@ def main():
 
     sentiment_data = safe(collect_sentiment) or {}
     save_json("sentiment.json", sentiment_data)
+
+    fundflow_data = safe(collect_fundflow) or {}
+    save_json("fundflow.json", fundflow_data)
 
     earn_data = safe(collect_earnings) or []
     save_json("earnings.json", earn_data)

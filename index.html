@@ -292,9 +292,11 @@ svg text{font-family:inherit}
     <h2>短期机会 <span class="tag red">情绪+资金</span></h2>
     <h3>情绪温度计 · 最近交易日 <span style="font-weight:400;font-size:12px;color:var(--txt3)">短线市场热度</span></h3>
     <div id="sentimentBox"></div>
+    <h3>主力资金流向 <span style="font-weight:400;font-size:12px;color:var(--txt3)">钱往哪去</span></h3>
+    <div id="fundflowBox"></div>
     <h3>机构调研 · 近 7 天 TOP8 <span style="font-weight:400;font-size:12px;color:var(--txt3)">机构正在关注谁</span></h3>
     <div id="researchList"></div>
-    <div class="plan-hint">建设中（按计划推进）：<br>② 主力资金流向 —— 净流入板块 / 个股榜<br>③ 龙虎榜拆解 —— 游资 / 机构席位动向</div>
+    <div class="plan-hint">建设中（按计划推进）：<br>③ 龙虎榜拆解 —— 游资 / 机构席位动向</div>
   </section>
 </div>
 
@@ -390,13 +392,23 @@ function demoData(){
       {code:'688062',name:'迈威生物',sum:93,count:1,date:t0,price:30.51,pct:7.62} ],
     sentiment:{ date:daysFromNow(-1), zt:74, dt:4, zb:26, zb_rate:26, max_lb:4,
       lb_dist:[{lb:1,count:61},{lb:2,count:6},{lb:3,count:2},{lb:4,count:5}],
-      score:66, level:'发酵', note:'', industries:[{name:'元件',count:11},{name:'医疗服务',count:8},{name:'化学制药',count:6},{name:'通信设备',count:4},{name:'半导体',count:4},{name:'化学制品',count:3}] }
+      score:66, level:'发酵', note:'', industries:[{name:'元件',count:11},{name:'医疗服务',count:8},{name:'化学制药',count:6},{name:'通信设备',count:4},{name:'半导体',count:4},{name:'化学制品',count:3}] },
+    fundflow:{ industry_in:[ {name:'半导体',net:119.46,pct:3.37,leader:'兆易创新',leader_pct:8.32},
+      {name:'化学制药',net:70.44,pct:4.4,leader:'恒瑞医药',leader_pct:4.82},
+      {name:'医疗服务',net:45.63,pct:8.34,leader:'博腾股份',leader_pct:20.02},
+      {name:'工业金属',net:43.05,pct:2.38,leader:'铜陵有色',leader_pct:5.94},
+      {name:'贵金属',net:30.63,pct:4.11,leader:'招金黄金',leader_pct:3.2},
+      {name:'元件',net:28.9,pct:6.45,leader:'一博科技',leader_pct:20.0} ],
+      industry_out:[ {name:'银行',net:-26.14,pct:0.5},{name:'IT服务',net:-28.54,pct:-1.2},{name:'软件开发',net:-31.94,pct:-1.8} ],
+      stock_in:[ {code:'600276',name:'恒瑞医药',net:19.24,pct:4.82},{code:'603259',name:'药明康德',net:13.88,pct:8.49},
+        {code:'603986',name:'兆易创新',net:11.92,pct:8.32},{code:'600363',name:'联创光电',net:10.53,pct:2.8},
+        {code:'300476',name:'胜宏科技',net:10.4,pct:12.01},{code:'002156',name:'通富微电',net:10.3,pct:6.17} ] }
   };
 }
 
 /* ================= 数据加载 ================= */
 async function loadAll(){
-  const files = ['index_snapshot','sector_rank','economic_calendar','unlock_calendar','earnings','watchlist_quotes','history','research_rank','sentiment','last_update'];
+  const files = ['index_snapshot','sector_rank','economic_calendar','unlock_calendar','earnings','watchlist_quotes','history','research_rank','sentiment','fundflow','last_update'];
   const map = {};
   let gotAny = false;
   await Promise.all(files.map(async f => {
@@ -410,7 +422,7 @@ async function loadAll(){
       index: map.index_snapshot || [], sector: map.sector_rank || [], econ: map.economic_calendar || [],
       unlock: map.unlock_calendar || [], earn: map.earnings || [], watch: map.watchlist_quotes || [],
       history: map.history || [], research: map.research_rank || [], sentiment: map.sentiment || {},
-      upd: map.last_update && map.last_update.time || ''
+      fundflow: map.fundflow || {}, upd: map.last_update && map.last_update.time || ''
     };
   }else{
     DATA = demoData();
@@ -559,6 +571,26 @@ function renderSentiment(){
     '</div>' +
     '<div style="font-size:13px;color:var(--txt2)">连板梯队：' + lbHtml + '</div>' +
     '<div class="senti-ind">涨停集中行业：' + indHtml + '</div>';
+}
+function renderFundflow(){
+  const f = DATA.fundflow || {};
+  const box = $('fundflowBox');
+  const indIn = f.industry_in || [];
+  if(!indIn.length){ box.innerHTML = '<div class="empty">暂无资金流数据（交易日收盘后更新）</div>'; return; }
+  const maxIn = Math.max(...indIn.map(x => Math.abs(x.net)), 1);
+  const indHtml = indIn.map(x => {
+    const w = Math.min(100, Math.abs(x.net) / maxIn * 100);
+    return '<div class="bar-row"><span class="bar-label">' + esc(x.name) + '</span><div class="bar-track"><div class="bar-fill" style="width:' + w + '%;background:var(--up)"></div></div><span class="bar-pct" style="color:var(--up);width:auto;min-width:92px">+' + x.net + '亿</span><span class="bar-pct" style="width:56px">' + fmtPct(x.pct) + '</span></div>';
+  }).join('');
+  const outHtml = (f.industry_out||[]).map(x => '<span class="chip green">' + esc(x.name) + ' ' + x.net + '亿</span>').join(' ');
+  const stkHtml = (f.stock_in||[]).slice(0,10).map((s,i) =>
+    '<tr><td style="color:var(--txt3)">' + (i+1) + '</td><td><b>' + esc(s.name) + '</b></td><td style="color:var(--txt2)">' + esc(s.code) + '</td><td class="num" style="color:var(--up);font-weight:600">+' + s.net + '亿</td><td class="num ' + clsPct(s.pct) + '">' + fmtPct(s.pct) + '</td></tr>'
+  ).join('');
+  box.innerHTML =
+    '<div style="font-size:13px;color:var(--txt2);margin-bottom:4px">行业净流入 TOP8</div>' + indHtml +
+    '<div class="senti-ind"><span>净流出：</span>' + outHtml + '</div>' +
+    '<div style="font-size:13px;color:var(--txt2);margin:12px 0 4px">个股净流入 TOP10</div>' +
+    '<div class="tbl-wrap"><table class="tbl"><thead><tr><th>#</th><th>名称</th><th>代码</th><th class="num">净流入</th><th class="num">涨跌幅</th></tr></thead><tbody>' + stkHtml + '</tbody></table></div>';
 }
 function renderResearch(){
   $('researchList').innerHTML = (DATA.research||[]).slice(0,8).map((r,i) => {
@@ -797,7 +829,7 @@ function restoreTab(){
 }
 
 /* ================= 渲染 ================= */
-function renderAll(){ renderToday(); renderAhead(); renderReview(); renderSentiment(); renderResearch(); renderLong(); renderNotes(); }
+function renderAll(){ renderToday(); renderAhead(); renderReview(); renderSentiment(); renderFundflow(); renderResearch(); renderLong(); renderNotes(); }
 /* ================= 启动 ================= */
 initNoteDate();
 restoreTab();
