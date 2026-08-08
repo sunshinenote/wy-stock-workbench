@@ -1,0 +1,156 @@
+{
+ "top10": [
+  {
+   "code": "000550",
+   "name": "江铃汽车",
+   "year_avg": 6.88,
+   "div_count": 53,
+   "list_years": 32.7,
+   "total_div": 220.1
+  },
+  {
+   "code": "000429",
+   "name": "粤高速A",
+   "year_avg": 6.41,
+   "div_count": 52,
+   "list_years": 28.5,
+   "total_div": 179.6
+  },
+  {
+   "code": "000541",
+   "name": "佛山照明",
+   "year_avg": 6.12,
+   "div_count": 58,
+   "list_years": 32.7,
+   "total_div": 195.7
+  },
+  {
+   "code": "000726",
+   "name": "鲁泰A",
+   "year_avg": 6.08,
+   "div_count": 53,
+   "list_years": 25.6,
+   "total_div": 152.1
+  },
+  {
+   "code": "000581",
+   "name": "威孚高科",
+   "year_avg": 5.76,
+   "div_count": 52,
+   "list_years": 27.9,
+   "total_div": 155.5
+  },
+  {
+   "code": "601088",
+   "name": "中国神华",
+   "year_avg": 5.17,
+   "div_count": 19,
+   "list_years": 18.8,
+   "total_div": 93.0
+  },
+  {
+   "code": "601288",
+   "name": "农业银行",
+   "year_avg": 5.12,
+   "div_count": 16,
+   "list_years": 16.1,
+   "total_div": 76.8
+  },
+  {
+   "code": "000022",
+   "name": "深赤湾A",
+   "year_avg": 5.09,
+   "div_count": 45,
+   "list_years": 33.3,
+   "total_div": 132.3
+  },
+  {
+   "code": "000488",
+   "name": "ST晨鸣",
+   "year_avg": 4.95,
+   "div_count": 40,
+   "list_years": 25.7,
+   "total_div": 123.7
+  },
+  {
+   "code": "601006",
+   "name": "大秦铁路",
+   "year_avg": 4.91,
+   "div_count": 20,
+   "list_years": 20.0,
+   "total_div": 93.2
+  }
+ ],
+ "mine": [
+  {
+   "code": "601318",
+   "name": "中国平安",
+   "year_avg": 2.27,
+   "div_count": 37,
+   "list_years": 19.4
+  },
+  {
+   "code": "600519",
+   "name": "贵州茅台",
+   "year_avg": 1.62,
+   "div_count": 29,
+   "list_years": 24.9
+  },
+  {
+   "code": "600900",
+   "name": "长江电力",
+   "year_avg": 3.67,
+   "div_count": 27,
+   "list_years": 22.7
+  },
+  {
+   "code": "600036",
+   "name": "招商银行",
+   "year_avg": 2.95,
+   "div_count": 24,
+   "list_years": 24.3
+  },
+  {
+   "code": "000001",
+   "name": "平安银行",
+   "year_avg": 1.18,
+   "div_count": 24,
+   "list_years": 35.3
+  },
+  {
+   "code": "000858",
+   "name": "五粮液",
+   "year_avg": 1.51,
+   "div_count": 24,
+   "list_years": 28.3
+  },
+  {
+   "code": "601899",
+   "name": "紫金矿业",
+   "year_avg": 2.17,
+   "div_count": 21,
+   "list_years": 18.3
+  },
+  {
+   "code": "002594",
+   "name": "比亚迪",
+   "year_avg": 0.35,
+   "div_count": 11,
+   "list_years": 15.1
+  },
+  {
+   "code": "300750",
+   "name": "宁德时代",
+   "year_avg": 0.91,
+   "div_count": 10,
+   "list_years": 8.2
+  },
+  {
+   "code": "688981",
+   "name": "中芯国际",
+   "year_avg": 0.0,
+   "div_count": 0,
+   "list_years": 6.1
+  }
+ ]
+}

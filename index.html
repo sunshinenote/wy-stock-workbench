@@ -315,11 +315,13 @@ svg text{font-family:inherit}
     <h2>长期机会 <span class="tag" style="background:var(--down-soft);color:var(--down)">业绩+估值</span></h2>
     <h3>估值分位 · 自选股（近十年） <span style="font-weight:400;font-size:12px;color:var(--txt3)">PE/PB 历史百分位，越低越便宜</span></h3>
     <div id="valuationBox"></div>
+    <h3>高股息精选 · 分红能力榜 <span style="font-weight:400;font-size:12px;color:var(--txt3)">上市满10年·分红≥10次</span></h3>
+    <div id="divyieldBox"></div>
     <h3>业绩预告 · 最近披露</h3>
     <div class="tbl-wrap">
       <table class="tbl" id="earnTbl"></table>
     </div>
-    <div class="plan-hint">建设中（按计划推进）：<br>② 高股息精选 —— 股息率 + ROE 筛选<br>③ 牛散持仓 —— 季报期结束后追踪徐开东 / 葛卫东 / 赵建平等牛散动向</div>
+    <div class="plan-hint">建设中（按计划推进）：<br>③ 牛散持仓 —— 季报期结束后追踪徐开东 / 葛卫东 / 赵建平等牛散动向</div>
   </section>
 </div>
 
@@ -429,13 +431,28 @@ function demoData(){
       {code:'600036',name:'招商银行',pe:6.5,pe_pct:20.9,pb:0.86,pb_pct:6.2,avg_pct:13.5,state:'低估'},
       {code:'600900',name:'长江电力',pe:18.8,pe_pct:52.5,pb:2.98,pb_pct:71.7,avg_pct:62.1,state:'偏高'},
       {code:'002594',name:'比亚迪',pe:29.8,pe_pct:31.3,pb:3.54,pb_pct:35.3,avg_pct:33.3,state:'偏低'},
-      {code:'688981',name:'中芯国际',pe:218,pe_pct:93,pb:7.34,pb_pct:92,avg_pct:92.5,state:'高估'} ] }
+      {code:'688981',name:'中芯国际',pe:218,pe_pct:93,pb:7.34,pb_pct:92,avg_pct:92.5,state:'高估'} ] },
+    divyield:{ top10:[ {code:'000550',name:'江铃汽车',year_avg:6.88,div_count:53,list_years:32.7,total_div:220.1},
+      {code:'000429',name:'粤高速A',year_avg:6.41,div_count:52,list_years:28.5,total_div:182.4},
+      {code:'000541',name:'佛山照明',year_avg:6.12,div_count:58,list_years:32.7,total_div:195.7},
+      {code:'000726',name:'鲁泰A',year_avg:6.08,div_count:53,list_years:25.6,total_div:156.3},
+      {code:'000581',name:'威孚高科',year_avg:5.76,div_count:52,list_years:27.9,total_div:158.8},
+      {code:'600900',name:'长江电力',year_avg:4.85,div_count:27,list_years:23.1,total_div:101.2},
+      {code:'601988',name:'中国银行',year_avg:4.42,div_count:36,list_years:19.8,total_div:88.6},
+      {code:'601398',name:'工商银行',year_avg:4.36,div_count:37,list_years:19.8,total_div:86.4},
+      {code:'600028',name:'中国石化',year_avg:4.12,div_count:41,list_years:24.9,total_div:101.9},
+      {code:'601088',name:'中国神华',year_avg:3.98,div_count:36,list_years:19.3,total_div:75.6} ],
+      mine:[ {code:'601318',name:'中国平安',year_avg:3.2,div_count:37,list_years:19.2},
+        {code:'600519',name:'贵州茅台',year_avg:2.8,div_count:29,list_years:25.1},
+        {code:'600900',name:'长江电力',year_avg:4.85,div_count:27,list_years:23.1},
+        {code:'600036',name:'招商银行',year_avg:3.1,div_count:24,list_years:24.2},
+        {code:'688981',name:'中芯国际',year_avg:0,div_count:0,list_years:6.2} ] }
   };
 }
 
 /* ================= 数据加载 ================= */
 async function loadAll(){
-  const files = ['index_snapshot','sector_rank','economic_calendar','unlock_calendar','earnings','watchlist_quotes','history','research_rank','sentiment','fundflow','lhb','valuation','last_update'];
+  const files = ['index_snapshot','sector_rank','economic_calendar','unlock_calendar','earnings','watchlist_quotes','history','research_rank','sentiment','fundflow','lhb','valuation','divyield','last_update'];
   const map = {};
   let gotAny = false;
   await Promise.all(files.map(async f => {
@@ -449,7 +466,7 @@ async function loadAll(){
       index: map.index_snapshot || [], sector: map.sector_rank || [], econ: map.economic_calendar || [],
       unlock: map.unlock_calendar || [], earn: map.earnings || [], watch: map.watchlist_quotes || [],
       history: map.history || [], research: map.research_rank || [], sentiment: map.sentiment || {},
-      fundflow: map.fundflow || {}, lhb: map.lhb || {}, valuation: map.valuation || {},
+      fundflow: map.fundflow || {}, lhb: map.lhb || {}, valuation: map.valuation || {}, divyield: map.divyield || {},
       upd: map.last_update && map.last_update.time || ''
     };
   }else{
@@ -658,6 +675,18 @@ function renderValuation(){
     return '<div class="val-row"><span class="val-name">' + esc(s.name) + '</span><span class="chip ' + cls + '">' + esc(s.state||'—') + '</span><div class="val-track"><div class="val-fill" style="width:' + p + '%;background:' + c + '"></div></div><span class="val-num">' + peStr + pbStr + '</span></div>';
   }).join('');
   box.innerHTML = '<div style="font-size:13px;color:var(--txt2);margin-bottom:2px">分位条越靠左越低估（绿）· 越靠右越高估（红）</div>' + rows;
+}
+function renderDivyield(){
+  const d = DATA.divyield || {};
+  const box = $('divyieldBox');
+  const top = (d.top10||[]).slice(0,10);
+  if(!top.length){ box.innerHTML = '<div class="empty">暂无分红数据</div>'; return; }
+  const rows = top.map((x,i) => {
+    const noCls = i === 0 ? ' top' : (i < 3 ? ' top2' : '');
+    return '<div class="rank-row"><span class="rank-no' + noCls + '">' + (i+1) + '</span><div><div class="rank-name">' + esc(x.name) + '</div><div class="rank-sub">分红 ' + x.div_count + ' 次 · 上市 ' + x.list_years + ' 年</div></div><div class="rank-sum"><b style="color:var(--brand)">' + x.year_avg + '</b> <span>年均股息</span></div></div>';
+  }).join('');
+  const mineHtml = (d.mine||[]).map(x => '<span class="chip ' + (x.div_count >= 10 ? 'blue' : '') + '">' + esc(x.name) + ' ' + x.div_count + '次</span>').join(' ') || '—';
+  box.innerHTML = rows + '<div class="senti-ind"><span>我的自选分红次数：</span>' + mineHtml + '</div>';
 }
 function renderLong(){
   const earn = (DATA.earn||[]).slice(0,15);
@@ -888,7 +917,7 @@ function restoreTab(){
 }
 
 /* ================= 渲染 ================= */
-function renderAll(){ renderToday(); renderAhead(); renderReview(); renderSentiment(); renderFundflow(); renderLhb(); renderResearch(); renderValuation(); renderLong(); renderNotes(); }
+function renderAll(){ renderToday(); renderAhead(); renderReview(); renderSentiment(); renderFundflow(); renderLhb(); renderResearch(); renderValuation(); renderDivyield(); renderLong(); renderNotes(); }
 /* ================= 启动 ================= */
 initNoteDate();
 restoreTab();

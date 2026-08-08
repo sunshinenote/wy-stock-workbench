@@ -437,6 +437,44 @@ def collect_valuation():
     return {"stocks": stocks}
 
 
+# ---------- 5.7 高股息精选（分红能力榜：上市满10年+分红≥10次） ----------
+def collect_divyield():
+    try:
+        df = ak.stock_history_dividend()
+    except Exception:
+        return {}
+    if df is None or df.empty:
+        return {}
+    now = NOW
+    df = df.copy()
+    df["上市日期"] = pd.to_datetime(df["上市日期"], errors="coerce")
+    df["上市年限"] = (now - df["上市日期"]).dt.days / 365.25
+    pool = df[(df["上市年限"] >= 10) & (df["分红次数"] >= 10)].copy()
+    top10 = []
+    for _, r in pool.sort_values("年均股息", ascending=False).head(10).iterrows():
+        top10.append({
+            "code": str(r.get("代码", "") or ""),
+            "name": str(r.get("名称", "") or ""),
+            "year_avg": round(float(r.get("年均股息", 0) or 0), 2),
+            "div_count": int(r.get("分红次数", 0) or 0),
+            "list_years": round(float(r["上市年限"]), 1),
+            "total_div": round(float(r.get("累计股息", 0) or 0), 1),
+        })
+    codes = read_watchlist()
+    mine = []
+    if codes:
+        sub = df[df["代码"].isin(codes)]
+        for _, r in sub.sort_values("分红次数", ascending=False).iterrows():
+            mine.append({
+                "code": str(r.get("代码", "") or ""),
+                "name": str(r.get("名称", "") or ""),
+                "year_avg": round(float(r.get("年均股息", 0) or 0), 2),
+                "div_count": int(r.get("分红次数", 0) or 0),
+                "list_years": round(float(r["上市年限"]), 1),
+            })
+    return {"top10": top10, "mine": mine}
+
+
 # ---------- 6. 机构调研排行（东财 datacenter 直连，近7天 TOP8） ----------
 def collect_research():
     """按股票聚合近7天机构调研：SUM=单次调研机构家数峰值，count=调研批次"""
@@ -622,6 +660,9 @@ def main():
 
     valuation_data = safe(collect_valuation) or {}
     save_json("valuation.json", valuation_data)
+
+    divyield_data = safe(collect_divyield) or {}
+    save_json("divyield.json", divyield_data)
 
     earn_data = safe(collect_earnings) or []
     save_json("earnings.json", earn_data)
