@@ -156,6 +156,27 @@ footer{text-align:center;font-size:12px;color:var(--txt3);padding:24px 0 8px;lin
 .empty{color:var(--txt3);font-size:14px;text-align:center;padding:24px 0}
 .hidden{display:none!important}
 
+/* tabs（4 Tab 页面切换） */
+.tabs{display:flex;gap:6px;margin-top:14px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:4px;overflow-x:auto;position:sticky;top:8px;z-index:30;box-shadow:0 2px 8px rgba(28,36,48,.06)}
+.tab{flex:1;min-width:96px;min-height:44px;border:none;background:transparent;border-radius:9px;font-size:15px;font-weight:500;color:var(--txt2);cursor:pointer;white-space:nowrap;transition:background .15s,color .15s}
+.tab:hover{background:var(--bg)}
+.tab.active{background:var(--brand);color:#fff}
+.tab-panel{display:none}
+.tab-panel.active{display:block}
+.page-in{animation:pageIn .28s ease}
+@keyframes pageIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.plan-hint{background:var(--bg);border:1px dashed var(--line2);border-radius:10px;padding:12px;font-size:13px;color:var(--txt2);margin-top:10px;line-height:1.8}
+
+/* structured notes */
+.note-fields{flex:1;min-width:240px;display:flex;flex-direction:column;gap:8px}
+.note-fields input[type=text],.note-fields textarea{width:100%;font-size:16px;border:1px solid var(--line2);border-radius:10px;padding:10px 12px;min-height:44px;font-family:inherit;resize:vertical}
+.note-fields textarea{min-height:56px}
+.note-form{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:12px;align-items:flex-start}
+.note-form>input[type=date]{align-self:center}
+.note-item .fld{display:flex;gap:8px;margin-top:6px;font-size:14px}
+.note-item .fld b{flex:none;width:64px;color:var(--txt2);font-weight:500}
+.note-item .fld span{flex:1;white-space:pre-wrap;color:var(--txt)}
+
 /* modal */
 .modal-mask{position:fixed;inset:0;background:rgba(15,23,42,.45);display:none;align-items:center;justify-content:center;z-index:99;padding:20px}
 .modal-mask.show{display:flex}
@@ -751,17 +772,28 @@ function doClearAll(){
   alert('已清空本地个人数据');
 }
 
-/* ================= Tab 切换 ================= */
+/* ================= Tab 切换（Hash 路由：每个 Tab 是独立"页面"） ================= */
+const TAB_TITLES = { review:'今日复盘', ahead:'大事前瞻', short:'短期机会', long:'长期机会' };
 function switchTab(name){
+  if(!TAB_TITLES[name]) return;
   document.querySelectorAll('.tab').forEach(b => b.classList.toggle('active', b.dataset.tab === name));
-  document.querySelectorAll('.tab-panel').forEach(p => p.classList.toggle('active', p.id === 'panel-' + name));
+  document.querySelectorAll('.tab-panel').forEach(p => {
+    const on = p.id === 'panel-' + name;
+    p.classList.toggle('active', on);
+    if(on){ p.classList.remove('page-in'); void p.offsetWidth; p.classList.add('page-in'); }
+  });
   try{ localStorage.setItem('wb_stock_tab', name); }catch(e){}
+  if(location.hash !== '#' + name) history.replaceState(null, '', '#' + name);
+  document.title = TAB_TITLES[name] + ' · 股票复盘工作台';
   window.scrollTo({top:0, behavior:'smooth'});
 }
 function restoreTab(){
-  let saved = null;
-  try{ saved = localStorage.getItem('wb_stock_tab'); }catch(e){}
-  if(saved && ['review','ahead','short','long'].includes(saved)) switchTab(saved);
+  let name = (location.hash || '').replace('#', '');
+  if(!TAB_TITLES[name]){
+    try{ name = localStorage.getItem('wb_stock_tab'); }catch(e){ name = ''; }
+  }
+  if(TAB_TITLES[name]) switchTab(name);
+  else document.title = '今日复盘 · 股票复盘工作台';
 }
 
 /* ================= 渲染 ================= */
