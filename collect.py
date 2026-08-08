@@ -107,6 +107,11 @@ def collect_sector():
 
 
 # ---------- 3. 财经日历（百度股市通，未来21天） ----------
+# 关键词命中直接判"高"（对A股投资者最核心的宏观事件）
+KEY_HIGH = ["CPI", "PPI", "LPR", "FOMC", "议息", "PMI", "GDP", "社融", "M2", "MLF",
+            "降准", "降息", "美联储", "非农", "零售销售", "耐用品订单"]
+
+
 def collect_econ_calendar():
     result = []
     for i in range(1, CAL_DAYS + 1):
@@ -117,20 +122,35 @@ def collect_econ_calendar():
             continue
         if df is None or df.empty:
             continue
+        day_rows = []
         for _, r in df.iterrows():
             try:
                 imp = int(r.get("重要性", 0))
             except Exception:
                 imp = 0
-            result.append({
+            country = str(r.get("地区", "") or "")
+            event = str(r.get("事件", "") or "")
+            # 中美核心宏观事件 → 高；其他中国/美国数据 → 中（对A股最相关）
+            if ("中国" in country or "美国" in country) and any(k in event.upper() for k in KEY_HIGH):
+                imp = max(imp, 3)
+            elif "中国" in country:
+                imp = max(imp, 2)
+            elif "美国" in country:
+                imp = max(imp, 2)
+            day_rows.append({
                 "date": str(r.get("日期", ""))[:10],
                 "time": str(r.get("时间", "") or ""),
-                "country": str(r.get("地区", "") or ""),
+                "country": country,
                 "importance": "高" if imp >= 3 else ("中" if imp == 2 else "低"),
-                "event": str(r.get("事件", "") or ""),
+                "event": event,
                 "forecast": str(r.get("预期", "") or ""),
                 "previous": str(r.get("前值", "") or ""),
             })
+        # 每天降噪：中/高全保留，低只留前5条
+        day_rows.sort(key=lambda x: (-(x["importance"] == "高"), -(x["importance"] == "中"), x["time"]))
+        mid_hi = [x for x in day_rows if x["importance"] != "低"]
+        lo_rows = [x for x in day_rows if x["importance"] == "低"][:5]
+        result.extend(mid_hi + lo_rows)
         time.sleep(0.3)
     result.sort(key=lambda x: (x["date"], x["time"]))
     return result[:80]

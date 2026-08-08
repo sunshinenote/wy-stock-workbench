@@ -3,7 +3,7 @@
   "date": "2026-08-09",
   "time": "09:30",
   "country": "中国",
-  "importance": "中",
+  "importance": "高",
   "event": "中国7月PPI年率(%)",
   "forecast": "3.8",
   "previous": "4.1"
@@ -12,7 +12,7 @@
   "date": "2026-08-09",
   "time": "09:30",
   "country": "中国",
-  "importance": "中",
+  "importance": "高",
   "event": "中国7月CPI年率(%)",
   "forecast": "0.8",
   "previous": "1.0"
@@ -21,7 +21,7 @@
   "date": "2026-08-09",
   "time": "09:30",
   "country": "中国",
-  "importance": "低",
+  "importance": "高",
   "event": "中国7月CPI月率(%)",
   "forecast": "0.2",
   "previous": "-0.3"
@@ -30,7 +30,7 @@
   "date": "2026-08-09",
   "time": "09:30",
   "country": "中国",
-  "importance": "低",
+  "importance": "高",
   "event": "中国7月PPI月率(%)",
   "forecast": "nan",
   "previous": "-0.3"
@@ -48,19 +48,19 @@
   "date": "2026-08-10",
   "time": "07:50",
   "country": "日本",
-  "importance": "低",
-  "event": "日本6月未季调经常帐(亿日元)",
-  "forecast": "15120.0",
-  "previous": "39683.0"
+  "importance": "中",
+  "event": "日本6月贸易收支-央行基于海关数据季调后(亿日元)",
+  "forecast": "nan",
+  "previous": "20.45"
  },
  {
   "date": "2026-08-10",
   "time": "07:50",
   "country": "日本",
-  "importance": "中",
-  "event": "日本6月贸易收支-央行基于海关数据季调后(亿日元)",
-  "forecast": "nan",
-  "previous": "20.45"
+  "importance": "低",
+  "event": "日本6月未季调经常帐(亿日元)",
+  "forecast": "15120.0",
+  "previous": "39683.0"
  },
  {
   "date": "2026-08-10",
@@ -91,93 +91,12 @@
  },
  {
   "date": "2026-08-10",
-  "time": "07:50",
-  "country": "日本",
-  "importance": "低",
-  "event": "日本7月季调后银行贷款年率(%)",
-  "forecast": "nan",
-  "previous": "5.7"
- },
- {
-  "date": "2026-08-10",
-  "time": "08:30",
-  "country": "新加坡",
-  "importance": "低",
-  "event": "新加坡7月季调后非石油出口NODX月率(%)",
-  "forecast": "nan",
-  "previous": "nan"
- },
- {
-  "date": "2026-08-10",
-  "time": "08:30",
-  "country": "新加坡",
-  "importance": "低",
-  "event": "新加坡7月非石油出口NODX年率(%)",
-  "forecast": "nan",
-  "previous": "nan"
- },
- {
-  "date": "2026-08-10",
   "time": "08:58",
   "country": "中国",
-  "importance": "低",
+  "importance": "中",
   "event": "中国7月实际外商直接投资年率CNY-年初至今(%)",
   "forecast": "nan",
   "previous": "nan"
- },
- {
-  "date": "2026-08-10",
-  "time": "11:00",
-  "country": "印度尼西亚",
-  "importance": "低",
-  "event": "印尼7月消费者信心指数",
-  "forecast": "nan",
-  "previous": "117.8"
- },
- {
-  "date": "2026-08-10",
-  "time": "12:30",
-  "country": "日本",
-  "importance": "低",
-  "event": "日本7月企业破产件数(件)",
-  "forecast": "nan",
-  "previous": "1021.0"
- },
- {
-  "date": "2026-08-10",
-  "time": "13:00",
-  "country": "日本",
-  "importance": "低",
-  "event": "日本7月经济观察家现况指数",
-  "forecast": "nan",
-  "previous": "44.0"
- },
- {
-  "date": "2026-08-10",
-  "time": "13:00",
-  "country": "日本",
-  "importance": "低",
-  "event": "日本7月经济观察家前景指数",
-  "forecast": "nan",
-  "previous": "45.7"
- },
- {
-  "date": "2026-08-10",
-  "time": "14:30",
-  "country": "澳大利亚",
-  "importance": "低",
-  "event": "澳大利亚7月外汇储备(亿澳元)",
-  "forecast": "nan",
-  "previous": "595.63"
- },
- {
-  "date": "2026-08-10",
-  "time": "14:30",
-  "country": "澳大利亚",
-  "importance": "低",
-  "event": "澳大利亚7月黄金储备(亿澳元)",
-  "forecast": "nan",
-  "previous": "150.49"
  },
  {
   "date": "2026-08-10",
@@ -201,7 +120,7 @@
   "date": "2026-08-10",
   "time": "15:10",
   "country": "中国",
-  "importance": "低",
+  "importance": "中",
   "event": "中国8月10日上期所每日仓单变动-燃料油(吨)",
   "forecast": "nan",
   "previous": ""
@@ -210,7 +129,7 @@
   "date": "2026-08-10",
   "time": "15:10",
   "country": "中国",
-  "importance": "低",
+  "importance": "中",
   "event": "中国8月10日上期所每日仓单变动-白银(千克)",
   "forecast": "nan",
   "previous": "1387.0"
@@ -219,7 +138,7 @@
   "date": "2026-08-10",
   "time": "15:10",
   "country": "中国",
-  "importance": "低",
+  "importance": "中",
   "event": "中国8月10日上期所每日仓单变动-黄金(千克)",
   "forecast": "nan",
   "previous": ""
@@ -228,19 +147,19 @@
   "date": "2026-08-10",
   "time": "16:00",
   "country": "中国",
-  "importance": "低",
-  "event": "中国7月人民币各项贷款余额年率(%)",
+  "importance": "高",
+  "event": "中国7月M2货币供应年率(%)",
   "forecast": "nan",
   "previous": "nan"
  },
  {
   "date": "2026-08-10",
   "time": "16:00",
-  "country": "瑞士",
-  "importance": "低",
-  "event": "瑞士截至8月7日当周国内活期存款周平均额(亿瑞郎)",
+  "country": "中国",
+  "importance": "中",
+  "event": "中国7月人民币各项贷款余额年率(%)",
   "forecast": "nan",
-  "previous": "4352.51"
+  "previous": "nan"
  },
  {
   "date": "2026-08-10",
@@ -254,17 +173,8 @@
  {
   "date": "2026-08-10",
   "time": "16:00",
-  "country": "瑞士",
-  "importance": "低",
-  "event": "瑞士截至8月7日当周活期存款总计金额(亿瑞郎)",
-  "forecast": "nan",
-  "previous": "4651.67"
- },
- {
-  "date": "2026-08-10",
-  "time": "16:00",
   "country": "中国",
-  "importance": "低",
+  "importance": "中",
   "event": "中国7月M0货币供应年率(%)",
   "forecast": "nan",
   "previous": "11.8"
@@ -273,19 +183,10 @@
   "date": "2026-08-10",
   "time": "16:00",
   "country": "中国",
-  "importance": "低",
+  "importance": "中",
   "event": "中国7月M1货币供应年率(%)",
   "forecast": "nan",
   "previous": "4.0"
- },
- {
-  "date": "2026-08-10",
-  "time": "16:00",
-  "country": "中国",
-  "importance": "中",
-  "event": "中国7月M2货币供应年率(%)",
-  "forecast": "nan",
-  "previous": "nan"
  },
  {
   "date": "2026-08-10",
@@ -298,72 +199,18 @@
  },
  {
   "date": "2026-08-10",
-  "time": "17:00",
-  "country": "希腊",
-  "importance": "低",
-  "event": "希腊6月工业产值年率(%)",
-  "forecast": "nan",
-  "previous": "3.9"
- },
- {
-  "date": "2026-08-10",
-  "time": "19:30",
-  "country": "印度",
-  "importance": "低",
-  "event": "印度7月进口额USD终值(亿美元)",
-  "forecast": "nan",
-  "previous": "nan"
- },
- {
-  "date": "2026-08-10",
-  "time": "19:30",
-  "country": "印度",
-  "importance": "低",
-  "event": "印度7月出口额USD终值(亿美元)",
-  "forecast": "nan",
-  "previous": "nan"
- },
- {
-  "date": "2026-08-10",
-  "time": "19:30",
-  "country": "印度",
-  "importance": "低",
-  "event": "印度7月政府贸易赤字USD终值(亿美元)",
-  "forecast": "nan",
-  "previous": "nan"
- },
- {
-  "date": "2026-08-10",
-  "time": "20:00",
-  "country": "加拿大",
-  "importance": "低",
-  "event": "加拿大截至8月7日当周全国经济信心指数",
-  "forecast": "nan",
-  "previous": "52.8"
- },
- {
-  "date": "2026-08-10",
   "time": "22:00",
   "country": "美国",
-  "importance": "低",
+  "importance": "中",
   "event": "美国7月谘商会就业趋势指数",
   "forecast": "nan",
   "previous": "106.69"
  },
  {
   "date": "2026-08-10",
-  "time": "22:30",
-  "country": "加拿大",
-  "importance": "低",
-  "event": "加拿大第二季度贷款人员变动季率-央行调查(%)",
-  "forecast": "nan",
-  "previous": "nan"
- },
- {
-  "date": "2026-08-10",
   "time": "23:30",
   "country": "美国",
-  "importance": "低",
+  "importance": "中",
   "event": "美国8月10日6个月期国债竞拍-总金额(亿美元)",
   "forecast": "nan",
   "previous": "852.63"
@@ -372,7 +219,7 @@
   "date": "2026-08-10",
   "time": "23:30",
   "country": "美国",
-  "importance": "低",
+  "importance": "中",
   "event": "美国8月10日6个月期国债竞拍-中标利率(%)",
   "forecast": "nan",
   "previous": "3.86"
@@ -381,7 +228,7 @@
   "date": "2026-08-10",
   "time": "23:30",
   "country": "美国",
-  "importance": "低",
+  "importance": "中",
   "event": "美国8月10日6个月期国债竞拍-高配置百分比(%)",
   "forecast": "nan",
   "previous": "65.4"
@@ -390,7 +237,7 @@
   "date": "2026-08-10",
   "time": "23:30",
   "country": "美国",
-  "importance": "低",
+  "importance": "中",
   "event": "美国8月10日3个月期国债竞拍-高配置百分比(%)",
   "forecast": "nan",
   "previous": "10.13"
@@ -399,7 +246,7 @@
   "date": "2026-08-10",
   "time": "23:30",
   "country": "美国",
-  "importance": "低",
+  "importance": "中",
   "event": "美国8月10日3个月期国债竞拍-总金额(亿美元)",
   "forecast": "nan",
   "previous": "992.94"
@@ -408,7 +255,7 @@
   "date": "2026-08-10",
   "time": "23:30",
   "country": "美国",
-  "importance": "低",
+  "importance": "中",
   "event": "美国8月10日3个月期国债竞拍-投标倍数(亿美元)",
   "forecast": "nan",
   "previous": "2.61"
@@ -417,7 +264,7 @@
   "date": "2026-08-10",
   "time": "23:30",
   "country": "美国",
-  "importance": "低",
+  "importance": "中",
   "event": "美国8月10日3个月期国债竞拍-中标利率(%)",
   "forecast": "nan",
   "previous": "3.75"
@@ -426,7 +273,7 @@
   "date": "2026-08-10",
   "time": "23:30",
   "country": "美国",
-  "importance": "低",
+  "importance": "中",
   "event": "美国8月10日6个月期国债竞拍-投标倍数(亿美元)",
   "forecast": "nan",
   "previous": "2.98"
@@ -453,7 +300,7 @@
   "date": "2026-08-11",
   "time": "06:30",
   "country": "美国",
-  "importance": "低",
+  "importance": "中",
   "event": "美国8月7日COMEX白银库存变动-每日(百盎司)",
   "forecast": "nan",
   "previous": "nan"
@@ -462,7 +309,7 @@
   "date": "2026-08-11",
   "time": "06:30",
   "country": "美国",
-  "importance": "低",
+  "importance": "中",
   "event": "美国8月7日COMEX黄金库存变动-每日(百盎司)",
   "forecast": "nan",
   "previous": "nan"
@@ -471,7 +318,7 @@
   "date": "2026-08-11",
   "time": "06:30",
   "country": "美国",
-  "importance": "低",
+  "importance": "中",
   "event": "美国8月7日NYMEX钯金库存-每日更新(百盎司)",
   "forecast": "nan",
   "previous": "nan"
@@ -480,7 +327,7 @@
   "date": "2026-08-11",
   "time": "06:30",
   "country": "美国",
-  "importance": "低",
+  "importance": "中",
   "event": "美国8月7日NYMEX钯金库存变动-每日(百盎司)",
   "forecast": "nan",
   "previous": "nan"
@@ -498,7 +345,7 @@
   "date": "2026-08-11",
   "time": "06:30",
   "country": "美国",
-  "importance": "低",
+  "importance": "中",
   "event": "美国8月7日COMEX白银库存-每日更新(百盎司)",
   "forecast": "nan",
   "previous": "nan"
@@ -516,7 +363,7 @@
   "date": "2026-08-11",
   "time": "06:30",
   "country": "美国",
-  "importance": "低",
+  "importance": "中",
   "event": "美国8月10日iShares白银持仓变动-每日(吨)",
   "forecast": "nan",
   "previous": "nan"
@@ -534,7 +381,7 @@
   "date": "2026-08-11",
   "time": "06:30",
   "country": "美国",
-  "importance": "低",
+  "importance": "中",
   "event": "美国8月10日iShares黄金持仓变动-每日(吨)",
   "forecast": "nan",
   "previous": "nan"
@@ -543,7 +390,7 @@
   "date": "2026-08-11",
   "time": "06:30",
   "country": "美国",
-  "importance": "低",
+  "importance": "中",
   "event": "美国8月7日NYMEX铂金库存-每日更新(百盎司)",
   "forecast": "nan",
   "previous": "nan"
@@ -552,7 +399,7 @@
   "date": "2026-08-11",
   "time": "06:30",
   "country": "美国",
-  "importance": "低",
+  "importance": "中",
   "event": "美国8月10日SPDR黄金持仓变动-每日(吨)",
   "forecast": "nan",
   "previous": "nan"
@@ -561,7 +408,7 @@
   "date": "2026-08-11",
   "time": "06:30",
   "country": "美国",
-  "importance": "低",
+  "importance": "中",
   "event": "美国8月7日NYMEX铂金库存变动-每日(百盎司)",
   "forecast": "nan",
   "previous": "nan"
@@ -604,93 +451,12 @@
  },
  {
   "date": "2026-08-11",
-  "time": "08:00",
-  "country": "新加坡",
-  "importance": "低",
-  "event": "新加坡第二季度季调后GDP季率初值(%)",
-  "forecast": "nan",
-  "previous": "1.1"
- },
- {
-  "date": "2026-08-11",
-  "time": "08:30",
-  "country": "澳大利亚",
-  "importance": "低",
-  "event": "澳大利亚截至8月9日当周ANZ消费者对未来5年经济预期",
-  "forecast": "nan",
-  "previous": "80.2"
- },
- {
-  "date": "2026-08-11",
-  "time": "08:30",
-  "country": "澳大利亚",
-  "importance": "低",
-  "event": "澳大利亚截至8月9日当周ANZ消费者对未来1年财务状况预期",
-  "forecast": "nan",
-  "previous": "83.9"
- },
- {
-  "date": "2026-08-11",
-  "time": "08:30",
-  "country": "澳大利亚",
-  "importance": "低",
-  "event": "澳大利亚截至8月9日当周ANZ消费者对未来2年通胀预期",
-  "forecast": "nan",
-  "previous": "5.5"
- },
- {
-  "date": "2026-08-11",
-  "time": "08:30",
-  "country": "澳大利亚",
-  "importance": "低",
-  "event": "澳大利亚截至8月9日当周ANZ消费者对未来1年经济预期",
-  "forecast": "nan",
-  "previous": "74.2"
- },
- {
-  "date": "2026-08-11",
   "time": "08:30",
   "country": "澳大利亚",
   "importance": "中",
   "event": "澳大利亚截至8月9日当周ANZ消费者信心指数",
   "forecast": "nan",
   "previous": "74.7"
- },
- {
-  "date": "2026-08-11",
-  "time": "08:30",
-  "country": "澳大利亚",
-  "importance": "低",
-  "event": "澳大利亚截至8月9日当周ANZ消费者对当前财务较1年前评价",
-  "forecast": "nan",
-  "previous": "66.8"
- },
- {
-  "date": "2026-08-11",
-  "time": "09:30",
-  "country": "澳大利亚",
-  "importance": "低",
-  "event": "澳大利亚7月NAB月度商业景气指数",
-  "forecast": "nan",
-  "previous": "3.0"
- },
- {
-  "date": "2026-08-11",
-  "time": "11:00",
-  "country": "印度尼西亚",
-  "importance": "低",
-  "event": "印尼6月零售销售指数年率(%)",
-  "forecast": "nan",
-  "previous": "-3.9"
- },
- {
-  "date": "2026-08-11",
-  "time": "12:00",
-  "country": "马来西亚",
-  "importance": "低",
-  "event": "马来西亚6月工业产值年率(%)",
-  "forecast": "nan",
-  "previous": "8.4"
  },
  {
   "date": "2026-08-11",
@@ -705,7 +471,7 @@
   "date": "2026-08-11",
   "time": "15:10",
   "country": "中国",
-  "importance": "低",
+  "importance": "中",
   "event": "中国8月11日上期所每日仓单变动-白银(千克)",
   "forecast": "nan",
   "previous": "nan"
@@ -714,9 +480,243 @@
   "date": "2026-08-11",
   "time": "15:10",
   "country": "中国",
-  "importance": "低",
+  "importance": "中",
   "event": "中国8月11日上期所每日仓单变动-黄金(千克)",
   "forecast": "nan",
   "previous": "nan"
+ },
+ {
+  "date": "2026-08-11",
+  "time": "15:10",
+  "country": "中国",
+  "importance": "中",
+  "event": "中国8月11日上期所每日仓单变动-燃料油(吨)",
+  "forecast": "nan",
+  "previous": "nan"
+ },
+ {
+  "date": "2026-08-11",
+  "time": "15:10",
+  "country": "中国",
+  "importance": "中",
+  "event": "中国8月11日上期所每日仓单变动-原油(桶)",
+  "forecast": "nan",
+  "previous": "nan"
+ },
+ {
+  "date": "2026-08-11",
+  "time": "15:10",
+  "country": "中国",
+  "importance": "中",
+  "event": "中国8月11日上期所每日仓单变动-铜(吨)",
+  "forecast": "nan",
+  "previous": "nan"
+ },
+ {
+  "date": "2026-08-11",
+  "time": "18:00",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国7月NFIB小型企业信心指数",
+  "forecast": "nan",
+  "previous": "97.4"
+ },
+ {
+  "date": "2026-08-11",
+  "time": "20:15",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国截至7月25日当周ADP就业周度发布变动(万人)",
+  "forecast": "nan",
+  "previous": "1.5"
+ },
+ {
+  "date": "2026-08-11",
+  "time": "20:55",
+  "country": "美国",
+  "importance": "高",
+  "event": "美国截至8月3日当周红皮书商业零售销售年率(%)",
+  "forecast": "nan",
+  "previous": "8.7"
+ },
+ {
+  "date": "2026-08-11",
+  "time": "22:00",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国7月成屋销售年化月率(%)",
+  "forecast": "-0.7",
+  "previous": "-2.4"
+ },
+ {
+  "date": "2026-08-11",
+  "time": "22:00",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国7月成屋销售年化总数(万户)",
+  "forecast": "407.0",
+  "previous": "409.0"
+ },
+ {
+  "date": "2026-08-12",
+  "time": "00:00",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国8月EIA月报展望-当年干天然气产量(亿立方英尺/日)",
+  "forecast": "nan",
+  "previous": "1112.0"
+ },
+ {
+  "date": "2026-08-12",
+  "time": "00:00",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国8月EIA月报预估-次年布伦特原油价格(美元/桶)",
+  "forecast": "nan",
+  "previous": "64.76"
+ },
+ {
+  "date": "2026-08-12",
+  "time": "00:00",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国8月EIA月报预估-次年WTI原油价格(美元/桶)",
+  "forecast": "nan",
+  "previous": "60.76"
+ },
+ {
+  "date": "2026-08-12",
+  "time": "00:00",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国8月EIA月报展望-次年干天然气产量(亿立方英尺/日)",
+  "forecast": "nan",
+  "previous": "1153.0"
+ },
+ {
+  "date": "2026-08-12",
+  "time": "00:00",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国8月EIA月报预估-次年天然气价格(美元/千立方英尺)",
+  "forecast": "nan",
+  "previous": "3.63"
+ },
+ {
+  "date": "2026-08-12",
+  "time": "00:00",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国8月EIA月报预估-当年布伦特原油价格(美元/桶)",
+  "forecast": "nan",
+  "previous": "81.82"
+ },
+ {
+  "date": "2026-08-12",
+  "time": "00:00",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国8月EIA月报预估-当年天然气价格(美元/千立方英尺)",
+  "forecast": "nan",
+  "previous": "3.81"
+ },
+ {
+  "date": "2026-08-12",
+  "time": "00:00",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国8月EIA月报展望-当年美国原油产量(万桶/日)",
+  "forecast": "nan",
+  "previous": "1378.0"
+ },
+ {
+  "date": "2026-08-12",
+  "time": "00:00",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国8月EIA月报预估-当年WTI原油价格(美元/桶)",
+  "forecast": "nan",
+  "previous": "76.26"
+ },
+ {
+  "date": "2026-08-12",
+  "time": "00:00",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国8月EIA月报展望-次年美国原油产量(万桶/日)",
+  "forecast": "nan",
+  "previous": "1403.0"
+ },
+ {
+  "date": "2026-08-12",
+  "time": "01:00",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国8月11日3年期国债竞拍-投标倍数(亿美元)",
+  "forecast": "nan",
+  "previous": "2.6"
+ },
+ {
+  "date": "2026-08-12",
+  "time": "01:00",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国8月11日3年期国债竞拍-高配置百分比(%)",
+  "forecast": "nan",
+  "previous": "2.17"
+ },
+ {
+  "date": "2026-08-12",
+  "time": "01:00",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国8月11日3年期国债竞拍-总金额(亿美元)",
+  "forecast": "nan",
+  "previous": "580.0"
+ },
+ {
+  "date": "2026-08-12",
+  "time": "01:00",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国8月11日3年期国债竞拍-高收益率(%)",
+  "forecast": "nan",
+  "previous": "4.18"
+ },
+ {
+  "date": "2026-08-12",
+  "time": "04:30",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国截至8月7日当周API每周取暖油库存(万桶)",
+  "forecast": "nan",
+  "previous": "-11.8"
+ },
+ {
+  "date": "2026-08-12",
+  "time": "04:30",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国截至8月7日当周API馏分油库存变动(万桶)",
+  "forecast": "nan",
+  "previous": "-123.2"
+ },
+ {
+  "date": "2026-08-12",
+  "time": "04:30",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国截至8月7日当周API原油库存变动(万桶)",
+  "forecast": "nan",
+  "previous": "269.0"
+ },
+ {
+  "date": "2026-08-12",
+  "time": "04:30",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国截至8月7日当周API汽油库存变动(万桶)",
+  "forecast": "nan",
+  "previous": "15.6"
  }
 ]

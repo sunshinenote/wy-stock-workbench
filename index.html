@@ -67,6 +67,30 @@ button.danger{color:var(--danger)}
 .tl-date{font-size:13px;font-weight:600;color:var(--brand)}
 .tl-event{font-size:15px}
 .tl-meta{font-size:13px;color:var(--txt2);display:flex;flex-wrap:wrap;gap:8px;margin-top:2px}
+
+/* timeline grouped by day */
+.tl-group{position:relative;padding:9px 0}
+.tl-group::before{content:"";position:absolute;left:-19px;top:17px;width:10px;height:10px;border-radius:50%;background:var(--brand);border:2px solid #fff;box-shadow:0 0 0 2px var(--brand-soft)}
+.tl-group.warn::before{background:var(--warn)}
+.tl-group.hot::before{background:var(--danger)}
+.tl-head{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:2px}
+.tl-day{font-size:14px;font-weight:600;color:var(--brand)}
+.tl-group.hot .tl-day{color:var(--danger)}
+.tl-count{font-size:12px;color:var(--txt3)}
+.ev-row{display:flex;align-items:baseline;gap:8px;padding:4px 0;font-size:14px}
+.imp-dot{flex:none;width:8px;height:8px;border-radius:50%;align-self:center}
+.imp-dot.hi{background:var(--danger)}
+.imp-dot.mid{background:var(--warn)}
+.imp-dot.lo{background:#b8c2d0}
+.ev-name{font-weight:500}
+.ev-name.hi{font-weight:600;color:var(--danger)}
+.ev-meta{font-size:12px;color:var(--txt3);margin-left:auto;white-space:nowrap}
+.ev-meta.first{margin-left:0}
+.ev-low{margin:4px 0 4px 16px;border-top:1px dashed var(--line);padding-top:4px}
+.ev-low summary{font-size:13px;color:var(--txt2);cursor:pointer;list-style:none}
+.ev-low summary::before{content:"▸ ";color:var(--txt3)}
+.ev-low[open] summary::before{content:"▾ "}
+.ev-low .ev-row{font-size:13px;color:var(--txt2)}
 .chip{display:inline-block;font-size:12px;padding:1px 8px;border-radius:6px;background:var(--bg);border:1px solid var(--line);color:var(--txt2)}
 .chip.red{background:var(--up-soft);color:var(--up);border-color:transparent}
 .chip.green{background:var(--down-soft);color:var(--down);border-color:transparent}
@@ -328,6 +352,12 @@ function cdBadge(dstr){
 }
 function esc(s){ return String(s==null?'':s).replace(/[&<>"']/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
 
+/* 前瞻：重要性排序与日期格式化 */
+function impRank(i){ return i==='高'?2:i==='中'?1:0; }
+const WEEK_CN = ['日','一','二','三','四','五','六'];
+function fmtDay(dstr){ const t = new Date(dstr + 'T00:00:00'); return dstr.slice(5) + ' 周' + WEEK_CN[t.getDay()]; }
+function impDotCls(i){ return i==='高'?'hi':(i==='中'?'mid':'lo'); }
+
 /* ================= 今天要处理 ================= */
 function renderToday(){
   const list = $('todayList'); list.innerHTML = '';
@@ -343,7 +373,8 @@ function renderToday(){
   // 今日大事
   if(todayEcon.length || todayUnlock.length){
     const evs = [...todayEcon.map(e=>e.event), ...todayUnlock.map(u=>u.name+' 解禁 '+u.unlock_value+'亿')];
-    html += item('alert', '今日大事', evs.join(' · '), '', '');
+    const shown = evs.slice(0, 3).join(' · ');
+    html += item('alert', '今日大事', shown + (evs.length > 3 ? ' 等 ' + evs.length + ' 项' : ''), '', '');
   }
   // 未来3天高重要性事件
   soonEcon.filter(e=>e.importance==='高').forEach(e=>{
@@ -379,23 +410,41 @@ function renderAhead(){
   const unlock = (DATA.unlock||[]).sort((a,b)=>b.unlock_value-a.unlock_value);
   const earn = (DATA.earn||[]).slice(0,15);
 
+  // 按天分组（统计卡与时间线共用）
+  const groups = {};
+  econ.forEach(e => { if(e.date) (groups[e.date] = groups[e.date] || []).push(e); });
+  const dates = Object.keys(groups).sort().filter(d => dayDiff(d) >= 0).slice(0, 14);
+
   // 统计卡
   const highCount = econ.filter(e=>e.importance==='高').length;
   const weekEvents = econ.filter(e=>{const d=dayDiff(e.date); return d>=0&&d<=7;}).length;
   const unlockTotal = unlock.slice(0,5).reduce((s,u)=>s+u.unlock_value,0);
   $('aheadStats').innerHTML = [
-    stat('未来 45 天宏观事件', econ.length + ' 项', ''),
-    stat('未来 7 天关键节点', weekEvents + ' 项', '高重要性 ' + highCount + ' 项'),
+    stat('宏观事件', econ.length + ' 项', '覆盖 ' + dates.length + ' 天'),
+    stat('未来 7 天节点', weekEvents + ' 项', '高重要性 ' + highCount + ' 项'),
     stat('解禁市值 TOP5', unlockTotal.toFixed(1) + ' 亿', ''),
     stat('业绩预告样本', earn.length + ' 条', '')
   ].join('');
 
-  // 财经日历时间线
+  // 财经日历时间线（按天分组，重要性色阶，紧急高亮）
+  const evRow = (e) => {
+    const hi = e.importance === '高';
+    const timeHtml = e.time && e.time !== '—' && e.time ? '<span class="ev-meta first">' + esc(e.time) + '</span>' : '';
+    return '<div class="ev-row"><span class="imp-dot ' + impDotCls(e.importance) + '"></span><span class="ev-name' + (hi?' hi':'') + '">' + esc(e.event) + '</span>' + timeHtml + '<span class="ev-meta">前值 ' + esc(e.previous||'—') + ' · 预期 ' + esc(e.forecast||'—') + '</span></div>';
+  };
   let tl = '';
-  econ.slice(0,18).forEach(e => {
-    const d = dayDiff(e.date);
-    const hot = e.importance==='高' && d<=7;
-    tl += '<div class="tl-item ' + (e.importance==='高'?'hot':'warn') + '"><div class="tl-date">' + e.date + ' ' + e.time + ' <span class="chip ' + (hot?'red':'amber') + '">' + e.importance + '</span></div><div class="tl-event">' + esc(e.event) + '</div><div class="tl-meta">' + esc(e.country) + ' · 前值 ' + esc(e.previous||'—') + ' · 预期 ' + esc(e.forecast||'—') + cdBadge(e.date) + '</div></div>';
+  dates.forEach(date => {
+    const evs = groups[date].sort((a,b) => (impRank(b.importance) - impRank(a.importance)) || a.time.localeCompare(b.time));
+    const d = dayDiff(date);
+    const hiN = evs.filter(e => e.importance === '高').length;
+    const urgent = d >= 0 && d <= 3;
+    const groupCls = hiN ? 'hot' : (urgent ? 'warn' : '');
+    let body = evs.slice(0, 8).map(e => evRow(e)).join('');
+    if(evs.length > 8){
+      const rest = evs.slice(8).map(e => evRow(e, true)).join('');
+      body += '<details class="ev-low"><summary>还有 ' + (evs.length - 8) + ' 条事件</summary>' + rest + '</details>';
+    }
+    tl += '<div class="tl-group ' + groupCls + '"><div class="tl-head"><span class="tl-day">' + fmtDay(date) + '</span>' + (hiN ? '<span class="chip red">高重要 ×' + hiN + '</span>' : '') + cdBadge(date) + '<span class="tl-count">' + evs.length + ' 项</span></div>' + body + '</div>';
   });
   $('econList').innerHTML = tl || '<div class="empty">暂无财经日历数据</div>';
 
