@@ -642,6 +642,64 @@ def collect_exec_hold():
     return {"stocks": result[:15]}
 
 
+# ---------- 5.10 私募/公募增持榜（十大流通股东，连续两期加仓标记） ----------
+def _prev_report_period(report):
+    """当前报告期 → 上一期（如 20260331 → 20251231）"""
+    y, mmdd = int(report[:4]), report[4:]
+    if mmdd == "0331":
+        return f"{y - 1}1231"
+    if mmdd == "0630":
+        return f"{y}0331"
+    if mmdd == "0930":
+        return f"{y}0630"
+    return f"{y}0930"
+
+
+def _inst_hold_by_type(df, types):
+    """统计指定股东类型的增持(增加/新进)家数 → {code: {name, count}}"""
+    sub = df[df["股东类型"].isin(types) & df["期末持股-持股变动"].isin(["增加", "新进"])]
+    agg = {}
+    for _, r in sub.iterrows():
+        code = str(r.get("股票代码", "") or "")
+        if not code:
+            continue
+        item = agg.setdefault(code, {"name": str(r.get("股票简称", "") or ""), "count": 0})
+        item["count"] += 1
+    return agg
+
+
+def collect_inst_hold():
+    """私募/公募增持：最新报告期被多家增持 + 上期也增持→连续加仓"""
+    report = _latest_report_period()
+    prev = _prev_report_period(report)
+    try:
+        df_now = ak.stock_gdfx_free_holding_detail_em(date=report)
+        df_prev = ak.stock_gdfx_free_holding_detail_em(date=prev)
+    except Exception:
+        return {}
+    if df_now is None or df_now.empty:
+        return {}
+
+    def _build(types, min_count):
+        cur = _inst_hold_by_type(df_now, types)
+        prev_codes = set(_inst_hold_by_type(df_prev, types).keys()) if df_prev is not None else set()
+        rows = []
+        for code, item in sorted(cur.items(), key=lambda kv: -kv[1]["count"]):
+            if item["count"] < min_count:
+                break
+            rows.append({"code": code, "name": item["name"], "count": item["count"], "consec": code in prev_codes})
+        return rows[:12]
+
+    # 私募基金 / 公募基金（东财里公募显示为"证券投资基金"）
+    private = _build(["私募基金"], 2)
+    public = _build(["证券投资基金"], 5)
+    return {
+        "report": f"{report[:4]}-{report[4:6]}-{report[6:]}",
+        "prev": f"{prev[:4]}-{prev[4:6]}-{prev[6:]}",
+        "private": private, "public": public,
+    }
+
+
 # ---------- 6. 机构调研排行（东财 datacenter 直连，近7天 TOP8） ----------
 def collect_research():
     """按股票聚合近7天机构调研：SUM=单次调研机构家数峰值，count=调研批次"""
@@ -836,6 +894,9 @@ def main():
 
     exec_hold_data = safe(collect_exec_hold) or {}
     save_json("exec_hold.json", exec_hold_data)
+
+    inst_hold_data = safe(collect_inst_hold) or {}
+    save_json("inst_hold.json", inst_hold_data)
 
     earn_data = safe(collect_earnings) or []
     save_json("earnings.json", earn_data)

@@ -1,0 +1,152 @@
+{
+ "report": "2026-03-31",
+ "prev": "2025-12-31",
+ "private": [
+  {
+   "code": "603271",
+   "name": "永杰新材",
+   "count": 6,
+   "consec": false
+  },
+  {
+   "code": "603124",
+   "name": "江南新材",
+   "count": 6,
+   "consec": false
+  },
+  {
+   "code": "301275",
+   "name": "汉朔科技",
+   "count": 5,
+   "consec": false
+  },
+  {
+   "code": "301458",
+   "name": "钧崴电子",
+   "count": 5,
+   "consec": false
+  },
+  {
+   "code": "688757",
+   "name": "胜科纳米",
+   "count": 5,
+   "consec": false
+  },
+  {
+   "code": "301479",
+   "name": "弘景光电",
+   "count": 5,
+   "consec": false
+  },
+  {
+   "code": "300881",
+   "name": "盛德鑫泰",
+   "count": 4,
+   "consec": false
+  },
+  {
+   "code": "603683",
+   "name": "晶华新材",
+   "count": 4,
+   "consec": true
+  },
+  {
+   "code": "688411",
+   "name": "海博思创",
+   "count": 4,
+   "consec": false
+  },
+  {
+   "code": "688726",
+   "name": "拉普拉斯",
+   "count": 4,
+   "consec": true
+  },
+  {
+   "code": "300235",
+   "name": "方直科技",
+   "count": 4,
+   "consec": true
+  },
+  {
+   "code": "603488",
+   "name": "展鹏科技",
+   "count": 4,
+   "consec": false
+  }
+ ],
+ "public": [
+  {
+   "code": "603402",
+   "name": "陕西旅游",
+   "count": 10,
+   "consec": false
+  },
+  {
+   "code": "688809",
+   "name": "强一股份",
+   "count": 10,
+   "consec": true
+  },
+  {
+   "code": "301662",
+   "name": "宏工科技",
+   "count": 8,
+   "consec": true
+  },
+  {
+   "code": "001233",
+   "name": "海安集团",
+   "count": 7,
+   "consec": false
+  },
+  {
+   "code": "600391",
+   "name": "航发科技",
+   "count": 7,
+   "consec": true
+  },
+  {
+   "code": "600118",
+   "name": "中国卫星",
+   "count": 7,
+   "consec": true
+  },
+  {
+   "code": "000700",
+   "name": "模塑科技",
+   "count": 6,
+   "consec": true
+  },
+  {
+   "code": "600230",
+   "name": "沧州大化",
+   "count": 6,
+   "consec": true
+  },
+  {
+   "code": "603163",
+   "name": "圣晖集成",
+   "count": 6,
+   "consec": true
+  },
+  {
+   "code": "688478",
+   "name": "晶升股份",
+   "count": 6,
+   "consec": false
+  },
+  {
+   "code": "000973",
+   "name": "佛塑科技",
+   "count": 6,
+   "consec": true
+  },
+  {
+   "code": "300161",
+   "name": "华中数控",
+   "count": 6,
+   "consec": true
+  }
+ ]
+}

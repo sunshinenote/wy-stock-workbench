@@ -332,6 +332,8 @@ svg text{font-family:inherit}
     </div>
     <h3>高管增持 · 近半年 ≥5 次 <span style="font-weight:400;font-size:12px;color:var(--txt3)">内部人信号 · 含首次增持时间</span></h3>
     <div id="execHoldBox"></div>
+    <h3>私募 / 公募增持 <span style="font-weight:400;font-size:12px;color:var(--txt3)">机构季报 · 滞后提示</span></h3>
+    <div id="instHoldBox"></div>
     <h3>牛散持仓追踪 <span style="font-weight:400;font-size:12px;color:var(--txt3)">季报披露完更新 · 新进/加仓标红</span></h3>
     <div id="niusanBox"></div>
   </section>
@@ -470,13 +472,16 @@ function demoData(){
       {code:'002832',name:'比音勒芬',count:39,dec_count:0,first_date:daysFromNow(-156),last_date:daysFromNow(-25)},
       {code:'600328',name:'中盐化工',count:34,dec_count:0,first_date:daysFromNow(-86),last_date:daysFromNow(-12)},
       {code:'301429',name:'森泰股份',count:22,dec_count:0,first_date:daysFromNow(-61),last_date:daysFromNow(-9)},
-      {code:'600873',name:'梅花生物',count:18,dec_count:0,first_date:daysFromNow(-108),last_date:daysFromNow(-20)} ] }
+      {code:'600873',name:'梅花生物',count:18,dec_count:0,first_date:daysFromNow(-108),last_date:daysFromNow(-20)} ] },
+    instHold:{ report:'2026-03-31', prev:'2025-12-31',
+      private:[ {code:'603155',name:'永杰新材',count:6,consec:false},{code:'002896',name:'江南新材',count:6,consec:false},{code:'301556',name:'汉朔科技',count:5,consec:false},{code:'301255',name:'钧崴电子',count:5,consec:true},{code:'688691',name:'胜科纳米',count:5,consec:false},{code:'301593',name:'弘景光电',count:5,consec:false} ],
+      public:[ {code:'002801',name:'陕西旅游',count:10,consec:false},{code:'603185',name:'强一股份',count:10,consec:true},{code:'301392',name:'宏工科技',count:8,consec:true},{code:'688751',name:'海安集团',count:7,consec:false},{code:'600391',name:'航发科技',count:7,consec:true},{code:'600118',name:'中国卫星',count:7,consec:true} ] }
   };
 }
 
 /* ================= 数据加载 ================= */
 async function loadAll(){
-  const files = ['index_snapshot','sector_rank','economic_calendar','unlock_calendar','earnings','watchlist_quotes','history','research_rank','sentiment','fundflow','lhb','valuation','divyield','niusan','exec_hold','last_update'];
+  const files = ['index_snapshot','sector_rank','economic_calendar','unlock_calendar','earnings','watchlist_quotes','history','research_rank','sentiment','fundflow','lhb','valuation','divyield','niusan','exec_hold','inst_hold','last_update'];
   const map = {};
   let gotAny = false;
   await Promise.all(files.map(async f => {
@@ -490,7 +495,7 @@ async function loadAll(){
       index: map.index_snapshot || [], sector: map.sector_rank || [], econ: map.economic_calendar || [],
       unlock: map.unlock_calendar || [], earn: map.earnings || [], watch: map.watchlist_quotes || [],
       history: map.history || [], research: map.research_rank || [], sentiment: map.sentiment || {},
-      fundflow: map.fundflow || {}, lhb: map.lhb || {}, valuation: map.valuation || {},       divyield: map.divyield || {}, niusan: map.niusan || {}, execHold: map.exec_hold || {},
+      fundflow: map.fundflow || {}, lhb: map.lhb || {}, valuation: map.valuation || {},       divyield: map.divyield || {}, niusan: map.niusan || {}, execHold: map.exec_hold || {}, instHold: map.inst_hold || {},
       upd: map.last_update && map.last_update.time || ''
     };
   }else{
@@ -725,6 +730,21 @@ function renderExecHold(){
     return '<div class="rank-row"><span class="rank-no' + (i===0?' top':'') + '">' + (i+1) + '</span><div><div class="rank-name">' + esc(s.name) + '</div><div class="rank-sub">' + esc(s.code) + ' · 本轮起点 ' + (s.first_date||'—') + ' · 近半年减持 ' + (s.dec_count||0) + '次</div></div><div class="rank-sum"><b style="color:var(--brand)">' + s.count + '</b> <span>次增/半年</span></div><span class="chip ' + cls + '" style="align-self:center">' + tag + '</span></div>';
   }).join('');
   box.innerHTML = '<div style="font-size:13px;color:var(--txt2);margin-bottom:4px">近半年增持 ≥5 次 且 减持 &lt;5 次 · 标签=本轮连续增持起点（间隔 &gt;60 天算中断）</div>' + rows;
+}
+function renderInstHold(){
+  const d = DATA.instHold || {};
+  const box = $('instHoldBox');
+  const pri = d.private || [], pub = d.public || [];
+  if(!pri.length && !pub.length){ box.innerHTML = '<div class="empty">暂无机构增持数据（季报披露期后更新）</div>'; return; }
+  const rowHtml = (s, tagCls, unit) => '<div class="rank-row"><span class="rank-name" style="width:92px">' + esc(s.name) + '</span><div class="rank-sum"><b style="color:var(--brand)">' + s.count + '</b> <span>' + unit + '</span></div>' + (s.consec ? '<span class="chip red">连续加仓</span>' : '<span class="chip blue">新加仓</span>') + '</div>';
+  const priHtml = pri.map(s => rowHtml(s, 'red', '家私募')).join('');
+  const pubHtml = pub.map(s => rowHtml(s, 'blue', '家公募')).join('');
+  box.innerHTML =
+    '<div style="font-size:12px;color:var(--txt2);background:var(--bg);border:1px dashed var(--line2);border-radius:10px;padding:10px 12px;margin-bottom:10px;line-height:1.8">' +
+    '⚠️ 机构季报披露有滞后：报告期 ' + esc(d.report||'') + ' 的持仓要到 ' + esc(d.prev||'') + ' 之后才陆续公告，看到时已滞后约 3-4 个月。<br>' +
+    '介入把握：① 披露后勿追高（已涨 &gt;20% 不追）；② <b>「连续加仓」</b> = 上期也在增持，信号更可靠；③ 等回调到披露期附近成本区 + 结合上方「估值分位」判断。</div>' +
+    '<div style="font-weight:600;font-size:14px;margin:8px 0 2px">🔒 私募基金增持 TOP（被 ≥2 家增持）</div>' + priHtml +
+    '<div style="font-weight:600;font-size:14px;margin:12px 0 2px">🏦 公募基金增持 TOP（被 ≥5 家增持）</div>' + pubHtml;
 }
 function renderNiusan(){
   const d = DATA.niusan || {};
@@ -995,7 +1015,7 @@ function restoreTab(){
 }
 
 /* ================= 渲染 ================= */
-function renderAll(){ renderToday(); renderAhead(); renderReview(); renderSentiment(); renderFundflow(); renderLhb(); renderResearch(); renderValuation(); renderDivyield(); renderExecHold(); renderNiusan(); renderLong(); renderNotes(); }
+function renderAll(){ renderToday(); renderAhead(); renderReview(); renderSentiment(); renderFundflow(); renderLhb(); renderResearch(); renderValuation(); renderDivyield(); renderExecHold(); renderInstHold(); renderNiusan(); renderLong(); renderNotes(); }
 /* ================= 启动 ================= */
 initNoteDate();
 restoreTab();
