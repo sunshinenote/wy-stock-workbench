@@ -753,7 +753,19 @@ function renderNiusan(){
     '<div class="ns-summary"><span>报告期 ' + esc(d.report||'') + ' · ' + esc(cur.name) + ' 全部持仓 ' + cur.stocks.length + ' 只：</span>' + summaryHtml + '</div>' +
     '<div class="tbl-wrap"><table class="tbl"><thead><tr><th>名称</th><th>代码</th><th>变动</th><th class="num">市值</th><th class="num">持股</th><th class="num">公告</th></tr></thead><tbody>' + rows + '</tbody></table></div>';
 }
-function switchNiusan(name){ curNs = name; renderNiusan(); }
+function switchNiusan(name){
+  curNs = name;
+  renderNiusan();
+  // 点击谁就把谁的 chip 横向滚到可视区中间（不重置到列表头部，也不动页面纵向滚动）
+  requestAnimationFrame(function(){
+    var el = document.querySelector('.ns-chip.active');
+    var wrap = document.querySelector('.ns-chips');
+    if(el && wrap){
+      var target = el.offsetLeft - wrap.clientWidth / 2 + el.clientWidth / 2;
+      wrap.scrollLeft = Math.max(0, target);
+    }
+  });
+}
 function renderLong(){
   const earn = (DATA.earn||[]).slice(0,15);
   $('earnTbl').innerHTML = '<thead><tr><th>代码</th><th>名称</th><th>类型</th><th class="num">变动幅度</th><th>原因摘要</th><th>公告日</th></tr></thead><tbody>' + earn.map(r =>
