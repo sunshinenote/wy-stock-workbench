@@ -129,7 +129,7 @@ button.danger{color:var(--danger)}
 
 /* niusan tabs */
 .ns-chips{display:flex;gap:6px;overflow-x:auto;padding-bottom:6px;margin-bottom:8px;-webkit-overflow-scrolling:touch}
-.ns-chip{flex:none;min-height:36px;padding:7px 12px;border-radius:20px;border:1px solid var(--line2);background:#fff;font-size:14px;color:var(--txt2);cursor:pointer;white-space:nowrap;transition:all .15s}
+.ns-chip{flex:none;min-height:36px;padding:7px 12px;border-radius:20px;border:1px solid var(--line2);background:#fff;font-size:14px;color:var(--txt2);cursor:pointer;white-space:nowrap;transition:all .15s;-webkit-tap-highlight-color:transparent;user-select:none;-webkit-user-select:none}
 .ns-chip b{font-variant-numeric:tabular-nums}
 .ns-chip .ns-hot{color:var(--up);font-weight:600;margin-left:2px}
 .ns-chip.active{background:var(--brand);border-color:var(--brand);color:#fff}
@@ -735,7 +735,7 @@ function renderNiusan(){
   const chCls = {新进:'red',增加:'amber',不变:'blue',减少:'green'};
   const chTxt = {新进:'新进',增加:'加仓',不变:'持有',减少:'减仓'};
   const chips = list.map(n =>
-    '<button class="ns-chip' + (n.name === curNs ? ' active' : '') + '" onclick="switchNiusan(\'' + n.name + '\')">' + esc(n.name) + ' <b>' + n.count + '只</b>' + ((n.summary&&n.summary['新进']) ? ' <span class="ns-hot">↑' + n.summary['新进'] + '</span>' : '') + '</button>'
+    '<div class="ns-chip' + (n.name === curNs ? ' active' : '') + '" role="button" onclick="switchNiusan(\'' + n.name + '\')">' + esc(n.name) + ' <b>' + n.count + '只</b>' + ((n.summary&&n.summary['新进']) ? ' <span class="ns-hot">↑' + n.summary['新进'] + '</span>' : '') + '</div>'
   ).join('');
   const cur = list.find(n => n.name === curNs);
   const sm = cur.summary || {};
