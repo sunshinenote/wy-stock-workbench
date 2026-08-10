@@ -1,55 +1,55 @@
 {
- "date": "2026-08-09",
- "zt": 74,
- "dt": 4,
- "zb": 26,
- "zb_rate": 26.0,
- "max_lb": 4,
+ "date": "2026-08-10",
+ "zt": 99,
+ "dt": 5,
+ "zb": 14,
+ "zb_rate": 12.4,
+ "max_lb": 5,
  "lb_dist": [
   {
    "lb": 1,
-   "count": 61
+   "count": 87
   },
   {
    "lb": 2,
-   "count": 6
+   "count": 9
   },
   {
    "lb": 3,
-   "count": 2
+   "count": 1
   },
   {
-   "lb": 4,
-   "count": 5
+   "lb": 5,
+   "count": 2
   }
  ],
- "score": 66,
- "level": "发酵",
+ "score": 84,
+ "level": "高潮",
  "note": "",
  "industries": [
   {
-   "name": "元件",
-   "count": 11
-  },
-  {
-   "name": "医疗服务",
-   "count": 8
-  },
-  {
-   "name": "化学制药",
+   "name": "电网设备",
    "count": 6
   },
   {
-   "name": "通信设备",
-   "count": 4
+   "name": "化学制药",
+   "count": 5
   },
   {
-   "name": "半导体",
-   "count": 4
+   "name": "医疗服务",
+   "count": 5
   },
   {
    "name": "化学制品",
-   "count": 3
+   "count": 5
+  },
+  {
+   "name": "电力",
+   "count": 4
+  },
+  {
+   "name": "汽车零部",
+   "count": 4
   }
  ]
 }

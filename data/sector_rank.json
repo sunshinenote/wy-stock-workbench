@@ -1,82 +1,82 @@
 [
  {
   "name": "医疗服务",
-  "pct": 8.34,
-  "leader": "博腾股份",
-  "leader_pct": 20.02,
+  "pct": 4.59,
+  "leader": "毕得医药",
+  "leader_pct": 20.0,
   "up_count": 53,
-  "down_count": 2
- },
- {
-  "name": "元件",
-  "pct": 6.45,
-  "leader": "一博科技",
-  "leader_pct": 20.0,
-  "up_count": 59,
-  "down_count": 4
- },
- {
-  "name": "生物制品",
-  "pct": 6.42,
-  "leader": "近岸蛋白",
-  "leader_pct": 20.01,
-  "up_count": 54,
-  "down_count": 1
- },
- {
-  "name": "电子化学品",
-  "pct": 4.54,
-  "leader": "方邦股份",
-  "leader_pct": 20.0,
-  "up_count": 41,
-  "down_count": 2
- },
- {
-  "name": "化学制药",
-  "pct": 4.4,
-  "leader": "贝达药业",
-  "leader_pct": 14.37,
-  "up_count": 149,
-  "down_count": 9
+  "down_count": 3
  },
  {
   "name": "贵金属",
-  "pct": 4.11,
+  "pct": 4.54,
   "leader": "招金黄金",
-  "leader_pct": 10.01,
-  "up_count": 13,
-  "down_count": 1
- },
- {
-  "name": "半导体",
-  "pct": 3.37,
-  "leader": "锴威特",
-  "leader_pct": 20.0,
-  "up_count": 172,
-  "down_count": 11
+  "leader_pct": 9.98,
+  "up_count": 14,
+  "down_count": 0
  },
  {
   "name": "能源金属",
-  "pct": 3.34,
-  "leader": "寒锐钴业",
-  "leader_pct": 8.53,
-  "up_count": 11,
+  "pct": 4.52,
+  "leader": "*ST威领",
+  "leader_pct": 10.0,
+  "up_count": 12,
+  "down_count": 0
+ },
+ {
+  "name": "养殖业",
+  "pct": 3.81,
+  "leader": "益生股份",
+  "leader_pct": 10.02,
+  "up_count": 36,
+  "down_count": 0
+ },
+ {
+  "name": "饮料制造",
+  "pct": 3.46,
+  "leader": "品渥食品",
+  "leader_pct": 10.61,
+  "up_count": 46,
   "down_count": 1
  },
  {
-  "name": "医疗器械",
-  "pct": 2.99,
-  "leader": "五洲医疗",
-  "leader_pct": 20.01,
-  "up_count": 127,
-  "down_count": 10
+  "name": "影视院线",
+  "pct": 3.43,
+  "leader": "北京文化",
+  "leader_pct": 10.07,
+  "up_count": 17,
+  "down_count": 2
+ },
+ {
+  "name": "农产品加工",
+  "pct": 3.11,
+  "leader": "百洋股份",
+  "leader_pct": 10.04,
+  "up_count": 40,
+  "down_count": 3
  },
  {
   "name": "小金属",
-  "pct": 2.85,
-  "leader": "中国稀土",
-  "leader_pct": 10.0,
-  "up_count": 28,
+  "pct": 2.9,
+  "leader": "翔鹭钨业",
+  "leader_pct": 10.01,
+  "up_count": 26,
+  "down_count": 3
+ },
+ {
+  "name": "食品加工制造",
+  "pct": 2.89,
+  "leader": "金达威",
+  "leader_pct": 10.03,
+  "up_count": 60,
+  "down_count": 6
+ },
+ {
+  "name": "医药商业",
+  "pct": 2.86,
+  "leader": "开开实业",
+  "leader_pct": 10.02,
+  "up_count": 31,
   "down_count": 1
  }
 ]
