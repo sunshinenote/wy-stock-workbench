@@ -11,7 +11,7 @@
   {
    "code": "603098",
    "name": "森特股份",
-   "count": 41,
+   "count": 40,
    "dec_count": 0,
    "first_date": "2025-12-29",
    "last_date": "2026-07-20"
@@ -27,15 +27,15 @@
   {
    "code": "600328",
    "name": "中盐化工",
-   "count": 34,
+   "count": 35,
    "dec_count": 0,
    "first_date": "2026-05-15",
-   "last_date": "2026-08-06"
+   "last_date": "2026-08-07"
   },
   {
    "code": "002096",
    "name": "易普力",
-   "count": 34,
+   "count": 32,
    "dec_count": 0,
    "first_date": "2026-06-12",
    "last_date": "2026-07-22"
@@ -51,10 +51,10 @@
   {
    "code": "002146",
    "name": "荣盛发展",
-   "count": 24,
+   "count": 25,
    "dec_count": 0,
    "first_date": "2026-06-30",
-   "last_date": "2026-08-06"
+   "last_date": "2026-08-07"
   },
   {
    "code": "301429",
@@ -97,6 +97,14 @@
    "last_date": "2026-04-30"
   },
   {
+   "code": "600684",
+   "name": "珠江股份",
+   "count": 17,
+   "dec_count": 0,
+   "first_date": "2026-06-23",
+   "last_date": "2026-07-08"
+  },
+  {
    "code": "300760",
    "name": "迈瑞医疗",
    "count": 17,
@@ -111,14 +119,6 @@
    "dec_count": 0,
    "first_date": "2026-06-25",
    "last_date": "2026-07-31"
-  },
-  {
-   "code": "002517",
-   "name": "恺英网络",
-   "count": 16,
-   "dec_count": 0,
-   "first_date": "2026-06-10",
-   "last_date": "2026-06-10"
   }
  ]
 }
