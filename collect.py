@@ -547,17 +547,24 @@ def collect_niusan():
     return {"report": f"{report[:4]}-{report[4:6]}-{report[6:]}", "niusan": result}
 
 
-# ---------- 5.9 高管增持榜（近半年增持≥5次，追溯首次增持时间） ----------
+# ---------- 5.9 高管增持榜（近半年增持≥5次 且 减持<5次，追溯本轮连续增持首次日期） ----------
 def collect_exec_hold():
-    """Step1 拉近一年高管增持 → Step2 筛近半年≥5次 → Step3 反查每只股票首次增持日期"""
+    """近半年高管【增持≥5次 且 减持<5次】；并追溯本轮连续增持起点（间隔>60天视为中断）
+
+    注意：旧实现 Step1 用 (CHANGE_SHARES>0) 过滤，只拉增持记录，
+    导致 dec_cnt 永远为 0、「减持<5次」条件形同虚设。这里改为拉近半年【全部】增减持记录，
+    在内存中按正负分别计数（见下方 if shares>0 / elif shares<0 分支）。
+    """
     from collections import defaultdict
     url = "https://datacenter-web.eastmoney.com/api/data/v1/get"
-    since = (NOW - timedelta(days=365)).strftime("%Y-%m-%d")
+    half = (NOW - timedelta(days=180)).strftime("%Y-%m-%d")
+    cols = "SECURITY_CODE,SECURITY_NAME,CHANGE_DATE,CHANGE_SHARES"
+    # Step1：拉近半年【全部】高管增减持记录（修复：必须包含减持，dec_cnt 才有意义）
     records = []
-    for page in range(1, 60):
+    for page in range(1, 200):
         params = {
-            "reportName": "RPT_EXECUTIVE_HOLD_DETAILS", "columns": "ALL",
-            "filter": f"(CHANGE_SHARES>0)(CHANGE_DATE>='{since}')",
+            "reportName": "RPT_EXECUTIVE_HOLD_DETAILS", "columns": cols,
+            "filter": f"(CHANGE_DATE>='{half}')",
             "pageSize": "500", "pageNumber": str(page),
             "sortColumns": "CHANGE_DATE", "sortTypes": "-1",
             "source": "WEB", "client": "WEB",
@@ -574,7 +581,6 @@ def collect_exec_hold():
             break
     if not records:
         return {}
-    half = (NOW - timedelta(days=180)).strftime("%Y-%m-%d")
     cnt, dec_cnt, last_date, names = defaultdict(int), defaultdict(int), {}, {}
     for row in records:
         code = str(row.get("SECURITY_CODE", "") or "")
@@ -585,13 +591,12 @@ def collect_exec_hold():
             shares = float(row.get("CHANGE_SHARES", 0) or 0)
         except (ValueError, TypeError):
             shares = 0
-        if d >= half:
-            if shares > 0:
-                cnt[code] += 1
-                if d > last_date.get(code, ""):
-                    last_date[code] = d
-            elif shares < 0:
-                dec_cnt[code] += 1
+        if shares > 0:
+            cnt[code] += 1
+            if d > last_date.get(code, ""):
+                last_date[code] = d
+        elif shares < 0:
+            dec_cnt[code] += 1
         names[code] = str(row.get("SECURITY_NAME", "") or "")
     # 入选条件：近半年增持≥5次 且 减持<5次（过滤边增边减的内部人分歧股）
     hot = {c: names.get(c, c) for c in cnt if cnt[c] >= 5 and dec_cnt[c] < 5}
@@ -599,9 +604,9 @@ def collect_exec_hold():
     def _consec_first_date(code):
         """拉该股全部增持记录，找【本轮连续增持】的起点（相邻间隔>60天视为中断）"""
         rows = []
-        for page in (1, 3):
+        for page in range(1, 40):   # 修复：原 for page in (1,3) 跳过 page2，记录超500时漏算起点
             params = {
-                "reportName": "RPT_EXECUTIVE_HOLD_DETAILS", "columns": "ALL",
+                "reportName": "RPT_EXECUTIVE_HOLD_DETAILS", "columns": cols,
                 "filter": f'(SECURITY_CODE="{code}")(CHANGE_SHARES>0)',
                 "pageSize": "500", "pageNumber": str(page),
                 "sortColumns": "CHANGE_DATE", "sortTypes": "1",   # 最早在前
