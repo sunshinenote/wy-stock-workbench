@@ -1,82 +1,82 @@
 [
  {
-  "name": "医疗服务",
-  "pct": 4.59,
-  "leader": "毕得医药",
-  "leader_pct": 20.0,
-  "up_count": 53,
-  "down_count": 3
- },
- {
-  "name": "贵金属",
-  "pct": 4.54,
-  "leader": "招金黄金",
-  "leader_pct": 9.98,
-  "up_count": 14,
-  "down_count": 0
- },
- {
-  "name": "能源金属",
-  "pct": 4.52,
-  "leader": "*ST威领",
-  "leader_pct": 10.0,
-  "up_count": 12,
-  "down_count": 0
- },
- {
-  "name": "养殖业",
-  "pct": 3.81,
-  "leader": "益生股份",
-  "leader_pct": 10.02,
-  "up_count": 36,
-  "down_count": 0
- },
- {
-  "name": "饮料制造",
-  "pct": 3.46,
-  "leader": "品渥食品",
-  "leader_pct": 10.61,
-  "up_count": 46,
-  "down_count": 1
+  "name": "油气开采及服务",
+  "pct": 2.32,
+  "leader": "ST洲际",
+  "leader_pct": 9.87,
+  "up_count": 15,
+  "down_count": 4
  },
  {
   "name": "影视院线",
-  "pct": 3.43,
-  "leader": "北京文化",
-  "leader_pct": 10.07,
-  "up_count": 17,
-  "down_count": 2
- },
- {
-  "name": "农产品加工",
-  "pct": 3.11,
-  "leader": "百洋股份",
-  "leader_pct": 10.04,
-  "up_count": 40,
-  "down_count": 3
- },
- {
-  "name": "小金属",
-  "pct": 2.9,
-  "leader": "翔鹭钨业",
-  "leader_pct": 10.01,
-  "up_count": 26,
-  "down_count": 3
- },
- {
-  "name": "食品加工制造",
-  "pct": 2.89,
-  "leader": "金达威",
-  "leader_pct": 10.03,
-  "up_count": 60,
-  "down_count": 6
+  "pct": 2.22,
+  "leader": "华智数媒",
+  "leader_pct": 20.0,
+  "up_count": 13,
+  "down_count": 7
  },
  {
   "name": "医药商业",
-  "pct": 2.86,
+  "pct": 1.68,
   "leader": "开开实业",
   "leader_pct": 10.02,
-  "up_count": 31,
-  "down_count": 1
+  "up_count": 23,
+  "down_count": 7
+ },
+ {
+  "name": "环保设备",
+  "pct": 1.36,
+  "leader": "蓝盾光电",
+  "leader_pct": 19.99,
+  "up_count": 14,
+  "down_count": 16
+ },
+ {
+  "name": "生物制品",
+  "pct": 1.19,
+  "leader": "甘李药业",
+  "leader_pct": 10.0,
+  "up_count": 32,
+  "down_count": 23
+ },
+ {
+  "name": "电机",
+  "pct": 0.9,
+  "leader": "三协电机",
+  "leader_pct": 5.43,
+  "up_count": 16,
+  "down_count": 9
+ },
+ {
+  "name": "医疗服务",
+  "pct": 0.89,
+  "leader": "万邦医药",
+  "leader_pct": 20.0,
+  "up_count": 26,
+  "down_count": 28
+ },
+ {
+  "name": "黑色家电",
+  "pct": 0.53,
+  "leader": "兆驰股份",
+  "leader_pct": 2.38,
+  "up_count": 6,
+  "down_count": 3
+ },
+ {
+  "name": "房地产",
+  "pct": 0.38,
+  "leader": "京投发展",
+  "leader_pct": 9.99,
+  "up_count": 38,
+  "down_count": 42
+ },
+ {
+  "name": "中药",
+  "pct": 0.34,
+  "leader": "振东制药",
+  "leader_pct": 14.26,
+  "up_count": 25,
+  "down_count": 42
  }
 ]
