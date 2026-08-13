@@ -1,59 +1,59 @@
 {
- "date": "2026-08-12",
- "zt": 92,
- "dt": 0,
- "zb": 13,
- "zb_rate": 12.4,
- "max_lb": 7,
+ "date": "2026-08-13",
+ "zt": 59,
+ "dt": 4,
+ "zb": 36,
+ "zb_rate": 37.9,
+ "max_lb": 5,
  "lb_dist": [
   {
    "lb": 1,
-   "count": 76
+   "count": 37
   },
   {
    "lb": 2,
-   "count": 7
+   "count": 13
   },
   {
    "lb": 3,
-   "count": 7
+   "count": 2
   },
   {
    "lb": 4,
-   "count": 1
+   "count": 6
   },
   {
-   "lb": 7,
+   "lb": 5,
    "count": 1
   }
  ],
- "score": 92,
- "level": "过热",
+ "score": 56,
+ "level": "发酵",
  "note": "",
  "industries": [
   {
-   "name": "专用设备",
-   "count": 8
-  },
-  {
-   "name": "通用设备",
-   "count": 8
-  },
-  {
-   "name": "房地产开",
-   "count": 8
-  },
-  {
-   "name": "电网设备",
-   "count": 5
-  },
-  {
-   "name": "软件开发",
-   "count": 4
+   "name": "医疗服务",
+   "count": 6
   },
   {
    "name": "汽车零部",
    "count": 4
+  },
+  {
+   "name": "电力",
+   "count": 4
+  },
+  {
+   "name": "通信设备",
+   "count": 3
+  },
+  {
+   "name": "中药Ⅱ",
+   "count": 3
+  },
+  {
+   "name": "装修装饰",
+   "count": 2
   }
  ]
 }

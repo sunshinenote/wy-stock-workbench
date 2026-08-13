@@ -19,7 +19,7 @@
   {
    "code": "603098",
    "name": "森特股份",
-   "count": 39,
+   "count": 38,
    "dec_count": 0,
    "first_date": "2025-12-29",
    "last_date": "2026-07-20"
@@ -65,20 +65,20 @@
    "last_date": "2026-08-04"
   },
   {
+   "code": "002568",
+   "name": "百润股份",
+   "count": 19,
+   "dec_count": 0,
+   "first_date": "2026-07-02",
+   "last_date": "2026-08-11"
+  },
+  {
    "code": "002024",
    "name": "ST易购",
    "count": 19,
    "dec_count": 0,
    "first_date": "2026-05-27",
    "last_date": "2026-08-06"
-  },
-  {
-   "code": "600763",
-   "name": "通策医疗",
-   "count": 19,
-   "dec_count": 0,
-   "first_date": "2026-02-13",
-   "last_date": "2026-06-10"
   },
   {
    "code": "603031",
@@ -97,14 +97,6 @@
    "last_date": "2026-04-30"
   },
   {
-   "code": "002568",
-   "name": "百润股份",
-   "count": 17,
-   "dec_count": 0,
-   "first_date": "2026-07-02",
-   "last_date": "2026-08-10"
-  },
-  {
    "code": "600684",
    "name": "珠江股份",
    "count": 17,
@@ -113,9 +105,17 @@
    "last_date": "2026-07-08"
   },
   {
+   "code": "603927",
+   "name": "中科软",
+   "count": 16,
+   "dec_count": 0,
+   "first_date": "2026-06-25",
+   "last_date": "2026-07-31"
+  },
+  {
    "code": "300760",
    "name": "迈瑞医疗",
-   "count": 17,
+   "count": 16,
    "dec_count": 0,
    "first_date": "2025-11-06",
    "last_date": "2026-06-24"

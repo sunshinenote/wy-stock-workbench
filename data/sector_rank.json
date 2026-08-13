@@ -1,82 +1,82 @@
 [
  {
-  "name": "房地产",
-  "pct": 3.37,
-  "leader": "荣盛发展",
-  "leader_pct": 10.44,
-  "up_count": 86,
-  "down_count": 2
+  "name": "医疗服务",
+  "pct": 3.99,
+  "leader": "博济医药",
+  "leader_pct": 20.02,
+  "up_count": 43,
+  "down_count": 12
  },
  {
-  "name": "通信设备",
-  "pct": 3.06,
-  "leader": "长进光子",
-  "leader_pct": 20.0,
-  "up_count": 80,
-  "down_count": 10
- },
- {
-  "name": "元件",
-  "pct": 2.47,
-  "leader": "金禄电子",
-  "leader_pct": 11.13,
-  "up_count": 57,
-  "down_count": 6
- },
- {
-  "name": "教育",
-  "pct": 2.46,
-  "leader": "传智教育",
-  "leader_pct": 9.97,
-  "up_count": 13,
-  "down_count": 2
- },
- {
-  "name": "光伏设备",
-  "pct": 2.2,
-  "leader": "金辰股份",
-  "leader_pct": 9.98,
-  "up_count": 66,
-  "down_count": 5
- },
- {
-  "name": "其他电源设备",
-  "pct": 2.18,
-  "leader": "盛弘股份",
-  "leader_pct": 6.61,
-  "up_count": 30,
-  "down_count": 5
- },
- {
-  "name": "非金属材料",
-  "pct": 2.15,
-  "leader": "联瑞新材",
-  "leader_pct": 15.02,
-  "up_count": 15,
-  "down_count": 1
- },
- {
-  "name": "白酒",
-  "pct": 2.03,
-  "leader": "今世缘",
-  "leader_pct": 9.99,
-  "up_count": 18,
-  "down_count": 1
- },
- {
-  "name": "半导体",
-  "pct": 2.03,
-  "leader": "杰理科技",
-  "leader_pct": 182.4,
-  "up_count": 160,
-  "down_count": 25
- },
- {
-  "name": "环保设备",
-  "pct": 1.99,
-  "leader": "蓝盾光电",
-  "leader_pct": 19.98,
-  "up_count": 22,
+  "name": "生物制品",
+  "pct": 2.0,
+  "leader": "近岸蛋白",
+  "leader_pct": 20.01,
+  "up_count": 47,
   "down_count": 7
+ },
+ {
+  "name": "中药",
+  "pct": 1.59,
+  "leader": "陇神戎发",
+  "leader_pct": 19.98,
+  "up_count": 51,
+  "down_count": 17
+ },
+ {
+  "name": "化学制药",
+  "pct": 1.38,
+  "leader": "新赣江",
+  "leader_pct": 29.6,
+  "up_count": 113,
+  "down_count": 37
+ },
+ {
+  "name": "医药商业",
+  "pct": 0.67,
+  "leader": "药易购",
+  "leader_pct": 19.98,
+  "up_count": 17,
+  "down_count": 13
+ },
+ {
+  "name": "医疗器械",
+  "pct": 0.57,
+  "leader": "超研股份",
+  "leader_pct": 10.99,
+  "up_count": 83,
+  "down_count": 54
+ },
+ {
+  "name": "证券",
+  "pct": 0.3,
+  "leader": "财通证券",
+  "leader_pct": 7.29,
+  "up_count": 29,
+  "down_count": 18
+ },
+ {
+  "name": "银行",
+  "pct": 0.29,
+  "leader": "沪农商行",
+  "leader_pct": 2.65,
+  "up_count": 24,
+  "down_count": 16
+ },
+ {
+  "name": "综合",
+  "pct": 0.26,
+  "leader": "亚泰集团",
+  "leader_pct": 10.19,
+  "up_count": 5,
+  "down_count": 13
+ },
+ {
+  "name": "电力",
+  "pct": 0.25,
+  "leader": "大唐发电",
+  "leader_pct": 10.02,
+  "up_count": 40,
+  "down_count": 60
  }
 ]
