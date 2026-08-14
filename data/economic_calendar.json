@@ -302,7 +302,7 @@
   "country": "中国",
   "importance": "中",
   "event": "中国7月城镇调查失业率(%)",
-  "forecast": "nan",
+  "forecast": "5.1",
   "previous": "5.0"
  },
  {
@@ -527,7 +527,7 @@
   "country": "加拿大",
   "importance": "中",
   "event": "加拿大7月未季调CPI月率(%)",
-  "forecast": "nan",
+  "forecast": "0.4",
   "previous": "-0.4"
  },
  {
@@ -536,7 +536,7 @@
   "country": "加拿大",
   "importance": "中",
   "event": "加拿大7月未季调CPI年率(%)",
-  "forecast": "nan",
+  "forecast": "2.9",
   "previous": "2.8"
  },
  {
@@ -563,7 +563,7 @@
   "country": "美国",
   "importance": "中",
   "event": "美国8月纽约联储制造业指数",
-  "forecast": "nan",
+  "forecast": "10.0",
   "previous": "15.6"
  },
  {
@@ -608,7 +608,7 @@
   "country": "美国",
   "importance": "中",
   "event": "美国8月NAHB房产市场指数",
-  "forecast": "nan",
+  "forecast": "33.0",
   "previous": "34.0"
  },
  {
