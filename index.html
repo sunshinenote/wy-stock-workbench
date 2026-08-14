@@ -232,6 +232,8 @@ svg text{font-family:inherit}
   <h1><span class="dot"></span>股票复盘工作台</h1>
   <span class="upd" id="updTime">数据加载中…</span>
   <div class="head-actions">
+    <button class="btn-sm primary" id="btnRefresh" onclick="refreshData()" title="触发 GitHub Actions 重新采集最新行情数据">🔄 刷新数据</button>
+    <button class="btn-sm" onclick="reloadData()" title="仅重新拉取已采集的 JSON 数据（不触发采集）">重新加载</button>
     <button class="btn-sm" onclick="exportData()" title="备份个人数据（自选/笔记）">导出备份</button>
     <button class="btn-sm" onclick="document.getElementById('importFile').click()">导入恢复</button>
     <button class="btn-sm danger" onclick="askClearAll()">清空数据</button>
@@ -305,6 +307,10 @@ svg text{font-family:inherit}
 
 <!-- ============ 短期机会 ============ -->
 <div class="tab-panel" id="panel-short">
+  <section class="card" id="hotSummarySec">
+    <h2>今日热点速览 <span class="tag red">一屏看懂</span></h2>
+    <div id="hotSummaryBox"></div>
+  </section>
   <section class="card">
     <h2>短期机会 <span class="tag red">情绪+资金</span></h2>
     <h3>情绪温度计 · 最近交易日 <span style="font-weight:400;font-size:12px;color:var(--txt3)">短线市场热度</span></h3>
@@ -357,6 +363,34 @@ svg text{font-family:inherit}
     </div>
   </div>
 </div>
+
+<!-- GitHub Token 设置弹窗 -->
+<div class="modal-mask" id="tokenModal">
+  <div class="modal" style="max-width:460px">
+    <h3>🔑 设置 GitHub Token（仅需一次）</h3>
+    <p style="font-size:13px;line-height:1.7">点击「刷新数据」需要通过 GitHub API 触发数据采集。请创建一个 <b>Personal Access Token</b>（Fine-grained，仅需 <code>actions:write</code> 权限），粘贴到下方。Token 仅存于本浏览器 localStorage，不会上传。</p>
+    <p style="font-size:13px;margin-top:8px"><a href="https://github.com/settings/personal-access-tokens/new" target="_blank" style="color:var(--brand)">👉 点此创建 Token</a> → Repository 选 <code>sunshinenote/wy-stock-workbench</code> → Permissions 勾 <code>Actions: Read and write</code></p>
+    <input type="password" id="tokenInput" placeholder="github_pat_xxxx..." style="width:100%;margin:10px 0;font-family:inherit;font-size:15px;border:1px solid var(--line2);border-radius:10px;padding:10px 12px;min-height:44px">
+    <div class="row">
+      <button onclick="closeTokenModal()">取消</button>
+      <button class="primary" onclick="saveToken()">保存并刷新</button>
+    </div>
+  </div>
+</div>
+
+<!-- 刷新进度弹窗 -->
+<div class="modal-mask" id="refreshModal">
+  <div class="modal" style="max-width:400px;text-align:center">
+    <h3 id="refreshTitle">🔄 正在触发数据采集…</h3>
+    <p id="refreshMsg" style="font-size:14px;line-height:1.7">已向 GitHub Actions 发送请求，请稍候…</p>
+    <div id="refreshSpin" style="margin:16px auto;width:36px;height:36px;border:3px solid var(--brand-soft);border-top-color:var(--brand);border-radius:50%;animation:spin .8s linear infinite"></div>
+    <div class="row" id="refreshActions" style="display:none">
+      <button onclick="closeRefreshModal()">关闭</button>
+      <button class="primary" onclick="closeRefreshModal();reloadData()">查看最新数据</button>
+    </div>
+  </div>
+</div>
+<style>@keyframes spin{to{transform:rotate(360deg)}}</style>
 
 <script>
 /* ================= 状态 ================= */
@@ -535,6 +569,191 @@ function cdBadge(dstr){
   return '<span class="cd">' + d + ' 天后</span>';
 }
 function esc(s){ return String(s==null?'':s).replace(/[&<>"']/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+
+/* ================= GitHub Actions 刷新 ================= */
+const GH_REPO = 'sunshinenote/wy-stock-workbench';
+const GH_WF = 'collect.yml';
+const LS_TOKEN = 'wb_gh_token';
+
+function getToken(){ try{ return localStorage.getItem(LS_TOKEN) || ''; }catch(e){ return ''; } }
+function openTokenModal(){ $('tokenModal').classList.add('show'); $('tokenInput').focus(); }
+function closeTokenModal(){ $('tokenModal').classList.remove('show'); }
+function closeRefreshModal(){ $('refreshModal').classList.remove('show'); }
+
+function saveToken(){
+  const t = $('tokenInput').value.trim();
+  if(!t || !t.startsWith('github_pat_')){ alert('Token 格式不对，应以 github_pat_ 开头'); return; }
+  try{ localStorage.setItem(LS_TOKEN, t); }catch(e){}
+  closeTokenModal();
+  refreshData();
+}
+
+function reloadData(){
+  $('updTime').textContent = '重新加载中…';
+  loadAll();
+}
+
+async function refreshData(){
+  const token = getToken();
+  if(!token){ openTokenModal(); return; }
+  /* 触发 workflow_dispatch */
+  $('refreshModal').classList.add('show');
+  $('refreshTitle').textContent = '🔄 正在触发数据采集…';
+  $('refreshMsg').textContent = '已向 GitHub Actions 发送请求，请稍候…';
+  $('refreshSpin').style.display = 'block';
+  $('refreshActions').style.display = 'none';
+
+  try{
+    const r = await fetch(`https://api.github.com/repos/${GH_REPO}/actions/workflows/${GH_WF}/dispatches`, {
+      method: 'POST',
+      headers: { 'Authorization': 'token ' + token, 'Accept': 'application/vnd.github.v3+json', 'Content-Type': 'application/json' },
+      body: JSON.stringify({ ref: 'main' })
+    });
+    if(r.status === 204){
+      $('refreshTitle').textContent = '✅ 已触发，正在采集…';
+      $('refreshMsg').textContent = 'GitHub Actions 正在运行 collect.py，预计 2-5 分钟完成。完成后会自动提示。';
+      pollWorkflowStatus(token);
+    }else if(r.status === 401 || r.status === 403){
+      $('refreshSpin').style.display = 'none';
+      $('refreshTitle').textContent = '❌ Token 无效或权限不足';
+      $('refreshMsg').textContent = 'Token 可能过期或没有 actions:write 权限。点击下方重新设置。';
+      $('refreshActions').style.display = 'flex';
+      $('refreshActions').innerHTML = '<button onclick="closeRefreshModal();openTokenModal();$(\'tokenInput\').value=\'\'">重新设置 Token</button>';
+    }else if(r.status === 422){
+      $('refreshSpin').style.display = 'none';
+      $('refreshTitle').textContent = '⚠️ 已有采集任务在运行';
+      $('refreshMsg').textContent = '上一个采集任务还未完成，请稍后点「重新加载」查看最新数据。';
+      $('refreshActions').style.display = 'flex';
+      $('refreshActions').innerHTML = '<button onclick="closeRefreshModal()">关闭</button><button class="primary" onclick="closeRefreshModal();reloadData()">重新加载</button>';
+    }else{
+      const err = await r.text();
+      $('refreshSpin').style.display = 'none';
+      $('refreshTitle').textContent = '❌ 触发失败 (' + r.status + ')';
+      $('refreshMsg').textContent = err.slice(0, 200);
+      $('refreshActions').style.display = 'flex';
+      $('refreshActions').innerHTML = '<button onclick="closeRefreshModal()">关闭</button>';
+    }
+  }catch(e){
+    $('refreshSpin').style.display = 'none';
+    $('refreshTitle').textContent = '❌ 网络错误';
+    $('refreshMsg').textContent = '无法连接 GitHub API，请检查网络后重试。';
+    $('refreshActions').style.display = 'flex';
+    $('refreshActions').innerHTML = '<button onclick="closeRefreshModal()">关闭</button>';
+  }
+}
+
+let _pollTimer = null;
+async function pollWorkflowStatus(token){
+  if(_pollTimer) clearTimeout(_pollTimer);
+  try{
+    const r = await fetch(`https://api.github.com/repos/${GH_REPO}/actions/runs?per_page=1&created=>=${new Date(Date.now()-5*60*1000).toISOString()}`, {
+      headers: { 'Authorization': 'token ' + token, 'Accept': 'application/vnd.github.v3+json' }
+    });
+    if(r.ok){
+      const data = await r.json();
+      const run = data.workflow_runs && data.workflow_runs[0];
+      if(run){
+        const status = run.status;       // queued, in_progress, completed
+        const conclusion = run.conclusion; // success, failure, null (still running)
+        if(status === 'completed'){
+          $('refreshSpin').style.display = 'none';
+          if(conclusion === 'success'){
+            $('refreshTitle').textContent = '✅ 采集完成！';
+            $('refreshMsg').textContent = '最新行情数据已更新到 GitHub Pages，点「查看最新数据」加载。';
+            $('refreshActions').style.display = 'flex';
+            $('refreshActions').innerHTML = '<button onclick="closeRefreshModal()">关闭</button><button class="primary" onclick="closeRefreshModal();reloadData()">查看最新数据</button>';
+            return;
+          }else{
+            $('refreshTitle').textContent = '⚠️ 采集完成但有错误';
+            $('refreshMsg').textContent = '部分数据可能未采集成功（常见于接口限频）。点「重新加载」查看已采集的数据，或稍后重试。';
+            $('refreshSpin').style.display = 'none';
+            $('refreshActions').style.display = 'flex';
+            $('refreshActions').innerHTML = '<button onclick="closeRefreshModal()">关闭</button><button class="primary" onclick="closeRefreshModal();reloadData()">重新加载</button>';
+            return;
+          }
+        }
+        $('refreshMsg').textContent = 'GitHub Actions 状态：' + (status === 'in_progress' ? '正在运行…' : '排队中…') + '（运行 #' + run.run_number + '）';
+      }
+    }
+  }catch(e){}
+  /* 每 15 秒轮询一次，最多 8 分钟 */
+  _pollTimer = setTimeout(() => pollWorkflowStatus(token), 15000);
+  setTimeout(() => {
+    if(_pollTimer){ clearTimeout(_pollTimer); _pollTimer = null;
+      $('refreshSpin').style.display = 'none';
+      $('refreshTitle').textContent = '⏱ 采集超时';
+      $('refreshMsg').textContent = '采集可能仍在后台运行。请稍后点「重新加载」查看。';
+      $('refreshActions').style.display = 'flex';
+      $('refreshActions').innerHTML = '<button onclick="closeRefreshModal()">关闭</button><button class="primary" onclick="closeRefreshModal();reloadData()">重新加载</button>';
+    }
+  }, 8 * 60 * 1000);
+}
+
+/* ================= 今日热点速览 ================= */
+function renderHotSummary(){
+  const box = $('hotSummaryBox');
+  const sec = DATA.sector || [];
+  const ff = DATA.fundflow || {};
+  const st = DATA.sentiment || {};
+  if(!sec.length && !ff.industry_in){ box.innerHTML = '<div class="empty">暂无数据（运行采集后显示）</div>'; return; }
+
+  /* 1. 最热板块 TOP3 */
+  const top3Sec = sec.slice(0, 3).map(s =>
+    '<span class="chip red">' + esc(s.name) + ' ' + fmtPct(s.pct) + ' · 领涨' + esc(s.leader) + '</span>'
+  ).join(' ');
+
+  /* 2. 主力净流入方向 TOP3 */
+  const top3In = (ff.industry_in || []).slice(0, 3).map(x =>
+    '<span class="chip amber">' + esc(x.name) + ' +' + x.net + '亿</span>'
+  ).join(' ');
+
+  /* 3. 主力净流出方向 */
+  const outStr = (ff.industry_out || []).map(x =>
+    '<span class="chip green">' + esc(x.name) + ' ' + x.net + '亿</span>'
+  ).join(' ');
+
+  /* 4. 情绪 */
+  const sentiColors = {'冰点':'#6b7a8d','复苏':'#185FA5','发酵':'#BA7517','高潮':'#d93a3a','过热':'#8b1a1a'};
+  const sc = sentiColors[st.level] || '#555';
+  const sentiStr = st.date
+    ? '<span class="senti-score" style="width:56px;height:56px;border-width:3px;border-color:' + sc + ';color:' + sc + '"><b style="font-size:20px">' + st.score + '</b><span style="font-size:10px">' + esc(st.level) + '</span></span>'
+    : '<span style="color:var(--txt3)">暂无</span>';
+
+  /* 5. 涨停集中行业 */
+  const ztInd = (st.industries || []).slice(0, 4).map(i =>
+    '<span class="chip">' + esc(i.name) + ' ' + i.count + '家</span>'
+  ).join(' ') || '—';
+
+  /* 6. 综合速读文字 */
+  let summary = '';
+  if(st.date && top3Sec){
+    const hot1 = sec[0];
+    const ff1 = (ff.industry_in || [])[0];
+    summary = '<b>' + esc(st.date) + ' 交易复盘：</b>' +
+      '情绪' + esc(st.level) + '（' + st.score + '分），涨停' + st.zt + '家/跌停' + st.dt + '家。' +
+      '今日最热板块为<b style="color:var(--up)">' + esc(hot1.name) + '</b>（' + fmtPct(hot1.pct) + '），' +
+      (ff1 ? '主力资金最大净流入方向为<b style="color:var(--up)">' + esc(ff1.name) + '</b>（+' + ff1.net + '亿）。' : '') +
+      (st.note ? '<span style="color:var(--danger)">⚠ ' + esc(st.note) + '</span>' : '');
+  }
+
+  let html = '';
+  if(summary){
+    html += '<div style="background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:14px;font-size:14px;line-height:1.8;margin-bottom:12px">' + summary + '</div>';
+  }
+  html +=
+    '<div class="stats" style="grid-template-columns:repeat(auto-fit,minmax(200px,1fr))">' +
+    stat('最热板块 TOP3', '<div style="font-size:13px;line-height:2.2;margin-top:4px">' + (top3Sec || '—') + '</div>', '') +
+    stat('主力净流入 TOP3', '<div style="font-size:13px;line-height:2.2;margin-top:4px">' + (top3In || '—') + '</div>', '') +
+    '</div>' +
+    '<div class="senti-ind" style="margin-top:10px;align-items:center">' +
+    '<span style="font-size:13px;color:var(--txt2)">情绪温度：</span>' + sentiStr +
+    '<span style="font-size:13px;color:var(--txt2);margin-left:12px">涨停集中：</span>' + ztInd +
+    '</div>';
+  if(outStr){
+    html += '<div class="senti-ind" style="margin-top:6px"><span style="font-size:13px;color:var(--txt2)">主力净流出：</span>' + outStr + '</div>';
+  }
+  box.innerHTML = html;
+}
 
 /* 前瞻：重要性排序与日期格式化 */
 function impRank(i){ return i==='高'?2:i==='中'?1:0; }
@@ -1027,7 +1246,7 @@ function restoreTab(){
 }
 
 /* ================= 渲染 ================= */
-function renderAll(){ renderToday(); renderAhead(); renderReview(); renderSentiment(); renderFundflow(); renderLhb(); renderResearch(); renderValuation(); renderDivyield(); renderExecHold(); renderInstHold(); renderNiusan(); renderLong(); renderNotes(); }
+function renderAll(){ renderToday(); renderAhead(); renderReview(); renderHotSummary(); renderSentiment(); renderFundflow(); renderLhb(); renderResearch(); renderValuation(); renderDivyield(); renderExecHold(); renderInstHold(); renderNiusan(); renderLong(); renderNotes(); }
 /* ================= 启动 ================= */
 initNoteDate();
 restoreTab();
