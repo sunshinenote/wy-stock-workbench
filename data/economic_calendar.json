@@ -1,5 +1,212 @@
 [
  {
+  "date": "2026-08-15",
+  "time": "01:00",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国截至8月14日当周石油钻井总数(口)",
+  "forecast": "nan",
+  "previous": "454.0"
+ },
+ {
+  "date": "2026-08-15",
+  "time": "01:00",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国截至8月14日当周天然气钻井总数(口)",
+  "forecast": "nan",
+  "previous": "124.0"
+ },
+ {
+  "date": "2026-08-15",
+  "time": "01:00",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国截至8月14日当周全美钻井总数(口)",
+  "forecast": "nan",
+  "previous": "588.0"
+ },
+ {
+  "date": "2026-08-15",
+  "time": "01:00",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国截至8月14日当周混杂钻井总数(口)",
+  "forecast": "nan",
+  "previous": "10.0"
+ },
+ {
+  "date": "2026-08-15",
+  "time": "01:00",
+  "country": "加拿大",
+  "importance": "低",
+  "event": "加拿大截至8月14日当周总钻井数量(口)",
+  "forecast": "nan",
+  "previous": "216.0"
+ },
+ {
+  "date": "2026-08-15",
+  "time": "01:00",
+  "country": "北美洲",
+  "importance": "低",
+  "event": "北美洲截至8月14日当周总钻井总数(口)",
+  "forecast": "nan",
+  "previous": "804.0"
+ },
+ {
+  "date": "2026-08-15",
+  "time": "01:00",
+  "country": "北美洲",
+  "importance": "低",
+  "event": "北美洲截至8月14日当周墨西哥湾总钻井总数(口)",
+  "forecast": "nan",
+  "previous": "12.0"
+ },
+ {
+  "date": "2026-08-15",
+  "time": "06:30",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国8月13日NYMEX钯金库存变动-每日(百盎司)",
+  "forecast": "nan",
+  "previous": ""
+ },
+ {
+  "date": "2026-08-15",
+  "time": "06:30",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国8月14日iShares黄金持仓变动-每日(吨)",
+  "forecast": "nan",
+  "previous": "-0.52"
+ },
+ {
+  "date": "2026-08-15",
+  "time": "06:30",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国8月13日NYMEX铂金库存-每日更新(百盎司)",
+  "forecast": "nan",
+  "previous": "934.87"
+ },
+ {
+  "date": "2026-08-15",
+  "time": "06:30",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国8月13日NYMEX铂金库存变动-每日(百盎司)",
+  "forecast": "nan",
+  "previous": ""
+ },
+ {
+  "date": "2026-08-15",
+  "time": "06:30",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国8月13日NYMEX钯金库存-每日更新(百盎司)",
+  "forecast": "nan",
+  "previous": "2511.12"
+ },
+ {
+  "date": "2026-08-15",
+  "time": "06:30",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国8月14日iShares白银持仓变动-每日(吨)",
+  "forecast": "nan",
+  "previous": "22.49"
+ },
+ {
+  "date": "2026-08-15",
+  "time": "06:30",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国8月14日SPDR黄金持仓-每日更新(吨)",
+  "forecast": "nan",
+  "previous": "1023.24"
+ },
+ {
+  "date": "2026-08-15",
+  "time": "06:30",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国8月14日SPDR黄金持仓变动-每日(吨)",
+  "forecast": "nan",
+  "previous": "-2.57"
+ },
+ {
+  "date": "2026-08-15",
+  "time": "06:30",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国8月14日iShares白银持仓-每日更新(吨)",
+  "forecast": "nan",
+  "previous": "15336.03"
+ },
+ {
+  "date": "2026-08-15",
+  "time": "06:30",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国8月13日COMEX白银库存-每日更新(百盎司)",
+  "forecast": "nan",
+  "previous": "3354273.43"
+ },
+ {
+  "date": "2026-08-15",
+  "time": "06:30",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国8月13日COMEX黄金库存变动-每日(百盎司)",
+  "forecast": "nan",
+  "previous": "32.15"
+ },
+ {
+  "date": "2026-08-15",
+  "time": "06:30",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国8月14日iShares黄金持仓-每日更新(吨)",
+  "forecast": "nan",
+  "previous": "456.32"
+ },
+ {
+  "date": "2026-08-15",
+  "time": "06:30",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国8月13日COMEX黄金库存-每日更新(百盎司)",
+  "forecast": "nan",
+  "previous": "266122.41"
+ },
+ {
+  "date": "2026-08-15",
+  "time": "06:30",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国8月13日COMEX白银库存变动-每日(百盎司)",
+  "forecast": "nan",
+  "previous": "-48.02"
+ },
+ {
+  "date": "2026-08-15",
+  "time": "08:00",
+  "country": "韩国",
+  "importance": "低",
+  "event": "韩国7月贸易帐修正值(亿美元)",
+  "forecast": "nan",
+  "previous": "303.2"
+ },
+ {
+  "date": "2026-08-15",
+  "time": "08:00",
+  "country": "韩国",
+  "importance": "低",
+  "event": "韩国7月出口年率修正值(%)",
+  "forecast": "nan",
+  "previous": "62.8"
+ },
+ {
   "date": "2026-08-17",
   "time": "06:30",
   "country": "新西兰",
@@ -231,7 +438,7 @@
   "importance": "中",
   "event": "中国8月17日上期所每日仓单变动-燃料油(吨)",
   "forecast": "nan",
-  "previous": "nan"
+  "previous": ""
  },
  {
   "date": "2026-08-17",
@@ -240,7 +447,7 @@
   "importance": "中",
   "event": "中国8月17日上期所每日仓单变动-白银(千克)",
   "forecast": "nan",
-  "previous": "nan"
+  "previous": "21380.0"
  },
  {
   "date": "2026-08-17",
@@ -249,7 +456,7 @@
   "importance": "中",
   "event": "中国8月17日上期所每日仓单变动-铜(吨)",
   "forecast": "nan",
-  "previous": "nan"
+  "previous": "6468.0"
  },
  {
   "date": "2026-08-17",
@@ -258,7 +465,7 @@
   "importance": "中",
   "event": "中国8月17日上期所每日仓单变动-原油(桶)",
   "forecast": "nan",
-  "previous": "nan"
+  "previous": ""
  },
  {
   "date": "2026-08-17",
@@ -267,7 +474,16 @@
   "importance": "中",
   "event": "中国8月17日上期所每日仓单变动-黄金(千克)",
   "forecast": "nan",
-  "previous": "nan"
+  "previous": ""
+ },
+ {
+  "date": "2026-08-17",
+  "time": "16:00",
+  "country": "中国",
+  "importance": "中",
+  "event": "中国7月实际外商直接投资年率CNY-年初至今(%)",
+  "forecast": "nan",
+  "previous": "-5.0"
  },
  {
   "date": "2026-08-17",
@@ -502,221 +718,5 @@
   "event": "美国6月长期资本净流入(亿美元)",
   "forecast": "nan",
   "previous": "2327.0"
- },
- {
-  "date": "2026-08-18",
-  "time": "04:00",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国6月外资净买入长期证券(亿美元)",
-  "forecast": "nan",
-  "previous": "2327.0"
- },
- {
-  "date": "2026-08-18",
-  "time": "04:00",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国6月外资净买入美国公债(亿美元)",
-  "forecast": "nan",
-  "previous": "566.0"
- },
- {
-  "date": "2026-08-18",
-  "time": "06:30",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国8月17日iShares黄金持仓变动-每日(吨)",
-  "forecast": "nan",
-  "previous": "nan"
- },
- {
-  "date": "2026-08-18",
-  "time": "06:30",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国8月14日COMEX白银库存-每日更新(百盎司)",
-  "forecast": "nan",
-  "previous": "nan"
- },
- {
-  "date": "2026-08-18",
-  "time": "06:30",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国8月17日iShares白银持仓-每日更新(吨)",
-  "forecast": "nan",
-  "previous": "nan"
- },
- {
-  "date": "2026-08-18",
-  "time": "06:30",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国8月14日COMEX黄金库存-每日更新(百盎司)",
-  "forecast": "nan",
-  "previous": "nan"
- },
- {
-  "date": "2026-08-18",
-  "time": "06:30",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国8月14日NYMEX铂金库存-每日更新(百盎司)",
-  "forecast": "nan",
-  "previous": "nan"
- },
- {
-  "date": "2026-08-18",
-  "time": "06:30",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国8月14日NYMEX钯金库存变动-每日(百盎司)",
-  "forecast": "nan",
-  "previous": "nan"
- },
- {
-  "date": "2026-08-18",
-  "time": "06:30",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国8月14日NYMEX钯金库存-每日更新(百盎司)",
-  "forecast": "nan",
-  "previous": "nan"
- },
- {
-  "date": "2026-08-18",
-  "time": "06:30",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国8月17日iShares白银持仓变动-每日(吨)",
-  "forecast": "nan",
-  "previous": "nan"
- },
- {
-  "date": "2026-08-18",
-  "time": "06:30",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国8月17日iShares黄金持仓-每日更新(吨)",
-  "forecast": "nan",
-  "previous": "nan"
- },
- {
-  "date": "2026-08-18",
-  "time": "06:30",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国8月17日SPDR黄金持仓-每日更新(吨)",
-  "forecast": "nan",
-  "previous": "nan"
- },
- {
-  "date": "2026-08-18",
-  "time": "06:30",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国8月14日NYMEX铂金库存变动-每日(百盎司)",
-  "forecast": "nan",
-  "previous": "nan"
- },
- {
-  "date": "2026-08-18",
-  "time": "06:30",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国8月17日SPDR黄金持仓变动-每日(吨)",
-  "forecast": "nan",
-  "previous": "nan"
- },
- {
-  "date": "2026-08-18",
-  "time": "06:30",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国8月14日COMEX白银库存变动-每日(百盎司)",
-  "forecast": "nan",
-  "previous": "nan"
- },
- {
-  "date": "2026-08-18",
-  "time": "06:30",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国8月14日COMEX黄金库存变动-每日(百盎司)",
-  "forecast": "nan",
-  "previous": "nan"
- },
- {
-  "date": "2026-08-18",
-  "time": "08:30",
-  "country": "澳大利亚",
-  "importance": "中",
-  "event": "澳大利亚截至8月16日当周ANZ消费者信心指数",
-  "forecast": "nan",
-  "previous": "75.0"
- },
- {
-  "date": "2026-08-18",
-  "time": "08:30",
-  "country": "澳大利亚",
-  "importance": "低",
-  "event": "澳大利亚截至8月16日当周ANZ消费者对未来2年通胀预期",
-  "forecast": "nan",
-  "previous": "5.7"
- },
- {
-  "date": "2026-08-18",
-  "time": "08:30",
-  "country": "澳大利亚",
-  "importance": "低",
-  "event": "澳大利亚截至8月16日当周ANZ消费者对当前财务较1年前评价",
-  "forecast": "nan",
-  "previous": "69.5"
- },
- {
-  "date": "2026-08-18",
-  "time": "08:30",
-  "country": "澳大利亚",
-  "importance": "低",
-  "event": "澳大利亚截至8月16日当周ANZ消费者对未来1年经济预期",
-  "forecast": "nan",
-  "previous": "74.1"
- },
- {
-  "date": "2026-08-18",
-  "time": "10:10",
-  "country": "中国",
-  "importance": "中",
-  "event": "中国2025年非洲贸易活力指标",
-  "forecast": "nan",
-  "previous": "939.69"
- },
- {
-  "date": "2026-08-18",
-  "time": "10:10",
-  "country": "中国",
-  "importance": "中",
-  "event": "中国2025年非洲贸易规模指标",
-  "forecast": "nan",
-  "previous": "1960.51"
- },
- {
-  "date": "2026-08-18",
-  "time": "10:10",
-  "country": "中国",
-  "importance": "中",
-  "event": "中国2025年非洲贸易指数",
-  "forecast": "nan",
-  "previous": "1056.53"
- },
- {
-  "date": "2026-08-18",
-  "time": "10:10",
-  "country": "中国",
-  "importance": "中",
-  "event": "中国2025年非洲贸易结构指标",
-  "forecast": "nan",
-  "previous": "149.14"
  }
 ]
