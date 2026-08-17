@@ -1,55 +1,55 @@
 {
- "date": "2026-08-14",
- "zt": 63,
- "dt": 10,
- "zb": 19,
- "zb_rate": 23.2,
- "max_lb": 5,
+ "date": "2026-08-17",
+ "zt": 106,
+ "dt": 1,
+ "zb": 12,
+ "zb_rate": 10.2,
+ "max_lb": 4,
  "lb_dist": [
   {
    "lb": 1,
-   "count": 52
+   "count": 91
   },
   {
    "lb": 2,
-   "count": 5
+   "count": 10
   },
   {
    "lb": 3,
-   "count": 5
+   "count": 2
   },
   {
-   "lb": 5,
-   "count": 1
+   "lb": 4,
+   "count": 3
   }
  ],
- "score": 65,
- "level": "发酵",
- "note": "跌停家数较多，情绪走弱",
+ "score": 81,
+ "level": "高潮",
+ "note": "",
  "industries": [
   {
-   "name": "通信设备",
-   "count": 6
-  },
-  {
-   "name": "汽车零部",
-   "count": 3
+   "name": "化学制品",
+   "count": 8
   },
   {
    "name": "元件",
-   "count": 3
+   "count": 4
   },
   {
-   "name": "医药商业",
-   "count": 3
+   "name": "汽车零部",
+   "count": 4
   },
   {
-   "name": "装修装饰",
-   "count": 3
+   "name": "光学光电",
+   "count": 4
   },
   {
-   "name": "环境治理",
-   "count": 3
+   "name": "专用设备",
+   "count": 4
+  },
+  {
+   "name": "通用设备",
+   "count": 4
   }
  ]
 }

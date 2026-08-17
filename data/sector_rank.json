@@ -1,82 +1,82 @@
 [
  {
   "name": "电子化学品",
-  "pct": 4.07,
+  "pct": 5.09,
   "leader": "中石科技",
-  "leader_pct": 20.01,
-  "up_count": 41,
-  "down_count": 2
- },
- {
-  "name": "非金属材料",
-  "pct": 3.84,
-  "leader": "金戈新材",
-  "leader_pct": 29.98,
-  "up_count": 12,
-  "down_count": 3
- },
- {
-  "name": "元件",
-  "pct": 2.52,
-  "leader": "中富电路",
-  "leader_pct": 11.74,
-  "up_count": 51,
-  "down_count": 12
- },
- {
-  "name": "通信设备",
-  "pct": 2.33,
-  "leader": "阿莱德",
   "leader_pct": 20.0,
-  "up_count": 67,
-  "down_count": 23
- },
- {
-  "name": "金属新材料",
-  "pct": 2.05,
-  "leader": "龙磁科技",
-  "leader_pct": 7.61,
-  "up_count": 27,
-  "down_count": 6
- },
- {
-  "name": "小金属",
-  "pct": 1.99,
-  "leader": "中国稀土",
-  "leader_pct": 10.0,
-  "up_count": 26,
+  "up_count": 40,
   "down_count": 3
  },
  {
   "name": "半导体",
-  "pct": 1.86,
-  "leader": "敏芯股份",
-  "leader_pct": 20.01,
-  "up_count": 149,
-  "down_count": 34
+  "pct": 4.85,
+  "leader": "中微半导",
+  "leader_pct": 16.81,
+  "up_count": 177,
+  "down_count": 8
  },
  {
   "name": "其他电子",
-  "pct": 1.7,
-  "leader": "富信科技",
-  "leader_pct": 20.0,
-  "up_count": 24,
-  "down_count": 10
+  "pct": 3.94,
+  "leader": "盈方微",
+  "leader_pct": 10.07,
+  "up_count": 32,
+  "down_count": 2
  },
  {
-  "name": "环保设备",
-  "pct": 1.55,
-  "leader": "蓝盾光电",
-  "leader_pct": 20.0,
-  "up_count": 20,
-  "down_count": 10
+  "name": "元件",
+  "pct": 3.88,
+  "leader": "金禄电子",
+  "leader_pct": 19.99,
+  "up_count": 60,
+  "down_count": 3
  },
  {
-  "name": "通信服务",
-  "pct": 1.38,
-  "leader": "数据港",
-  "leader_pct": 10.0,
-  "up_count": 30,
+  "name": "种植业与林业",
+  "pct": 3.81,
+  "leader": "秋乐种业",
+  "leader_pct": 12.98,
+  "up_count": 29,
+  "down_count": 1
+ },
+ {
+  "name": "贵金属",
+  "pct": 3.29,
+  "leader": "湖南白银",
+  "leader_pct": 6.63,
+  "up_count": 14,
+  "down_count": 0
+ },
+ {
+  "name": "其他电源设备",
+  "pct": 3.18,
+  "leader": "中远通",
+  "leader_pct": 20.0,
+  "up_count": 32,
+  "down_count": 2
+ },
+ {
+  "name": "工业金属",
+  "pct": 3.09,
+  "leader": "北方铜业",
+  "leader_pct": 10.01,
+  "up_count": 53,
+  "down_count": 2
+ },
+ {
+  "name": "通信设备",
+  "pct": 3.08,
+  "leader": "太辰光",
+  "leader_pct": 20.0,
+  "up_count": 79,
+  "down_count": 12
+ },
+ {
+  "name": "消费电子",
+  "pct": 2.85,
+  "leader": "电连技术",
+  "leader_pct": 20.0,
+  "up_count": 84,
   "down_count": 12
  }
 ]
