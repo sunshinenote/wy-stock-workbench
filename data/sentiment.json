@@ -1,50 +1,50 @@
 {
- "date": "2026-08-17",
- "zt": 106,
- "dt": 1,
- "zb": 12,
- "zb_rate": 10.2,
+ "date": "2026-08-18",
+ "zt": 79,
+ "dt": 5,
+ "zb": 23,
+ "zb_rate": 22.5,
  "max_lb": 4,
  "lb_dist": [
   {
    "lb": 1,
-   "count": 91
+   "count": 61
   },
   {
    "lb": 2,
-   "count": 10
+   "count": 13
   },
   {
    "lb": 3,
-   "count": 2
+   "count": 4
   },
   {
    "lb": 4,
-   "count": 3
+   "count": 1
   }
  ],
- "score": 81,
+ "score": 71,
  "level": "高潮",
  "note": "",
  "industries": [
   {
-   "name": "化学制品",
-   "count": 8
-  },
-  {
-   "name": "元件",
-   "count": 4
+   "name": "种植业",
+   "count": 13
   },
   {
    "name": "汽车零部",
+   "count": 5
+  },
+  {
+   "name": "化学制药",
    "count": 4
   },
   {
-   "name": "光学光电",
+   "name": "农产品加",
    "count": 4
   },
   {
-   "name": "专用设备",
+   "name": "一般零售",
    "count": 4
   },
   {

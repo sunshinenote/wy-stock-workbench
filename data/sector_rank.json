@@ -1,82 +1,82 @@
 [
  {
-  "name": "电子化学品",
-  "pct": 5.09,
-  "leader": "中石科技",
-  "leader_pct": 20.0,
-  "up_count": 40,
-  "down_count": 3
- },
- {
-  "name": "半导体",
-  "pct": 4.85,
-  "leader": "中微半导",
-  "leader_pct": 16.81,
-  "up_count": 177,
-  "down_count": 8
- },
- {
-  "name": "其他电子",
-  "pct": 3.94,
-  "leader": "盈方微",
-  "leader_pct": 10.07,
-  "up_count": 32,
-  "down_count": 2
- },
- {
-  "name": "元件",
-  "pct": 3.88,
-  "leader": "金禄电子",
-  "leader_pct": 19.99,
-  "up_count": 60,
-  "down_count": 3
- },
- {
   "name": "种植业与林业",
-  "pct": 3.81,
+  "pct": 9.36,
   "leader": "秋乐种业",
-  "leader_pct": 12.98,
+  "leader_pct": 29.98,
   "up_count": 29,
   "down_count": 1
  },
  {
-  "name": "贵金属",
-  "pct": 3.29,
-  "leader": "湖南白银",
-  "leader_pct": 6.63,
-  "up_count": 14,
-  "down_count": 0
+  "name": "农产品加工",
+  "pct": 3.51,
+  "leader": "大北农",
+  "leader_pct": 10.1,
+  "up_count": 40,
+  "down_count": 3
  },
  {
-  "name": "其他电源设备",
-  "pct": 3.18,
-  "leader": "中远通",
-  "leader_pct": 20.0,
-  "up_count": 32,
+  "name": "养殖业",
+  "pct": 2.95,
+  "leader": "天山生物",
+  "leader_pct": 20.04,
+  "up_count": 30,
+  "down_count": 6
+ },
+ {
+  "name": "农化制品",
+  "pct": 2.3,
+  "leader": "农大科技",
+  "leader_pct": 12.65,
+  "up_count": 51,
+  "down_count": 8
+ },
+ {
+  "name": "油气开采及服务",
+  "pct": 2.06,
+  "leader": "海油工程",
+  "leader_pct": 7.31,
+  "up_count": 17,
   "down_count": 2
  },
  {
-  "name": "工业金属",
-  "pct": 3.09,
-  "leader": "北方铜业",
-  "leader_pct": 10.01,
-  "up_count": 53,
-  "down_count": 2
+  "name": "燃气",
+  "pct": 1.53,
+  "leader": "洪通燃气",
+  "leader_pct": 6.07,
+  "up_count": 26,
+  "down_count": 1
  },
  {
-  "name": "通信设备",
-  "pct": 3.08,
-  "leader": "太辰光",
-  "leader_pct": 20.0,
-  "up_count": 79,
-  "down_count": 12
+  "name": "食品加工制造",
+  "pct": 1.5,
+  "leader": "康比特",
+  "leader_pct": 11.6,
+  "up_count": 44,
+  "down_count": 20
  },
  {
-  "name": "消费电子",
-  "pct": 2.85,
-  "leader": "电连技术",
-  "leader_pct": 20.0,
-  "up_count": 84,
-  "down_count": 12
+  "name": "工程机械",
+  "pct": 1.21,
+  "leader": "万达轴承",
+  "leader_pct": 10.61,
+  "up_count": 19,
+  "down_count": 15
+ },
+ {
+  "name": "自动化设备",
+  "pct": 1.04,
+  "leader": "频准激光",
+  "leader_pct": 516.44,
+  "up_count": 54,
+  "down_count": 42
+ },
+ {
+  "name": "电机",
+  "pct": 1.0,
+  "leader": "卧龙电驱",
+  "leader_pct": 7.4,
+  "up_count": 15,
+  "down_count": 11
  }
 ]
