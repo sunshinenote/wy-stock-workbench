@@ -136,6 +136,20 @@ button.danger{color:var(--danger)}
 .ns-chip.active .ns-hot{color:#ffdcdc}
 .ns-summary{display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-bottom:8px;font-size:13px;color:var(--txt2)}
 .chip{display:inline-block;font-size:12px;padding:1px 8px;border-radius:6px;background:var(--bg);border:1px solid var(--line);color:var(--txt2)}
+.concept-search{width:100%;font-size:16px;border:1px solid var(--line2);border-radius:10px;padding:10px 12px;min-height:44px;margin:6px 0 10px;font-family:inherit;box-sizing:border-box}
+.fchip-row{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 12px}
+.fchip{padding:5px 12px;border:1px solid var(--line2);border-radius:999px;background:#fff;color:var(--txt2);font-size:13px;cursor:pointer;white-space:nowrap;-webkit-tap-highlight-color:transparent}
+.fchip.active{background:var(--brand);color:#fff;border-color:var(--brand)}
+.ind-block{margin-top:14px;border-top:1px solid var(--line);padding-top:12px}
+.ind-block:first-child{border-top:none;padding-top:0}
+.ind-title{font-size:15px;font-weight:600;margin-bottom:8px;color:var(--txt)}
+.concept-card{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:10px 12px;margin-bottom:10px}
+.concept-name{font-size:14px;font-weight:600;margin-bottom:8px;color:var(--txt)}
+.lchip{display:inline-flex;align-items:center;gap:5px;padding:4px 9px;margin:3px 4px 3px 0;border-radius:8px;background:#fff;border:1px solid var(--line);font-size:13px;color:var(--txt);cursor:default}
+.lchip small{font-size:11px;font-weight:600}
+.lchip.up{color:var(--up);border-color:var(--up-soft);background:var(--up-soft)}
+.lchip.down{color:var(--down);border-color:var(--down-soft);background:var(--down-soft)}
+.lchip .code{font-size:10px;color:var(--txt3)}
 .chip.red{background:var(--up-soft);color:var(--up);border-color:transparent}
 .chip.green{background:var(--down-soft);color:var(--down);border-color:transparent}
 .chip.amber{background:var(--warn-soft);color:var(--warn);border-color:transparent}
@@ -202,6 +216,23 @@ footer{text-align:center;font-size:12px;color:var(--txt3);padding:24px 0 8px;lin
 .modal p{font-size:14px;color:var(--txt2);margin-bottom:18px}
 .modal .row{display:flex;gap:10px;justify-content:flex-end}
 
+/* ============ 日K线弹窗 ============ */
+.kline-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:8px}
+.kline-meta{font-size:13px;color:var(--txt2);margin-top:2px}
+.kline-body{max-height:80vh;overflow:auto;-webkit-overflow-scrolling:touch}
+.kline-chart{width:100%;height:auto;display:block}
+.kline-legend{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--txt2);margin:2px 0 6px}
+.kline-legend i{display:inline-block;width:14px;height:3px;border-radius:2px;vertical-align:middle;margin-right:5px}
+.kline-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(118px,1fr));gap:8px;margin:10px 0}
+.kline-stat{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:8px 10px}
+.kline-stat .k{font-size:12px;color:var(--txt3)}
+.kline-stat .v{font-size:15px;font-weight:600;margin-top:2px}
+.kline-note{font-size:12px;color:var(--txt3);line-height:1.6;margin-top:8px;border-top:1px dashed var(--line);padding-top:8px}
+.kline-paste{margin-top:10px}
+.kline-paste textarea{width:100%;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:13px;border:1px solid var(--line2);border-radius:10px;padding:10px;margin:8px 0;resize:vertical;min-height:90px}
+.kline-loading{text-align:center;color:var(--txt2);padding:40px 0;font-size:14px}
+.lk{color:var(--brand);cursor:pointer;text-decoration:underline;text-underline-offset:2px;transition:opacity .15s}.lk:hover{opacity:.78;background:var(--brand-soft,#eef2ff);border-radius:4px}
+
 /* range bar for sectors */
 .bar-row{display:flex;align-items:center;gap:10px;padding:7px 0}
 .bar-label{flex:none;width:110px;font-size:14px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
@@ -249,6 +280,7 @@ svg text{font-family:inherit}
   <button class="tab" data-tab="ahead" onclick="switchTab('ahead')">大事前瞻</button>
   <button class="tab" data-tab="short" onclick="switchTab('short')">短期机会</button>
   <button class="tab" data-tab="long" onclick="switchTab('long')">长期机会</button>
+  <button class="tab" data-tab="concepts" onclick="switchTab('concepts')">概念龙头</button>
 </nav>
 
 <!-- ============ 今日复盘 ============ -->
@@ -345,6 +377,18 @@ svg text{font-family:inherit}
   </section>
 </div>
 
+<!-- ============ 概念龙头 ============ -->
+<div class="tab-panel" id="panel-concepts">
+  <section class="card">
+    <h2>行业概念 · 龙头速查 <span class="tag blue">参考</span></h2>
+    <input class="concept-search" id="conceptSearch" placeholder="搜索行业 / 概念 / 股票代码或名称…" oninput="renderConcepts()">
+    <div class="fchip-row" id="conceptFilter"></div>
+    <div id="conceptTree"></div>
+    <p class="empty" id="conceptEmpty" style="display:none">没有匹配的概念或股票。</p>
+    <div class="plan-hint" id="conceptNote"></div>
+  </section>
+</div>
+
 <footer>
   数据来源：AKShare 聚合的公开免费接口（东方财富/新浪等），仅供个人研究参考，不构成投资建议。<br>
   个人数据（自选/成本/笔记）仅存于本浏览器 localStorage，导出备份请妥善保管；采集行情为公网公开数据。<br>
@@ -387,6 +431,30 @@ svg text{font-family:inherit}
     <div class="row" id="refreshActions" style="display:none">
       <button onclick="closeRefreshModal()">关闭</button>
       <button class="primary" onclick="closeRefreshModal();reloadData()">查看最新数据</button>
+    </div>
+  </div>
+</div>
+
+<!-- 日K线弹窗 -->
+<div class="modal-mask" id="klineModal" onclick="if(event.target===this)closeKline()">
+  <div class="modal" style="max-width:min(940px,96vw);width:100%">
+    <div class="kline-head">
+      <div>
+        <h3 id="klineTitle" style="margin:0">日K线</h3>
+        <div id="klineMeta" class="kline-meta"></div>
+      </div>
+      <button class="ghost btn-sm" onclick="closeKline()">✕ 关闭</button>
+    </div>
+    <div id="klineBody" class="kline-body"></div>
+    <div id="klinePaste" class="kline-paste" style="display:none">
+      <p style="font-size:13px;color:var(--txt2);line-height:1.7">
+        未读到该股票 K 线（本地离线打开或尚未运行采集）。可粘贴数据后渲染：<br>
+        支持 CSV（每行：<code>日期,开,高,低,收,量</code>）或 JSON（<code>{"kline":[{"date","open","high","low","close","vol"}]}</code>）。
+      </p>
+      <textarea id="klinePasteArea" placeholder="2026-08-10,1325,1359.97,1318.08,1348.86,62686&#10;2026-08-11,1348,1352.65,1338,1346.5,27073"></textarea>
+      <div class="row" style="justify-content:flex-start">
+        <button class="primary btn-sm" onclick="renderPastedKline()">渲染粘贴的数据</button>
+      </div>
     </div>
   </div>
 </div>
@@ -443,6 +511,20 @@ function demoData(){
       {code:'300750',name:'宁德时代',price:196.32,pct:3.12,chg:5.94,turnover:1.85,amount:58.3,pe:21.4,pb:4.6,ytd:12.8},
       {code:'688981',name:'中芯国际',price:78.55,pct:5.62,chg:4.18,turnover:2.42,amount:66.7,pe:78.3,pb:3.2,ytd:35.6} ],
     history: (()=>{ const arr=[]; for(let i=89;i>=0;i--){ const d=new Date(); d.setDate(d.getDate()-i); arr.push({date:d.toISOString().slice(5,10), '上证指数':3260+Math.sin(i/6)*30+i*1.4}); } return arr; })(),
+    concepts:{ updated:'示例', note:'示例数据（离线模式）。部署后由 concepts.json 提供真实清单，可在该文件直接编辑后重新采集。', industries:[
+      {name:'科技', concepts:[
+        {name:'半导体', leaders:[{code:'688981',name:'中芯国际'},{code:'002371',name:'北方华创'},{code:'603986',name:'兆易创新'}]},
+        {name:'人形机器人', leaders:[{code:'601689',name:'拓普集团'},{code:'002050',name:'三花智控'},{code:'688017',name:'绿的谐波'}]}
+      ]},
+      {name:'新能源', concepts:[
+        {name:'锂电池', leaders:[{code:'300750',name:'宁德时代'},{code:'002594',name:'比亚迪'}]},
+        {name:'光伏', leaders:[{code:'601012',name:'隆基绿能'},{code:'300274',name:'阳光电源'}]}
+      ]},
+      {name:'消费', concepts:[
+        {name:'白酒', leaders:[{code:'600519',name:'贵州茅台'},{code:'000858',name:'五粮液'}]}
+      ]}
+    ]},
+    conceptsQuotes:{ '688981':{pct:5.62,name:'中芯国际'}, '002371':{pct:3.21,name:'北方华创'}, '603986':{pct:8.32,name:'兆易创新'}, '601689':{pct:4.15,name:'拓普集团'}, '002050':{pct:2.88,name:'三花智控'}, '688017':{pct:6.4,name:'绿的谐波'}, '300750':{pct:3.12,name:'宁德时代'}, '002594':{pct:1.05,name:'比亚迪'}, '601012':{pct:2.68,name:'隆基绿能'}, '300274':{pct:3.92,name:'阳光电源'}, '600519':{pct:0.85,name:'贵州茅台'}, '000858':{pct:1.55,name:'五粮液'} },
     research:[ {code:'605499',name:'东鹏饮料',sum:275,count:1,date:t0,price:122.8,pct:1.58},
       {code:'600885',name:'宏发股份',sum:158,count:1,date:t0,price:35.41,pct:-0.39},
       {code:'688235',name:'百济神州',sum:152,count:2,date:t1,price:299.33,pct:11.28},
@@ -516,7 +598,7 @@ function demoData(){
 
 /* ================= 数据加载 ================= */
 async function loadAll(){
-  const files = ['index_snapshot','sector_rank','economic_calendar','unlock_calendar','earnings','watchlist_quotes','history','research_rank','sentiment','fundflow','lhb','valuation','divyield','niusan','exec_hold','inst_hold','last_update'];
+  const files = ['index_snapshot','sector_rank','economic_calendar','unlock_calendar','earnings','watchlist_quotes','history','research_rank','sentiment','fundflow','lhb','valuation','divyield','niusan','exec_hold','inst_hold','concepts','concepts_quotes','last_update'];
   const map = {};
   let gotAny = false;
   await Promise.all(files.map(async f => {
@@ -531,7 +613,8 @@ async function loadAll(){
       index: map.index_snapshot || [], sector: map.sector_rank || [], econ: map.economic_calendar || [],
       unlock: map.unlock_calendar || [], earn: map.earnings || [], watch: map.watchlist_quotes || [],
       history: map.history || [], research: map.research_rank || [], sentiment: map.sentiment || {},
-      fundflow: map.fundflow || {}, lhb: map.lhb || {}, valuation: map.valuation || {},       divyield: map.divyield || {}, niusan: map.niusan || {}, execHold: map.exec_hold || {}, instHold: map.inst_hold || {},
+      fundflow: map.fundflow || {}, lhb: map.lhb || {}, valuation: map.valuation || {},       divyield: map.divyield || {},       niusan: map.niusan || {}, execHold: map.exec_hold || {}, instHold: map.inst_hold || {},
+      concepts: map.concepts || {industries:[]}, conceptsQuotes: map.concepts_quotes || {},
       upd: map.last_update && map.last_update.time || ''
     };
   }else{
@@ -1064,19 +1147,19 @@ function renderReview(){
   }).concat(manual.map(code => {
     const name = code; // 手动添加无行情数据的显示代码
     const cost = costs[code];
-    return '<tr><td>' + code + '</td><td><b>（手动）</b></td><td class="num">—</td><td class="num">—</td><td class="num">' + (cost?'成本 '+cost:'—') + '</td><td class="num">—</td><td style="text-align:right"><button class="btn-sm" onclick="editCost(\''+code+'\')">成本</button> <button class="btn-sm danger" onclick="removeWatch(\''+code+'\')">移除</button></td></tr>';
+    return '<tr><td><span class="lk" onclick="showKline(\''+code+'\',\''+code+'\')">'+code+'</span></td><td><b>（手动）</b></td><td class="num">—</td><td class="num">—</td><td class="num">' + (cost?'成本 '+cost:'—') + '</td><td class="num">—</td><td style="text-align:right"><button class="btn-sm" onclick="showKline(\''+code+'\',\''+code+'\')">K线</button> <button class="btn-sm" onclick="editCost(\''+code+'\')">成本</button> <button class="btn-sm danger" onclick="removeWatch(\''+code+'\')">移除</button></td></tr>';
   }));
   wt.innerHTML = '<thead><tr><th>代码</th><th>名称</th><th class="num">现价</th><th class="num">涨跌幅</th><th class="num">成本</th><th class="num">盈亏</th><th></th></tr></thead><tbody>' + rows.join('') + '</tbody>';
   wc.innerHTML = quotes.map(q => {
     const cost = costs[q.code];
     const pnl = cost ? ((q.price-cost)*100/cost) : null;
-    return '<div class="t-item" style="margin-bottom:8px"><div class="t-body"><div class="t-title">' + q.name + ' <span class="' + clsPct(q.pct) + '">' + fmtPct(q.pct) + '</span></div><div class="t-sub">' + q.code + ' · 现价 ' + q.price + (cost?' · 成本 ' + cost + ' · 盈亏 ' + (pnl>=0?'+':'') + pnl.toFixed(2) + '%':'') + '</div></div><div style="display:flex;gap:6px"><button class="btn-sm" onclick="editCost(\''+q.code+'\')">成本</button><button class="btn-sm danger" onclick="removeWatch(\''+q.code+'\')">移除</button></div></div>';
+    return '<div class="t-item" style="margin-bottom:8px"><div class="t-body"><div class="t-title"><span class="lk" onclick="showKline(\''+q.code+'\',\''+q.name+'\')">' + q.name + '</span> <span class="' + clsPct(q.pct) + '">' + fmtPct(q.pct) + '</span></div><div class="t-sub"><span class="lk" onclick="showKline(\''+q.code+'\',\''+q.name+'\')">' + q.code + '</span> · 现价 ' + q.price + (cost?' · 成本 ' + cost + ' · 盈亏 ' + (pnl>=0?'+':'') + pnl.toFixed(2) + '%':'') + '</div></div><div style="display:flex;gap:6px"><button class="btn-sm" onclick="showKline(\''+q.code+'\',\''+q.name+'\')">K线</button><button class="btn-sm" onclick="editCost(\''+q.code+'\')">成本</button><button class="btn-sm danger" onclick="removeWatch(\''+q.code+'\')">移除</button></div></div>';
   }).join('');
 
   function row(q, cost, pnl){
     const costStr = cost != null ? cost : '<button class="btn-sm" onclick="editCost(\''+q.code+'\')">录入</button>';
     const pnlStr = pnl != null ? '<span class="' + (pnl>=0?'up':'down') + '" style="font-weight:600">' + (pnl>=0?'+':'') + pnl.toFixed(2) + '%</span>' : '—';
-    return '<tr><td>' + q.code + '</td><td><b>' + q.name + '</b>' + '<span class="chip amber" style="margin-left:4px">' + q.ytd.toFixed(1) + '% YTD</span>' + '</td><td class="num" style="font-weight:600">' + q.price + '</td><td class="num ' + clsPct(q.pct) + '" style="font-weight:600">' + fmtPct(q.pct) + '</td><td class="num">' + costStr + '</td><td class="num">' + pnlStr + '</td><td style="text-align:right"><button class="btn-sm danger" onclick="removeWatch(\''+q.code+'\')">移除</button></td></tr>';
+    return '<tr><td><span class="lk" onclick="showKline(\''+q.code+'\',\''+q.name+'\')">'+q.code+'</span></td><td><b class="lk" onclick="showKline(\''+q.code+'\',\''+q.name+'\')">' + q.name + '</b>' + '<span class="chip amber" style="margin-left:4px">' + q.ytd.toFixed(1) + '% YTD</span>' + '</td><td class="num" style="font-weight:600">' + q.price + '</td><td class="num ' + clsPct(q.pct) + '" style="font-weight:600">' + fmtPct(q.pct) + '</td><td class="num">' + costStr + '</td><td class="num">' + pnlStr + '</td><td style="text-align:right"><button class="btn-sm" onclick="showKline(\''+q.code+'\',\''+q.name+'\')">K线</button> <button class="btn-sm danger" onclick="removeWatch(\''+q.code+'\')">移除</button></td></tr>';
   }
 }
 
@@ -1100,6 +1183,192 @@ function lineChart(hist){
   let gy = '';
   for(let i=0;i<=4;i++){ const v = min + range*i/4; const y = Y(v); gy += '<text x="' + (P.l-8) + '" y="' + (y+3).toFixed(0) + '" text-anchor="end" font-size="11" fill="#93a0b3">' + v.toFixed(0) + '</text><line x1="' + P.l + '" y1="' + y.toFixed(0) + '" x2="' + (W-P.r) + '" y2="' + y.toFixed(0) + '" stroke="#e5e8ef" stroke-width="0.5"/>'; }
   return '<svg viewBox="0 0 ' + W + ' ' + H + '" style="width:100%;height:auto" role="img" aria-label="上证指数近90日走势折线图"><rect x="' + P.l + '" y="' + P.t + '" width="' + iw + '" height="' + ih + '" fill="none"/><defs><marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M2 1L8 5L2 9" fill="none" stroke="' + lastColor + '" stroke-width="1.5"/></marker></defs>' + gy + gx + '<polyline points="' + pts + '" fill="none" stroke="' + lastColor + '" stroke-width="2" stroke-linejoin="round"/>' + '<line x1="' + X(vals.length-1).toFixed(0) + '" y1="' + Y(last).toFixed(0) + '" x2="' + (X(vals.length-1)+14).toFixed(0) + '" y2="' + (Y(last)-10).toFixed(0) + '" stroke="' + lastColor + '" stroke-width="1.5" marker-end="url(#arr)"/>' + '<text x="' + (X(vals.length-1)+30).toFixed(0) + '" y="' + (Y(last)-14).toFixed(0) + '" font-size="13" font-weight="500" fill="' + lastColor + '">' + last.toFixed(2) + '</text></svg>';
+}
+
+/* ================= 日K线（点击股票查看） ================= */
+const KL_UP = '#d93a3a', KL_DOWN = '#0aa050';
+const KL_MA = {5:'#E8923A', 10:'#2F7DE1', 20:'#8E5BC9'};
+
+function closeKline(){ $('klineModal').classList.remove('show'); }
+
+function showKline(code, name){
+  $('klineTitle').textContent = name + '（' + code + '）· 日K线';
+  $('klineMeta').textContent = '加载中…';
+  $('klineBody').innerHTML = '<div class="kline-loading">⏳ 正在读取 ' + code + ' 的日K线…</div>';
+  $('klinePaste').style.display = 'none';
+  $('klineModal').classList.add('show');
+  fetch('data/kline/' + code + '.json?_=' + Date.now(), {cache:'no-store'})
+    .then(r => { if(!r.ok) throw new Error('no'); return r.json(); })
+    .then(d => {
+      const bars = (d && d.kline) || [];
+      if(!bars.length){ showKlinePaste(code); return; }
+      renderKline(bars, d.name || name);
+    })
+    .catch(() => { showKlinePaste(code); });
+}
+
+function showKlinePaste(code){
+  $('klineMeta').textContent = '未读到 K 线数据';
+  $('klineBody').innerHTML = '<div class="kline-loading">⚠️ 未读到该股票 K 线数据（本地离线打开，或尚未运行采集）。<br>可在下方粘贴数据后渲染。</div>';
+  $('klinePaste').style.display = 'block';
+  $('klinePasteArea').dataset.code = code;
+}
+
+function maArr(closes, n){
+  const out = new Array(closes.length).fill(null);
+  let sum = 0;
+  for(let i=0;i<closes.length;i++){
+    sum += closes[i];
+    if(i >= n) sum -= closes[i-n];
+    if(i >= n-1) out[i] = sum / n;
+  }
+  return out;
+}
+
+function renderKline(bars, name){
+  $('klineBody').innerHTML = klineChartSVG(bars) + klineStatsHTML(bars);
+  const last = bars[bars.length-1];
+  $('klineMeta').textContent = '近 ' + bars.length + ' 交易日 · 截至 ' + last.date + ' · 前复权';
+}
+
+function klineChartSVG(bars){
+  const W = 960;
+  const PADL = 58, PADR = 14, PADT = 14;
+  const PRICE_H = 360, GAP = 14, VOL_H = 110, DATE_H = 24;
+  const H = PADT + PRICE_H + GAP + VOL_H + DATE_H;
+  const iw = W - PADL - PADR;
+  const N = Math.min(bars.length, 150);
+  const start = bars.length - N;
+  const disp = bars.slice(start);
+  const closes = bars.map(b => b.close);
+  const ma5 = maArr(closes, 5), ma10 = maArr(closes, 10), ma20 = maArr(closes, 20);
+  let pMin = Infinity, pMax = -Infinity, vMax = 0;
+  disp.forEach(b => { if(b.low < pMin) pMin = b.low; if(b.high > pMax) pMax = b.high; if(b.vol > vMax) vMax = b.vol; });
+  const pad = (pMax - pMin) * 0.06 || 1; pMin -= pad; pMax += pad;
+  const pr = (pMax - pMin) || 1;
+  const step = iw / N;
+  const yP = v => PADT + (pMax - v)/pr * PRICE_H;
+  const volTop = PADT + PRICE_H + GAP, volBot = volTop + VOL_H;
+  const yV = v => volBot - (v/(vMax||1)) * VOL_H;
+  const cx = j => PADL + (j + 0.5) * step;
+  const bodyW = Math.max(1.5, step * 0.6);
+  let s = '<svg class="kline-chart" viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="日K线蜡烛图">';
+  for(let i=0;i<=4;i++){
+    const v = pMin + pr*i/4, y = yP(v);
+    s += '<line x1="'+PADL+'" y1="'+y.toFixed(1)+'" x2="'+(W-PADR)+'" y2="'+y.toFixed(1)+'" stroke="#eef1f6" stroke-width="1"/>';
+    s += '<text x="'+(PADL-8)+'" y="'+(y+3).toFixed(1)+'" text-anchor="end" font-size="11" fill="#93a0b3">'+v.toFixed(2)+'</text>';
+  }
+  let candles = '', vols = '';
+  disp.forEach((b, j) => {
+    const up = b.close >= b.open;
+    const col = up ? KL_UP : KL_DOWN;
+    const x = cx(j);
+    candles += '<line x1="'+x.toFixed(1)+'" y1="'+yP(b.high).toFixed(1)+'" x2="'+x.toFixed(1)+'" y2="'+yP(b.low).toFixed(1)+'" stroke="'+col+'" stroke-width="1"/>';
+    const yTop = yP(Math.max(b.open,b.close)), yBot = yP(Math.min(b.open,b.close));
+    candles += '<rect x="'+(x-bodyW/2).toFixed(1)+'" y="'+yTop.toFixed(1)+'" width="'+bodyW.toFixed(1)+'" height="'+Math.max(1,(yBot-yTop)).toFixed(1)+'" fill="'+col+'"/>';
+    vols += '<rect x="'+(x-bodyW/2).toFixed(1)+'" y="'+yV(b.vol).toFixed(1)+'" width="'+bodyW.toFixed(1)+'" height="'+Math.max(1,(volBot-yV(b.vol))).toFixed(1)+'" fill="'+col+'" fill-opacity="0.5"/>';
+  });
+  s += vols + candles;
+  [5,10,20].forEach(n => {
+    const ma = n===5?ma5:(n===10?ma10:ma20);
+    let pts = '';
+    for(let j=0;j<N;j++){
+      const idx = start + j;
+      const v = ma[idx];
+      if(v == null) continue;
+      pts += cx(j).toFixed(1)+','+yP(v).toFixed(1)+' ';
+    }
+    if(pts) s += '<polyline points="'+pts.trim()+'" fill="none" stroke="'+KL_MA[n]+'" stroke-width="1.4"/>';
+  });
+  const last = disp[N-1];
+  const yLast = yP(last.close);
+  s += '<line x1="'+PADL+'" y1="'+yLast.toFixed(1)+'" x2="'+(W-PADR)+'" y2="'+yLast.toFixed(1)+'" stroke="'+KL_UP+'" stroke-width="1" stroke-dasharray="4 3" opacity="0.7"/>';
+  s += '<rect x="'+(W-PADR-58)+'" y="'+(yLast-9).toFixed(1)+'" width="58" height="18" rx="3" fill="'+KL_UP+'"/>';
+  s += '<text x="'+(W-PADR-29)+'" y="'+(yLast+4).toFixed(1)+'" text-anchor="middle" font-size="11" fill="#fff">'+last.close.toFixed(2)+'</text>';
+  const dtStep = Math.max(1, Math.floor(N/6));
+  for(let j=0;j<N;j+=dtStep){
+    const d = disp[j].date;
+    s += '<text x="'+cx(j).toFixed(1)+'" y="'+(volBot+16)+'" text-anchor="middle" font-size="11" fill="#93a0b3">'+d.slice(5)+'</text>';
+  }
+  s += '</svg>';
+  return s;
+}
+
+function klineStatsHTML(bars){
+  const closes = bars.map(b => b.close);
+  const last = bars[bars.length-1];
+  const prev = bars[bars.length-2] || last;
+  const chg = (last.close - prev.close)/prev.close*100;
+  const ma5 = maArr(closes,5), ma10 = maArr(closes,10), ma20 = maArr(closes,20);
+  const v5 = maArr(bars.map(b=>b.vol),5);
+  const lastMa5 = ma5[ma5.length-1], lastMa10 = ma10[ma10.length-1], lastMa20 = ma20[ma20.length-1];
+  const lastVol5 = v5[v5.length-1] || 1;
+  const volRatio = last.vol / lastVol5;
+  const N20 = Math.min(20, bars.length);
+  const recent = bars.slice(-N20);
+  const hi20 = Math.max(...recent.map(b=>b.high)), lo20 = Math.min(...recent.map(b=>b.low));
+  const pos = (last.close - lo20)/(hi20 - lo20 || 1)*100;
+  const aboveMA20 = last.close >= lastMa20;
+  const aboveMA5 = last.close >= lastMa5;
+  const volState = volRatio >= 1.2 ? '放量' : (volRatio <= 0.8 ? '缩量' : '平量');
+  let hint = [];
+  if(lastMa20 && lastMa10 && lastMa5){
+    if(lastMa5 > lastMa10 && lastMa10 > lastMa20) hint.push('均线多头排列');
+    else if(lastMa5 < lastMa10 && lastMa10 < lastMa20) hint.push('均线空头排列');
+  }
+  if(aboveMA20) hint.push('站上MA20'); else hint.push('跌破MA20');
+  if(volRatio >= 1.2 && aboveMA5) hint.push('价涨量增');
+  if(volRatio <= 0.8 && !aboveMA5) hint.push('价跌量缩');
+  const hintStr = hint.length ? hint.join(' · ') : '震荡';
+  const stat = (k, v, extra) => '<div class="kline-stat"><div class="k">'+k+'</div><div class="v '+(extra||'')+'">'+v+'</div></div>';
+  const upCls = chg>=0?'up':'down';
+  let html = '<div class="kline-legend">'
+    + '<span><i style="background:'+KL_MA[5]+'"></i>MA5</span>'
+    + '<span><i style="background:'+KL_MA[10]+'"></i>MA10</span>'
+    + '<span><i style="background:'+KL_MA[20]+'"></i>MA20</span>'
+    + '<span><i style="background:'+KL_UP+'"></i>涨（红）</span>'
+    + '<span><i style="background:'+KL_DOWN+'"></i>跌（绿）</span></div>';
+  html += '<div class="kline-stats">'
+    + stat('最新收盘', last.close.toFixed(2))
+    + stat('当日涨跌', (chg>=0?'+':'') + chg.toFixed(2) + '%', upCls)
+    + stat('MA5', lastMa5 ? lastMa5.toFixed(2) : '—')
+    + stat('MA10', lastMa10 ? lastMa10.toFixed(2) : '—')
+    + stat('MA20', lastMa20 ? lastMa20.toFixed(2) : '—')
+    + stat('价/MA20', lastMa20 ? (aboveMA20?'上方':'下方') : '—')
+    + stat('近20日最高', hi20.toFixed(2))
+    + stat('近20日最低', lo20.toFixed(2))
+    + stat('当前分位', pos.toFixed(0) + '%', pos>=70?'up':(pos<=30?'down':''))
+    + stat('量能(较5日均)', volState + ' ' + volRatio.toFixed(2) + 'x')
+    + '</div>';
+  html += '<div class="kline-note">研判参考：' + hintStr + '。以上为量价技术面客观描述，<b>仅供参考，不构成投资建议</b>；是否介入请结合自身风险承受与仓位管理。</div>';
+  return html;
+}
+
+function renderPastedKline(){
+  const code = $('klinePasteArea').dataset.code || '';
+  const txt = $('klinePasteArea').value.trim();
+  if(!txt){ alert('请先粘贴数据'); return; }
+  let bars = [];
+  try{
+    if(txt[0] === '{'){
+      const d = JSON.parse(txt);
+      bars = (d.kline || d.bars || []).map(b => ({
+        date:String(b.date), open:+b.open, high:+b.high, low:+b.low, close:+b.close, vol:+(b.vol||0)
+      }));
+    } else {
+      txt.split(/\r?\n/).forEach(line => {
+        line = line.trim(); if(!line) return;
+        const p = line.split(/[,，\s]+/);
+        if(p.length < 5) return;
+        bars.push({date:p[0], open:+p[1], high:+p[2], low:+p[3], close:+p[4], vol:+(p[5]||0)});
+      });
+    }
+  }catch(e){ alert('解析失败：' + e.message); return; }
+  bars = bars.filter(b => b.date && !isNaN(b.close));
+  if(bars.length < 2){ alert('数据不足，至少需要 2 根K线'); return; }
+  $('klinePaste').style.display = 'none';
+  renderKline(bars, code);
+  $('klineMeta').textContent = '已渲染粘贴数据 · ' + bars.length + ' 根（非采集数据）';
 }
 
 /* ================= 自选管理 ================= */
@@ -1222,7 +1491,7 @@ function doClearAll(){
 }
 
 /* ================= Tab 切换（Hash 路由：每个 Tab 是独立"页面"） ================= */
-const TAB_TITLES = { review:'今日复盘', ahead:'大事前瞻', short:'短期机会', long:'长期机会' };
+const TAB_TITLES = { review:'今日复盘', ahead:'大事前瞻', short:'短期机会', long:'长期机会', concepts:'概念龙头' };
 function switchTab(name){
   if(!TAB_TITLES[name]) return;
   document.querySelectorAll('.tab').forEach(b => b.classList.toggle('active', b.dataset.tab === name));
@@ -1246,7 +1515,58 @@ function restoreTab(){
 }
 
 /* ================= 渲染 ================= */
-function renderAll(){ renderToday(); renderAhead(); renderReview(); renderHotSummary(); renderSentiment(); renderFundflow(); renderLhb(); renderResearch(); renderValuation(); renderDivyield(); renderExecHold(); renderInstHold(); renderNiusan(); renderLong(); renderNotes(); }
+function renderConcepts(){
+  const tree = $('conceptTree'); if(!tree) return;
+  const ind = (DATA.concepts && DATA.concepts.industries) || [];
+  const quotes = DATA.conceptsQuotes || {};
+  const q = (($('conceptSearch') && $('conceptSearch').value || '')).trim().toLowerCase();
+  const filter = $('conceptFilter');
+  if(filter && filter.dataset.built !== String(ind.length)){
+    let fh = '<span class="fchip active" data-ind="__all__">全部</span>';
+    ind.forEach((it,i)=>{ fh += '<span class="fchip" data-ind="'+i+'">'+esc(it.name)+'</span>'; });
+    filter.innerHTML = fh;
+    filter.querySelectorAll('.fchip').forEach(c=>{
+      c.onclick = ()=>{ filter.querySelectorAll('.fchip').forEach(x=>x.classList.remove('active')); c.classList.add('active'); renderConcepts(); };
+    });
+    filter.dataset.built = String(ind.length);
+  }
+  let activeInd = '__all__';
+  if(filter){ const a = filter.querySelector('.fchip.active'); if(a) activeInd = a.dataset.ind; }
+  const matchInd = (activeInd && activeInd !== '__all__') ? parseInt(activeInd) : -1;
+  const note = $('conceptNote');
+  if(note) note.textContent = (DATA.concepts && DATA.concepts.note) ? '说明：'+DATA.concepts.note : '';
+  let html = '', shown = 0;
+  ind.forEach((it, i)=>{
+    if(matchInd >= 0 && i !== matchInd) return;
+    const concepts = (it.concepts||[]).filter(c=>{
+      if(!q) return true;
+      if(it.name.toLowerCase().includes(q)) return true;
+      if(c.name.toLowerCase().includes(q)) return true;
+      return (c.leaders||[]).some(l=> (l.name||'').toLowerCase().includes(q) || (l.code||'').includes(q));
+    });
+    if(!concepts.length) return;
+    shown++;
+    html += '<div class="ind-block"><div class="ind-title">'+esc(it.name)+'</div>';
+    concepts.forEach(c=>{
+      html += '<div class="concept-card"><div class="concept-name">'+esc(c.name)+'</div>';
+      (c.leaders||[]).forEach(l=>{
+        const qt = quotes[l.code];
+        if(qt && typeof qt.pct === 'number'){
+          const cls = qt.pct >= 0 ? 'up' : 'down';
+          html += '<span class="lchip '+cls+'">'+esc(l.name)+' <small>'+(qt.pct>=0?'+':'')+qt.pct.toFixed(2)+'%</small> <span class="code">'+esc(l.code)+'</span></span>';
+        } else {
+          html += '<span class="lchip">'+esc(l.name)+' <span class="code">'+esc(l.code)+'</span></span>';
+        }
+      });
+      html += '</div>';
+    });
+    html += '</div>';
+  });
+  tree.innerHTML = html;
+  const empty = $('conceptEmpty'); if(empty) empty.style.display = shown ? 'none' : 'block';
+}
+
+function renderAll(){ renderToday(); renderAhead(); renderReview(); renderHotSummary(); renderSentiment(); renderFundflow(); renderLhb(); renderResearch(); renderValuation(); renderDivyield(); renderExecHold(); renderInstHold(); renderNiusan(); renderLong(); renderNotes(); renderConcepts(); }
 /* ================= 启动 ================= */
 initNoteDate();
 restoreTab();

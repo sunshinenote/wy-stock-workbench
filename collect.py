@@ -864,6 +864,116 @@ def collect_history():
     return result[-HIST_DAYS:]
 
 
+# ---------- 8. 自选股日K线（腾讯，前复权） ----------
+KLINE_DAYS = 220  # 抓取约 1 年日K线，足够 MA20 + 量价研判
+
+
+def _watchlist_pairs():
+    """返回 [(code, name), ...]，name 取自 watchlist.txt 备注列"""
+    path = os.path.join(DATA_DIR, "watchlist.txt")
+    pairs = []
+    if os.path.exists(path):
+        with open(path, encoding="utf-8") as f:
+            for line in f:
+                line = line.strip()
+                if line and not line.startswith("#"):
+                    parts = [p.strip() for p in line.split(",")]
+                    pairs.append((parts[0], parts[1] if len(parts) > 1 else parts[0]))
+    return pairs
+
+
+def collect_kline():
+    """为每只自选股抓取日K线（前复权），写入 data/kline/{code}.json。
+    供工作台点击股票后查看日K线、辅助判断介入时机。"""
+    pairs = _watchlist_pairs()
+    if not pairs:
+        return {}
+    kdir = os.path.join(DATA_DIR, "kline")
+    os.makedirs(kdir, exist_ok=True)
+    out = {}
+    for code, name in pairs:
+        try:
+            kr = requests.get(
+                f"https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param={tx_code(code)},day,,,{KLINE_DAYS},qfq",
+                headers=UA, timeout=15)
+            data = kr.json()["data"][tx_code(code)]
+            kline = data.get("qfqday") or data.get("day") or []
+            bars = []
+            for k in kline:
+                if len(k) < 6:
+                    continue
+                bars.append({
+                    "date": k[0],
+                    "open": round(float(k[1]), 2),
+                    "high": round(float(k[3]), 2),
+                    "low": round(float(k[4]), 2),
+                    "close": round(float(k[2]), 2),
+                    "vol": round(float(k[5]), 0),
+                })
+            if not bars:
+                continue
+            payload = {"code": code, "name": name, "kline": bars}
+            with open(os.path.join(kdir, f"{code}.json"), "w", encoding="utf-8") as f:
+                json.dump(payload, f, ensure_ascii=False, indent=1)
+            out[code] = len(bars)
+            print(f"[OK] kline/{code}.json ({len(bars)} bars)")
+            time.sleep(0.15)
+        except Exception as e:
+            print(f"[WARN] kline {code} 失败: {e}")
+    return out
+
+
+# ---------- 9. 概念龙头实时行情（腾讯批量接口） ----------
+def collect_concepts_quotes():
+    """读取 concepts.json，收集所有龙头股代码，批量取实时行情，返回 {code: quote}。"""
+    path = os.path.join(DATA_DIR, "concepts.json")
+    if not os.path.exists(path):
+        return {}
+    try:
+        with open(path, encoding="utf-8") as f:
+            cfg = json.load(f)
+    except Exception:
+        return {}
+    codes = []
+    for ind in cfg.get("industries", []):
+        for c in ind.get("concepts", []):
+            for l in c.get("leaders", []):
+                code = str(l.get("code", "")).strip()
+                if code and code not in codes:
+                    codes.append(code)
+    if not codes:
+        return {}
+    q = ",".join(tx_code(c) for c in codes)
+    try:
+        r = requests.get("https://qt.gtimg.cn/q=" + q, headers=UA, timeout=20)
+        r.encoding = "gbk"
+    except Exception:
+        return {}
+    quotes = {}
+    for line in r.text.strip().split(";"):
+        if "=" not in line:
+            continue
+        try:
+            payload = line.split('="')[1].rstrip('"')
+            f = payload.split("~")
+            if len(f) < 46:
+                continue
+            code = f[2]
+            quotes[code] = {
+                "code": code, "name": f[1].replace(" ", ""),
+                "price": round(float(f[3]), 2),
+                "pct": round(float(f[32]), 2),
+                "chg": round(float(f[31]), 2),
+                "turnover": round(float(f[38]), 2),
+                "amount": round(float(f[37]) / 10000, 2),
+                "pe": round(float(f[39]), 1) if f[39] else None,
+                "pb": round(float(f[46]), 2) if len(f) > 46 and f[46] else None,
+            }
+        except Exception:
+            continue
+    return quotes
+
+
 def main():
     print(f"=== 股票复盘工作台 · 数据采集 @ {NOW.strftime('%Y-%m-%d %H:%M:%S')} ===")
 
@@ -912,8 +1022,13 @@ def main():
     wl_data = safe(collect_watchlist) or []
     save_json("watchlist_quotes.json", wl_data)
 
+    concepts_q = safe(collect_concepts_quotes) or {}
+    save_json("concepts_quotes.json", concepts_q)
+
     history = safe(collect_history) or []
     save_json("history.json", history)
+
+    kline_map = safe(collect_kline) or {}
 
     save_json("last_update.json", {"time": NOW.strftime("%Y-%m-%d %H:%M:%S")})
     print("=== 采集完成 ===")
