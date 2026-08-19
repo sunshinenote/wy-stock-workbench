@@ -137,6 +137,11 @@ button.danger{color:var(--danger)}
 .ns-summary{display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-bottom:8px;font-size:13px;color:var(--txt2)}
 .chip{display:inline-block;font-size:12px;padding:1px 8px;border-radius:6px;background:var(--bg);border:1px solid var(--line);color:var(--txt2)}
 .concept-search{width:100%;font-size:16px;border:1px solid var(--line2);border-radius:10px;padding:10px 12px;min-height:44px;margin:6px 0 10px;font-family:inherit;box-sizing:border-box}
+.concept-tools{display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin:2px 0 12px;font-size:13px;color:var(--txt2)}
+.ctool{display:inline-flex;align-items:center;gap:5px;cursor:pointer;user-select:none}
+.ctool input{width:15px;height:15px;accent-color:var(--brand);cursor:pointer}
+.ctool-count{margin-left:auto;color:var(--txt3);font-size:12px}
+.ccount{display:inline-block;margin-left:6px;padding:0 7px;border-radius:999px;background:var(--bg);border:1px solid var(--line);color:var(--txt3);font-size:11px;font-weight:400}
 .fchip-row{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 12px}
 .fchip{padding:5px 12px;border:1px solid var(--line2);border-radius:999px;background:#fff;color:var(--txt2);font-size:13px;cursor:pointer;white-space:nowrap;-webkit-tap-highlight-color:transparent}
 .fchip.active{background:var(--brand);color:#fff;border-color:var(--brand)}
@@ -383,6 +388,11 @@ svg text{font-family:inherit}
     <h2>行业概念 · 龙头速查 <span class="tag blue">参考</span></h2>
     <input class="concept-search" id="conceptSearch" placeholder="搜索行业 / 概念 / 股票代码或名称…" oninput="renderConcepts()">
     <div class="fchip-row" id="conceptFilter"></div>
+    <div class="concept-tools">
+      <label class="ctool"><input type="checkbox" id="conceptSort" onchange="renderConcepts()"> 按涨幅排序</label>
+      <label class="ctool"><input type="checkbox" id="conceptUp" onchange="renderConcepts()"> 只看上涨</label>
+      <span class="ctool-count" id="conceptCount"></span>
+    </div>
     <div id="conceptTree"></div>
     <p class="empty" id="conceptEmpty" style="display:none">没有匹配的概念或股票。</p>
     <div class="plan-hint" id="conceptNote"></div>
@@ -1520,6 +1530,8 @@ function renderConcepts(){
   const ind = (DATA.concepts && DATA.concepts.industries) || [];
   const quotes = DATA.conceptsQuotes || {};
   const q = (($('conceptSearch') && $('conceptSearch').value || '')).trim().toLowerCase();
+  const sortEl = $('conceptSort'), upEl = $('conceptUp');
+  const sortBy = sortEl && sortEl.checked, onlyUp = upEl && upEl.checked;
   const filter = $('conceptFilter');
   if(filter && filter.dataset.built !== String(ind.length)){
     let fh = '<span class="fchip active" data-ind="__all__">全部</span>';
@@ -1535,7 +1547,7 @@ function renderConcepts(){
   const matchInd = (activeInd && activeInd !== '__all__') ? parseInt(activeInd) : -1;
   const note = $('conceptNote');
   if(note) note.textContent = (DATA.concepts && DATA.concepts.note) ? '说明：'+DATA.concepts.note : '';
-  let html = '', shown = 0;
+  let html = '', shownInd = 0, shownConcept = 0, shownLeader = 0;
   ind.forEach((it, i)=>{
     if(matchInd >= 0 && i !== matchInd) return;
     const concepts = (it.concepts||[]).filter(c=>{
@@ -1545,25 +1557,34 @@ function renderConcepts(){
       return (c.leaders||[]).some(l=> (l.name||'').toLowerCase().includes(q) || (l.code||'').includes(q));
     });
     if(!concepts.length) return;
-    shown++;
-    html += '<div class="ind-block"><div class="ind-title">'+esc(it.name)+'</div>';
+    let indHtml = '<div class="ind-block"><div class="ind-title">'+esc(it.name)+'</div>';
+    let indHas = false;
     concepts.forEach(c=>{
-      html += '<div class="concept-card"><div class="concept-name">'+esc(c.name)+'</div>';
-      (c.leaders||[]).forEach(l=>{
+      let leaders = (c.leaders||[]);
+      if(onlyUp) leaders = leaders.filter(l=>{ const qt=quotes[l.code]; return qt && typeof qt.pct==='number' && qt.pct>=0; });
+      if(sortBy) leaders = leaders.slice().sort((a,b)=>{ const pa=(quotes[a.code]&&quotes[a.code].pct); const pb=(quotes[b.code]&&quotes[b.code].pct); const va=(typeof pa==='number')?pa:-1e9; const vb=(typeof pb==='number')?pb:-1e9; return vb-va; });
+      if(!leaders.length) return;
+      indHas = true; shownConcept++; shownLeader += leaders.length;
+      indHtml += '<div class="concept-card"><div class="concept-name">'+esc(c.name)+' <span class="ccount">'+leaders.length+'</span></div>';
+      leaders.forEach(l=>{
         const qt = quotes[l.code];
         if(qt && typeof qt.pct === 'number'){
           const cls = qt.pct >= 0 ? 'up' : 'down';
-          html += '<span class="lchip '+cls+'">'+esc(l.name)+' <small>'+(qt.pct>=0?'+':'')+qt.pct.toFixed(2)+'%</small> <span class="code">'+esc(l.code)+'</span></span>';
+          indHtml += '<span class="lchip '+cls+'">'+esc(l.name)+' <small>'+(qt.pct>=0?'+':'')+qt.pct.toFixed(2)+'%</small> <span class="code">'+esc(l.code)+'</span></span>';
         } else {
-          html += '<span class="lchip">'+esc(l.name)+' <span class="code">'+esc(l.code)+'</span></span>';
+          indHtml += '<span class="lchip">'+esc(l.name)+' <span class="code">'+esc(l.code)+'</span></span>';
         }
       });
-      html += '</div>';
+      indHtml += '</div>';
     });
-    html += '</div>';
+    indHtml += '</div>';
+    if(!indHas) return;
+    shownInd++;
+    html += indHtml;
   });
   tree.innerHTML = html;
-  const empty = $('conceptEmpty'); if(empty) empty.style.display = shown ? 'none' : 'block';
+  const empty = $('conceptEmpty'); if(empty) empty.style.display = shownInd ? 'none' : 'block';
+  const cnt = $('conceptCount'); if(cnt) cnt.textContent = shownConcept ? (shownConcept+' 个概念 · '+shownLeader+' 只龙头') : '';
 }
 
 function renderAll(){ renderToday(); renderAhead(); renderReview(); renderHotSummary(); renderSentiment(); renderFundflow(); renderLhb(); renderResearch(); renderValuation(); renderDivyield(); renderExecHold(); renderInstHold(); renderNiusan(); renderLong(); renderNotes(); renderConcepts(); }
