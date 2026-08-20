@@ -1,82 +1,82 @@
 [
  {
-  "name": "厨卫电器",
-  "pct": 4.57,
-  "leader": "亿田智能",
-  "leader_pct": 19.98,
-  "up_count": 7,
-  "down_count": 2
- },
- {
-  "name": "煤炭开采加工",
-  "pct": 1.52,
-  "leader": "宝泰隆",
-  "leader_pct": 10.14,
-  "up_count": 21,
-  "down_count": 13
- },
- {
-  "name": "银行",
-  "pct": 1.46,
-  "leader": "中信银行",
-  "leader_pct": 4.48,
-  "up_count": 40,
+  "name": "生物制品",
+  "pct": 10.04,
+  "leader": "三元基因",
+  "leader_pct": 29.97,
+  "up_count": 55,
   "down_count": 0
  },
  {
-  "name": "港口航运",
-  "pct": 0.37,
-  "leader": "南京港",
-  "leader_pct": 9.95,
-  "up_count": 17,
-  "down_count": 16
- },
- {
-  "name": "保险",
-  "pct": 0.2,
-  "leader": "中国平安",
-  "leader_pct": 1.48,
-  "up_count": 2,
-  "down_count": 3
- },
- {
-  "name": "公路铁路运输",
-  "pct": -0.87,
-  "leader": "四川成渝",
-  "leader_pct": 1.27,
-  "up_count": 10,
-  "down_count": 20
- },
- {
-  "name": "机场航运",
-  "pct": -0.98,
-  "leader": "白云机场",
-  "leader_pct": 0.27,
-  "up_count": 1,
-  "down_count": 12
+  "name": "医疗服务",
+  "pct": 6.74,
+  "leader": "和元生物",
+  "leader_pct": 20.0,
+  "up_count": 56,
+  "down_count": 0
  },
  {
   "name": "贵金属",
-  "pct": -1.06,
-  "leader": "山东黄金",
-  "leader_pct": 6.5,
-  "up_count": 4,
-  "down_count": 10
+  "pct": 6.19,
+  "leader": "兴业银锡",
+  "leader_pct": 10.01,
+  "up_count": 13,
+  "down_count": 0
  },
  {
-  "name": "油气开采及服务",
-  "pct": -1.44,
-  "leader": "科力股份",
-  "leader_pct": 2.42,
-  "up_count": 5,
-  "down_count": 13
+  "name": "医疗器械",
+  "pct": 4.88,
+  "leader": "华大智造",
+  "leader_pct": 20.0,
+  "up_count": 136,
+  "down_count": 3
  },
  {
-  "name": "石油加工贸易",
-  "pct": -1.46,
-  "leader": "华锦股份",
+  "name": "化学制药",
+  "pct": 4.56,
+  "leader": "键凯科技",
+  "leader_pct": 20.0,
+  "up_count": 146,
+  "down_count": 11
+ },
+ {
+  "name": "通信设备",
+  "pct": 3.66,
+  "leader": "万隆光电",
+  "leader_pct": 20.01,
+  "up_count": 83,
+  "down_count": 8
+ },
+ {
+  "name": "互联网电商",
+  "pct": 3.0,
+  "leader": "狮头股份",
+  "leader_pct": 10.03,
+  "up_count": 18,
+  "down_count": 2
+ },
+ {
+  "name": "中药",
+  "pct": 2.93,
+  "leader": "古汉医药",
+  "leader_pct": 9.99,
+  "up_count": 64,
+  "down_count": 4
+ },
+ {
+  "name": "医药商业",
+  "pct": 2.85,
+  "leader": "塞力医疗",
   "leader_pct": 9.98,
-  "up_count": 6,
-  "down_count": 21
+  "up_count": 30,
+  "down_count": 2
+ },
+ {
+  "name": "旅游及酒店",
+  "pct": 2.55,
+  "leader": "南京商旅",
+  "leader_pct": 10.0,
+  "up_count": 35,
+  "down_count": 0
  }
 ]

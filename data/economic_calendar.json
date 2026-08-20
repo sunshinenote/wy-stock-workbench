@@ -262,6 +262,60 @@
  },
  {
   "date": "2026-08-21",
+  "time": "10:10",
+  "country": "中国",
+  "importance": "中",
+  "event": "中国2025年非洲贸易结构指标",
+  "forecast": "nan",
+  "previous": "149.14"
+ },
+ {
+  "date": "2026-08-21",
+  "time": "10:10",
+  "country": "中国",
+  "importance": "中",
+  "event": "中国2025年非洲贸易潜力指标",
+  "forecast": "nan",
+  "previous": "795.57"
+ },
+ {
+  "date": "2026-08-21",
+  "time": "10:10",
+  "country": "中国",
+  "importance": "中",
+  "event": "中国2025年非洲贸易指数",
+  "forecast": "nan",
+  "previous": "1056.53"
+ },
+ {
+  "date": "2026-08-21",
+  "time": "10:10",
+  "country": "中国",
+  "importance": "中",
+  "event": "中国2025年非洲贸易活力指标",
+  "forecast": "nan",
+  "previous": "939.69"
+ },
+ {
+  "date": "2026-08-21",
+  "time": "10:10",
+  "country": "中国",
+  "importance": "中",
+  "event": "中国2025年非洲贸易规模指标",
+  "forecast": "nan",
+  "previous": "1960.51"
+ },
+ {
+  "date": "2026-08-21",
+  "time": "10:10",
+  "country": "中国",
+  "importance": "中",
+  "event": "中国2025年非洲贸易密切指标",
+  "forecast": "nan",
+  "previous": "294.98"
+ },
+ {
+  "date": "2026-08-21",
   "time": "14:00",
   "country": "英国",
   "importance": "中",
@@ -664,59 +718,5 @@
   "event": "中国台湾7月失业率(%)",
   "forecast": "nan",
   "previous": "3.33"
- },
- {
-  "date": "2026-08-24",
-  "time": "16:20",
-  "country": "中国台湾",
-  "importance": "高",
-  "event": "中国台湾7月M2货币供应年率(%)",
-  "forecast": "nan",
-  "previous": "8.13"
- },
- {
-  "date": "2026-08-24",
-  "time": "16:20",
-  "country": "中国台湾",
-  "importance": "高",
-  "event": "中国台湾7月M2广义货币(亿新台币)",
-  "forecast": "nan",
-  "previous": "701420.0"
- },
- {
-  "date": "2026-08-24",
-  "time": "20:30",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国7月芝加哥联储全国活动指数",
-  "forecast": "nan",
-  "previous": "-0.02"
- },
- {
-  "date": "2026-08-24",
-  "time": "23:30",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国8月24日3个月期国债竞拍-中标利率(%)",
-  "forecast": "nan",
-  "previous": "3.72"
- },
- {
-  "date": "2026-08-24",
-  "time": "23:30",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国8月24日6个月期国债竞拍-中标利率(%)",
-  "forecast": "nan",
-  "previous": "3.78"
- },
- {
-  "date": "2026-08-24",
-  "time": "23:30",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国8月24日6个月期国债竞拍-投标倍数(亿美元)",
-  "forecast": "nan",
-  "previous": "2.97"
  }
 ]
