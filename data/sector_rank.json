@@ -1,82 +1,82 @@
 [
  {
   "name": "生物制品",
-  "pct": 10.04,
+  "pct": 9.12,
   "leader": "三元基因",
   "leader_pct": 29.97,
-  "up_count": 55,
-  "down_count": 0
+  "up_count": 54,
+  "down_count": 1
  },
  {
   "name": "医疗服务",
-  "pct": 6.74,
-  "leader": "和元生物",
+  "pct": 5.9,
+  "leader": "博腾股份",
   "leader_pct": 20.0,
-  "up_count": 56,
-  "down_count": 0
- },
- {
-  "name": "贵金属",
-  "pct": 6.19,
-  "leader": "兴业银锡",
-  "leader_pct": 10.01,
-  "up_count": 13,
-  "down_count": 0
- },
- {
-  "name": "医疗器械",
-  "pct": 4.88,
-  "leader": "华大智造",
-  "leader_pct": 20.0,
-  "up_count": 136,
+  "up_count": 53,
   "down_count": 3
  },
  {
-  "name": "化学制药",
-  "pct": 4.56,
-  "leader": "键凯科技",
-  "leader_pct": 20.0,
-  "up_count": 146,
-  "down_count": 11
+  "name": "贵金属",
+  "pct": 4.9,
+  "leader": "山东黄金",
+  "leader_pct": 8.59,
+  "up_count": 12,
+  "down_count": 1
  },
  {
-  "name": "通信设备",
-  "pct": 3.66,
-  "leader": "万隆光电",
-  "leader_pct": 20.01,
-  "up_count": 83,
+  "name": "医疗器械",
+  "pct": 4.14,
+  "leader": "华大智造",
+  "leader_pct": 20.0,
+  "up_count": 132,
   "down_count": 8
  },
  {
-  "name": "互联网电商",
-  "pct": 3.0,
-  "leader": "狮头股份",
-  "leader_pct": 10.03,
-  "up_count": 18,
-  "down_count": 2
+  "name": "化学制药",
+  "pct": 3.82,
+  "leader": "键凯科技",
+  "leader_pct": 20.0,
+  "up_count": 140,
+  "down_count": 16
  },
  {
-  "name": "中药",
-  "pct": 2.93,
-  "leader": "古汉医药",
-  "leader_pct": 9.99,
-  "up_count": 64,
-  "down_count": 4
- },
- {
-  "name": "医药商业",
-  "pct": 2.85,
-  "leader": "塞力医疗",
-  "leader_pct": 9.98,
-  "up_count": 30,
-  "down_count": 2
+  "name": "通信设备",
+  "pct": 3.33,
+  "leader": "万隆光电",
+  "leader_pct": 20.01,
+  "up_count": 78,
+  "down_count": 13
  },
  {
   "name": "旅游及酒店",
-  "pct": 2.55,
+  "pct": 3.12,
   "leader": "南京商旅",
   "leader_pct": 10.0,
   "up_count": 35,
   "down_count": 0
+ },
+ {
+  "name": "互联网电商",
+  "pct": 3.03,
+  "leader": "狮头股份",
+  "leader_pct": 10.03,
+  "up_count": 19,
+  "down_count": 1
+ },
+ {
+  "name": "美容护理",
+  "pct": 2.46,
+  "leader": "上海家化",
+  "leader_pct": 6.79,
+  "up_count": 32,
+  "down_count": 2
+ },
+ {
+  "name": "中药",
+  "pct": 2.42,
+  "leader": "古汉医药",
+  "leader_pct": 9.99,
+  "up_count": 64,
+  "down_count": 4
  }
 ]

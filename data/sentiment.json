@@ -1,14 +1,14 @@
 {
  "date": "2026-08-20",
- "zt": 73,
- "dt": 5,
- "zb": 30,
- "zb_rate": 29.1,
+ "zt": 79,
+ "dt": 12,
+ "zb": 46,
+ "zb_rate": 36.8,
  "max_lb": 4,
  "lb_dist": [
   {
    "lb": 1,
-   "count": 69
+   "count": 75
   },
   {
    "lb": 2,
@@ -19,29 +19,29 @@
    "count": 1
   }
  ],
- "score": 63,
+ "score": 64,
  "level": "发酵",
- "note": "",
+ "note": "跌停家数较多，情绪走弱",
  "industries": [
   {
-   "name": "化学制药",
+   "name": "生物制品",
    "count": 14
   },
   {
-   "name": "生物制品",
-   "count": 11
+   "name": "化学制药",
+   "count": 12
   },
   {
    "name": "医疗服务",
-   "count": 5
-  },
-  {
-   "name": "专用设备",
    "count": 4
   },
   {
    "name": "医疗器械",
    "count": 4
+  },
+  {
+   "name": "专用设备",
+   "count": 3
   },
   {
    "name": "电网设备",

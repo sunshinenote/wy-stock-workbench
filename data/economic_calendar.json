@@ -316,6 +316,33 @@
  },
  {
   "date": "2026-08-21",
+  "time": "11:08",
+  "country": "中国",
+  "importance": "中",
+  "event": "中国1-7月全国发电装机容量-年初至今(万千瓦)",
+  "forecast": "nan",
+  "previous": "404252.0"
+ },
+ {
+  "date": "2026-08-21",
+  "time": "11:08",
+  "country": "中国",
+  "importance": "中",
+  "event": "中国1-7月全国发电装机容量年率-年初至今(%)",
+  "forecast": "nan",
+  "previous": "10.8"
+ },
+ {
+  "date": "2026-08-21",
+  "time": "11:08",
+  "country": "中国",
+  "importance": "中",
+  "event": "中国1-7月发电装机容量之水核风太阳能-年初至今(万千瓦)",
+  "forecast": "nan",
+  "previous": "247354.0"
+ },
+ {
+  "date": "2026-08-21",
   "time": "14:00",
   "country": "英国",
   "importance": "中",
@@ -331,6 +358,24 @@
   "event": "英国7月季调后零售销售月率(%)",
   "forecast": "-0.5",
   "previous": "1.1"
+ },
+ {
+  "date": "2026-08-21",
+  "time": "14:10",
+  "country": "中国",
+  "importance": "中",
+  "event": "中国7月全社会用电量-每月(亿千瓦时)",
+  "forecast": "nan",
+  "previous": "8981.0"
+ },
+ {
+  "date": "2026-08-21",
+  "time": "14:10",
+  "country": "中国",
+  "importance": "中",
+  "event": "中国7月全社会用电量年率-每月(%)",
+  "forecast": "nan",
+  "previous": "3.7"
  },
  {
   "date": "2026-08-21",
@@ -673,50 +718,5 @@
   "event": "中国8月24日上期所每日仓单变动-铜(吨)",
   "forecast": "nan",
   "previous": "nan"
- },
- {
-  "date": "2026-08-24",
-  "time": "15:10",
-  "country": "中国",
-  "importance": "中",
-  "event": "中国8月24日上期所每日仓单变动-原油(桶)",
-  "forecast": "nan",
-  "previous": "nan"
- },
- {
-  "date": "2026-08-24",
-  "time": "15:10",
-  "country": "中国",
-  "importance": "中",
-  "event": "中国8月24日上期所每日仓单变动-白银(千克)",
-  "forecast": "nan",
-  "previous": "nan"
- },
- {
-  "date": "2026-08-24",
-  "time": "15:10",
-  "country": "中国",
-  "importance": "中",
-  "event": "中国8月24日上期所每日仓单变动-黄金(千克)",
-  "forecast": "nan",
-  "previous": "nan"
- },
- {
-  "date": "2026-08-24",
-  "time": "15:10",
-  "country": "中国",
-  "importance": "中",
-  "event": "中国8月24日上期所每日仓单变动-燃料油(吨)",
-  "forecast": "nan",
-  "previous": "nan"
- },
- {
-  "date": "2026-08-24",
-  "time": "16:00",
-  "country": "中国台湾",
-  "importance": "中",
-  "event": "中国台湾7月失业率(%)",
-  "forecast": "nan",
-  "previous": "3.33"
  }
 ]
