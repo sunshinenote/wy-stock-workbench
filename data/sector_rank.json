@@ -1,82 +1,82 @@
 [
  {
-  "name": "生物制品",
-  "pct": 9.12,
-  "leader": "三元基因",
-  "leader_pct": 29.97,
-  "up_count": 54,
-  "down_count": 1
- },
- {
-  "name": "医疗服务",
-  "pct": 5.9,
-  "leader": "博腾股份",
-  "leader_pct": 20.0,
-  "up_count": 53,
-  "down_count": 3
- },
- {
   "name": "贵金属",
-  "pct": 4.9,
-  "leader": "山东黄金",
-  "leader_pct": 8.59,
-  "up_count": 12,
-  "down_count": 1
- },
- {
-  "name": "医疗器械",
-  "pct": 4.14,
-  "leader": "华大智造",
-  "leader_pct": 20.0,
-  "up_count": 132,
-  "down_count": 8
- },
- {
-  "name": "化学制药",
-  "pct": 3.82,
-  "leader": "键凯科技",
-  "leader_pct": 20.0,
-  "up_count": 140,
-  "down_count": 16
- },
- {
-  "name": "通信设备",
-  "pct": 3.33,
-  "leader": "万隆光电",
-  "leader_pct": 20.01,
-  "up_count": 78,
-  "down_count": 13
- },
- {
-  "name": "旅游及酒店",
-  "pct": 3.12,
-  "leader": "南京商旅",
-  "leader_pct": 10.0,
-  "up_count": 35,
+  "pct": 5.34,
+  "leader": "湖南白银",
+  "leader_pct": 10.03,
+  "up_count": 13,
   "down_count": 0
  },
  {
-  "name": "互联网电商",
-  "pct": 3.03,
-  "leader": "狮头股份",
-  "leader_pct": 10.03,
-  "up_count": 19,
-  "down_count": 1
- },
- {
-  "name": "美容护理",
-  "pct": 2.46,
-  "leader": "上海家化",
-  "leader_pct": 6.79,
-  "up_count": 32,
+  "name": "能源金属",
+  "pct": 4.51,
+  "leader": "*ST威领",
+  "leader_pct": 10.02,
+  "up_count": 11,
   "down_count": 2
  },
  {
-  "name": "中药",
-  "pct": 2.42,
-  "leader": "古汉医药",
-  "leader_pct": 9.99,
-  "up_count": 64,
-  "down_count": 4
+  "name": "工业金属",
+  "pct": 2.65,
+  "leader": "盛达资源",
+  "leader_pct": 10.01,
+  "up_count": 47,
+  "down_count": 7
+ },
+ {
+  "name": "小金属",
+  "pct": 1.8,
+  "leader": "国城矿业",
+  "leader_pct": 8.19,
+  "up_count": 23,
+  "down_count": 6
+ },
+ {
+  "name": "元件",
+  "pct": 1.55,
+  "leader": "江海股份",
+  "leader_pct": 7.27,
+  "up_count": 45,
+  "down_count": 18
+ },
+ {
+  "name": "石油加工贸易",
+  "pct": 1.52,
+  "leader": "博汇股份",
+  "leader_pct": 20.02,
+  "up_count": 20,
+  "down_count": 7
+ },
+ {
+  "name": "通信设备",
+  "pct": 1.38,
+  "leader": "星网锐捷",
+  "leader_pct": 10.02,
+  "up_count": 61,
+  "down_count": 30
+ },
+ {
+  "name": "非金属材料",
+  "pct": 1.3,
+  "leader": "金博股份",
+  "leader_pct": 14.54,
+  "up_count": 9,
+  "down_count": 7
+ },
+ {
+  "name": "塑料制品",
+  "pct": 1.28,
+  "leader": "肯特股份",
+  "leader_pct": 20.01,
+  "up_count": 55,
+  "down_count": 22
+ },
+ {
+  "name": "消费电子",
+  "pct": 1.28,
+  "leader": "锦富技术",
+  "leader_pct": 12.5,
+  "up_count": 62,
+  "down_count": 34
  }
 ]
