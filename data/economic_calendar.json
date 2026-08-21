@@ -343,6 +343,33 @@
  },
  {
   "date": "2026-08-24",
+  "time": "16:08",
+  "country": "中国",
+  "importance": "中",
+  "event": "中国1-7月全国发电装机容量-年初至今(万千瓦)",
+  "forecast": "nan",
+  "previous": "404252.0"
+ },
+ {
+  "date": "2026-08-24",
+  "time": "16:08",
+  "country": "中国",
+  "importance": "中",
+  "event": "中国1-7月全国发电装机容量年率-年初至今(%)",
+  "forecast": "nan",
+  "previous": "10.8"
+ },
+ {
+  "date": "2026-08-24",
+  "time": "16:08",
+  "country": "中国",
+  "importance": "中",
+  "event": "中国1-7月发电装机容量之水核风太阳能-年初至今(万千瓦)",
+  "forecast": "nan",
+  "previous": "247354.0"
+ },
+ {
+  "date": "2026-08-24",
   "time": "16:20",
   "country": "中国台湾",
   "importance": "高",
@@ -691,32 +718,5 @@
   "event": "中国台湾7月工业产出年率(%)",
   "forecast": "nan",
   "previous": "22.95"
- },
- {
-  "date": "2026-08-25",
-  "time": "16:00",
-  "country": "德国",
-  "importance": "中",
-  "event": "德国8月IFO商业景气指数",
-  "forecast": "87.2",
-  "previous": "86.6"
- },
- {
-  "date": "2026-08-25",
-  "time": "16:30",
-  "country": "中国香港",
-  "importance": "中",
-  "event": "中国香港7月贸易帐(亿港元)",
-  "forecast": "nan",
-  "previous": "-519.52"
- },
- {
-  "date": "2026-08-25",
-  "time": "16:30",
-  "country": "中国香港",
-  "importance": "中",
-  "event": "中国香港7月出口年率(%)",
-  "forecast": "nan",
-  "previous": "53.4"
  }
 ]
