@@ -1202,6 +1202,45 @@ const KL_MA = {5:'#E8923A', 10:'#2F7DE1', 20:'#8E5BC9'};
 
 function closeKline(){ $('klineModal').classList.remove('show'); }
 
+// 在线 K 线缓存（同一代码只拉一次）
+const KL_CACHE = {};
+function txCode(code){
+  const c = (code||'').replace(/[^0-9]/g,'');
+  if(c.startsWith('6')) return 'sh'+c;
+  if(c.startsWith('0')||c.startsWith('3')) return 'sz'+c;
+  return 'bj'+c;
+}
+// 通过腾讯公开行情接口(JSONP)实时拉取日K线，规避浏览器跨域限制
+function fetchKlineOnline(code, cb){
+  if(KL_CACHE[code]){ cb(KL_CACHE[code]); return; }
+  const tx = txCode(code);
+  const varName = 'kljsonp_' + Date.now().toString(36) + Math.floor(Math.random()*1e6).toString(36);
+  const url = 'https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=' + tx + ',day,,,320,qfq&_var=' + varName;
+  let done = false;
+  const s = document.createElement('script');
+  const finish = (ok) => {
+    if(done) return; done = true;
+    try{ if(s.parentNode) s.parentNode.removeChild(s); }catch(e){}
+    const res = window[varName];
+    try{ delete window[varName]; }catch(e){}
+    if(!ok || !res || !res.data || !res.data[tx]){ cb(null); return; }
+    const node = res.data[tx];
+    const arr = node.qfqday || node.day || [];
+    if(arr.length < 2){ cb(null); return; }
+    const bars = arr.filter(b => b && b.length >= 6).map(b => ({
+      date: b[0], open: +b[1], close: +b[2], high: +b[3], low: +b[4], vol: +b[5]
+    }));
+    if(bars.length < 2){ cb(null); return; }
+    KL_CACHE[code] = bars;
+    cb(bars);
+  };
+  s.onload = () => finish(true);
+  s.onerror = () => finish(false);
+  s.src = url;
+  document.body.appendChild(s);
+  setTimeout(() => finish(false), 12000); // 超时兜底
+}
+
 function showKline(code, name){
   const kc = (code||'').match(/\d{6}$/) ? code.match(/\d{6}$/)[0] : (code||'');
   $('klineTitle').textContent = name + '（' + code + '）· 日K线';
@@ -1209,14 +1248,20 @@ function showKline(code, name){
   $('klineBody').innerHTML = '<div class="kline-loading">⏳ 正在读取 ' + code + ' 的日K线…</div>';
   $('klinePaste').style.display = 'none';
   $('klineModal').classList.add('show');
+  const tryOnline = () => {
+    fetchKlineOnline(code, online => {
+      if(online){ renderKline(online, name); $('klineMeta').textContent += ' · 在线行情(腾讯)'; }
+      else showKlinePaste(code);
+    });
+  };
   fetch('data/kline/' + kc + '.json?_=' + Date.now(), {cache:'no-store'})
     .then(r => { if(!r.ok) throw new Error('no'); return r.json(); })
     .then(d => {
       const bars = (d && d.kline) || [];
-      if(!bars.length){ showKlinePaste(code); return; }
+      if(!bars.length){ tryOnline(); return; }
       renderKline(bars, d.name || name);
     })
-    .catch(() => { showKlinePaste(code); });
+    .catch(() => { tryOnline(); });
 }
 
 function showKlinePaste(code){
