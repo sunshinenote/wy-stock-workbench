@@ -150,7 +150,8 @@ button.danger{color:var(--danger)}
 .ind-title{font-size:15px;font-weight:600;margin-bottom:8px;color:var(--txt)}
 .concept-card{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:10px 12px;margin-bottom:10px}
 .concept-name{font-size:14px;font-weight:600;margin-bottom:8px;color:var(--txt)}
-.lchip{display:inline-flex;align-items:center;gap:5px;padding:4px 9px;margin:3px 4px 3px 0;border-radius:8px;background:#fff;border:1px solid var(--line);font-size:13px;color:var(--txt);cursor:default}
+.lchip{display:inline-flex;align-items:center;gap:5px;padding:4px 9px;margin:3px 4px 3px 0;border-radius:8px;background:#fff;border:1px solid var(--line);font-size:13px;color:var(--txt);cursor:pointer;transition:border-color .15s,background .15s}
+.lchip:hover{border-color:var(--brand)}
 .lchip small{font-size:11px;font-weight:600}
 .lchip.up{color:var(--up);border-color:var(--up-soft);background:var(--up-soft)}
 .lchip.down{color:var(--down);border-color:var(--down-soft);background:var(--down-soft)}
@@ -946,9 +947,9 @@ function renderAhead(){
   // 解禁表
   $('unlockTbl').innerHTML = '<thead><tr><th>日期</th><th>代码</th><th>名称</th><th class="num">解禁市值(亿)</th><th class="num">占流通比</th><th>类型</th><th></th></tr></thead><tbody>' + unlock.slice(0,6).map(u => {
     const inWatch = lsGet(LS.watch,[]).includes(u.code);
-    return '<tr><td>' + u.date + ' ' + cdBadge(u.date) + '</td><td>' + u.code + '</td><td><b>' + u.name + '</b>' + (inWatch?' <span class="chip red">自选</span>':'') + '</td><td class="num" style="font-weight:600">' + u.unlock_value.toFixed(1) + '</td><td class="num">' + u.ratio.toFixed(1) + '%</td><td>' + esc(u.type) + '</td><td>' + (inWatch?'':'<button class="btn-sm" onclick="addWatch(\''+u.code+'\',\''+u.name+'\')">关注</button>') + '</td></tr>';
+    return '<tr><td>' + u.date + ' ' + cdBadge(u.date) + '</td><td><span class="lk" onclick="showKline(\''+u.code+'\',\''+u.name+'\')">'+u.code+'</span></td><td><b class="lk" onclick="showKline(\''+u.code+'\',\''+u.name+'\')">' + u.name + '</b>' + (inWatch?' <span class="chip red">自选</span>':'') + '</td><td class="num" style="font-weight:600">' + u.unlock_value.toFixed(1) + '</td><td class="num">' + u.ratio.toFixed(1) + '%</td><td>' + esc(u.type) + '</td><td>' + (inWatch?'':'<button class="btn-sm" onclick="addWatch(\''+u.code+'\',\''+u.name+'\')">关注</button>') + '</td></tr>';
   }).join('') + '</tbody>';
-  $('unlockCards').innerHTML = unlock.slice(0,6).map(u => '<div class="t-item" style="margin-bottom:8px"><div class="t-body"><div class="t-title">' + u.name + ' <span class="chip red">' + u.unlock_value.toFixed(1) + '亿</span></div><div class="t-sub">' + u.date + ' · ' + esc(u.type) + ' · 占流通 ' + u.ratio.toFixed(1) + '%</div></div>' + cdBadge(u.date) + '</div>').join('');
+  $('unlockCards').innerHTML = unlock.slice(0,6).map(u => '<div class="t-item" style="margin-bottom:8px"><div class="t-body"><div class="t-title"><span class="lk" onclick="showKline(\''+u.code+'\',\''+u.name+'\')">' + u.name + '</span> <span class="chip red">' + u.unlock_value.toFixed(1) + '亿</span></div><div class="t-sub">' + u.date + ' · ' + esc(u.type) + ' · 占流通 ' + u.ratio.toFixed(1) + '%</div></div>' + cdBadge(u.date) + '</div>').join('');
 }
 
 /* ================= 短期机会 ================= */
@@ -1051,7 +1052,7 @@ function renderExecHold(){
     const m = s.first_date ? Math.floor((Date.now() - new Date(s.first_date).getTime()) / 2629800000) : null;
     const tag = m == null ? '—' : (m >= 24 ? '持续' + Math.floor(m/12) + '年+' : (m >= 12 ? '1年前开始' : (m >= 6 ? '半年前开始' : m + '个月前开始')));
     const cls = m == null ? 'blue' : (m < 6 ? 'red' : (m < 12 ? 'amber' : 'blue'));
-    return '<div class="rank-row"><span class="rank-no' + (i===0?' top':'') + '">' + (i+1) + '</span><div><div class="rank-name">' + esc(s.name) + '</div><div class="rank-sub">' + esc(s.code) + ' · 本轮起点 ' + (s.first_date||'—') + ' · 近半年减持 ' + (s.dec_count||0) + '次</div></div><div class="rank-sum"><b style="color:var(--brand)">' + s.count + '</b> <span>次增/半年</span></div><span class="chip ' + cls + '" style="align-self:center">' + tag + '</span></div>';
+    return '<div class="rank-row"><span class="rank-no' + (i===0?' top':'') + '">' + (i+1) + '</span><div><div class="rank-name lk" onclick="showKline(\''+s.code+'\',\''+s.name+'\')">' + esc(s.name) + '</div><div class="rank-sub"><span class="lk" onclick="showKline(\''+s.code+'\',\''+s.name+'\')">'+esc(s.code)+'</span> · 本轮起点 ' + (s.first_date||'—') + ' · 近半年减持 ' + (s.dec_count||0) + '次</div></div><div class="rank-sum"><b style="color:var(--brand)">' + s.count + '</b> <span>次增/半年</span></div><span class="chip ' + cls + '" style="align-self:center">' + tag + '</span></div>';
   }).join('');
   box.innerHTML = '<div style="font-size:13px;color:var(--txt2);margin-bottom:4px">近半年增持 ≥5 次 且 减持 &lt;5 次 · 标签=本轮连续增持起点（间隔 &gt;60 天算中断）</div>' + rows;
 }
@@ -1060,7 +1061,7 @@ function renderInstHold(){
   const box = $('instHoldBox');
   const pri = d.private || [], pub = d.public || [];
   if(!pri.length && !pub.length){ box.innerHTML = '<div class="empty">暂无机构增持数据（季报披露期后更新）</div>'; return; }
-  const rowHtml = (s, tagCls, unit) => '<div class="rank-row"><span class="rank-name" style="width:92px">' + esc(s.name) + '</span><div class="rank-sum"><b style="color:var(--brand)">' + s.count + '</b> <span>' + unit + '</span></div>' + (s.consec ? '<span class="chip red">连续加仓</span>' : '<span class="chip blue">新加仓</span>') + '</div>';
+  const rowHtml = (s, tagCls, unit) => '<div class="rank-row"><span class="rank-name lk" style="width:92px" onclick="showKline(\''+s.code+'\',\''+s.name+'\')">' + esc(s.name) + '</span><div class="rank-sum"><b style="color:var(--brand)">' + s.count + '</b> <span>' + unit + '</span></div>' + (s.consec ? '<span class="chip red">连续加仓</span>' : '<span class="chip blue">新加仓</span>') + '</div>';
   const priHtml = pri.map(s => rowHtml(s, 'red', '家私募')).join('');
   const pubHtml = pub.map(s => rowHtml(s, 'blue', '家公募')).join('');
   box.innerHTML =
@@ -1090,7 +1091,7 @@ function renderNiusan(){
     (sm['减少'] ? '<span class="chip green">减仓 ' + sm['减少'] + '</span>' : '');
   const fmtShares = s => s >= 1e8 ? (s/1e8).toFixed(2) + '亿股' : (s/1e4).toFixed(1) + '万股';
   const rows = cur.stocks.map(s =>
-    '<tr><td><b>' + esc(s.name) + '</b></td><td style="color:var(--txt2)">' + esc(s.code) + '</td><td><span class="chip ' + (chCls[s.change]||'blue') + '">' + (chTxt[s.change]||s.change||'持有') + '</span></td><td class="num" style="font-weight:600">' + s.value + '亿</td><td class="num" style="color:var(--txt2)">' + fmtShares(s.shares) + '</td><td class="num" style="color:var(--txt3)">' + (s.ann_date||'').slice(5) + '</td></tr>'
+    '<tr><td><b class="lk" onclick="showKline(\''+s.code+'\',\''+s.name+'\')">' + esc(s.name) + '</b></td><td style="color:var(--txt2)"><span class="lk" onclick="showKline(\''+s.code+'\',\''+s.name+'\')">'+esc(s.code)+'</span></td><td><span class="chip ' + (chCls[s.change]||'blue') + '">' + (chTxt[s.change]||s.change||'持有') + '</span></td><td class="num" style="font-weight:600">' + s.value + '亿</td><td class="num" style="color:var(--txt2)">' + fmtShares(s.shares) + '</td><td class="num" style="color:var(--txt3)">' + (s.ann_date||'').slice(5) + '</td></tr>'
   ).join('');
   box.innerHTML =
     '<div class="ns-chips">' + chips + '</div>' +
@@ -1113,7 +1114,7 @@ function switchNiusan(name){
 function renderLong(){
   const earn = (DATA.earn||[]).slice(0,15);
   $('earnTbl').innerHTML = '<thead><tr><th>代码</th><th>名称</th><th>类型</th><th class="num">变动幅度</th><th>原因摘要</th><th>公告日</th></tr></thead><tbody>' + earn.map(r =>
-    '<tr><td>' + r.code + '</td><td><b>' + r.name + '</b></td><td><span class="chip blue">' + esc(r.type) + '</span></td><td class="num" style="font-weight:600;color:' + ((r.change||'').includes('-')?'var(--down)':'var(--up)') + '">' + esc(r.change) + '</td><td style="white-space:normal;min-width:220px;color:var(--txt2)">' + esc(r.reason) + '</td><td>' + esc(r.ann_date) + '</td></tr>'
+    '<tr><td><span class="lk" onclick="showKline(\''+r.code+'\',\''+r.name+'\')">'+r.code+'</span></td><td><b class="lk" onclick="showKline(\''+r.code+'\',\''+r.name+'\')">' + r.name + '</b></td><td><span class="chip blue">' + esc(r.type) + '</span></td><td class="num" style="font-weight:600;color:' + ((r.change||'').includes('-')?'var(--down)':'var(--up)') + '">' + esc(r.change) + '</td><td style="white-space:normal;min-width:220px;color:var(--txt2)">' + esc(r.reason) + '</td><td>' + esc(r.ann_date) + '</td></tr>'
   ).join('') + '</tbody>';
 }
 
@@ -1202,12 +1203,13 @@ const KL_MA = {5:'#E8923A', 10:'#2F7DE1', 20:'#8E5BC9'};
 function closeKline(){ $('klineModal').classList.remove('show'); }
 
 function showKline(code, name){
+  const kc = (code||'').match(/\d{6}$/) ? code.match(/\d{6}$/)[0] : (code||'');
   $('klineTitle').textContent = name + '（' + code + '）· 日K线';
   $('klineMeta').textContent = '加载中…';
   $('klineBody').innerHTML = '<div class="kline-loading">⏳ 正在读取 ' + code + ' 的日K线…</div>';
   $('klinePaste').style.display = 'none';
   $('klineModal').classList.add('show');
-  fetch('data/kline/' + code + '.json?_=' + Date.now(), {cache:'no-store'})
+  fetch('data/kline/' + kc + '.json?_=' + Date.now(), {cache:'no-store'})
     .then(r => { if(!r.ok) throw new Error('no'); return r.json(); })
     .then(d => {
       const bars = (d && d.kline) || [];
@@ -1570,9 +1572,9 @@ function renderConcepts(){
         const qt = quotes[l.code];
         if(qt && typeof qt.pct === 'number'){
           const cls = qt.pct >= 0 ? 'up' : 'down';
-          indHtml += '<span class="lchip '+cls+'">'+esc(l.name)+' <small>'+(qt.pct>=0?'+':'')+qt.pct.toFixed(2)+'%</small> <span class="code">'+esc(l.code)+'</span></span>';
+          indHtml += '<span class="lchip '+cls+'" onclick="showKline(\''+l.code+'\',\''+l.name+'\')">'+esc(l.name)+' <small>'+(qt.pct>=0?'+':'')+qt.pct.toFixed(2)+'%</small> <span class="code">'+esc(l.code)+'</span></span>';
         } else {
-          indHtml += '<span class="lchip">'+esc(l.name)+' <span class="code">'+esc(l.code)+'</span></span>';
+          indHtml += '<span class="lchip" onclick="showKline(\''+l.code+'\',\''+l.name+'\')">'+esc(l.name)+' <span class="code">'+esc(l.code)+'</span></span>';
         }
       });
       indHtml += '</div>';
