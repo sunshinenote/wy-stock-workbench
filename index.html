@@ -457,6 +457,9 @@ svg text{font-family:inherit}
       <button class="ghost btn-sm" onclick="closeKline()">✕ 关闭</button>
     </div>
     <div id="klineBody" class="kline-body"></div>
+    <div class="kline-ext" style="padding:10px 16px 14px;border-top:1px solid var(--line)">
+      <a id="klineExt" class="btn-sm primary" target="_blank" rel="noopener noreferrer">🔗 在东方财富看完整行情 »</a>
+    </div>
     <div id="klinePaste" class="kline-paste" style="display:none">
       <p style="font-size:13px;color:var(--txt2);line-height:1.7">
         未读到该股票 K 线（本地离线打开或尚未运行采集）。可粘贴数据后渲染：<br>
@@ -1245,6 +1248,8 @@ function showKline(code, name){
   const kc = (code||'').match(/\d{6}$/) ? code.match(/\d{6}$/)[0] : (code||'');
   $('klineTitle').textContent = name + '（' + code + '）· 日K线';
   $('klineMeta').textContent = '加载中…';
+  $('klineExt').href = 'https://quote.eastmoney.com/' + txCode(code) + '.html';
+  $('klineExt').textContent = '🔗 在东方财富看 ' + (name||code) + ' 完整行情 »';
   $('klineBody').innerHTML = '<div class="kline-loading">⏳ 正在读取 ' + code + ' 的日K线…</div>';
   $('klinePaste').style.display = 'none';
   $('klineModal').classList.add('show');
