@@ -1,194 +1,5 @@
 [
  {
-  "date": "2026-08-22",
-  "time": "01:00",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国截至8月21日当周石油钻井总数(口)",
-  "forecast": "nan",
-  "previous": "455.0"
- },
- {
-  "date": "2026-08-22",
-  "time": "01:00",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国截至8月21日当周全美钻井总数(口)",
-  "forecast": "nan",
-  "previous": "593.0"
- },
- {
-  "date": "2026-08-22",
-  "time": "01:00",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国截至8月21日当周混杂钻井总数(口)",
-  "forecast": "nan",
-  "previous": "10.0"
- },
- {
-  "date": "2026-08-22",
-  "time": "01:00",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国截至8月21日当周天然气钻井总数(口)",
-  "forecast": "nan",
-  "previous": "128.0"
- },
- {
-  "date": "2026-08-22",
-  "time": "01:00",
-  "country": "北美洲",
-  "importance": "低",
-  "event": "北美洲截至8月21日当周总钻井总数(口)",
-  "forecast": "nan",
-  "previous": "812.0"
- },
- {
-  "date": "2026-08-22",
-  "time": "01:00",
-  "country": "北美洲",
-  "importance": "低",
-  "event": "北美洲截至8月21日当周墨西哥湾总钻井总数(口)",
-  "forecast": "nan",
-  "previous": "10.0"
- },
- {
-  "date": "2026-08-22",
-  "time": "01:00",
-  "country": "加拿大",
-  "importance": "低",
-  "event": "加拿大截至8月21日当周总钻井数量(口)",
-  "forecast": "nan",
-  "previous": "219.0"
- },
- {
-  "date": "2026-08-22",
-  "time": "06:30",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国8月21日iShares白银持仓-每日更新(吨)",
-  "forecast": "nan",
-  "previous": "15275.59"
- },
- {
-  "date": "2026-08-22",
-  "time": "06:30",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国8月20日COMEX白银库存变动-每日(百盎司)",
-  "forecast": "nan",
-  "previous": "2203.97"
- },
- {
-  "date": "2026-08-22",
-  "time": "06:30",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国8月21日iShares黄金持仓变动-每日(吨)",
-  "forecast": "nan",
-  "previous": "1.06"
- },
- {
-  "date": "2026-08-22",
-  "time": "06:30",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国8月21日SPDR黄金持仓变动-每日(吨)",
-  "forecast": "nan",
-  "previous": "4.28"
- },
- {
-  "date": "2026-08-22",
-  "time": "06:30",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国8月21日iShares白银持仓变动-每日(吨)",
-  "forecast": "nan",
-  "previous": ""
- },
- {
-  "date": "2026-08-22",
-  "time": "06:30",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国8月21日iShares黄金持仓-每日更新(吨)",
-  "forecast": "nan",
-  "previous": "457.81"
- },
- {
-  "date": "2026-08-22",
-  "time": "06:30",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国8月20日NYMEX钯金库存-每日更新(百盎司)",
-  "forecast": "nan",
-  "previous": "2505.11"
- },
- {
-  "date": "2026-08-22",
-  "time": "06:30",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国8月20日COMEX黄金库存-每日更新(百盎司)",
-  "forecast": "nan",
-  "previous": "266808.53"
- },
- {
-  "date": "2026-08-22",
-  "time": "06:30",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国8月20日NYMEX铂金库存-每日更新(百盎司)",
-  "forecast": "nan",
-  "previous": "3934.87"
- },
- {
-  "date": "2026-08-22",
-  "time": "06:30",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国8月20日NYMEX钯金库存变动-每日(百盎司)",
-  "forecast": "nan",
-  "previous": "-6.01"
- },
- {
-  "date": "2026-08-22",
-  "time": "06:30",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国8月20日COMEX白银库存-每日更新(百盎司)",
-  "forecast": "nan",
-  "previous": "3375359.87"
- },
- {
-  "date": "2026-08-22",
-  "time": "06:30",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国8月21日SPDR黄金持仓-每日更新(吨)",
-  "forecast": "nan",
-  "previous": "1038.93"
- },
- {
-  "date": "2026-08-22",
-  "time": "06:30",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国8月20日NYMEX铂金库存变动-每日(百盎司)",
-  "forecast": "nan",
-  "previous": ""
- },
- {
-  "date": "2026-08-22",
-  "time": "06:30",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国8月20日COMEX黄金库存变动-每日(百盎司)",
-  "forecast": "nan",
-  "previous": "320.16"
- },
- {
   "date": "2026-08-24",
   "time": "06:45",
   "country": "新西兰",
@@ -718,5 +529,194 @@
   "event": "中国台湾7月工业产出年率(%)",
   "forecast": "nan",
   "previous": "22.95"
+ },
+ {
+  "date": "2026-08-25",
+  "time": "16:00",
+  "country": "德国",
+  "importance": "中",
+  "event": "德国8月IFO商业景气指数",
+  "forecast": "87.2",
+  "previous": "86.6"
+ },
+ {
+  "date": "2026-08-25",
+  "time": "16:30",
+  "country": "中国香港",
+  "importance": "中",
+  "event": "中国香港7月贸易帐(亿港元)",
+  "forecast": "nan",
+  "previous": "-519.52"
+ },
+ {
+  "date": "2026-08-25",
+  "time": "16:30",
+  "country": "中国香港",
+  "importance": "中",
+  "event": "中国香港7月出口年率(%)",
+  "forecast": "nan",
+  "previous": "53.4"
+ },
+ {
+  "date": "2026-08-25",
+  "time": "16:30",
+  "country": "中国香港",
+  "importance": "中",
+  "event": "中国香港7月进口年率(%)",
+  "forecast": "nan",
+  "previous": "45.4"
+ },
+ {
+  "date": "2026-08-25",
+  "time": "20:00",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国7月营建许可年化总数修正值(万户)",
+  "forecast": "nan",
+  "previous": "144.3"
+ },
+ {
+  "date": "2026-08-25",
+  "time": "20:00",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国7月营建许可月率修正值(%)",
+  "forecast": "nan",
+  "previous": "5.0"
+ },
+ {
+  "date": "2026-08-25",
+  "time": "20:15",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国截至8月8日当周ADP就业周度发布变动(万人)",
+  "forecast": "nan",
+  "previous": "0.95"
+ },
+ {
+  "date": "2026-08-25",
+  "time": "20:55",
+  "country": "美国",
+  "importance": "高",
+  "event": "美国截至8月17日当周红皮书商业零售销售年率(%)",
+  "forecast": "nan",
+  "previous": "7.6"
+ },
+ {
+  "date": "2026-08-25",
+  "time": "21:00",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国6月S&P/CS20座大城市季调后房价指数月率(%)",
+  "forecast": "nan",
+  "previous": "0.2"
+ },
+ {
+  "date": "2026-08-25",
+  "time": "21:00",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国6月S&P/CS10座大城市未季调房价指数月率(%)",
+  "forecast": "nan",
+  "previous": "0.94"
+ },
+ {
+  "date": "2026-08-25",
+  "time": "21:00",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国6月S&P/CS20座大城市未季调房价指数月率(%)",
+  "forecast": "nan",
+  "previous": "0.9"
+ },
+ {
+  "date": "2026-08-25",
+  "time": "21:00",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国6月FHFA房价指数月率(%)",
+  "forecast": "nan",
+  "previous": "0.3"
+ },
+ {
+  "date": "2026-08-25",
+  "time": "21:00",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国6月FHFA房价指数",
+  "forecast": "nan",
+  "previous": "442.4"
+ },
+ {
+  "date": "2026-08-25",
+  "time": "21:00",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国6月FHFA房价指数年率(%)",
+  "forecast": "nan",
+  "previous": "2.2"
+ },
+ {
+  "date": "2026-08-25",
+  "time": "21:00",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国6月S&P/CS20座大城市未季调房价指数年率(%)",
+  "forecast": "nan",
+  "previous": "1.6"
+ },
+ {
+  "date": "2026-08-25",
+  "time": "21:00",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国6月S&P/CS10座大城市未季调房价指数年率(%)",
+  "forecast": "nan",
+  "previous": "2.38"
+ },
+ {
+  "date": "2026-08-25",
+  "time": "22:00",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国8月里士满联储制造业新订单指数",
+  "forecast": "nan",
+  "previous": "5.0"
+ },
+ {
+  "date": "2026-08-25",
+  "time": "22:00",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国8月里士满联储制造业装船指数",
+  "forecast": "nan",
+  "previous": "8.0"
+ },
+ {
+  "date": "2026-08-25",
+  "time": "22:00",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国7月季调后新屋销售年化总数(万户)",
+  "forecast": "62.1",
+  "previous": "62.8"
+ },
+ {
+  "date": "2026-08-25",
+  "time": "22:00",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国8月里士满联储服务业收入指数",
+  "forecast": "nan",
+  "previous": "-3.0"
+ },
+ {
+  "date": "2026-08-25",
+  "time": "22:00",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国8月谘商会消费者预期指数",
+  "forecast": "nan",
+  "previous": "74.7"
  }
 ]
