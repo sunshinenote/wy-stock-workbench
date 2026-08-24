@@ -1,82 +1,82 @@
 [
  {
   "name": "贵金属",
-  "pct": 5.34,
+  "pct": 3.19,
   "leader": "湖南白银",
-  "leader_pct": 10.03,
-  "up_count": 13,
-  "down_count": 0
+  "leader_pct": 9.98,
+  "up_count": 8,
+  "down_count": 5
  },
  {
-  "name": "能源金属",
-  "pct": 4.51,
-  "leader": "*ST威领",
+  "name": "煤炭开采加工",
+  "pct": 2.72,
+  "leader": "上海能源",
   "leader_pct": 10.02,
-  "up_count": 11,
-  "down_count": 2
- },
- {
-  "name": "工业金属",
-  "pct": 2.65,
-  "leader": "盛达资源",
-  "leader_pct": 10.01,
-  "up_count": 47,
-  "down_count": 7
- },
- {
-  "name": "小金属",
-  "pct": 1.8,
-  "leader": "国城矿业",
-  "leader_pct": 8.19,
-  "up_count": 23,
+  "up_count": 28,
   "down_count": 6
  },
  {
-  "name": "元件",
-  "pct": 1.55,
-  "leader": "江海股份",
-  "leader_pct": 7.27,
-  "up_count": 45,
+  "name": "保险",
+  "pct": 1.8,
+  "leader": "中国平安",
+  "leader_pct": 2.94,
+  "up_count": 5,
+  "down_count": 0
+ },
+ {
+  "name": "银行",
+  "pct": 1.38,
+  "leader": "渝农商行",
+  "leader_pct": 3.38,
+  "up_count": 40,
+  "down_count": 1
+ },
+ {
+  "name": "种植业与林业",
+  "pct": 1.33,
+  "leader": "登海种业",
+  "leader_pct": 10.04,
+  "up_count": 18,
+  "down_count": 10
+ },
+ {
+  "name": "公路铁路运输",
+  "pct": 0.91,
+  "leader": "皖通高速",
+  "leader_pct": 4.84,
+  "up_count": 25,
+  "down_count": 6
+ },
+ {
+  "name": "工业金属",
+  "pct": 0.76,
+  "leader": "白银有色",
+  "leader_pct": 10.02,
+  "up_count": 34,
   "down_count": 18
  },
  {
-  "name": "石油加工贸易",
-  "pct": 1.52,
-  "leader": "博汇股份",
+  "name": "电池",
+  "pct": 0.65,
+  "leader": "天力锂能",
   "leader_pct": 20.02,
-  "up_count": 20,
-  "down_count": 7
+  "up_count": 54,
+  "down_count": 52
  },
  {
-  "name": "通信设备",
-  "pct": 1.38,
-  "leader": "星网锐捷",
-  "leader_pct": 10.02,
-  "up_count": 61,
-  "down_count": 30
+  "name": "港口航运",
+  "pct": 0.5,
+  "leader": "中谷物流",
+  "leader_pct": 10.01,
+  "up_count": 21,
+  "down_count": 13
  },
  {
-  "name": "非金属材料",
-  "pct": 1.3,
-  "leader": "金博股份",
-  "leader_pct": 14.54,
-  "up_count": 9,
-  "down_count": 7
- },
- {
-  "name": "塑料制品",
-  "pct": 1.28,
-  "leader": "肯特股份",
-  "leader_pct": 20.01,
-  "up_count": 55,
-  "down_count": 22
- },
- {
-  "name": "消费电子",
-  "pct": 1.28,
-  "leader": "锦富技术",
-  "leader_pct": 12.5,
-  "up_count": 62,
-  "down_count": 34
+  "name": "白酒",
+  "pct": 0.49,
+  "leader": "贵州茅台",
+  "leader_pct": 2.5,
+  "up_count": 11,
+  "down_count": 5
  }
 ]

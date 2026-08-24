@@ -1,51 +1,55 @@
 {
- "date": "2026-08-22",
- "zt": 54,
- "dt": 13,
- "zb": 18,
- "zb_rate": 25.0,
- "max_lb": 3,
+ "date": "2026-08-24",
+ "zt": 46,
+ "dt": 11,
+ "zb": 16,
+ "zb_rate": 25.8,
+ "max_lb": 4,
  "lb_dist": [
   {
    "lb": 1,
-   "count": 43
+   "count": 36
   },
   {
    "lb": 2,
-   "count": 10
+   "count": 6
   },
   {
    "lb": 3,
+   "count": 3
+  },
+  {
+   "lb": 4,
    "count": 1
   }
  ],
- "score": 50,
+ "score": 49,
  "level": "复苏",
  "note": "跌停家数较多，情绪走弱",
  "industries": [
   {
-   "name": "通信设备",
-   "count": 6
+   "name": "电力",
+   "count": 3
+  },
+  {
+   "name": "电池",
+   "count": 3
   },
   {
    "name": "化学制药",
-   "count": 4
+   "count": 2
   },
   {
-   "name": "专用设备",
-   "count": 4
+   "name": "汽车零部",
+   "count": 2
   },
   {
-   "name": "化学制品",
-   "count": 4
+   "name": "一般零售",
+   "count": 2
   },
   {
-   "name": "消费电子",
-   "count": 4
-  },
-  {
-   "name": "通用设备",
-   "count": 3
+   "name": "房地产开",
+   "count": 2
   }
  ]
 }
