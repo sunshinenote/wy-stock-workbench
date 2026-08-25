@@ -1,55 +1,59 @@
 {
- "date": "2026-08-24",
- "zt": 46,
- "dt": 11,
- "zb": 16,
- "zb_rate": 25.8,
- "max_lb": 4,
+ "date": "2026-08-25",
+ "zt": 65,
+ "dt": 2,
+ "zb": 22,
+ "zb_rate": 25.3,
+ "max_lb": 5,
  "lb_dist": [
   {
    "lb": 1,
-   "count": 36
+   "count": 56
   },
   {
    "lb": 2,
-   "count": 6
+   "count": 5
   },
   {
    "lb": 3,
-   "count": 3
+   "count": 2
   },
   {
    "lb": 4,
    "count": 1
+  },
+  {
+   "lb": 5,
+   "count": 1
   }
  ],
- "score": 49,
- "level": "复苏",
- "note": "跌停家数较多，情绪走弱",
+ "score": 65,
+ "level": "发酵",
+ "note": "",
  "industries": [
   {
-   "name": "电力",
-   "count": 3
-  },
-  {
-   "name": "电池",
-   "count": 3
-  },
-  {
-   "name": "化学制药",
-   "count": 2
+   "name": "通用设备",
+   "count": 4
   },
   {
    "name": "汽车零部",
-   "count": 2
+   "count": 3
+  },
+  {
+   "name": "农化制品",
+   "count": 3
   },
   {
    "name": "一般零售",
-   "count": 2
+   "count": 3
   },
   {
-   "name": "房地产开",
-   "count": 2
+   "name": "装修装饰",
+   "count": 3
+  },
+  {
+   "name": "包装印刷",
+   "count": 3
   }
  ]
 }

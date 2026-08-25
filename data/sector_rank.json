@@ -1,82 +1,82 @@
 [
  {
-  "name": "贵金属",
-  "pct": 3.19,
-  "leader": "湖南白银",
-  "leader_pct": 9.98,
-  "up_count": 8,
-  "down_count": 5
+  "name": "种植业与林业",
+  "pct": 3.29,
+  "leader": "万向德农",
+  "leader_pct": 10.03,
+  "up_count": 26,
+  "down_count": 4
  },
  {
-  "name": "煤炭开采加工",
-  "pct": 2.72,
-  "leader": "上海能源",
-  "leader_pct": 10.02,
-  "up_count": 28,
-  "down_count": 6
- },
- {
-  "name": "保险",
-  "pct": 1.8,
-  "leader": "中国平安",
-  "leader_pct": 2.94,
-  "up_count": 5,
-  "down_count": 0
- },
- {
-  "name": "银行",
-  "pct": 1.38,
-  "leader": "渝农商行",
-  "leader_pct": 3.38,
-  "up_count": 40,
+  "name": "美容护理",
+  "pct": 3.26,
+  "leader": "维琪科技",
+  "leader_pct": 13.63,
+  "up_count": 33,
   "down_count": 1
  },
  {
-  "name": "种植业与林业",
-  "pct": 1.33,
-  "leader": "登海种业",
-  "leader_pct": 10.04,
-  "up_count": 18,
-  "down_count": 10
+  "name": "医药商业",
+  "pct": 3.25,
+  "leader": "人民同泰",
+  "leader_pct": 9.98,
+  "up_count": 30,
+  "down_count": 1
  },
  {
-  "name": "公路铁路运输",
-  "pct": 0.91,
-  "leader": "皖通高速",
-  "leader_pct": 4.84,
-  "up_count": 25,
+  "name": "小家电",
+  "pct": 3.04,
+  "leader": "石头科技",
+  "leader_pct": 20.0,
+  "up_count": 23,
+  "down_count": 3
+ },
+ {
+  "name": "影视院线",
+  "pct": 2.9,
+  "leader": "博纳影业",
+  "leader_pct": 5.34,
+  "up_count": 19,
+  "down_count": 0
+ },
+ {
+  "name": "零售",
+  "pct": 2.89,
+  "leader": "汇通能源",
+  "leader_pct": 10.02,
+  "up_count": 65,
   "down_count": 6
  },
  {
-  "name": "工业金属",
-  "pct": 0.76,
-  "leader": "白银有色",
-  "leader_pct": 10.02,
-  "up_count": 34,
-  "down_count": 18
+  "name": "旅游及酒店",
+  "pct": 2.88,
+  "leader": "凯撒旅业",
+  "leader_pct": 10.0,
+  "up_count": 33,
+  "down_count": 2
  },
  {
-  "name": "电池",
-  "pct": 0.65,
-  "leader": "天力锂能",
-  "leader_pct": 20.02,
-  "up_count": 54,
-  "down_count": 52
+  "name": "中药",
+  "pct": 2.69,
+  "leader": "华森制药",
+  "leader_pct": 9.99,
+  "up_count": 64,
+  "down_count": 4
  },
  {
-  "name": "港口航运",
-  "pct": 0.5,
-  "leader": "中谷物流",
-  "leader_pct": 10.01,
-  "up_count": 21,
-  "down_count": 13
+  "name": "教育",
+  "pct": 2.62,
+  "leader": "创业黑马",
+  "leader_pct": 9.59,
+  "up_count": 13,
+  "down_count": 2
  },
  {
-  "name": "白酒",
-  "pct": 0.49,
-  "leader": "贵州茅台",
-  "leader_pct": 2.5,
-  "up_count": 11,
-  "down_count": 5
+  "name": "医疗服务",
+  "pct": 2.61,
+  "leader": "凯莱英",
+  "leader_pct": 10.0,
+  "up_count": 44,
+  "down_count": 12
  }
 ]
