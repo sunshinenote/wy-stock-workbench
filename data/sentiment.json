@@ -1,22 +1,22 @@
 {
- "date": "2026-08-25",
- "zt": 65,
- "dt": 2,
- "zb": 22,
- "zb_rate": 25.3,
+ "date": "2026-08-26",
+ "zt": 52,
+ "dt": 0,
+ "zb": 20,
+ "zb_rate": 27.8,
  "max_lb": 5,
  "lb_dist": [
   {
    "lb": 1,
-   "count": 56
+   "count": 39
   },
   {
    "lb": 2,
-   "count": 5
+   "count": 10
   },
   {
    "lb": 3,
-   "count": 2
+   "count": 1
   },
   {
    "lb": 4,
@@ -27,32 +27,32 @@
    "count": 1
   }
  ],
- "score": 65,
+ "score": 56,
  "level": "发酵",
  "note": "",
  "industries": [
   {
-   "name": "通用设备",
+   "name": "工业金属",
    "count": 4
   },
   {
-   "name": "汽车零部",
+   "name": "家居用品",
    "count": 3
   },
   {
-   "name": "农化制品",
+   "name": "电网设备",
    "count": 3
   },
   {
-   "name": "一般零售",
+   "name": "电力",
    "count": 3
   },
   {
-   "name": "装修装饰",
+   "name": "饰品",
    "count": 3
   },
   {
-   "name": "包装印刷",
+   "name": "通信设备",
    "count": 3
   }
  ]
