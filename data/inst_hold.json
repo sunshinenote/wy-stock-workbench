@@ -15,6 +15,12 @@
    "consec": false
   },
   {
+   "code": "688411",
+   "name": "海博思创",
+   "count": 5,
+   "consec": false
+  },
+  {
    "code": "301275",
    "name": "汉朔科技",
    "count": 5,
@@ -51,12 +57,6 @@
    "consec": true
   },
   {
-   "code": "688411",
-   "name": "海博思创",
-   "count": 4,
-   "consec": false
-  },
-  {
    "code": "688726",
    "name": "拉普拉斯",
    "count": 4,
@@ -69,10 +69,10 @@
    "consec": true
   },
   {
-   "code": "603488",
-   "name": "展鹏科技",
+   "code": "301557",
+   "name": "常友科技",
    "count": 4,
-   "consec": false
+   "consec": true
   }
  ],
  "public": [
