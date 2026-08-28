@@ -1,150 +1,150 @@
 {
- "report": "2026-03-31",
- "prev": "2025-12-31",
+ "report": "2026-06-30",
+ "prev": "2026-03-31",
  "private": [
-  {
-   "code": "603271",
-   "name": "永杰新材",
-   "count": 6,
-   "consec": false
-  },
-  {
-   "code": "603124",
-   "name": "江南新材",
-   "count": 6,
-   "consec": false
-  },
-  {
-   "code": "688411",
-   "name": "海博思创",
-   "count": 5,
-   "consec": false
-  },
-  {
-   "code": "301275",
-   "name": "汉朔科技",
-   "count": 5,
-   "consec": false
-  },
-  {
-   "code": "301458",
-   "name": "钧崴电子",
-   "count": 5,
-   "consec": false
-  },
-  {
-   "code": "688757",
-   "name": "胜科纳米",
-   "count": 5,
-   "consec": false
-  },
-  {
-   "code": "301479",
-   "name": "弘景光电",
-   "count": 5,
-   "consec": false
-  },
-  {
-   "code": "300881",
-   "name": "盛德鑫泰",
-   "count": 4,
-   "consec": false
-  },
-  {
-   "code": "603683",
-   "name": "晶华新材",
-   "count": 4,
-   "consec": true
-  },
-  {
-   "code": "688726",
-   "name": "拉普拉斯",
-   "count": 4,
-   "consec": true
-  },
-  {
-   "code": "300235",
-   "name": "方直科技",
-   "count": 4,
-   "consec": true
-  },
   {
    "code": "301557",
    "name": "常友科技",
+   "count": 6,
+   "consec": true
+  },
+  {
+   "code": "301680",
+   "name": "固德电材",
+   "count": 6,
+   "consec": true
+  },
+  {
+   "code": "688755",
+   "name": "汉邦科技",
+   "count": 6,
+   "consec": false
+  },
+  {
+   "code": "003026",
+   "name": "中晶科技",
+   "count": 6,
+   "consec": true
+  },
+  {
+   "code": "301042",
+   "name": "安联锐视",
+   "count": 5,
+   "consec": true
+  },
+  {
+   "code": "688583",
+   "name": "思看科技",
+   "count": 5,
+   "consec": true
+  },
+  {
+   "code": "002961",
+   "name": "瑞达期货",
+   "count": 5,
+   "consec": false
+  },
+  {
+   "code": "300084",
+   "name": "海默科技",
+   "count": 4,
+   "consec": false
+  },
+  {
+   "code": "300607",
+   "name": "拓斯达",
+   "count": 4,
+   "consec": false
+  },
+  {
+   "code": "301121",
+   "name": "紫建电子",
+   "count": 4,
+   "consec": true
+  },
+  {
+   "code": "301209",
+   "name": "联合化学",
+   "count": 4,
+   "consec": true
+  },
+  {
+   "code": "301590",
+   "name": "优优绿能",
    "count": 4,
    "consec": true
   }
  ],
  "public": [
   {
-   "code": "603402",
-   "name": "陕西旅游",
-   "count": 10,
-   "consec": false
-  },
-  {
-   "code": "688809",
-   "name": "强一股份",
-   "count": 10,
-   "consec": true
-  },
-  {
-   "code": "301662",
-   "name": "宏工科技",
-   "count": 8,
-   "consec": true
-  },
-  {
-   "code": "001233",
-   "name": "海安集团",
-   "count": 7,
-   "consec": false
-  },
-  {
-   "code": "600391",
-   "name": "航发科技",
+   "code": "301362",
+   "name": "民爆光电",
    "count": 7,
    "consec": true
   },
   {
-   "code": "600118",
-   "name": "中国卫星",
+   "code": "600757",
+   "name": "长江传媒",
    "count": 7,
    "consec": true
   },
   {
-   "code": "000700",
-   "name": "模塑科技",
+   "code": "600997",
+   "name": "开滦股份",
+   "count": 7,
+   "consec": true
+  },
+  {
+   "code": "601038",
+   "name": "一拖股份",
+   "count": 7,
+   "consec": true
+  },
+  {
+   "code": "300548",
+   "name": "长芯博创",
    "count": 6,
    "consec": true
   },
   {
-   "code": "600230",
-   "name": "沧州大化",
+   "code": "300820",
+   "name": "英杰电气",
    "count": 6,
    "consec": true
   },
   {
-   "code": "603163",
-   "name": "圣晖集成",
+   "code": "300969",
+   "name": "恒帅股份",
    "count": 6,
    "consec": true
   },
   {
-   "code": "688478",
-   "name": "晶升股份",
+   "code": "301151",
+   "name": "冠龙节能",
+   "count": 6,
+   "consec": true
+  },
+  {
+   "code": "301217",
+   "name": "铜冠铜箔",
+   "count": 6,
+   "consec": true
+  },
+  {
+   "code": "301446",
+   "name": "福事特",
    "count": 6,
    "consec": false
   },
   {
-   "code": "000973",
-   "name": "佛塑科技",
+   "code": "600105",
+   "name": "永鼎股份",
    "count": 6,
    "consec": true
   },
   {
-   "code": "300161",
-   "name": "华中数控",
+   "code": "603115",
+   "name": "海星股份",
    "count": 6,
    "consec": true
   }
