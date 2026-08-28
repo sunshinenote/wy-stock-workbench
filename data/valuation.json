@@ -3,11 +3,11 @@
   {
    "code": "600519",
    "name": "600519",
-   "pe": 19.9,
-   "pe_pct": 4.5,
+   "pe": null,
+   "pe_pct": null,
    "pb": 6.46,
    "pb_pct": 8.1,
-   "avg_pct": 6.3,
+   "avg_pct": 8.1,
    "state": "低估"
   },
   {
