@@ -477,7 +477,8 @@ def collect_divyield():
 
 # ---------- 5.8 牛散持仓追踪（十大流通股东，季报披露完才更新） ----------
 NIUSAN_LIST = ["徐开东", "陈发树", "葛卫东", "赵建平", "章建平", "赵强", "王玉", "袁喜保", "袁东红",
-               "刘鑫", "张素芬", "夏重阳", "蒋仕波", "高雅萍", "何雪萍", "孙惠刚", "周信钢", "金莺"]
+               "刘鑫", "张素芬", "夏重阳", "蒋仕波", "高雅萍", "何雪萍", "孙惠刚", "周信钢", "金莺",
+               "刘佳", "牛志国", "付前军"]
 
 
 def _latest_report_period():
@@ -500,10 +501,18 @@ def _latest_report_period():
 
 
 def _match_niusan(holder_name):
-    """股东名称是否命中牛散名单（精确或前缀，防误匹配）"""
+    """股东名称是否命中牛散名单
+
+    重要：2 字短名必须用「精确匹配」。若对"王玉"做前缀匹配，会误伤
+    王玉霞 / 王玉明 / 王玉琴 …（实测中报 13 条命中里 8 条是别人的持仓）。
+    3 字及以上才用前缀匹配，以兼容"徐开东（受限）"这类带后缀的写法。
+    """
     name = str(holder_name or "").replace(" ", "")
     for ns in NIUSAN_LIST:
-        if name == ns or name.startswith(ns):
+        if len(ns) <= 2:
+            if name == ns:
+                return ns
+        elif name == ns or name.startswith(ns):
             return ns
     return None
 
