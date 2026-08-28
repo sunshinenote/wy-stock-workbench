@@ -1,82 +1,82 @@
 [
  {
-  "name": "元件",
-  "pct": 5.33,
-  "leader": "生益电子",
-  "leader_pct": 14.32,
-  "up_count": 63,
-  "down_count": 0
- },
- {
-  "name": "电子化学品",
-  "pct": 5.22,
-  "leader": "宏昌电子",
-  "leader_pct": 10.02,
-  "up_count": 43,
-  "down_count": 0
- },
- {
-  "name": "非金属材料",
-  "pct": 5.19,
-  "leader": "联瑞新材",
-  "leader_pct": 20.0,
-  "up_count": 16,
-  "down_count": 0
- },
- {
-  "name": "半导体",
-  "pct": 5.12,
-  "leader": "赛微电子",
-  "leader_pct": 20.01,
-  "up_count": 184,
-  "down_count": 3
- },
- {
   "name": "种植业与林业",
-  "pct": 4.91,
-  "leader": "秋乐种业",
-  "leader_pct": 14.69,
-  "up_count": 29,
+  "pct": 3.08,
+  "leader": "敦煌种业",
+  "leader_pct": 10.05,
+  "up_count": 24,
+  "down_count": 5
+ },
+ {
+  "name": "农化制品",
+  "pct": 2.9,
+  "leader": "潞化科技",
+  "leader_pct": 10.11,
+  "up_count": 56,
+  "down_count": 5
+ },
+ {
+  "name": "化学原料",
+  "pct": 2.74,
+  "leader": "迪尔化工",
+  "leader_pct": 15.22,
+  "up_count": 52,
+  "down_count": 5
+ },
+ {
+  "name": "石油加工贸易",
+  "pct": 2.48,
+  "leader": "华锦股份",
+  "leader_pct": 10.08,
+  "up_count": 27,
+  "down_count": 0
+ },
+ {
+  "name": "农产品加工",
+  "pct": 2.25,
+  "leader": "冠农股份",
+  "leader_pct": 10.0,
+  "up_count": 39,
+  "down_count": 4
+ },
+ {
+  "name": "贸易",
+  "pct": 2.19,
+  "leader": "远大控股",
+  "leader_pct": 10.06,
+  "up_count": 13,
   "down_count": 1
  },
  {
-  "name": "通信设备",
-  "pct": 3.54,
-  "leader": "长芯博创",
-  "leader_pct": 12.0,
-  "up_count": 80,
-  "down_count": 10
+  "name": "零售",
+  "pct": 1.93,
+  "leader": "香江控股",
+  "leader_pct": 10.06,
+  "up_count": 62,
+  "down_count": 8
  },
  {
-  "name": "其他电子",
-  "pct": 3.52,
-  "leader": "瑞可达",
-  "leader_pct": 12.16,
-  "up_count": 31,
-  "down_count": 3
- },
- {
-  "name": "小金属",
-  "pct": 2.83,
-  "leader": "东方钽业",
-  "leader_pct": 10.0,
-  "up_count": 26,
-  "down_count": 3
- },
- {
-  "name": "贵金属",
-  "pct": 2.81,
-  "leader": "湖南黄金",
-  "leader_pct": 10.02,
-  "up_count": 14,
-  "down_count": 0
- },
- {
-  "name": "塑料制品",
-  "pct": 2.43,
-  "leader": "肯特股份",
-  "leader_pct": 20.0,
+  "name": "服装家纺",
+  "pct": 1.84,
+  "leader": "嘉麟杰",
+  "leader_pct": 10.07,
   "up_count": 61,
-  "down_count": 15
+  "down_count": 14
+ },
+ {
+  "name": "旅游及酒店",
+  "pct": 1.69,
+  "leader": "陕西旅游",
+  "leader_pct": 4.96,
+  "up_count": 33,
+  "down_count": 2
+ },
+ {
+  "name": "化学制品",
+  "pct": 1.59,
+  "leader": "华大海天",
+  "leader_pct": 126.81,
+  "up_count": 136,
+  "down_count": 44
  }
 ]

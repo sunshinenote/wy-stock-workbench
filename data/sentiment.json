@@ -1,62 +1,62 @@
 {
- "date": "2026-08-27",
- "zt": 77,
- "dt": 3,
- "zb": 17,
- "zb_rate": 18.1,
- "max_lb": 6,
+ "date": "2026-08-28",
+ "zt": 82,
+ "dt": 1,
+ "zb": 16,
+ "zb_rate": 16.3,
+ "max_lb": 7,
  "lb_dist": [
   {
    "lb": 1,
-   "count": 61
+   "count": 64
   },
   {
    "lb": 2,
-   "count": 8
+   "count": 10
   },
   {
    "lb": 3,
-   "count": 5
+   "count": 3
   },
   {
    "lb": 4,
-   "count": 1
+   "count": 3
   },
   {
    "lb": 5,
    "count": 1
   },
   {
-   "lb": 6,
+   "lb": 7,
    "count": 1
   }
  ],
- "score": 81,
- "level": "高潮",
+ "score": 89,
+ "level": "过热",
  "note": "",
  "industries": [
   {
-   "name": "通信设备",
+   "name": "化学制品",
+   "count": 6
+  },
+  {
+   "name": "农化制品",
    "count": 5
   },
   {
-   "name": "半导体",
+   "name": "软件开发",
    "count": 5
+  },
+  {
+   "name": "专用设备",
+   "count": 4
+  },
+  {
+   "name": "家居用品",
+   "count": 3
   },
   {
    "name": "种植业",
-   "count": 4
-  },
-  {
-   "name": "塑料",
-   "count": 4
-  },
-  {
-   "name": "元件",
-   "count": 4
-  },
-  {
-   "name": "电网设备",
    "count": 3
   }
  ]
