@@ -1,82 +1,82 @@
 [
  {
-  "name": "种植业与林业",
-  "pct": 3.08,
-  "leader": "敦煌种业",
-  "leader_pct": 10.05,
-  "up_count": 24,
-  "down_count": 5
- },
- {
-  "name": "农化制品",
-  "pct": 2.9,
-  "leader": "潞化科技",
-  "leader_pct": 10.11,
-  "up_count": 56,
-  "down_count": 5
- },
- {
-  "name": "化学原料",
-  "pct": 2.74,
-  "leader": "迪尔化工",
-  "leader_pct": 15.22,
-  "up_count": 52,
-  "down_count": 5
- },
- {
-  "name": "石油加工贸易",
-  "pct": 2.48,
-  "leader": "华锦股份",
-  "leader_pct": 10.08,
-  "up_count": 27,
+  "name": "影视院线",
+  "pct": 6.5,
+  "leader": "华策影视",
+  "leader_pct": 15.77,
+  "up_count": 20,
   "down_count": 0
  },
  {
-  "name": "农产品加工",
-  "pct": 2.25,
-  "leader": "冠农股份",
-  "leader_pct": 10.0,
-  "up_count": 39,
-  "down_count": 4
- },
- {
-  "name": "贸易",
-  "pct": 2.19,
-  "leader": "远大控股",
-  "leader_pct": 10.06,
-  "up_count": 13,
+  "name": "文化传媒",
+  "pct": 4.66,
+  "leader": "流金科技",
+  "leader_pct": 29.96,
+  "up_count": 81,
   "down_count": 1
  },
  {
-  "name": "零售",
-  "pct": 1.93,
-  "leader": "香江控股",
-  "leader_pct": 10.06,
-  "up_count": 62,
-  "down_count": 8
+  "name": "黑色家电",
+  "pct": 3.22,
+  "leader": "极米科技",
+  "leader_pct": 8.86,
+  "up_count": 8,
+  "down_count": 1
  },
  {
-  "name": "服装家纺",
-  "pct": 1.84,
-  "leader": "嘉麟杰",
-  "leader_pct": 10.07,
-  "up_count": 61,
-  "down_count": 14
+  "name": "元件",
+  "pct": 3.03,
+  "leader": "强达电路",
+  "leader_pct": 12.98,
+  "up_count": 55,
+  "down_count": 7
  },
  {
-  "name": "旅游及酒店",
-  "pct": 1.69,
-  "leader": "陕西旅游",
-  "leader_pct": 4.96,
-  "up_count": 33,
-  "down_count": 2
+  "name": "消费电子",
+  "pct": 2.77,
+  "leader": "精研科技",
+  "leader_pct": 16.16,
+  "up_count": 85,
+  "down_count": 11
  },
  {
-  "name": "化学制品",
-  "pct": 1.59,
-  "leader": "华大海天",
-  "leader_pct": 126.81,
-  "up_count": 136,
-  "down_count": 44
+  "name": "通信服务",
+  "pct": 2.55,
+  "leader": "会畅科技",
+  "leader_pct": 11.3,
+  "up_count": 38,
+  "down_count": 4
+ },
+ {
+  "name": "游戏",
+  "pct": 2.53,
+  "leader": "大晟文化",
+  "leader_pct": 9.95,
+  "up_count": 21,
+  "down_count": 1
+ },
+ {
+  "name": "通用设备",
+  "pct": 2.37,
+  "leader": "荣亿精密",
+  "leader_pct": 29.97,
+  "up_count": 207,
+  "down_count": 42
+ },
+ {
+  "name": "半导体",
+  "pct": 2.36,
+  "leader": "力芯微",
+  "leader_pct": 18.21,
+  "up_count": 148,
+  "down_count": 37
+ },
+ {
+  "name": "军工电子",
+  "pct": 2.26,
+  "leader": "航天南湖",
+  "leader_pct": 7.6,
+  "up_count": 57,
+  "down_count": 4
  }
 ]

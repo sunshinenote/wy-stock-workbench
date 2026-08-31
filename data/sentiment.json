@@ -1,14 +1,14 @@
 {
- "date": "2026-08-28",
- "zt": 82,
- "dt": 1,
- "zb": 16,
- "zb_rate": 16.3,
- "max_lb": 7,
+ "date": "2026-08-31",
+ "zt": 88,
+ "dt": 11,
+ "zb": 30,
+ "zb_rate": 25.4,
+ "max_lb": 6,
  "lb_dist": [
   {
    "lb": 1,
-   "count": 64
+   "count": 70
   },
   {
    "lb": 2,
@@ -16,48 +16,48 @@
   },
   {
    "lb": 3,
-   "count": 3
+   "count": 4
   },
   {
    "lb": 4,
-   "count": 3
+   "count": 1
   },
   {
    "lb": 5,
-   "count": 1
+   "count": 2
   },
   {
-   "lb": 7,
+   "lb": 6,
    "count": 1
   }
  ],
- "score": 89,
- "level": "过热",
- "note": "",
+ "score": 80,
+ "level": "高潮",
+ "note": "跌停家数较多，情绪走弱",
  "industries": [
   {
-   "name": "化学制品",
+   "name": "通用设备",
+   "count": 7
+  },
+  {
+   "name": "汽车零部",
    "count": 6
   },
   {
-   "name": "农化制品",
-   "count": 5
-  },
-  {
-   "name": "软件开发",
-   "count": 5
-  },
-  {
-   "name": "专用设备",
+   "name": "房地产开",
    "count": 4
   },
   {
    "name": "家居用品",
-   "count": 3
+   "count": 4
   },
   {
-   "name": "种植业",
-   "count": 3
+   "name": "装修装饰",
+   "count": 4
+  },
+  {
+   "name": "影视院线",
+   "count": 4
   }
  ]
 }
