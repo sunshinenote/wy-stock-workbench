@@ -473,7 +473,7 @@
   "country": "美国",
   "importance": "中",
   "event": "美国截至8月28日当周EIA汽油库存变动(万桶)",
-  "forecast": "-24.0",
+  "forecast": "-240.0",
   "previous": "-253.6"
  },
  {
@@ -545,7 +545,7 @@
   "country": "美国",
   "importance": "中",
   "event": "美国截至8月28日当周EIA精炼厂设备利用率(%)",
-  "forecast": "nan",
+  "forecast": "97.1",
   "previous": "97.4"
  },
  {
