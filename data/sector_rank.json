@@ -1,82 +1,82 @@
 [
  {
+  "name": "种植业与林业",
+  "pct": 7.51,
+  "leader": "康农种业",
+  "leader_pct": 21.3,
+  "up_count": 30,
+  "down_count": 0
+ },
+ {
   "name": "影视院线",
-  "pct": 6.5,
-  "leader": "华策影视",
-  "leader_pct": 15.77,
-  "up_count": 20,
+  "pct": 3.31,
+  "leader": "中广天择",
+  "leader_pct": 10.0,
+  "up_count": 17,
+  "down_count": 3
+ },
+ {
+  "name": "零售",
+  "pct": 3.3,
+  "leader": "茂业商业",
+  "leader_pct": 10.08,
+  "up_count": 67,
+  "down_count": 3
+ },
+ {
+  "name": "保险",
+  "pct": 3.16,
+  "leader": "中国人保",
+  "leader_pct": 6.17,
+  "up_count": 5,
+  "down_count": 0
+ },
+ {
+  "name": "多元金融",
+  "pct": 3.02,
+  "leader": "香溢融通",
+  "leader_pct": 10.01,
+  "up_count": 23,
+  "down_count": 3
+ },
+ {
+  "name": "农产品加工",
+  "pct": 2.9,
+  "leader": "深粮控股",
+  "leader_pct": 10.0,
+  "up_count": 37,
+  "down_count": 5
+ },
+ {
+  "name": "白酒",
+  "pct": 2.85,
+  "leader": "古井贡酒",
+  "leader_pct": 10.0,
+  "up_count": 19,
   "down_count": 0
  },
  {
   "name": "文化传媒",
-  "pct": 4.66,
-  "leader": "流金科技",
-  "leader_pct": 29.96,
-  "up_count": 81,
-  "down_count": 1
+  "pct": 2.74,
+  "leader": "芒果超媒",
+  "leader_pct": 20.02,
+  "up_count": 75,
+  "down_count": 9
  },
  {
-  "name": "黑色家电",
-  "pct": 3.22,
-  "leader": "极米科技",
-  "leader_pct": 8.86,
-  "up_count": 8,
-  "down_count": 1
- },
- {
-  "name": "元件",
-  "pct": 3.03,
-  "leader": "强达电路",
-  "leader_pct": 12.98,
+  "name": "农化制品",
+  "pct": 2.39,
+  "leader": "绿亨科技",
+  "leader_pct": 21.7,
   "up_count": 55,
-  "down_count": 7
+  "down_count": 5
  },
  {
-  "name": "消费电子",
-  "pct": 2.77,
-  "leader": "精研科技",
-  "leader_pct": 16.16,
-  "up_count": 85,
-  "down_count": 11
- },
- {
-  "name": "通信服务",
-  "pct": 2.55,
-  "leader": "会畅科技",
-  "leader_pct": 11.3,
-  "up_count": 38,
-  "down_count": 4
- },
- {
-  "name": "游戏",
-  "pct": 2.53,
-  "leader": "大晟文化",
-  "leader_pct": 9.95,
-  "up_count": 21,
-  "down_count": 1
- },
- {
-  "name": "通用设备",
-  "pct": 2.37,
-  "leader": "荣亿精密",
-  "leader_pct": 29.97,
-  "up_count": 207,
-  "down_count": 42
- },
- {
-  "name": "半导体",
-  "pct": 2.36,
-  "leader": "力芯微",
-  "leader_pct": 18.21,
-  "up_count": 148,
-  "down_count": 37
- },
- {
-  "name": "军工电子",
-  "pct": 2.26,
-  "leader": "航天南湖",
-  "leader_pct": 7.6,
-  "up_count": 57,
-  "down_count": 4
+  "name": "旅游及酒店",
+  "pct": 2.25,
+  "leader": "*ST西旅",
+  "leader_pct": 10.07,
+  "up_count": 34,
+  "down_count": 0
  }
 ]
