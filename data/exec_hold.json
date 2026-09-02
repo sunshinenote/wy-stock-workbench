@@ -41,20 +41,20 @@
    "last_date": "2026-07-22"
   },
   {
+   "code": "002568",
+   "name": "百润股份",
+   "count": 31,
+   "dec_count": 0,
+   "first_date": "2026-07-02",
+   "last_date": "2026-09-01"
+  },
+  {
    "code": "002601",
    "name": "龙佰集团",
    "count": 31,
    "dec_count": 0,
    "first_date": "2026-06-08",
    "last_date": "2026-07-28"
-  },
-  {
-   "code": "002568",
-   "name": "百润股份",
-   "count": 30,
-   "dec_count": 0,
-   "first_date": "2026-07-02",
-   "last_date": "2026-08-31"
   },
   {
    "code": "002146",
@@ -67,10 +67,10 @@
   {
    "code": "301429",
    "name": "森泰股份",
-   "count": 22,
+   "count": 23,
    "dec_count": 0,
    "first_date": "2026-06-08",
-   "last_date": "2026-08-04"
+   "last_date": "2026-09-01"
   },
   {
    "code": "002024",
