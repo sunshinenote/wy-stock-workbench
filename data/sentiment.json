@@ -1,63 +1,55 @@
 {
- "date": "2026-09-01",
- "zt": 83,
- "dt": 0,
- "zb": 6,
- "zb_rate": 6.7,
- "max_lb": 7,
+ "date": "2026-09-02",
+ "zt": 52,
+ "dt": 8,
+ "zb": 15,
+ "zb_rate": 22.4,
+ "max_lb": 4,
  "lb_dist": [
   {
    "lb": 1,
-   "count": 65
+   "count": 39
   },
   {
    "lb": 2,
-   "count": 9
+   "count": 7
   },
   {
    "lb": 3,
-   "count": 5
-  },
-  {
-   "lb": 4,
-   "count": 1
-  },
-  {
-   "lb": 6,
-   "count": 2
-  },
-  {
-   "lb": 7,
-   "count": 1
-  }
- ],
- "score": 95,
- "level": "过热",
- "note": "",
- "industries": [
-  {
-   "name": "种植业",
-   "count": 8
-  },
-  {
-   "name": "一般零售",
-   "count": 6
-  },
-  {
-   "name": "汽车零部",
    "count": 4
   },
   {
-   "name": "影视院线",
+   "lb": 4,
+   "count": 2
+  }
+ ],
+ "score": 55,
+ "level": "发酵",
+ "note": "",
+ "industries": [
+  {
+   "name": "汽车零部",
+   "count": 5
+  },
+  {
+   "name": "电网设备",
+   "count": 4
+  },
+  {
+   "name": "服装家纺",
    "count": 3
+  },
+  {
+   "name": "化学原料",
+   "count": 2
   },
   {
    "name": "IT服务Ⅱ",
-   "count": 3
+   "count": 2
   },
   {
-   "name": "出版",
-   "count": 3
+   "name": "一般零售",
+   "count": 2
   }
  ]
 }
