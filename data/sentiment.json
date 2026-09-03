@@ -1,54 +1,54 @@
 {
- "date": "2026-09-02",
- "zt": 52,
- "dt": 8,
- "zb": 15,
- "zb_rate": 22.4,
- "max_lb": 4,
+ "date": "2026-09-03",
+ "zt": 43,
+ "dt": 13,
+ "zb": 32,
+ "zb_rate": 42.7,
+ "max_lb": 5,
  "lb_dist": [
   {
    "lb": 1,
-   "count": 39
+   "count": 33
   },
   {
    "lb": 2,
    "count": 7
   },
   {
-   "lb": 3,
-   "count": 4
-  },
-  {
    "lb": 4,
    "count": 2
+  },
+  {
+   "lb": 5,
+   "count": 1
   }
  ],
- "score": 55,
- "level": "发酵",
- "note": "",
+ "score": 47,
+ "level": "复苏",
+ "note": "炸板率偏高，注意分歧；跌停家数较多，情绪走弱",
  "industries": [
   {
    "name": "汽车零部",
    "count": 5
   },
   {
-   "name": "电网设备",
-   "count": 4
-  },
-  {
-   "name": "服装家纺",
+   "name": "一般零售",
    "count": 3
   },
   {
-   "name": "化学原料",
-   "count": 2
+   "name": "通用设备",
+   "count": 3
+  },
+  {
+   "name": "包装印刷",
+   "count": 3
   },
   {
    "name": "IT服务Ⅱ",
    "count": 2
   },
   {
-   "name": "一般零售",
+   "name": "电网设备",
    "count": 2
   }
  ]

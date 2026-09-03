@@ -1,82 +1,82 @@
 [
  {
-  "name": "军工装备",
-  "pct": 2.06,
-  "leader": "晟楠科技",
-  "leader_pct": 29.96,
-  "up_count": 56,
-  "down_count": 24
+  "name": "保险",
+  "pct": 2.82,
+  "leader": "中国太保",
+  "leader_pct": 3.75,
+  "up_count": 5,
+  "down_count": 0
  },
  {
-  "name": "橡胶制品",
-  "pct": 1.62,
-  "leader": "科隆新材",
-  "leader_pct": 14.57,
-  "up_count": 9,
-  "down_count": 12
+  "name": "贵金属",
+  "pct": 2.54,
+  "leader": "湖南白银",
+  "leader_pct": 8.0,
+  "up_count": 13,
+  "down_count": 1
  },
  {
-  "name": "美容护理",
-  "pct": 1.52,
-  "leader": "维琪科技",
-  "leader_pct": 29.98,
-  "up_count": 19,
-  "down_count": 15
+  "name": "电机",
+  "pct": 2.31,
+  "leader": "鸣志电器",
+  "leader_pct": 10.0,
+  "up_count": 23,
+  "down_count": 2
  },
  {
-  "name": "厨卫电器",
-  "pct": 1.07,
-  "leader": "*ST帅电",
-  "leader_pct": 4.88,
-  "up_count": 4,
-  "down_count": 5
+  "name": "港口航运",
+  "pct": 2.17,
+  "leader": "海通发展",
+  "leader_pct": 10.0,
+  "up_count": 32,
+  "down_count": 2
  },
  {
-  "name": "教育",
-  "pct": 0.79,
-  "leader": "科德教育",
-  "leader_pct": 8.74,
-  "up_count": 7,
-  "down_count": 8
- },
- {
-  "name": "燃气",
-  "pct": 0.63,
-  "leader": "贵州燃气",
-  "leader_pct": 9.95,
-  "up_count": 16,
+  "name": "其他电源设备",
+  "pct": 1.64,
+  "leader": "欧陆通",
+  "leader_pct": 9.99,
+  "up_count": 24,
   "down_count": 10
  },
  {
-  "name": "旅游及酒店",
-  "pct": 0.59,
-  "leader": "云南旅游",
+  "name": "元件",
+  "pct": 1.45,
+  "leader": "金禄电子",
+  "leader_pct": 12.92,
+  "up_count": 38,
+  "down_count": 23
+ },
+ {
+  "name": "自动化设备",
+  "pct": 1.39,
+  "leader": "劲拓股份",
+  "leader_pct": 14.8,
+  "up_count": 70,
+  "down_count": 28
+ },
+ {
+  "name": "工业金属",
+  "pct": 1.23,
+  "leader": "白银有色",
   "leader_pct": 10.06,
+  "up_count": 37,
+  "down_count": 17
+ },
+ {
+  "name": "其他电子",
+  "pct": 1.09,
+  "leader": "百邦科技",
+  "leader_pct": 5.47,
   "up_count": 21,
   "down_count": 12
  },
  {
-  "name": "军工电子",
-  "pct": 0.59,
-  "leader": "晶品特装",
-  "leader_pct": 9.2,
-  "up_count": 32,
-  "down_count": 29
- },
- {
-  "name": "电网设备",
-  "pct": 0.5,
-  "leader": "益坤电气",
-  "leader_pct": 17.24,
-  "up_count": 66,
-  "down_count": 71
- },
- {
-  "name": "消费电子",
-  "pct": 0.47,
-  "leader": "奥尼电子",
-  "leader_pct": 11.56,
-  "up_count": 46,
-  "down_count": 50
+  "name": "电子化学品",
+  "pct": 1.0,
+  "leader": "思泉新材",
+  "leader_pct": 20.0,
+  "up_count": 21,
+  "down_count": 22
  }
 ]
