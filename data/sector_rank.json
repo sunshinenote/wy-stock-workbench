@@ -1,82 +1,82 @@
 [
  {
   "name": "保险",
-  "pct": 2.82,
+  "pct": 2.56,
   "leader": "中国太保",
-  "leader_pct": 3.75,
+  "leader_pct": 3.69,
   "up_count": 5,
   "down_count": 0
  },
  {
   "name": "贵金属",
-  "pct": 2.54,
+  "pct": 2.4,
   "leader": "湖南白银",
-  "leader_pct": 8.0,
-  "up_count": 13,
-  "down_count": 1
- },
- {
-  "name": "电机",
-  "pct": 2.31,
-  "leader": "鸣志电器",
-  "leader_pct": 10.0,
-  "up_count": 23,
+  "leader_pct": 7.81,
+  "up_count": 12,
   "down_count": 2
  },
  {
   "name": "港口航运",
-  "pct": 2.17,
+  "pct": 1.97,
   "leader": "海通发展",
   "leader_pct": 10.0,
-  "up_count": 32,
-  "down_count": 2
+  "up_count": 28,
+  "down_count": 5
+ },
+ {
+  "name": "电机",
+  "pct": 1.94,
+  "leader": "鸣志电器",
+  "leader_pct": 10.0,
+  "up_count": 21,
+  "down_count": 5
  },
  {
   "name": "其他电源设备",
-  "pct": 1.64,
+  "pct": 1.35,
   "leader": "欧陆通",
-  "leader_pct": 9.99,
-  "up_count": 24,
-  "down_count": 10
- },
- {
-  "name": "元件",
-  "pct": 1.45,
-  "leader": "金禄电子",
-  "leader_pct": 12.92,
-  "up_count": 38,
-  "down_count": 23
- },
- {
-  "name": "自动化设备",
-  "pct": 1.39,
-  "leader": "劲拓股份",
-  "leader_pct": 14.8,
-  "up_count": 70,
-  "down_count": 28
- },
- {
-  "name": "工业金属",
-  "pct": 1.23,
-  "leader": "白银有色",
-  "leader_pct": 10.06,
-  "up_count": 37,
-  "down_count": 17
- },
- {
-  "name": "其他电子",
-  "pct": 1.09,
-  "leader": "百邦科技",
-  "leader_pct": 5.47,
-  "up_count": 21,
+  "leader_pct": 9.49,
+  "up_count": 22,
   "down_count": 12
  },
  {
-  "name": "电子化学品",
-  "pct": 1.0,
-  "leader": "思泉新材",
-  "leader_pct": 20.0,
-  "up_count": 21,
-  "down_count": 22
+  "name": "工业金属",
+  "pct": 1.01,
+  "leader": "白银有色",
+  "leader_pct": 10.06,
+  "up_count": 34,
+  "down_count": 20
+ },
+ {
+  "name": "元件",
+  "pct": 0.89,
+  "leader": "金禄电子",
+  "leader_pct": 12.31,
+  "up_count": 33,
+  "down_count": 30
+ },
+ {
+  "name": "自动化设备",
+  "pct": 0.75,
+  "leader": "劲拓股份",
+  "leader_pct": 13.45,
+  "up_count": 59,
+  "down_count": 37
+ },
+ {
+  "name": "机场航运",
+  "pct": 0.6,
+  "leader": "华夏航空",
+  "leader_pct": 1.62,
+  "up_count": 9,
+  "down_count": 1
+ },
+ {
+  "name": "证券",
+  "pct": 0.54,
+  "leader": "国盛证券",
+  "leader_pct": 4.02,
+  "up_count": 37,
+  "down_count": 9
  }
 ]

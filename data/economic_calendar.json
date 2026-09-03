@@ -1,6 +1,15 @@
 [
  {
   "date": "2026-09-04",
+  "time": "00:00",
+  "country": "俄罗斯",
+  "importance": "低",
+  "event": "俄罗斯8月GDP年率-每月(%)",
+  "forecast": "0.5",
+  "previous": "1.1"
+ },
+ {
+  "date": "2026-09-04",
   "time": "02:00",
   "country": "俄罗斯",
   "importance": "低",
@@ -28,12 +37,21 @@
  },
  {
   "date": "2026-09-04",
+  "time": "05:00",
+  "country": "韩国",
+  "importance": "低",
+  "event": "韩国8月外汇储备(亿美元)",
+  "forecast": "nan",
+  "previous": "4279.5"
+ },
+ {
+  "date": "2026-09-04",
   "time": "06:30",
   "country": "美国",
   "importance": "中",
   "event": "美国9月3日iShares白银持仓变动-每日(吨)",
   "forecast": "nan",
-  "previous": "nan"
+  "previous": "-40.23"
  },
  {
   "date": "2026-09-04",
@@ -51,7 +69,7 @@
   "importance": "中",
   "event": "美国9月2日NYMEX铂金库存-每日更新(百盎司)",
   "forecast": "nan",
-  "previous": "nan"
+  "previous": "3934.22"
  },
  {
   "date": "2026-09-04",
@@ -172,24 +190,6 @@
  },
  {
   "date": "2026-09-04",
-  "time": "07:30",
-  "country": "日本",
-  "importance": "低",
-  "event": "日本7月所有家庭支出月率(%)",
-  "forecast": "2.6",
-  "previous": "-6.4"
- },
- {
-  "date": "2026-09-04",
-  "time": "13:00",
-  "country": "新加坡",
-  "importance": "低",
-  "event": "新加坡7月季调后核心零售销售月率(%)",
-  "forecast": "nan",
-  "previous": "0.2"
- },
- {
-  "date": "2026-09-04",
   "time": "14:45",
   "country": "法国",
   "importance": "中",
@@ -204,7 +204,7 @@
   "importance": "中",
   "event": "中国9月4日上期所每日仓单变动-白银(千克)",
   "forecast": "nan",
-  "previous": "nan"
+  "previous": "-22687.0"
  },
  {
   "date": "2026-09-04",
@@ -213,7 +213,7 @@
   "importance": "中",
   "event": "中国9月4日上期所每日仓单变动-铜(吨)",
   "forecast": "nan",
-  "previous": "nan"
+  "previous": "-1959.0"
  },
  {
   "date": "2026-09-04",
@@ -222,7 +222,7 @@
   "importance": "中",
   "event": "中国9月4日上期所每日仓单变动-黄金(千克)",
   "forecast": "nan",
-  "previous": "nan"
+  "previous": ""
  },
  {
   "date": "2026-09-04",
@@ -231,7 +231,7 @@
   "importance": "中",
   "event": "中国9月4日上期所每日仓单变动-原油(桶)",
   "forecast": "nan",
-  "previous": "nan"
+  "previous": ""
  },
  {
   "date": "2026-09-04",
@@ -240,7 +240,7 @@
   "importance": "中",
   "event": "中国9月4日上期所每日仓单变动-燃料油(吨)",
   "forecast": "nan",
-  "previous": "nan"
+  "previous": "-22650.0"
  },
  {
   "date": "2026-09-04",
@@ -631,6 +631,24 @@
  },
  {
   "date": "2026-09-07",
+  "time": "09:30",
+  "country": "澳大利亚",
+  "importance": "低",
+  "event": "澳大利亚8月季调后ANZ总招聘广告年率(%)",
+  "forecast": "nan",
+  "previous": "2.1"
+ },
+ {
+  "date": "2026-09-07",
+  "time": "09:30",
+  "country": "澳大利亚",
+  "importance": "低",
+  "event": "澳大利亚8月季调后ANZ总招聘广告月率(%)",
+  "forecast": "nan",
+  "previous": "0.8"
+ },
+ {
+  "date": "2026-09-07",
   "time": "11:00",
   "country": "新西兰",
   "importance": "低",
@@ -646,24 +664,6 @@
   "event": "日本7月同步指标初值",
   "forecast": "nan",
   "previous": "118.5"
- },
- {
-  "date": "2026-09-07",
-  "time": "13:00",
-  "country": "日本",
-  "importance": "低",
-  "event": "日本7月领先指标读数变动初值",
-  "forecast": "nan",
-  "previous": ""
- },
- {
-  "date": "2026-09-07",
-  "time": "13:00",
-  "country": "日本",
-  "importance": "低",
-  "event": "日本7月同步指标读数变动初值",
-  "forecast": "nan",
-  "previous": "0.6"
  },
  {
   "date": "2026-09-07",

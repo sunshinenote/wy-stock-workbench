@@ -1,18 +1,18 @@
 {
  "date": "2026-09-03",
- "zt": 43,
- "dt": 13,
- "zb": 32,
- "zb_rate": 42.7,
+ "zt": 44,
+ "dt": 16,
+ "zb": 33,
+ "zb_rate": 42.9,
  "max_lb": 5,
  "lb_dist": [
   {
    "lb": 1,
-   "count": 33
+   "count": 35
   },
   {
    "lb": 2,
-   "count": 7
+   "count": 6
   },
   {
    "lb": 4,
@@ -29,7 +29,7 @@
  "industries": [
   {
    "name": "汽车零部",
-   "count": 5
+   "count": 4
   },
   {
    "name": "一般零售",
