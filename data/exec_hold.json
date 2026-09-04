@@ -81,6 +81,14 @@
    "last_date": "2026-08-06"
   },
   {
+   "code": "301533",
+   "name": "威马农机",
+   "count": 18,
+   "dec_count": 4,
+   "first_date": "2026-07-24",
+   "last_date": "2026-09-03"
+  },
+  {
    "code": "603312",
    "name": "西典新能",
    "count": 18,
@@ -111,14 +119,6 @@
    "dec_count": 0,
    "first_date": "2026-06-23",
    "last_date": "2026-07-08"
-  },
-  {
-   "code": "301533",
-   "name": "威马农机",
-   "count": 16,
-   "dec_count": 4,
-   "first_date": "2026-07-24",
-   "last_date": "2026-09-02"
   }
  ]
 }
