@@ -1,82 +1,82 @@
 [
  {
-  "name": "保险",
-  "pct": 2.56,
-  "leader": "中国太保",
-  "leader_pct": 3.69,
-  "up_count": 5,
+  "name": "养殖业",
+  "pct": 4.36,
+  "leader": "罗牛山",
+  "leader_pct": 10.05,
+  "up_count": 33,
+  "down_count": 3
+ },
+ {
+  "name": "农产品加工",
+  "pct": 3.6,
+  "leader": "播恩集团",
+  "leader_pct": 10.04,
+  "up_count": 40,
+  "down_count": 3
+ },
+ {
+  "name": "白酒",
+  "pct": 2.87,
+  "leader": "顺鑫农业",
+  "leader_pct": 5.35,
+  "up_count": 19,
   "down_count": 0
  },
  {
-  "name": "贵金属",
-  "pct": 2.4,
-  "leader": "湖南白银",
-  "leader_pct": 7.81,
-  "up_count": 12,
-  "down_count": 2
+  "name": "种植业与林业",
+  "pct": 2.48,
+  "leader": "亚盛集团",
+  "leader_pct": 10.1,
+  "up_count": 26,
+  "down_count": 3
  },
  {
-  "name": "港口航运",
-  "pct": 1.97,
-  "leader": "海通发展",
-  "leader_pct": 10.0,
-  "up_count": 28,
-  "down_count": 5
- },
- {
-  "name": "电机",
-  "pct": 1.94,
-  "leader": "鸣志电器",
-  "leader_pct": 10.0,
-  "up_count": 21,
-  "down_count": 5
- },
- {
-  "name": "其他电源设备",
-  "pct": 1.35,
-  "leader": "欧陆通",
-  "leader_pct": 9.49,
-  "up_count": 22,
-  "down_count": 12
- },
- {
-  "name": "工业金属",
-  "pct": 1.01,
-  "leader": "白银有色",
-  "leader_pct": 10.06,
-  "up_count": 34,
-  "down_count": 20
- },
- {
-  "name": "元件",
-  "pct": 0.89,
-  "leader": "金禄电子",
-  "leader_pct": 12.31,
-  "up_count": 33,
-  "down_count": 30
- },
- {
-  "name": "自动化设备",
-  "pct": 0.75,
-  "leader": "劲拓股份",
-  "leader_pct": 13.45,
-  "up_count": 59,
-  "down_count": 37
- },
- {
-  "name": "机场航运",
-  "pct": 0.6,
-  "leader": "华夏航空",
-  "leader_pct": 1.62,
-  "up_count": 9,
+  "name": "影视院线",
+  "pct": 2.44,
+  "leader": "欢瑞世纪",
+  "leader_pct": 10.04,
+  "up_count": 19,
   "down_count": 1
  },
  {
-  "name": "证券",
-  "pct": 0.54,
-  "leader": "国盛证券",
-  "leader_pct": 4.02,
-  "up_count": 37,
-  "down_count": 9
+  "name": "文化传媒",
+  "pct": 2.44,
+  "leader": "易点天下",
+  "leader_pct": 11.12,
+  "up_count": 78,
+  "down_count": 7
+ },
+ {
+  "name": "饮料制造",
+  "pct": 2.23,
+  "leader": "古越龙山",
+  "leader_pct": 10.06,
+  "up_count": 42,
+  "down_count": 5
+ },
+ {
+  "name": "食品加工制造",
+  "pct": 1.91,
+  "leader": "安记食品",
+  "leader_pct": 10.04,
+  "up_count": 55,
+  "down_count": 11
+ },
+ {
+  "name": "游戏",
+  "pct": 1.81,
+  "leader": "世纪华通",
+  "leader_pct": 7.96,
+  "up_count": 20,
+  "down_count": 2
+ },
+ {
+  "name": "旅游及酒店",
+  "pct": 1.47,
+  "leader": "华天酒店",
+  "leader_pct": 10.09,
+  "up_count": 27,
+  "down_count": 7
  }
 ]
