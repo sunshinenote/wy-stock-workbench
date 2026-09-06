@@ -768,7 +768,56 @@ def collect_research():
     return result
 
 
-# ---------- 6. 业绩预告（东财） ----------
+# ---------- 6. 散户减少 TOP30（股东户数减少=筹码集中，东财） ----------
+def collect_retail_reduce():
+    """散户减少最多 TOP30：股东户数环比减少（最新披露报告期），按减少比例排序。
+
+    口径说明：股东户数减少 = 筹码从散户集中到少数人/机构（户均持股市值上升），
+    是主力吸筹的常见信号。统一用最新已披露报告期（与牛散/机构数据一致），
+    避免接口默认返回「各自最新一期」导致跨期混排、次新股上市筹码沉淀干扰排名。
+    """
+    rp = _latest_report_period()            # 如 "20260630"
+    prev = _prev_report_period(rp)          # 如 "20260331"
+    end = f"{rp[:4]}-{rp[4:6]}-{rp[6:8]}"   # "2026-06-30"
+    prev_fmt = f"{prev[:4]}-{prev[4:6]}-{prev[6:8]}"
+
+    url = "https://datacenter-web.eastmoney.com/api/data/v1/get"
+    params = {
+        "sortColumns": "HOLDER_NUM_RATIO", "sortTypes": "1",
+        "pageSize": "30", "pageNumber": "1",
+        "reportName": "RPT_HOLDERNUMLATEST", "columns": "ALL",
+        "quoteColumns": "f3~01~SECURITY_CODE~CHANGE_RATE",
+        "source": "WEB", "client": "WEB",
+        "filter": f"(END_DATE='{end}')(HOLDER_NUM_CHANGE<0)",
+    }
+    r = requests.get(url, params=params, headers=UA, timeout=15)
+    data = r.json().get("result")
+    rows = (data or {}).get("data") or []
+    stocks = []
+    for x in rows:
+        try:
+            holder_num = int(x.get("HOLDER_NUM", 0) or 0)
+            change = -int(x.get("HOLDER_NUM_CHANGE", 0) or 0)
+            ratio = abs(float(x.get("HOLDER_NUM_RATIO", 0) or 0))
+            avg_cap = float(x.get("AVG_MARKET_CAP", 0) or 0) / 10000
+            pct = x.get("CHANGE_RATE")
+            price = x.get("CLOSE_PRICE")
+        except (TypeError, ValueError):
+            continue
+        stocks.append({
+            "code": str(x.get("SECURITY_CODE", "") or ""),
+            "name": str(x.get("SECURITY_NAME_ABBR", "") or ""),
+            "holder_num": holder_num,
+            "change": change,
+            "ratio": round(ratio, 2),
+            "avg_cap": round(avg_cap, 1),
+            "pct": round(float(pct), 2) if pct not in (None, "-") else None,
+            "price": round(float(price), 2) if price not in (None, "-") else None,
+        })
+    return {"report": end, "prev": prev_fmt, "stocks": stocks}
+
+
+# ---------- 7. 业绩预告（东财） ----------
 def collect_earnings():
     year = NOW.year
     result = []
@@ -1033,6 +1082,9 @@ def main():
 
     research_data = safe(collect_research) or []
     save_json("research_rank.json", research_data)
+
+    retail_data = safe(collect_retail_reduce) or {}
+    save_json("retail_reduce.json", retail_data)
 
     wl_data = safe(collect_watchlist) or []
     save_json("watchlist_quotes.json", wl_data)
