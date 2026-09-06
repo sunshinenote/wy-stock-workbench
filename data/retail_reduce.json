@@ -1,17 +1,8 @@
 {
  "report": "2026-06-30",
  "prev": "2026-03-31",
+ "generated_at": "2026-09-06T15:34:48.810Z",
  "stocks": [
-  {
-   "code": "920055",
-   "name": "隆源股份",
-   "holder_num": 3561,
-   "change": 8308,
-   "ratio": 70.0,
-   "avg_cap": 52.5,
-   "pct": 0.55,
-   "price": 27.49
-  },
   {
    "code": "001312",
    "name": "福恩股份",
@@ -33,24 +24,14 @@
    "price": 10.52
   },
   {
-   "code": "920188",
-   "name": "悦龙科技",
-   "holder_num": 5178,
-   "change": 7890,
-   "ratio": 60.38,
-   "avg_cap": 40.1,
-   "pct": -1.49,
-   "price": 25.04
-  },
-  {
    "code": "688811",
    "name": "有研复材",
    "holder_num": 27782,
    "change": 34779,
    "ratio": 55.59,
-   "avg_cap": 56.0,
+   "avg_cap": 56,
    "pct": -2.86,
-   "price": 31.0
+   "price": 31
   },
   {
    "code": "301306",
@@ -119,28 +100,8 @@
    "change": 21413,
    "ratio": 46.97,
    "avg_cap": 12.7,
-   "pct": 0.0,
+   "pct": 0,
    "price": 2.41
-  },
-  {
-   "code": "920028",
-   "name": "新恒泰",
-   "holder_num": 5442,
-   "change": 4634,
-   "ratio": 45.99,
-   "avg_cap": 53.8,
-   "pct": -2.99,
-   "price": 17.8
-  },
-  {
-   "code": "920069",
-   "name": "普昂医疗",
-   "holder_num": 2772,
-   "change": 2339,
-   "ratio": 45.76,
-   "avg_cap": 65.1,
-   "pct": -1.39,
-   "price": 34.09
   },
   {
    "code": "600722",
@@ -180,7 +141,7 @@
    "ratio": 43.99,
    "avg_cap": 241.3,
    "pct": -2.94,
-   "price": 210.0
+   "price": 210
   },
   {
    "code": "001237",
@@ -228,7 +189,7 @@
    "holder_num": 22855,
    "change": 16045,
    "ratio": 41.25,
-   "avg_cap": 4.0,
+   "avg_cap": 4,
    "pct": 0.42,
    "price": 2.07
   },
@@ -301,6 +262,46 @@
    "avg_cap": 5.3,
    "pct": 0.33,
    "price": 5.51
+  },
+  {
+   "code": "600885",
+   "name": "宏发股份",
+   "holder_num": 44656,
+   "change": 28502,
+   "ratio": 38.96,
+   "avg_cap": 119.5,
+   "pct": 0.2,
+   "price": 34.49
+  },
+  {
+   "code": "603435",
+   "name": "嘉德利",
+   "holder_num": 36676,
+   "change": 23266,
+   "ratio": 38.81,
+   "avg_cap": 85.5,
+   "pct": -3.94,
+   "price": 68.26
+  },
+  {
+   "code": "002757",
+   "name": "南兴股份",
+   "holder_num": 33264,
+   "change": 21046,
+   "ratio": 38.75,
+   "avg_cap": 16,
+   "pct": 0.22,
+   "price": 18.05
+  },
+  {
+   "code": "603011",
+   "name": "合锻智能",
+   "holder_num": 63262,
+   "change": 39180,
+   "ratio": 38.25,
+   "avg_cap": 25.9,
+   "pct": -4.35,
+   "price": 33.08
   }
  ]
 }

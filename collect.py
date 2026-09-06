@@ -67,6 +67,12 @@ def tx_code(code):
     return "bj" + code
 
 
+def _is_bse(code):
+    """是否北交所股票：8 开头（83/87/88 等）、92 开头（新代码段）、43 开头"""
+    c = str(code or "")
+    return c.startswith(("8", "92", "43"))
+
+
 # ---------- 1. 指数快照（腾讯） ----------
 def collect_index():
     q = ",".join(c for _, c in INDEX_MAP)
@@ -722,18 +728,20 @@ def collect_inst_hold():
 
 # ---------- 6. 机构调研排行（东财 datacenter 直连，近7天 TOP8） ----------
 def collect_research():
-    """按股票聚合近7天机构调研：SUM=单次调研机构家数峰值，count=调研批次"""
+    """按股票聚合近7天机构调研（按接待日 RECEIVE_START_DATE 筛近7天）：
+    SUM=单次调研机构家数峰值，count=调研批次（接待日才是机构真实调研动作的时间）。
+    注意：不能用 NOTICE_DATE（公告日）筛，公告滞后可达2个月，会导致「近7天」出现2个月前的调研。"""
     url = "https://datacenter-web.eastmoney.com/api/data/v1/get"
     since = (NOW - timedelta(days=7)).strftime("%Y-%m-%d")
     agg = {}
     for page in (1, 2):
         params = {
-            "sortColumns": "NOTICE_DATE,SUM,RECEIVE_START_DATE,SECURITY_CODE",
-            "sortTypes": "-1,-1,-1,1", "pageSize": "500", "pageNumber": str(page),
+            "sortColumns": "RECEIVE_START_DATE,SUM,SECURITY_CODE",
+            "sortTypes": "-1,-1,1", "pageSize": "500", "pageNumber": str(page),
             "reportName": "RPT_ORG_SURVEYNEW", "columns": "ALL",
             "quoteColumns": "f2~01~SECURITY_CODE~CLOSE_PRICE,f3~01~SECURITY_CODE~CHANGE_RATE",
             "source": "WEB", "client": "WEB",
-            "filter": f'(NUMBERNEW="1")(IS_SOURCE="1")(NOTICE_DATE>\'{since}\')',
+            "filter": f'(NUMBERNEW="1")(IS_SOURCE="1")(RECEIVE_START_DATE>\'{since}\')',
         }
         r = requests.get(url, params=params, headers=UA, timeout=15)
         data = r.json().get("result")
@@ -784,7 +792,7 @@ def collect_retail_reduce():
     url = "https://datacenter-web.eastmoney.com/api/data/v1/get"
     params = {
         "sortColumns": "HOLDER_NUM_RATIO", "sortTypes": "1",
-        "pageSize": "30", "pageNumber": "1",
+        "pageSize": "100", "pageNumber": "1",
         "reportName": "RPT_HOLDERNUMLATEST", "columns": "ALL",
         "quoteColumns": "f3~01~SECURITY_CODE~CHANGE_RATE",
         "source": "WEB", "client": "WEB",
@@ -795,6 +803,9 @@ def collect_retail_reduce():
     rows = (data or {}).get("data") or []
     stocks = []
     for x in rows:
+        code = str(x.get("SECURITY_CODE", "") or "")
+        if _is_bse(code):
+            continue  # 剔除北交所（8/92/43 开头）
         try:
             holder_num = int(x.get("HOLDER_NUM", 0) or 0)
             change = -int(x.get("HOLDER_NUM_CHANGE", 0) or 0)
@@ -805,7 +816,7 @@ def collect_retail_reduce():
         except (TypeError, ValueError):
             continue
         stocks.append({
-            "code": str(x.get("SECURITY_CODE", "") or ""),
+            "code": code,
             "name": str(x.get("SECURITY_NAME_ABBR", "") or ""),
             "holder_num": holder_num,
             "change": change,
@@ -814,6 +825,8 @@ def collect_retail_reduce():
             "pct": round(float(pct), 2) if pct not in (None, "-") else None,
             "price": round(float(price), 2) if price not in (None, "-") else None,
         })
+        if len(stocks) >= 30:
+            break
     return {"report": end, "prev": prev_fmt, "stocks": stocks}
 
 

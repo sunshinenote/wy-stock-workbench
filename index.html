@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<html lang="zh-CN" data-page-node-id="KiibxKsMQODMSKLnDxoJE6">
+<head data-page-node-id="ur4js8uiLrX11IxZHj4aYU">
+<meta charset="UTF-8" data-page-node-id="JEBxDp7xFFXoqnt3GCIsW8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" data-page-node-id="iiyBV6uAhwqkxIpGATV1cf">
 <title>股票复盘工作台 · 每日复盘 + 未来前瞻</title>
 <style>
 :root{
@@ -262,214 +262,214 @@ svg text{font-family:inherit}
 }
 </style>
 </head>
-<body>
-<div class="wrap">
+<body data-page-node-id="dwaN5Xg6JTOrsd59YvoFt1">
+<div class="wrap" data-page-node-id="HIoP29PiSMKoEiQj9DH6Pa">
 
-<header>
-  <h1><span class="dot"></span>股票复盘工作台</h1>
-  <span class="upd" id="updTime">数据加载中…</span>
-  <div class="head-actions">
-    <button class="btn-sm primary" id="btnRefresh" onclick="refreshData()" title="触发 GitHub Actions 重新采集最新行情数据">🔄 刷新数据</button>
-    <button class="btn-sm" onclick="reloadData()" title="仅重新拉取已采集的 JSON 数据（不触发采集）">重新加载</button>
-    <button class="btn-sm" onclick="exportData()" title="备份个人数据（自选/笔记）">导出备份</button>
-    <button class="btn-sm" onclick="document.getElementById('importFile').click()">导入恢复</button>
-    <button class="btn-sm danger" onclick="askClearAll()">清空数据</button>
-    <input type="file" id="importFile" accept=".json" class="hidden" onchange="importData(event)">
+<header data-page-node-id="QTjnZbZ6eNoGBLf91Va9NE">
+  <h1 data-page-node-id="gdEvyKJ4PsNabfjob47O8G"><span class="dot" data-page-node-id="iyoIu43VZO3q4qKGwoyYoj"></span>股票复盘工作台</h1>
+  <span class="upd" id="updTime" data-page-node-id="i7gGkzi9DM2YhSovpe3vx7">数据加载中…</span>
+  <div class="head-actions" data-page-node-id="EqKbbS3IpFpshf4omkXMbo">
+    <button class="btn-sm primary" id="btnRefresh" onclick="refreshData()" title="触发 GitHub Actions 重新采集最新行情数据" data-page-node-id="V2AFwVV8GNxMCLEkid3JxY">🔄 刷新数据</button>
+    <button class="btn-sm" onclick="reloadData()" title="仅重新拉取已采集的 JSON 数据（不触发采集）" data-page-node-id="Z4K9Smm5dTQTXfcsYHBlWU">重新加载</button>
+    <button class="btn-sm" onclick="exportData()" title="备份个人数据（自选/笔记）" data-page-node-id="LwqjEReDZi1uceAYn4iWkz">导出备份</button>
+    <button class="btn-sm" onclick="document.getElementById('importFile').click()" data-page-node-id="w7Mk7WKActE3NHMuGHkULq">导入恢复</button>
+    <button class="btn-sm danger" onclick="askClearAll()" data-page-node-id="U7jhKtCkDJAxweVCawZbAZ">清空数据</button>
+    <input type="file" id="importFile" accept=".json" class="hidden" onchange="importData(event)" data-page-node-id="QHQv8fgBtGLSXeAU3bGEGS">
   </div>
 </header>
 
-<div id="demoBanner" class="banner hidden">当前展示<b>示例数据</b>。运行数据采集脚本（collect.py / GitHub Actions）后自动切换为真实数据。</div>
+<div id="demoBanner" class="banner hidden" data-page-node-id="kTdHi4MZGAXugzPF12WCLB">当前展示<b data-page-node-id="jGV9gxxwqQWbQwd7KLDeFV">示例数据</b>。运行数据采集脚本（collect.py / GitHub Actions）后自动切换为真实数据。</div>
 
 <!-- ============ Tab 导航 ============ -->
-<nav class="tabs">
-  <button class="tab active" data-tab="review" onclick="switchTab('review')">今日复盘</button>
-  <button class="tab" data-tab="ahead" onclick="switchTab('ahead')">大事前瞻</button>
-  <button class="tab" data-tab="short" onclick="switchTab('short')">短期机会</button>
-  <button class="tab" data-tab="long" onclick="switchTab('long')">长期机会</button>
-  <button class="tab" data-tab="concepts" onclick="switchTab('concepts')">概念龙头</button>
+<nav class="tabs" data-page-node-id="XUy9fVMPUZ9Pd2Cxpw3dc2">
+  <button class="tab active" data-tab="review" onclick="switchTab('review')" data-page-node-id="5QcfHiU5ywGIHnWjzrxBEc">今日复盘</button>
+  <button class="tab" data-tab="ahead" onclick="switchTab('ahead')" data-page-node-id="oI3bQtFC3GOqR6JIZk0a9q">大事前瞻</button>
+  <button class="tab" data-tab="short" onclick="switchTab('short')" data-page-node-id="iXNtQrrt2bFXAEFSjLd6QY">短期机会</button>
+  <button class="tab" data-tab="long" onclick="switchTab('long')" data-page-node-id="eg2SLmEPzf2zNJmHL9Zlg7">长期机会</button>
+  <button class="tab" data-tab="concepts" onclick="switchTab('concepts')" data-page-node-id="CTOGqtrEVcyrTrX12brQ9a">概念龙头</button>
 </nav>
 
 <!-- ============ 今日复盘 ============ -->
-<div class="tab-panel active" id="panel-review">
-  <section class="card" id="todaySec">
-    <h2>今天要处理 <span class="tag blue">置顶</span></h2>
-    <div class="today-grid" id="todayList"></div>
+<div class="tab-panel active" id="panel-review" data-page-node-id="0YUplnV22Fip6Cpg0840Lm">
+  <section class="card" id="todaySec" data-page-node-id="WTulZi8NGql4XEc8vC8SIx">
+    <h2 data-page-node-id="TVlZBh5D9c79ohzwzZbuMs">今天要处理 <span class="tag blue" data-page-node-id="j2cyAk2tg0cgBUtQifDnWZ">置顶</span></h2>
+    <div class="today-grid" id="todayList" data-page-node-id="bo5lGH8vdPafwYwhCCS6EE"></div>
   </section>
 
-  <section class="card" id="reviewSec">
-    <h2>大盘总览 <span class="tag blue">昨日回顾</span></h2>
-    <div class="stats" id="indexStats"></div>
-    <h3>上证指数 · 近 90 日走势</h3>
-    <div class="chart-box" id="trendChart"></div>
-    <h3>板块涨幅榜 TOP10</h3>
-    <div id="sectorList"></div>
-    <h3>自选股盈亏 <span style="font-size:12px;color:var(--txt3);font-weight:400">（成本价存本地，随导出备份）</span></h3>
-    <div class="tbl-wrap">
-      <table class="tbl desktop" id="watchTbl"></table>
-      <table class="tbl mobile-cards" id="watchCards"></table>
+  <section class="card" id="reviewSec" data-page-node-id="bZ57hCCZ5VYnWjpprJu1U6">
+    <h2 data-page-node-id="HEqK5HtnRX0uO6XcNsA7WR">大盘总览 <span class="tag blue" data-page-node-id="qnyiAlwaKVZRuNRMLfsA37">昨日回顾</span></h2>
+    <div class="stats" id="indexStats" data-page-node-id="YFEzMTRocnZnJJlbrSLgSt"></div>
+    <h3 data-page-node-id="c3WTzapJUMDdIuwwjO6zHR">上证指数 · 近 90 日走势</h3>
+    <div class="chart-box" id="trendChart" data-page-node-id="UczBqA7mDqz3BDayxiussE"></div>
+    <h3 data-page-node-id="AgAVFseBhwXFeuApmHiDyH">板块涨幅榜 TOP10</h3>
+    <div id="sectorList" data-page-node-id="WXEQzrGD3EgwVIw6LgL02G"></div>
+    <h3 data-page-node-id="D6rEAolPMAnYcmLIroZKbb">自选股盈亏 <span style="font-size:12px;color:var(--txt3);font-weight:400" data-page-node-id="DqXApCy9JTzJTnElBS9Il9">（成本价存本地，随导出备份）</span></h3>
+    <div class="tbl-wrap" data-page-node-id="J82fU3BAGAwtnZ5RBkWjGX">
+      <table class="tbl desktop" id="watchTbl" data-page-node-id="CBEo6Vm5Eh9VQTDDl0C675"></table>
+      <table class="tbl mobile-cards" id="watchCards" data-page-node-id="ho0nD1Zk0QeFRV7fmFS5Ai"></table>
     </div>
-    <p class="empty" id="watchEmpty" style="display:none">暂无自选股。点下方「加入自选」添加，或编辑 data/watchlist.txt 后重新采集。</p>
+    <p class="empty" id="watchEmpty" style="display:none" data-page-node-id="VVUlFsM97THqDK2WayBDug">暂无自选股。点下方「加入自选」添加，或编辑 data/watchlist.txt 后重新采集。</p>
   </section>
 
-  <section class="card" id="notesSec">
-    <h2>复盘笔记 <span class="tag blue">结构化模板</span></h2>
-    <div class="note-form">
-      <input type="date" id="noteDate" value="">
-      <div class="note-fields">
-        <input type="text" id="noteAction" placeholder="当日操作：买入 / 卖出 / 加仓 / 减仓 / 持仓不动…">
+  <section class="card" id="notesSec" data-page-node-id="zAAi9bousIYff6WpVdvH0s">
+    <h2 data-page-node-id="D8RUemJsb89k3IiQqf3QkF">复盘笔记 <span class="tag blue" data-page-node-id="7mqBekxZ65ZM51urSkMqyR">结构化模板</span></h2>
+    <div class="note-form" data-page-node-id="ZM49i6KaLH5hObWfoB6oaB">
+      <input type="date" id="noteDate" value="" data-page-node-id="G5XCNRotLKlkMSPxYvur3S">
+      <div class="note-fields" data-page-node-id="G4oYcmbmknr2GtAfiO1hA6">
+        <input type="text" id="noteAction" placeholder="当日操作：买入 / 卖出 / 加仓 / 减仓 / 持仓不动…" data-page-node-id="gNRM4zfi9Yy4Mk0xlCd4Pw">
         <textarea id="noteMarket" placeholder="市场观察：盘面怎么走的？主线板块在哪？量能如何？"></textarea>
         <textarea id="noteReflect" placeholder="操作反思：今天做对了什么？做错了什么？"></textarea>
         <textarea id="notePlan" placeholder="明日计划：关注哪些事件 / 准备怎么操作…"></textarea>
       </div>
-      <button class="primary" onclick="saveNote()" style="align-self:flex-end">保存笔记</button>
+      <button class="primary" onclick="saveNote()" style="align-self:flex-end" data-page-node-id="yaOShcqZy2CoGva1zBIGLH">保存笔记</button>
     </div>
-    <div id="noteList"></div>
+    <div id="noteList" data-page-node-id="cTSVxwP9vOuCn4gdHl1Klw"></div>
   </section>
 </div>
 
 <!-- ============ 大事前瞻 ============ -->
-<div class="tab-panel" id="panel-ahead">
-  <section class="card">
-    <h2>大事前瞻 <span class="tag red">重点</span></h2>
-    <div class="stats" id="aheadStats"></div>
-    <h3>财经日历 · 宏观数据发布</h3>
-    <div class="tl" id="econList"></div>
-    <h3>限售解禁 · 未来市值榜 TOP6</h3>
-    <div class="tbl-wrap desktop-tbl">
-      <table class="tbl desktop" id="unlockTbl"></table>
-      <table class="tbl mobile-cards" id="unlockCards"></table>
+<div class="tab-panel" id="panel-ahead" data-page-node-id="Xmj1V3qV9qYz1tEA6bHCcA">
+  <section class="card" data-page-node-id="ieNVoOD6Dhdj6ER2q6x9Ka">
+    <h2 data-page-node-id="BhlTofAuLA59fRhf9KXvpG">大事前瞻 <span class="tag red" data-page-node-id="T29I2pRoSubThSy6D8gK5x">重点</span></h2>
+    <div class="stats" id="aheadStats" data-page-node-id="xrs5oTIIm64peiuRto24f4"></div>
+    <h3 data-page-node-id="FQeoMvNcQRdiZ7bSRqeMt0">财经日历 · 宏观数据发布</h3>
+    <div class="tl" id="econList" data-page-node-id="heMA8J3jv1BvOjrD7j0MkE"></div>
+    <h3 data-page-node-id="J3eDWY9iCnnUczaKLb2EJc">限售解禁 · 未来市值榜 TOP6</h3>
+    <div class="tbl-wrap desktop-tbl" data-page-node-id="DPovr4uvLqVfcQjRFBD515">
+      <table class="tbl desktop" id="unlockTbl" data-page-node-id="9C6BEgAgSYn44sBNPcIGGz"></table>
+      <table class="tbl mobile-cards" id="unlockCards" data-page-node-id="iWBpix2AbXtfsyQAqW08gv"></table>
     </div>
-    <div class="plan-hint">即将新增：新股申购 / 上市日历、分红除权提醒（数据接口就绪后加入）</div>
+    <div class="plan-hint" data-page-node-id="ahvE0DMNY9quBvHO8112Ae">即将新增：新股申购 / 上市日历、分红除权提醒（数据接口就绪后加入）</div>
   </section>
 </div>
 
 <!-- ============ 短期机会 ============ -->
-<div class="tab-panel" id="panel-short">
-  <section class="card" id="hotSummarySec">
-    <h2>今日热点速览 <span class="tag red">一屏看懂</span></h2>
-    <div id="hotSummaryBox"></div>
+<div class="tab-panel" id="panel-short" data-page-node-id="Dm3Gc93kgBWhEQPmyYhlYu">
+  <section class="card" id="hotSummarySec" data-page-node-id="qdSWkFxe9HAkorKenhrrK6">
+    <h2 data-page-node-id="G6fl3z6gf6ZebrUhoFa9lW">今日热点速览 <span class="tag red" data-page-node-id="nJabAPzvPzzE8CZhO3nYlD">一屏看懂</span></h2>
+    <div id="hotSummaryBox" data-page-node-id="D3P1CMYSU4SYgNPySgof78"></div>
   </section>
-  <section class="card">
-    <h2>短期机会 <span class="tag red">情绪+资金</span></h2>
-    <h3>情绪温度计 · 最近交易日 <span style="font-weight:400;font-size:12px;color:var(--txt3)">短线市场热度</span></h3>
-    <div id="sentimentBox"></div>
-    <h3>主力资金流向 <span style="font-weight:400;font-size:12px;color:var(--txt3)">钱往哪去</span></h3>
-    <div id="fundflowBox"></div>
-    <h3>龙虎榜 · 机构游资动向 <span style="font-weight:400;font-size:12px;color:var(--txt3)">谁在主导</span></h3>
-    <div id="lhbBox"></div>
-    <h3>机构调研 · 近 7 天 TOP8 <span style="font-weight:400;font-size:12px;color:var(--txt3)">机构正在关注谁</span></h3>
-    <div id="researchList"></div>
-    <h3>散户减少 TOP30 · 筹码集中 <span style="font-weight:400;font-size:12px;color:var(--txt3)">股东户数环比减少</span></h3>
-    <div id="retailReduceBox"></div>
+  <section class="card" data-page-node-id="CqTpaOU8ZiY6ccG24jbolk">
+    <h2 data-page-node-id="nXcStppfldzstRbcSzj5Zb">短期机会 <span class="tag red" data-page-node-id="f59j12F6eQtp9jiz9Ysikc">情绪+资金</span></h2>
+    <h3 data-page-node-id="VKXmuxD2Y4m4NKMZGN9HZo">情绪温度计 · 最近交易日 <span style="font-weight:400;font-size:12px;color:var(--txt3)" data-page-node-id="d5G7Hxs1JXAsgPLFme74Ij">短线市场热度</span></h3>
+    <div id="sentimentBox" data-page-node-id="m04RdYJRiFpsgzG6RE8Vmk"></div>
+    <h3 data-page-node-id="1xP2Rgczf3rVOLX6zlwWL2">主力资金流向 <span style="font-weight:400;font-size:12px;color:var(--txt3)" data-page-node-id="477UnT0Cmz3CyMej7F8S9O">钱往哪去</span></h3>
+    <div id="fundflowBox" data-page-node-id="sB1rQHxJxaLexbhcLvGxeL"></div>
+    <h3 data-page-node-id="JQCh2PbYBdKEBDCX94HqfX">龙虎榜 · 机构游资动向 <span style="font-weight:400;font-size:12px;color:var(--txt3)" data-page-node-id="A4GaQq8WTnPhOrZLCsVuWF">谁在主导</span></h3>
+    <div id="lhbBox" data-page-node-id="RX55vqRhJjMOsEMob4oIr8"></div>
+    <h3 data-page-node-id="vDIaJtYv4IVk0nMgusfmGX">机构调研 · 近 7 天接待 TOP8 <span style="font-weight:400;font-size:12px;color:var(--txt3)" data-page-node-id="78g7NjxExIkqX1IeMHcbam">按调研接待日统计</span></h3>
+    <div id="researchList" data-page-node-id="0iRpUBL2Uy67tddDqAHvLg"></div>
+    <h3 data-page-node-id="mph5BOFP1UDsl3zxfNMLnc">散户减少 TOP30 · 筹码集中 <span style="font-weight:400;font-size:12px;color:var(--txt3)" data-page-node-id="hMM0y2rt6lOSlC0wOzTKDC">股东户数环比减少</span></h3>
+    <div id="retailReduceBox" data-page-node-id="L6TXKLD1mNiAfA7hT8N9UQ"></div>
   </section>
 </div>
 
 <!-- ============ 长期机会 ============ -->
-<div class="tab-panel" id="panel-long">
-  <section class="card">
-    <h2>长期机会 <span class="tag" style="background:var(--down-soft);color:var(--down)">业绩+估值</span></h2>
-    <h3>估值分位 · 自选股（近十年） <span style="font-weight:400;font-size:12px;color:var(--txt3)">PE/PB 历史百分位，越低越便宜</span></h3>
-    <div id="valuationBox"></div>
-    <h3>高股息精选 · 分红能力榜 <span style="font-weight:400;font-size:12px;color:var(--txt3)">上市满10年·分红≥10次</span></h3>
-    <div id="divyieldBox"></div>
-    <h3>业绩预告 · 最近披露</h3>
-    <div class="tbl-wrap">
-      <table class="tbl" id="earnTbl"></table>
+<div class="tab-panel" id="panel-long" data-page-node-id="pu2kks6u2hAaU5IC45phUO">
+  <section class="card" data-page-node-id="nh95GTFrIdnUX6CZCKEBbJ">
+    <h2 data-page-node-id="IzmRLEIdPqrUUygGkMVHWN">长期机会 <span class="tag" style="background:var(--down-soft);color:var(--down)" data-page-node-id="5la9hsYanZa8Oos29HF5EX">业绩+估值</span></h2>
+    <h3 data-page-node-id="1rzGgxI15Pv3Y2poSirIzA">估值分位 · 自选股（近十年） <span style="font-weight:400;font-size:12px;color:var(--txt3)" data-page-node-id="gl9I93Pv8bc5c7YPNvqCu0">PE/PB 历史百分位，越低越便宜</span></h3>
+    <div id="valuationBox" data-page-node-id="zHV2cbjEpN3Fftd6UJwNgJ"></div>
+    <h3 data-page-node-id="uu0ZDfVdvFr8gOX7f7gdcv">高股息精选 · 分红能力榜 <span style="font-weight:400;font-size:12px;color:var(--txt3)" data-page-node-id="mLA9a99C5LagVTH4ozi5J1">上市满10年·分红≥10次</span></h3>
+    <div id="divyieldBox" data-page-node-id="YLliV8LcfMB2FejkM8occ5"></div>
+    <h3 data-page-node-id="8ejsq8b0i3QofGpkqnkFxl">业绩预告 · 最近披露</h3>
+    <div class="tbl-wrap" data-page-node-id="ITkesGLVJCFgPZEWqyDrzu">
+      <table class="tbl" id="earnTbl" data-page-node-id="SDB7sQ62xapK9c1DzsDRAt"></table>
     </div>
-    <h3>高管增持 · 近半年 ≥5 次 <span style="font-weight:400;font-size:12px;color:var(--txt3)">内部人信号 · 含首次增持时间</span></h3>
-    <div id="execHoldBox"></div>
-    <h3>私募 / 公募增持 <span style="font-weight:400;font-size:12px;color:var(--txt3)">机构季报 · 滞后提示</span></h3>
-    <div id="instHoldBox"></div>
-    <h3>牛散持仓追踪 <span style="font-weight:400;font-size:12px;color:var(--txt3)">季报披露完更新 · 新进/加仓标红</span></h3>
-    <div id="niusanBox"></div>
+    <h3 data-page-node-id="HriqGBYeVfinYYpAgZ2OCQ">高管增持 · 近半年 ≥5 次 <span style="font-weight:400;font-size:12px;color:var(--txt3)" data-page-node-id="ZdDZ7wJs7TyVv5DLuNxzkv">内部人信号 · 含首次增持时间</span></h3>
+    <div id="execHoldBox" data-page-node-id="9QGIIDSFuJZMxhMXdLO9QL"></div>
+    <h3 data-page-node-id="gpzbHrERdJlde4nzvwmDAp">私募 / 公募增持 <span style="font-weight:400;font-size:12px;color:var(--txt3)" data-page-node-id="swZCeDI7hZclNrfgHXbJS2">机构季报 · 滞后提示</span></h3>
+    <div id="instHoldBox" data-page-node-id="VfdnRC1So8zGtHZoSLTfVf"></div>
+    <h3 data-page-node-id="6JvweQO2PpAUg3FD2CoWqH">牛散持仓追踪 <span style="font-weight:400;font-size:12px;color:var(--txt3)" data-page-node-id="WjDHm1XeBbReHP1lBs5AnU">季报披露完更新 · 新进/加仓标红</span></h3>
+    <div id="niusanBox" data-page-node-id="OzDzt9Aio7Ewj7DmkKvA51"></div>
   </section>
 </div>
 
 <!-- ============ 概念龙头 ============ -->
-<div class="tab-panel" id="panel-concepts">
-  <section class="card">
-    <h2>行业概念 · 龙头速查 <span class="tag blue">参考</span></h2>
-    <input class="concept-search" id="conceptSearch" placeholder="搜索行业 / 概念 / 股票代码或名称…" oninput="renderConcepts()">
-    <div class="fchip-row" id="conceptFilter"></div>
-    <div class="concept-tools">
-      <label class="ctool"><input type="checkbox" id="conceptSort" onchange="renderConcepts()"> 按涨幅排序</label>
-      <label class="ctool"><input type="checkbox" id="conceptUp" onchange="renderConcepts()"> 只看上涨</label>
-      <span class="ctool-count" id="conceptCount"></span>
+<div class="tab-panel" id="panel-concepts" data-page-node-id="dYR9V6gFBTDnvsHLHw3Gaa">
+  <section class="card" data-page-node-id="xTetB0nz3sQ7iAHQxNH5Is">
+    <h2 data-page-node-id="2LOfHc9eQALaxL10Eip2DB">行业概念 · 龙头速查 <span class="tag blue" data-page-node-id="YmjAuxeac2xGbhXQRnPmR5">参考</span></h2>
+    <input class="concept-search" id="conceptSearch" placeholder="搜索行业 / 概念 / 股票代码或名称…" oninput="renderConcepts()" data-page-node-id="wVoq4B3C7MTRGRyeSbhdwj">
+    <div class="fchip-row" id="conceptFilter" data-page-node-id="YRHJL4r3zibxfUIsWlcGiY"></div>
+    <div class="concept-tools" data-page-node-id="Tn6blv2LhY07fdFbqrNipo">
+      <label class="ctool" data-page-node-id="uQQC0JIauS6MrBHixGyx7L"><input type="checkbox" id="conceptSort" onchange="renderConcepts()" data-page-node-id="CbEu7LETUAb6cfwKwkSaKE"> 按涨幅排序</label>
+      <label class="ctool" data-page-node-id="huuHGZeGEepbIyzwqF4VKx"><input type="checkbox" id="conceptUp" onchange="renderConcepts()" data-page-node-id="W3pEOYuQbTGmr4ScQOfK65"> 只看上涨</label>
+      <span class="ctool-count" id="conceptCount" data-page-node-id="BooboAsDMQrBq6kk1aRhNA"></span>
     </div>
-    <div id="conceptTree"></div>
-    <p class="empty" id="conceptEmpty" style="display:none">没有匹配的概念或股票。</p>
-    <div class="plan-hint" id="conceptNote"></div>
+    <div id="conceptTree" data-page-node-id="uDCmtYZyCUYrs7eR31c3du"></div>
+    <p class="empty" id="conceptEmpty" style="display:none" data-page-node-id="FWEolxjGFwCQF1FuLvaisD">没有匹配的概念或股票。</p>
+    <div class="plan-hint" id="conceptNote" data-page-node-id="oOQ2wPzjfTjT9vCHsV5EEu"></div>
   </section>
 </div>
 
-<footer>
-  数据来源：AKShare 聚合的公开免费接口（东方财富/新浪等），仅供个人研究参考，不构成投资建议。<br>
-  个人数据（自选/成本/笔记）仅存于本浏览器 localStorage，导出备份请妥善保管；采集行情为公网公开数据。<br>
+<footer data-page-node-id="2xFMj35zYZZIEdHv4u8WXG">
+  数据来源：AKShare 聚合的公开免费接口（东方财富/新浪等），仅供个人研究参考，不构成投资建议。<br data-page-node-id="0WtWIgH2pXx6ymTL2g9Tgo">
+  个人数据（自选/成本/笔记）仅存于本浏览器 localStorage，导出备份请妥善保管；采集行情为公网公开数据。<br data-page-node-id="sEXGMYPlbyLUBgzAcnbgOL">
   建议：数据积累后定期「导出备份」。
 </footer>
 </div>
 
 <!-- 清空确认 -->
-<div class="modal-mask" id="clearModal">
-  <div class="modal">
-    <h3>确认清空？</h3>
-    <p id="clearModalMsg">将删除本地的自选股、成本价与全部复盘笔记，且不可恢复。建议先「导出备份」。</p>
-    <div class="row">
-      <button onclick="closeClearModal()">取消</button>
-      <button class="danger" onclick="doClearAll()">确认清空</button>
+<div class="modal-mask" id="clearModal" data-page-node-id="uajw0qXeaUXyJGimk7AdvC">
+  <div class="modal" data-page-node-id="NdSRDH7dKYjMAVBy7IJ2C2">
+    <h3 data-page-node-id="4OrV9PWxmwefzc1PLoAMhW">确认清空？</h3>
+    <p id="clearModalMsg" data-page-node-id="GisZGC2GgcXWCp7pzgq0FB">将删除本地的自选股、成本价与全部复盘笔记，且不可恢复。建议先「导出备份」。</p>
+    <div class="row" data-page-node-id="iSdcxpDCbLXe6DUdLagf9P">
+      <button onclick="closeClearModal()" data-page-node-id="M1wp6xz7lDtrubI1IqCrxy">取消</button>
+      <button class="danger" onclick="doClearAll()" data-page-node-id="lOJp8K0JzUfQBbOKOo8is9">确认清空</button>
     </div>
   </div>
 </div>
 
 <!-- GitHub Token 设置弹窗 -->
-<div class="modal-mask" id="tokenModal">
-  <div class="modal" style="max-width:460px">
-    <h3>🔑 设置 GitHub Token（仅需一次）</h3>
-    <p style="font-size:13px;line-height:1.7">点击「刷新数据」需要通过 GitHub API 触发数据采集。请创建一个 <b>Personal Access Token</b>（Fine-grained，仅需 <code>actions:write</code> 权限），粘贴到下方。Token 仅存于本浏览器 localStorage，不会上传。</p>
-    <p style="font-size:13px;margin-top:8px"><a href="https://github.com/settings/personal-access-tokens/new" target="_blank" style="color:var(--brand)">👉 点此创建 Token</a> → Repository 选 <code>sunshinenote/wy-stock-workbench</code> → Permissions 勾 <code>Actions: Read and write</code></p>
-    <input type="password" id="tokenInput" placeholder="github_pat_xxxx..." style="width:100%;margin:10px 0;font-family:inherit;font-size:15px;border:1px solid var(--line2);border-radius:10px;padding:10px 12px;min-height:44px">
-    <div class="row">
-      <button onclick="closeTokenModal()">取消</button>
-      <button class="primary" onclick="saveToken()">保存并刷新</button>
+<div class="modal-mask" id="tokenModal" data-page-node-id="YhAq4VtWNXJlVofQ4zCEn3">
+  <div class="modal" style="max-width:460px" data-page-node-id="hu9m1o6WpILTGChPvftKC2">
+    <h3 data-page-node-id="Hd3DsMQGurCpnoRZ1nbzaA">🔑 设置 GitHub Token（仅需一次）</h3>
+    <p style="font-size:13px;line-height:1.7" data-page-node-id="SJEMLiarnmtJOtHB4WctIp">点击「刷新数据」需要通过 GitHub API 触发数据采集。请创建一个 <b data-page-node-id="gFkNOoVgSNN60xJp1IK7BU">Personal Access Token</b>（Fine-grained，仅需 <code data-page-node-id="fxQ857zHzoXMspeYGOLCHQ">actions:write</code> 权限），粘贴到下方。Token 仅存于本浏览器 localStorage，不会上传。</p>
+    <p style="font-size:13px;margin-top:8px" data-page-node-id="LBE0mjKFx2E4LEqsufVOTJ"><a href="https://github.com/settings/personal-access-tokens/new" target="_blank" style="color:var(--brand)" data-page-node-id="PCBsyuW6soHqE7DGiwqOCJ">👉 点此创建 Token</a> → Repository 选 <code data-page-node-id="t0ABEzcrJ3LBkxy69LIbLz">sunshinenote/wy-stock-workbench</code> → Permissions 勾 <code data-page-node-id="hHO7BHoTAwoidUN59EKicA">Actions: Read and write</code></p>
+    <input type="password" id="tokenInput" placeholder="github_pat_xxxx..." style="width:100%;margin:10px 0;font-family:inherit;font-size:15px;border:1px solid var(--line2);border-radius:10px;padding:10px 12px;min-height:44px" data-page-node-id="ODqeO6CUElIkSb4vC8QuEG">
+    <div class="row" data-page-node-id="NJwJKQiKIZWB6eXUo8HtGN">
+      <button onclick="closeTokenModal()" data-page-node-id="Bjw4iBqcxMREG0Lvq7grG4">取消</button>
+      <button class="primary" onclick="saveToken()" data-page-node-id="oKv5avvD24iwEX0xwAr9fY">保存并刷新</button>
     </div>
   </div>
 </div>
 
 <!-- 刷新进度弹窗 -->
-<div class="modal-mask" id="refreshModal">
-  <div class="modal" style="max-width:400px;text-align:center">
-    <h3 id="refreshTitle">🔄 正在触发数据采集…</h3>
-    <p id="refreshMsg" style="font-size:14px;line-height:1.7">已向 GitHub Actions 发送请求，请稍候…</p>
-    <div id="refreshSpin" style="margin:16px auto;width:36px;height:36px;border:3px solid var(--brand-soft);border-top-color:var(--brand);border-radius:50%;animation:spin .8s linear infinite"></div>
-    <div class="row" id="refreshActions" style="display:none">
-      <button onclick="closeRefreshModal()">关闭</button>
-      <button class="primary" onclick="closeRefreshModal();reloadData()">查看最新数据</button>
+<div class="modal-mask" id="refreshModal" data-page-node-id="jLCjBMiDWvWdPUXMVd4X7Y">
+  <div class="modal" style="max-width:400px;text-align:center" data-page-node-id="mPFbDmxDTJiITZjsoW08kg">
+    <h3 id="refreshTitle" data-page-node-id="TInWzEV2FFoxaH3Z94u92t">🔄 正在触发数据采集…</h3>
+    <p id="refreshMsg" style="font-size:14px;line-height:1.7" data-page-node-id="N15J7sYnvPGa4VXUCHHmHt">已向 GitHub Actions 发送请求，请稍候…</p>
+    <div id="refreshSpin" style="margin:16px auto;width:36px;height:36px;border:3px solid var(--brand-soft);border-top-color:var(--brand);border-radius:50%;animation:spin .8s linear infinite" data-page-node-id="FQD6CMOMrXA1PPpLeaRWPy"></div>
+    <div class="row" id="refreshActions" style="display:none" data-page-node-id="xWNBHKlLEf1ssTJ97ZrU9a">
+      <button onclick="closeRefreshModal()" data-page-node-id="JbEtYtu7kZEc3jGRfTKLnO">关闭</button>
+      <button class="primary" onclick="closeRefreshModal();reloadData()" data-page-node-id="gUHmqVORZlJ4FHQZreayTW">查看最新数据</button>
     </div>
   </div>
 </div>
 
 <!-- 日K线弹窗 -->
-<div class="modal-mask" id="klineModal" onclick="if(event.target===this)closeKline()">
-  <div class="modal" style="max-width:min(940px,96vw);width:100%">
-    <div class="kline-head">
-      <div>
-        <h3 id="klineTitle" style="margin:0">日K线</h3>
-        <div id="klineMeta" class="kline-meta"></div>
+<div class="modal-mask" id="klineModal" onclick="if(event.target===this)closeKline()" data-page-node-id="QWkE8qHTFwFaTGaGC9HXpv">
+  <div class="modal" style="max-width:min(940px,96vw);width:100%" data-page-node-id="xs5J7CFrE3iInkA8ezwPU3">
+    <div class="kline-head" data-page-node-id="XM3nVNX2Nu1AfSxUkdUeeN">
+      <div data-page-node-id="0Hfi0UwOQOEEwBcBydY7wj">
+        <h3 id="klineTitle" style="margin:0" data-page-node-id="HAKGB4RiBTmVpJX2Tbf84o">日K线</h3>
+        <div id="klineMeta" class="kline-meta" data-page-node-id="f062bMNUy5a3z7NELiHMDO"></div>
       </div>
-      <button class="ghost btn-sm" onclick="closeKline()">✕ 关闭</button>
+      <button class="ghost btn-sm" onclick="closeKline()" data-page-node-id="7NJn3kaEyksiu9E00CzFmA">✕ 关闭</button>
     </div>
-    <div id="klineBody" class="kline-body"></div>
-    <div class="kline-ext" style="padding:10px 16px 14px;border-top:1px solid var(--line)">
-      <a id="klineExt" class="btn-sm primary" target="_blank" rel="noopener noreferrer">🔗 在东方财富看完整行情 »</a>
+    <div id="klineBody" class="kline-body" data-page-node-id="520y758VT4y6kTKMfzYCHe"></div>
+    <div class="kline-ext" style="padding:10px 16px 14px;border-top:1px solid var(--line)" data-page-node-id="QZqpgmi1l1MH9yXzWD2oZ6">
+      <a id="klineExt" class="btn-sm primary" target="_blank" rel="noopener noreferrer" data-page-node-id="ieHpqWEn4NOVx5cbwlt9nN">🔗 在东方财富看完整行情 »</a>
     </div>
-    <div id="klinePaste" class="kline-paste" style="display:none">
-      <p style="font-size:13px;color:var(--txt2);line-height:1.7">
-        未读到该股票 K 线（本地离线打开或尚未运行采集）。可粘贴数据后渲染：<br>
-        支持 CSV（每行：<code>日期,开,高,低,收,量</code>）或 JSON（<code>{"kline":[{"date","open","high","low","close","vol"}]}</code>）。
+    <div id="klinePaste" class="kline-paste" style="display:none" data-page-node-id="d99dwF6dGx7G8ZCm8kdlBt">
+      <p style="font-size:13px;color:var(--txt2);line-height:1.7" data-page-node-id="PwrUz6SfxQnmOgOSoo96bk">
+        未读到该股票 K 线（本地离线打开或尚未运行采集）。可粘贴数据后渲染：<br data-page-node-id="92MXoMgDmzTscZQancECwm">
+        支持 CSV（每行：<code data-page-node-id="RfhqUrmAnysOi2A7TgR01W">日期,开,高,低,收,量</code>）或 JSON（<code data-page-node-id="SWQjX9R4R49IWD7pe3Fayw">{"kline":[{"date","open","high","low","close","vol"}]}</code>）。
       </p>
       <textarea id="klinePasteArea" placeholder="2026-08-10,1325,1359.97,1318.08,1348.86,62686&#10;2026-08-11,1348,1352.65,1338,1346.5,27073"></textarea>
-      <div class="row" style="justify-content:flex-start">
-        <button class="primary btn-sm" onclick="renderPastedKline()">渲染粘贴的数据</button>
+      <div class="row" style="justify-content:flex-start" data-page-node-id="wNIgappvnGIWIasEcpd7jN">
+        <button class="primary btn-sm" onclick="renderPastedKline()" data-page-node-id="FQiAYO1WDgSlED1M6VFX82">渲染粘贴的数据</button>
       </div>
     </div>
   </div>
@@ -541,14 +541,14 @@ function demoData(){
       ]}
     ]},
     conceptsQuotes:{ '688981':{pct:5.62,name:'中芯国际'}, '002371':{pct:3.21,name:'北方华创'}, '603986':{pct:8.32,name:'兆易创新'}, '601689':{pct:4.15,name:'拓普集团'}, '002050':{pct:2.88,name:'三花智控'}, '688017':{pct:6.4,name:'绿的谐波'}, '300750':{pct:3.12,name:'宁德时代'}, '002594':{pct:1.05,name:'比亚迪'}, '601012':{pct:2.68,name:'隆基绿能'}, '300274':{pct:3.92,name:'阳光电源'}, '600519':{pct:0.85,name:'贵州茅台'}, '000858':{pct:1.55,name:'五粮液'} },
-    research:[ {code:'605499',name:'东鹏饮料',sum:275,count:1,date:t0,price:122.8,pct:1.58},
-      {code:'600885',name:'宏发股份',sum:158,count:1,date:t0,price:35.41,pct:-0.39},
-      {code:'688235',name:'百济神州',sum:152,count:2,date:t1,price:299.33,pct:11.28},
-      {code:'300285',name:'国瓷材料',sum:152,count:1,date:t0,price:70.88,pct:1.94},
-      {code:'688005',name:'容百科技',sum:139,count:1,date:t0,price:27.75,pct:-0.54},
-      {code:'688313',name:'仕佳光子',sum:98,count:3,date:t0,price:127.7,pct:7.54},
-      {code:'688266',name:'泽璟制药',sum:97,count:1,date:t0,price:121.7,pct:8.45},
-      {code:'688062',name:'迈威生物',sum:93,count:1,date:t0,price:30.51,pct:7.62} ],
+    research:[ {code:'300661',name:'圣邦股份',sum:272,count:1,date:'2026-08-31',price:106.92,pct:-2.59},
+      {code:'300760',name:'迈瑞医疗',sum:253,count:1,date:'2026-08-31',price:169.91,pct:1.34},
+      {code:'000636',name:'风华高科',sum:180,count:1,date:'2026-09-01',price:48.41,pct:-4.37},
+      {code:'002270',name:'华明装备',sum:165,count:1,date:'2026-08-31',price:19.12,pct:0.63},
+      {code:'301345',name:'涛涛车业',sum:164,count:1,date:'2026-08-31',price:229.01,pct:0.2},
+      {code:'301080',name:'百普赛斯',sum:114,count:2,date:'2026-09-01',price:81.71,pct:-4.5},
+      {code:'688322',name:'奥比中光',sum:96,count:1,date:'2026-09-01',price:92.17,pct:-5.17},
+      {code:'300740',name:'水羊股份',sum:86,count:2,date:'2026-09-02',price:22.59,pct:-0.48} ],
     sentiment:{ date:daysFromNow(-1), zt:74, dt:4, zb:26, zb_rate:26, max_lb:4,
       lb_dist:[{lb:1,count:61},{lb:2,count:6},{lb:3,count:2},{lb:4,count:5}],
       score:66, level:'发酵', note:'', industries:[{name:'元件',count:11},{name:'医疗服务',count:8},{name:'化学制药',count:6},{name:'通信设备',count:4},{name:'半导体',count:4},{name:'化学制品',count:3}] },
@@ -630,7 +630,7 @@ function demoData(){
     instHold:{ report:'2026-06-30', prev:'2026-03-31',
       private:[ {code:'301557',name:'常友科技',count:6,consec:true},{code:'301680',name:'固德电材',count:6,consec:true},{code:'688755',name:'汉邦科技',count:6,consec:false},{code:'003026',name:'中晶科技',count:6,consec:true},{code:'301042',name:'安联锐视',count:5,consec:true},{code:'688583',name:'思看科技',count:5,consec:true},{code:'002961',name:'瑞达期货',count:5,consec:false},{code:'300084',name:'海默科技',count:4,consec:false},{code:'300607',name:'拓斯达',count:4,consec:false},{code:'301121',name:'紫建电子',count:4,consec:true},{code:'301209',name:'联合化学',count:4,consec:true},{code:'301590',name:'优优绿能',count:4,consec:false} ],
       public:[ {code:'301362',name:'民爆光电',count:7,consec:true},{code:'600757',name:'长江传媒',count:7,consec:true},{code:'600997',name:'开滦股份',count:7,consec:true},{code:'601038',name:'一拖股份',count:7,consec:true},{code:'300548',name:'长芯博创',count:6,consec:true},{code:'300820',name:'英杰电气',count:6,consec:true},{code:'300969',name:'恒帅股份',count:6,consec:true},{code:'301151',name:'冠龙节能',count:6,consec:true},{code:'301217',name:'铜冠铜箔',count:6,consec:true},{code:'301446',name:'福事特',count:6,consec:false},{code:'600105',name:'永鼎股份',count:6,consec:true},{code:'603115',name:'海星股份',count:6,consec:true} ] },
-    retailReduce:{ report:'2026-06-30', prev:'2026-03-31', stocks:[{code:'920055',name:'隆源股份',holder_num:3561,change:8308,ratio:70,avg_cap:52.5,pct:0.55,price:27.49},{code:'001312',name:'福恩股份',holder_num:35063,change:65825,ratio:65.25,avg_cap:12.7,pct:-0.85,price:19.15},{code:'002082',name:'ST万邦',holder_num:17671,change:29366,ratio:62.43,avg_cap:36.4,pct:0.76,price:10.52},{code:'920188',name:'悦龙科技',holder_num:5178,change:7890,ratio:60.38,avg_cap:40.1,pct:-1.49,price:25.04},{code:'688811',name:'有研复材',holder_num:27782,change:34779,ratio:55.59,avg_cap:56,pct:-2.86,price:31},{code:'301306',name:'西测测试',holder_num:14429,change:15494,ratio:51.78,avg_cap:92.7,pct:-2.41,price:158.49},{code:'001365',name:'天海电子',holder_num:46615,change:49913,ratio:51.71,avg_cap:44.3,pct:-2.13,price:39.3},{code:'603017',name:'中衡设计',holder_num:25774,change:27030,ratio:51.19,avg_cap:10.7,pct:0.1,price:9.95},{code:'603407',name:'长裕集团',holder_num:28740,change:29776,ratio:50.89,avg_cap:150.5,pct:-3.29,price:106.02},{code:'605299',name:'舒华体育',holder_num:23805,change:24273,ratio:50.49,avg_cap:22.9,pct:-2.75,price:13.35},{code:'603729',name:'ST龙韵',holder_num:7409,change:6863,ratio:48.09,avg_cap:13.2,pct:2.77,price:10.58},{code:'002109',name:'ST兴化',holder_num:24177,change:21413,ratio:46.97,avg_cap:12.7,pct:0,price:2.41},{code:'920028',name:'新恒泰',holder_num:5442,change:4634,ratio:45.99,avg_cap:53.8,pct:-2.99,price:17.8},{code:'920069',name:'普昂医疗',holder_num:2772,change:2339,ratio:45.76,avg_cap:65.1,pct:-1.39,price:34.09},{code:'600722',name:'金牛化工',holder_num:73976,change:61560,ratio:45.42,avg_cap:7.5,pct:-0.75,price:8.12},{code:'600337',name:'ST美克',holder_num:21413,change:17133,ratio:44.45,avg_cap:21.8,pct:-0.94,price:3.25},{code:'300661',name:'圣邦股份',holder_num:44628,change:35593,ratio:44.37,avg_cap:200.3,pct:-2.59,price:143.48},{code:'688813',name:'泰金新能',holder_num:13927,change:10936,ratio:43.99,avg_cap:241.3,pct:-2.94,price:210},{code:'001237',name:'惠康科技',holder_num:38990,change:27989,ratio:41.79,avg_cap:27.3,pct:-1.5,price:71.72},{code:'603787',name:'新日股份',holder_num:15918,change:11326,ratio:41.57,avg_cap:13.1,pct:0.39,price:9.09},{code:'002309',name:'中利集团',holder_num:158650,change:111888,ratio:41.36,avg_cap:5.2,pct:-0.66,price:2.76},{code:'603922',name:'ST金鸿顺',holder_num:6257,change:4405,ratio:41.31,avg_cap:38.7,pct:0.5,price:13.53},{code:'603359',name:'*ST东珠',holder_num:22855,change:16045,ratio:41.25,avg_cap:4,pct:0.42,price:2.07},{code:'001399',name:'惠科股份',holder_num:430552,change:293761,ratio:40.56,avg_cap:64.7,pct:-1.32,price:38.18},{code:'603189',name:'*ST网达',holder_num:17380,change:11600,ratio:40.03,avg_cap:16.1,pct:5.14,price:10.39},{code:'001696',name:'宗申动力',holder_num:111434,change:74140,ratio:39.95,avg_cap:21.4,pct:-3.52,price:20.81},{code:'605336',name:'*ST帅电',holder_num:4374,change:2879,ratio:39.69,avg_cap:57.1,pct:0.42,price:13.62},{code:'688808',name:'联讯仪器',holder_num:13928,change:9127,ratio:39.59,avg_cap:1711.8,pct:-2.49,price:2322.33},{code:'002350',name:'北京科锐',holder_num:30137,change:19682,ratio:39.51,avg_cap:24.3,pct:-1.35,price:13.51},{code:'300245',name:'ST天玑',holder_num:31475,change:20164,ratio:39.05,avg_cap:5.3,pct:0.33,price:5.51}] }
+    retailReduce:{ report:'2026-06-30', prev:'2026-03-31', stocks:[{code:'001312',name:'福恩股份',holder_num:35063,change:65825,ratio:65.25,avg_cap:12.7,pct:-0.85,price:19.15},{code:'002082',name:'ST万邦',holder_num:17671,change:29366,ratio:62.43,avg_cap:36.4,pct:0.76,price:10.52},{code:'688811',name:'有研复材',holder_num:27782,change:34779,ratio:55.59,avg_cap:56,pct:-2.86,price:31},{code:'301306',name:'西测测试',holder_num:14429,change:15494,ratio:51.78,avg_cap:92.7,pct:-2.41,price:158.49},{code:'001365',name:'天海电子',holder_num:46615,change:49913,ratio:51.71,avg_cap:44.3,pct:-2.13,price:39.3},{code:'603017',name:'中衡设计',holder_num:25774,change:27030,ratio:51.19,avg_cap:10.7,pct:0.1,price:9.95},{code:'603407',name:'长裕集团',holder_num:28740,change:29776,ratio:50.89,avg_cap:150.5,pct:-3.29,price:106.02},{code:'605299',name:'舒华体育',holder_num:23805,change:24273,ratio:50.49,avg_cap:22.9,pct:-2.75,price:13.35},{code:'603729',name:'ST龙韵',holder_num:7409,change:6863,ratio:48.09,avg_cap:13.2,pct:2.77,price:10.58},{code:'002109',name:'ST兴化',holder_num:24177,change:21413,ratio:46.97,avg_cap:12.7,pct:0,price:2.41},{code:'600722',name:'金牛化工',holder_num:73976,change:61560,ratio:45.42,avg_cap:7.5,pct:-0.75,price:8.12},{code:'600337',name:'ST美克',holder_num:21413,change:17133,ratio:44.45,avg_cap:21.8,pct:-0.94,price:3.25},{code:'300661',name:'圣邦股份',holder_num:44628,change:35593,ratio:44.37,avg_cap:200.3,pct:-2.59,price:143.48},{code:'688813',name:'泰金新能',holder_num:13927,change:10936,ratio:43.99,avg_cap:241.3,pct:-2.94,price:210},{code:'001237',name:'惠康科技',holder_num:38990,change:27989,ratio:41.79,avg_cap:27.3,pct:-1.5,price:71.72},{code:'603787',name:'新日股份',holder_num:15918,change:11326,ratio:41.57,avg_cap:13.1,pct:0.39,price:9.09},{code:'002309',name:'中利集团',holder_num:158650,change:111888,ratio:41.36,avg_cap:5.2,pct:-0.66,price:2.76},{code:'603922',name:'ST金鸿顺',holder_num:6257,change:4405,ratio:41.31,avg_cap:38.7,pct:0.5,price:13.53},{code:'603359',name:'*ST东珠',holder_num:22855,change:16045,ratio:41.25,avg_cap:4,pct:0.42,price:2.07},{code:'001399',name:'惠科股份',holder_num:430552,change:293761,ratio:40.56,avg_cap:64.7,pct:-1.32,price:38.18},{code:'603189',name:'*ST网达',holder_num:17380,change:11600,ratio:40.03,avg_cap:16.1,pct:5.14,price:10.39},{code:'001696',name:'宗申动力',holder_num:111434,change:74140,ratio:39.95,avg_cap:21.4,pct:-3.52,price:20.81},{code:'605336',name:'*ST帅电',holder_num:4374,change:2879,ratio:39.69,avg_cap:57.1,pct:0.42,price:13.62},{code:'688808',name:'联讯仪器',holder_num:13928,change:9127,ratio:39.59,avg_cap:1711.8,pct:-2.49,price:2322.33},{code:'002350',name:'北京科锐',holder_num:30137,change:19682,ratio:39.51,avg_cap:24.3,pct:-1.35,price:13.51},{code:'300245',name:'ST天玑',holder_num:31475,change:20164,ratio:39.05,avg_cap:5.3,pct:0.33,price:5.51},{code:'600885',name:'宏发股份',holder_num:44656,change:28502,ratio:38.96,avg_cap:119.5,pct:0.2,price:34.49},{code:'603435',name:'嘉德利',holder_num:36676,change:23266,ratio:38.81,avg_cap:85.5,pct:-3.94,price:68.26},{code:'002757',name:'南兴股份',holder_num:33264,change:21046,ratio:38.75,avg_cap:16,pct:0.22,price:18.05},{code:'603011',name:'合锻智能',holder_num:63262,change:39180,ratio:38.25,avg_cap:25.9,pct:-4.35,price:33.08}] }
   };
 }
 
