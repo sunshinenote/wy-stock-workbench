@@ -1,7 +1,6 @@
 {
  "report": "2026-06-30",
  "prev": "2026-03-31",
- "generated_at": "2026-09-06T15:34:48.810Z",
  "stocks": [
   {
    "code": "001312",
@@ -29,9 +28,9 @@
    "holder_num": 27782,
    "change": 34779,
    "ratio": 55.59,
-   "avg_cap": 56,
+   "avg_cap": 56.0,
    "pct": -2.86,
-   "price": 31
+   "price": 31.0
   },
   {
    "code": "301306",
@@ -100,7 +99,7 @@
    "change": 21413,
    "ratio": 46.97,
    "avg_cap": 12.7,
-   "pct": 0,
+   "pct": 0.0,
    "price": 2.41
   },
   {
@@ -141,7 +140,7 @@
    "ratio": 43.99,
    "avg_cap": 241.3,
    "pct": -2.94,
-   "price": 210
+   "price": 210.0
   },
   {
    "code": "001237",
@@ -189,7 +188,7 @@
    "holder_num": 22855,
    "change": 16045,
    "ratio": 41.25,
-   "avg_cap": 4,
+   "avg_cap": 4.0,
    "pct": 0.42,
    "price": 2.07
   },
@@ -289,7 +288,7 @@
    "holder_num": 33264,
    "change": 21046,
    "ratio": 38.75,
-   "avg_cap": 16,
+   "avg_cap": 16.0,
    "pct": 0.22,
    "price": 18.05
   },
