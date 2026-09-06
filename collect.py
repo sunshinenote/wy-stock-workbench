@@ -73,6 +73,12 @@ def _is_bse(code):
     return c.startswith(("8", "92", "43"))
 
 
+def _is_st(name):
+    """是否 ST 股票：简称以 ST / *ST 开头（不计入排行）"""
+    n = str(name or "").strip().upper()
+    return n.startswith("ST") or n.startswith("*ST")
+
+
 # ---------- 1. 指数快照（腾讯） ----------
 def collect_index():
     q = ",".join(c for _, c in INDEX_MAP)
@@ -804,8 +810,9 @@ def collect_retail_reduce():
     stocks = []
     for x in rows:
         code = str(x.get("SECURITY_CODE", "") or "")
-        if _is_bse(code):
-            continue  # 剔除北交所（8/92/43 开头）
+        name = str(x.get("SECURITY_NAME_ABBR", "") or "")
+        if _is_bse(code) or _is_st(name):
+            continue  # 剔除北交所、ST 股（不计入排行）
         try:
             holder_num = int(x.get("HOLDER_NUM", 0) or 0)
             change = -int(x.get("HOLDER_NUM_CHANGE", 0) or 0)
@@ -817,7 +824,7 @@ def collect_retail_reduce():
             continue
         stocks.append({
             "code": code,
-            "name": str(x.get("SECURITY_NAME_ABBR", "") or ""),
+            "name": name,
             "holder_num": holder_num,
             "change": change,
             "ratio": round(ratio, 2),
