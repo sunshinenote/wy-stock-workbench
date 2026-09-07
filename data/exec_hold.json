@@ -19,10 +19,10 @@
   {
    "code": "603098",
    "name": "森特股份",
-   "count": 35,
+   "count": 36,
    "dec_count": 0,
    "first_date": "2025-12-29",
-   "last_date": "2026-09-02"
+   "last_date": "2026-09-03"
   },
   {
    "code": "600328",
@@ -33,20 +33,20 @@
    "last_date": "2026-08-07"
   },
   {
+   "code": "002568",
+   "name": "百润股份",
+   "count": 32,
+   "dec_count": 0,
+   "first_date": "2026-07-02",
+   "last_date": "2026-09-04"
+  },
+  {
    "code": "002096",
    "name": "易普力",
    "count": 32,
    "dec_count": 0,
    "first_date": "2026-06-12",
    "last_date": "2026-07-22"
-  },
-  {
-   "code": "002568",
-   "name": "百润股份",
-   "count": 31,
-   "dec_count": 0,
-   "first_date": "2026-07-02",
-   "last_date": "2026-09-01"
   },
   {
    "code": "002601",
@@ -73,20 +73,20 @@
    "last_date": "2026-09-01"
   },
   {
+   "code": "301533",
+   "name": "威马农机",
+   "count": 19,
+   "dec_count": 4,
+   "first_date": "2026-07-24",
+   "last_date": "2026-09-04"
+  },
+  {
    "code": "002024",
    "name": "ST易购",
    "count": 19,
    "dec_count": 0,
    "first_date": "2026-05-27",
    "last_date": "2026-08-06"
-  },
-  {
-   "code": "301533",
-   "name": "威马农机",
-   "count": 18,
-   "dec_count": 4,
-   "first_date": "2026-07-24",
-   "last_date": "2026-09-03"
   },
   {
    "code": "603312",
