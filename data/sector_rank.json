@@ -1,82 +1,82 @@
 [
  {
-  "name": "养殖业",
-  "pct": 4.36,
-  "leader": "罗牛山",
-  "leader_pct": 10.05,
-  "up_count": 33,
-  "down_count": 3
- },
- {
-  "name": "农产品加工",
-  "pct": 3.6,
-  "leader": "播恩集团",
-  "leader_pct": 10.04,
-  "up_count": 40,
-  "down_count": 3
- },
- {
-  "name": "白酒",
-  "pct": 2.87,
-  "leader": "顺鑫农业",
-  "leader_pct": 5.35,
-  "up_count": 19,
+  "name": "元件",
+  "pct": 6.83,
+  "leader": "则成电子",
+  "leader_pct": 29.97,
+  "up_count": 63,
   "down_count": 0
  },
  {
-  "name": "种植业与林业",
-  "pct": 2.48,
-  "leader": "亚盛集团",
-  "leader_pct": 10.1,
-  "up_count": 26,
-  "down_count": 3
- },
- {
-  "name": "影视院线",
-  "pct": 2.44,
-  "leader": "欢瑞世纪",
-  "leader_pct": 10.04,
-  "up_count": 19,
-  "down_count": 1
- },
- {
-  "name": "文化传媒",
-  "pct": 2.44,
-  "leader": "易点天下",
-  "leader_pct": 11.12,
-  "up_count": 78,
-  "down_count": 7
- },
- {
-  "name": "饮料制造",
-  "pct": 2.23,
-  "leader": "古越龙山",
-  "leader_pct": 10.06,
-  "up_count": 42,
-  "down_count": 5
- },
- {
-  "name": "食品加工制造",
-  "pct": 1.91,
-  "leader": "安记食品",
-  "leader_pct": 10.04,
-  "up_count": 55,
-  "down_count": 11
- },
- {
-  "name": "游戏",
-  "pct": 1.81,
-  "leader": "世纪华通",
-  "leader_pct": 7.96,
-  "up_count": 20,
+  "name": "非金属材料",
+  "pct": 4.48,
+  "leader": "太力科技",
+  "leader_pct": 16.73,
+  "up_count": 14,
   "down_count": 2
  },
  {
-  "name": "旅游及酒店",
-  "pct": 1.47,
-  "leader": "华天酒店",
+  "name": "种植业与林业",
+  "pct": 4.33,
+  "leader": "亚盛集团",
   "leader_pct": 10.09,
-  "up_count": 27,
+  "up_count": 29,
+  "down_count": 1
+ },
+ {
+  "name": "电子化学品",
+  "pct": 4.1,
+  "leader": "中石科技",
+  "leader_pct": 17.39,
+  "up_count": 42,
+  "down_count": 1
+ },
+ {
+  "name": "通信设备",
+  "pct": 3.77,
+  "leader": "蘅东光",
+  "leader_pct": 18.86,
+  "up_count": 69,
+  "down_count": 20
+ },
+ {
+  "name": "农产品加工",
+  "pct": 3.09,
+  "leader": "播恩集团",
+  "leader_pct": 10.03,
+  "up_count": 38,
+  "down_count": 5
+ },
+ {
+  "name": "自动化设备",
+  "pct": 3.04,
+  "leader": "智立方",
+  "leader_pct": 15.04,
+  "up_count": 83,
+  "down_count": 14
+ },
+ {
+  "name": "其他电子",
+  "pct": 2.87,
+  "leader": "瑞可达",
+  "leader_pct": 9.05,
+  "up_count": 33,
+  "down_count": 1
+ },
+ {
+  "name": "旅游及酒店",
+  "pct": 2.61,
+  "leader": "华天酒店",
+  "leader_pct": 10.02,
+  "up_count": 32,
+  "down_count": 3
+ },
+ {
+  "name": "其他电源设备",
+  "pct": 2.59,
+  "leader": "中远通",
+  "leader_pct": 20.0,
+  "up_count": 26,
   "down_count": 7
  }
 ]

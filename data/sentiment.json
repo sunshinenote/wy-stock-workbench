@@ -1,51 +1,55 @@
 {
- "date": "2026-09-06",
- "zt": 39,
- "dt": 9,
- "zb": 48,
- "zb_rate": 55.2,
- "max_lb": 5,
+ "date": "2026-09-07",
+ "zt": 93,
+ "dt": 2,
+ "zb": 19,
+ "zb_rate": 17.0,
+ "max_lb": 6,
  "lb_dist": [
   {
    "lb": 1,
-   "count": 32
+   "count": 80
   },
   {
    "lb": 2,
-   "count": 6
+   "count": 9
   },
   {
-   "lb": 5,
-   "count": 1
-  }
- ],
- "score": 44,
- "level": "复苏",
- "note": "炸板率偏高，注意分歧",
- "industries": [
-  {
-   "name": "饲料",
-   "count": 4
-  },
-  {
-   "name": "养殖业",
+   "lb": 3,
    "count": 3
   },
   {
-   "name": "出版",
-   "count": 2
+   "lb": 6,
+   "count": 1
+  }
+ ],
+ "score": 85,
+ "level": "过热",
+ "note": "",
+ "industries": [
+  {
+   "name": "元件",
+   "count": 14
   },
   {
-   "name": "非白酒",
-   "count": 2
-  },
-  {
-   "name": "种植业",
-   "count": 2
+   "name": "通信设备",
+   "count": 8
   },
   {
    "name": "汽车零部",
-   "count": 2
+   "count": 7
+  },
+  {
+   "name": "一般零售",
+   "count": 6
+  },
+  {
+   "name": "种植业",
+   "count": 4
+  },
+  {
+   "name": "出版",
+   "count": 3
   }
  ]
 }

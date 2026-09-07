@@ -1,203 +1,5 @@
 [
  {
-  "date": "2026-09-07",
-  "time": "06:45",
-  "country": "新西兰",
-  "importance": "低",
-  "event": "新西兰第二季度季调后制造业销售额季率(%)",
-  "forecast": "nan",
-  "previous": "2.8"
- },
- {
-  "date": "2026-09-07",
-  "time": "07:50",
-  "country": "日本",
-  "importance": "低",
-  "event": "日本8月外汇储备(亿美元)",
-  "forecast": "nan",
-  "previous": "12871.0"
- },
- {
-  "date": "2026-09-07",
-  "time": "09:30",
-  "country": "澳大利亚",
-  "importance": "低",
-  "event": "澳大利亚8月季调后ANZ总招聘广告年率(%)",
-  "forecast": "nan",
-  "previous": "2.1"
- },
- {
-  "date": "2026-09-07",
-  "time": "09:30",
-  "country": "澳大利亚",
-  "importance": "低",
-  "event": "澳大利亚8月季调后ANZ总招聘广告月率(%)",
-  "forecast": "nan",
-  "previous": "0.8"
- },
- {
-  "date": "2026-09-07",
-  "time": "11:00",
-  "country": "印度尼西亚",
-  "importance": "低",
-  "event": "印尼8月外汇储备(亿美元)",
-  "forecast": "nan",
-  "previous": "1453.4"
- },
- {
-  "date": "2026-09-07",
-  "time": "14:00",
-  "country": "德国",
-  "importance": "中",
-  "event": "德国7月季调后工业产出月率(%)",
-  "forecast": "0.3",
-  "previous": "0.2"
- },
- {
-  "date": "2026-09-07",
-  "time": "14:00",
-  "country": "德国",
-  "importance": "中",
-  "event": "德国7月工作日调整后工业产出年率(%)",
-  "forecast": "nan",
-  "previous": "-0.1"
- },
- {
-  "date": "2026-09-07",
-  "time": "15:00",
-  "country": "瑞士",
-  "importance": "中",
-  "event": "瑞士8月季调后失业率(%)",
-  "forecast": "nan",
-  "previous": "3.1"
- },
- {
-  "date": "2026-09-07",
-  "time": "15:00",
-  "country": "瑞士",
-  "importance": "中",
-  "event": "瑞士8月未季调失业率(%)",
-  "forecast": "nan",
-  "previous": "3.0"
- },
- {
-  "date": "2026-09-07",
-  "time": "15:10",
-  "country": "中国",
-  "importance": "中",
-  "event": "中国9月7日上期所每日仓单变动-白银(千克)",
-  "forecast": "nan",
-  "previous": "6846.0"
- },
- {
-  "date": "2026-09-07",
-  "time": "15:10",
-  "country": "中国",
-  "importance": "中",
-  "event": "中国9月7日上期所每日仓单变动-铜(吨)",
-  "forecast": "nan",
-  "previous": "-1777.0"
- },
- {
-  "date": "2026-09-07",
-  "time": "15:10",
-  "country": "中国",
-  "importance": "中",
-  "event": "中国9月7日上期所每日仓单变动-黄金(千克)",
-  "forecast": "nan",
-  "previous": ""
- },
- {
-  "date": "2026-09-07",
-  "time": "15:10",
-  "country": "中国",
-  "importance": "中",
-  "event": "中国9月7日上期所每日仓单变动-原油(桶)",
-  "forecast": "nan",
-  "previous": ""
- },
- {
-  "date": "2026-09-07",
-  "time": "15:10",
-  "country": "中国",
-  "importance": "中",
-  "event": "中国9月7日上期所每日仓单变动-燃料油(吨)",
-  "forecast": "nan",
-  "previous": "-21470.0"
- },
- {
-  "date": "2026-09-07",
-  "time": "16:00",
-  "country": "中国",
-  "importance": "中",
-  "event": "中国8月黄金储备量(万盎司)",
-  "forecast": "nan",
-  "previous": "7608.0"
- },
- {
-  "date": "2026-09-07",
-  "time": "16:00",
-  "country": "中国",
-  "importance": "中",
-  "event": "中国8月外汇储备(亿美元)",
-  "forecast": "34300.0",
-  "previous": "34190.0"
- },
- {
-  "date": "2026-09-07",
-  "time": "16:00",
-  "country": "中国",
-  "importance": "中",
-  "event": "中国8月黄金储备-美元计价(亿美元)",
-  "forecast": "nan",
-  "previous": "3063.0"
- },
- {
-  "date": "2026-09-07",
-  "time": "16:30",
-  "country": "欧元区",
-  "importance": "中",
-  "event": "欧元区9月Sentix投资者信心指数",
-  "forecast": "nan",
-  "previous": "0.9"
- },
- {
-  "date": "2026-09-07",
-  "time": "16:30",
-  "country": "中国香港",
-  "importance": "中",
-  "event": "中国香港8月外汇储备(亿美元)",
-  "forecast": "nan",
-  "previous": "4478.0"
- },
- {
-  "date": "2026-09-07",
-  "time": "17:00",
-  "country": "欧元区",
-  "importance": "中",
-  "event": "欧元区第二季度季调后GDP年率终值(%)",
-  "forecast": "1.0",
-  "previous": "1.0"
- },
- {
-  "date": "2026-09-07",
-  "time": "17:00",
-  "country": "欧元区",
-  "importance": "中",
-  "event": "欧元区第二季度季调后GDP季率终值(%)",
-  "forecast": "0.4",
-  "previous": "0.4"
- },
- {
-  "date": "2026-09-07",
-  "time": "18:00",
-  "country": "加拿大",
-  "importance": "中",
-  "event": "加拿大8月先行指标月率(%)",
-  "forecast": "nan",
-  "previous": "0.14"
- },
- {
   "date": "2026-09-08",
   "time": "06:30",
   "country": "美国",
@@ -518,7 +320,7 @@
   "country": "德国",
   "importance": "中",
   "event": "德国7月季调后出口月率(%)",
-  "forecast": "nan",
+  "forecast": "",
   "previous": "0.9"
  },
  {
@@ -572,7 +374,7 @@
   "country": "中国台湾",
   "importance": "高",
   "event": "中国台湾8月CPI年率(%)",
-  "forecast": "nan",
+  "forecast": "2.3",
   "previous": "2.54"
  },
  {
@@ -718,5 +520,203 @@
   "event": "美国8月纽约联储1年房价通胀预期(%)",
   "forecast": "nan",
   "previous": "3.2"
+ },
+ {
+  "date": "2026-09-08",
+  "time": "23:00",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国9月纽约联储1年黄金涨幅预期(%)",
+  "forecast": "nan",
+  "previous": "4.64438"
+ },
+ {
+  "date": "2026-09-08",
+  "time": "23:00",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国9月纽约联储未来3个月无法偿最低债平均预期(%)",
+  "forecast": "nan",
+  "previous": "12.003121"
+ },
+ {
+  "date": "2026-09-08",
+  "time": "23:00",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国9月纽约联储1年房价通胀预期(%)",
+  "forecast": "nan",
+  "previous": "3.204563"
+ },
+ {
+  "date": "2026-09-08",
+  "time": "23:00",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国8月纽约联储1年家庭支出增长预期(%)",
+  "forecast": "nan",
+  "previous": "4.9"
+ },
+ {
+  "date": "2026-09-08",
+  "time": "23:00",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国8月纽约联储1年通胀预期(%)",
+  "forecast": "nan",
+  "previous": "3.6"
+ },
+ {
+  "date": "2026-09-08",
+  "time": "23:00",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国8月纽约联储未来3个月无法偿最低债平均预期(%)",
+  "forecast": "nan",
+  "previous": "12.0"
+ },
+ {
+  "date": "2026-09-08",
+  "time": "23:30",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国9月8日6个月期国债竞拍-高配置百分比(%)",
+  "forecast": "nan",
+  "previous": "49.27"
+ },
+ {
+  "date": "2026-09-08",
+  "time": "23:30",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国9月8日3个月期国债竞拍-投标倍数(亿美元)",
+  "forecast": "nan",
+  "previous": "2.77"
+ },
+ {
+  "date": "2026-09-08",
+  "time": "23:30",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国9月8日3个月期国债竞拍-总金额(亿美元)",
+  "forecast": "nan",
+  "previous": "975.47"
+ },
+ {
+  "date": "2026-09-08",
+  "time": "23:30",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国9月8日3个月期国债竞拍-中标利率(%)",
+  "forecast": "nan",
+  "previous": "3.77"
+ },
+ {
+  "date": "2026-09-08",
+  "time": "23:30",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国9月8日6个月期国债竞拍-投标倍数(亿美元)",
+  "forecast": "nan",
+  "previous": "2.63"
+ },
+ {
+  "date": "2026-09-08",
+  "time": "23:30",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国9月8日3个月期国债竞拍-高配置百分比(%)",
+  "forecast": "nan",
+  "previous": "66.77"
+ },
+ {
+  "date": "2026-09-08",
+  "time": "23:30",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国9月8日6个月期国债竞拍-中标利率(%)",
+  "forecast": "nan",
+  "previous": "3.89"
+ },
+ {
+  "date": "2026-09-08",
+  "time": "23:30",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国9月8日6个月期国债竞拍-总金额(亿美元)",
+  "forecast": "nan",
+  "previous": "837.63"
+ },
+ {
+  "date": "2026-09-09",
+  "time": "01:00",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国9月8日3年期国债竞拍-总金额(亿美元)",
+  "forecast": "nan",
+  "previous": "726.71"
+ },
+ {
+  "date": "2026-09-09",
+  "time": "01:00",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国9月8日3年期国债竞拍-投标倍数(亿美元)",
+  "forecast": "nan",
+  "previous": "2.71"
+ },
+ {
+  "date": "2026-09-09",
+  "time": "01:00",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国9月8日3年期国债竞拍-高配置百分比(%)",
+  "forecast": "nan",
+  "previous": "18.31"
+ },
+ {
+  "date": "2026-09-09",
+  "time": "01:00",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国9月8日3年期国债竞拍-高收益率(%)",
+  "forecast": "nan",
+  "previous": "4.29"
+ },
+ {
+  "date": "2026-09-09",
+  "time": "03:00",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国7月消费信贷(亿美元)",
+  "forecast": "130.0",
+  "previous": "141.7"
+ },
+ {
+  "date": "2026-09-09",
+  "time": "04:30",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国截至9月4日当周API原油库存变动(万桶)",
+  "forecast": "nan",
+  "previous": "-259.3"
+ },
+ {
+  "date": "2026-09-09",
+  "time": "04:30",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国截至9月4日当周API每周成品油进口(万桶)",
+  "forecast": "nan",
+  "previous": "-22.6"
+ },
+ {
+  "date": "2026-09-09",
+  "time": "04:30",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国截至9月4日当周API汽油库存变动(万桶)",
+  "forecast": "nan",
+  "previous": "34.8"
  }
 ]
