@@ -1,82 +1,82 @@
 [
  {
-  "name": "元件",
-  "pct": 6.83,
-  "leader": "则成电子",
-  "leader_pct": 29.97,
-  "up_count": 63,
+  "name": "农化制品",
+  "pct": 4.7,
+  "leader": "川金诺",
+  "leader_pct": 13.69,
+  "up_count": 61,
   "down_count": 0
  },
  {
-  "name": "非金属材料",
-  "pct": 4.48,
-  "leader": "太力科技",
-  "leader_pct": 16.73,
-  "up_count": 14,
-  "down_count": 2
- },
- {
   "name": "种植业与林业",
-  "pct": 4.33,
-  "leader": "亚盛集团",
-  "leader_pct": 10.09,
+  "pct": 4.09,
+  "leader": "海南橡胶",
+  "leader_pct": 10.0,
   "up_count": 29,
   "down_count": 1
  },
  {
-  "name": "电子化学品",
-  "pct": 4.1,
-  "leader": "中石科技",
-  "leader_pct": 17.39,
-  "up_count": 42,
-  "down_count": 1
- },
- {
-  "name": "通信设备",
-  "pct": 3.77,
-  "leader": "蘅东光",
-  "leader_pct": 18.86,
-  "up_count": 69,
-  "down_count": 20
- },
- {
   "name": "农产品加工",
-  "pct": 3.09,
-  "leader": "播恩集团",
-  "leader_pct": 10.03,
-  "up_count": 38,
-  "down_count": 5
+  "pct": 3.47,
+  "leader": "欧福蛋业",
+  "leader_pct": 29.91,
+  "up_count": 39,
+  "down_count": 4
  },
  {
-  "name": "自动化设备",
-  "pct": 3.04,
-  "leader": "智立方",
-  "leader_pct": 15.04,
-  "up_count": 83,
-  "down_count": 14
+  "name": "综合",
+  "pct": 2.76,
+  "leader": "亚泰集团",
+  "leader_pct": 10.11,
+  "up_count": 16,
+  "down_count": 2
  },
  {
-  "name": "其他电子",
-  "pct": 2.87,
-  "leader": "瑞可达",
-  "leader_pct": 9.05,
-  "up_count": 33,
-  "down_count": 1
- },
- {
-  "name": "旅游及酒店",
-  "pct": 2.61,
-  "leader": "华天酒店",
-  "leader_pct": 10.02,
+  "name": "煤炭开采加工",
+  "pct": 2.58,
+  "leader": "云煤能源",
+  "leader_pct": 10.1,
   "up_count": 32,
+  "down_count": 2
+ },
+ {
+  "name": "医疗服务",
+  "pct": 2.46,
+  "leader": "奥浦迈",
+  "leader_pct": 15.69,
+  "up_count": 50,
+  "down_count": 6
+ },
+ {
+  "name": "文化传媒",
+  "pct": 2.42,
+  "leader": "中信出版",
+  "leader_pct": 19.99,
+  "up_count": 73,
+  "down_count": 10
+ },
+ {
+  "name": "钢铁",
+  "pct": 2.33,
+  "leader": "抚顺特钢",
+  "leader_pct": 4.86,
+  "up_count": 41,
   "down_count": 3
  },
  {
-  "name": "其他电源设备",
-  "pct": 2.59,
-  "leader": "中远通",
-  "leader_pct": 20.0,
-  "up_count": 26,
-  "down_count": 7
+  "name": "油气开采及服务",
+  "pct": 2.23,
+  "leader": "中曼石油",
+  "leader_pct": 6.27,
+  "up_count": 18,
+  "down_count": 1
+ },
+ {
+  "name": "工业金属",
+  "pct": 2.23,
+  "leader": "电工合金",
+  "leader_pct": 10.21,
+  "up_count": 49,
+  "down_count": 6
  }
 ]

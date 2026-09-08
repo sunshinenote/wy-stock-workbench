@@ -1,54 +1,54 @@
 {
- "date": "2026-09-07",
- "zt": 93,
- "dt": 2,
- "zb": 19,
- "zb_rate": 17.0,
- "max_lb": 6,
+ "date": "2026-09-08",
+ "zt": 74,
+ "dt": 0,
+ "zb": 27,
+ "zb_rate": 26.7,
+ "max_lb": 4,
  "lb_dist": [
   {
    "lb": 1,
-   "count": 80
+   "count": 54
   },
   {
    "lb": 2,
-   "count": 9
+   "count": 14
   },
   {
    "lb": 3,
    "count": 3
   },
   {
-   "lb": 6,
-   "count": 1
+   "lb": 4,
+   "count": 3
   }
  ],
- "score": 85,
- "level": "过热",
+ "score": 65,
+ "level": "发酵",
  "note": "",
  "industries": [
   {
-   "name": "元件",
-   "count": 14
+   "name": "农化制品",
+   "count": 9
   },
   {
-   "name": "通信设备",
-   "count": 8
-  },
-  {
-   "name": "汽车零部",
-   "count": 7
-  },
-  {
-   "name": "一般零售",
-   "count": 6
+   "name": "综合Ⅱ",
+   "count": 4
   },
   {
    "name": "种植业",
    "count": 4
   },
   {
+   "name": "通信设备",
+   "count": 3
+  },
+  {
    "name": "出版",
+   "count": 3
+  },
+  {
+   "name": "农产品加",
    "count": 3
   }
  ]
