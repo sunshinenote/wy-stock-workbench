@@ -1,82 +1,82 @@
 [
  {
   "name": "农化制品",
-  "pct": 4.7,
+  "pct": 4.71,
   "leader": "川金诺",
-  "leader_pct": 13.69,
-  "up_count": 61,
-  "down_count": 0
+  "leader_pct": 11.69,
+  "up_count": 59,
+  "down_count": 2
  },
  {
-  "name": "种植业与林业",
-  "pct": 4.09,
-  "leader": "海南橡胶",
-  "leader_pct": 10.0,
-  "up_count": 29,
+  "name": "油气开采及服务",
+  "pct": 4.23,
+  "leader": "中曼石油",
+  "leader_pct": 9.98,
+  "up_count": 18,
   "down_count": 1
  },
  {
   "name": "农产品加工",
-  "pct": 3.47,
+  "pct": 3.5,
   "leader": "欧福蛋业",
   "leader_pct": 29.91,
-  "up_count": 39,
+  "up_count": 37,
+  "down_count": 5
+ },
+ {
+  "name": "种植业与林业",
+  "pct": 3.29,
+  "leader": "亚盛集团",
+  "leader_pct": 10.0,
+  "up_count": 26,
   "down_count": 4
  },
  {
-  "name": "综合",
-  "pct": 2.76,
-  "leader": "亚泰集团",
-  "leader_pct": 10.11,
-  "up_count": 16,
-  "down_count": 2
+  "name": "医疗服务",
+  "pct": 3.08,
+  "leader": "奥浦迈",
+  "leader_pct": 20.0,
+  "up_count": 50,
+  "down_count": 6
  },
  {
   "name": "煤炭开采加工",
-  "pct": 2.58,
+  "pct": 2.96,
   "leader": "云煤能源",
   "leader_pct": 10.1,
   "up_count": 32,
   "down_count": 2
  },
  {
-  "name": "医疗服务",
-  "pct": 2.46,
-  "leader": "奥浦迈",
-  "leader_pct": 15.69,
-  "up_count": 50,
-  "down_count": 6
+  "name": "石油加工贸易",
+  "pct": 2.92,
+  "leader": "华锦股份",
+  "leader_pct": 10.02,
+  "up_count": 23,
+  "down_count": 4
+ },
+ {
+  "name": "化学原料",
+  "pct": 2.54,
+  "leader": "华昌化工",
+  "leader_pct": 10.03,
+  "up_count": 51,
+  "down_count": 7
+ },
+ {
+  "name": "综合",
+  "pct": 2.53,
+  "leader": "亚泰集团",
+  "leader_pct": 10.11,
+  "up_count": 16,
+  "down_count": 2
  },
  {
   "name": "文化传媒",
-  "pct": 2.42,
+  "pct": 2.44,
   "leader": "中信出版",
   "leader_pct": 19.99,
-  "up_count": 73,
+  "up_count": 74,
   "down_count": 10
- },
- {
-  "name": "钢铁",
-  "pct": 2.33,
-  "leader": "抚顺特钢",
-  "leader_pct": 4.86,
-  "up_count": 41,
-  "down_count": 3
- },
- {
-  "name": "油气开采及服务",
-  "pct": 2.23,
-  "leader": "中曼石油",
-  "leader_pct": 6.27,
-  "up_count": 18,
-  "down_count": 1
- },
- {
-  "name": "工业金属",
-  "pct": 2.23,
-  "leader": "电工合金",
-  "leader_pct": 10.21,
-  "up_count": 49,
-  "down_count": 6
  }
 ]

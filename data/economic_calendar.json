@@ -330,7 +330,7 @@
   "importance": "中",
   "event": "中国9月9日上期所每日仓单变动-黄金(千克)",
   "forecast": "nan",
-  "previous": "nan"
+  "previous": ""
  },
  {
   "date": "2026-09-09",
@@ -339,7 +339,7 @@
   "importance": "中",
   "event": "中国9月9日上期所每日仓单变动-燃料油(吨)",
   "forecast": "nan",
-  "previous": "nan"
+  "previous": ""
  },
  {
   "date": "2026-09-09",
@@ -348,7 +348,7 @@
   "importance": "中",
   "event": "中国9月9日上期所每日仓单变动-白银(千克)",
   "forecast": "nan",
-  "previous": "nan"
+  "previous": "-1031.0"
  },
  {
   "date": "2026-09-09",
@@ -357,7 +357,7 @@
   "importance": "中",
   "event": "中国9月9日上期所每日仓单变动-原油(桶)",
   "forecast": "nan",
-  "previous": "nan"
+  "previous": ""
  },
  {
   "date": "2026-09-09",
@@ -366,7 +366,7 @@
   "importance": "中",
   "event": "中国9月9日上期所每日仓单变动-铜(吨)",
   "forecast": "nan",
-  "previous": "nan"
+  "previous": "-1903.0"
  },
  {
   "date": "2026-09-09",
