@@ -1,82 +1,82 @@
 [
  {
-  "name": "农化制品",
-  "pct": 4.71,
-  "leader": "川金诺",
-  "leader_pct": 11.69,
-  "up_count": 59,
-  "down_count": 2
- },
- {
-  "name": "油气开采及服务",
-  "pct": 4.23,
-  "leader": "中曼石油",
-  "leader_pct": 9.98,
-  "up_count": 18,
-  "down_count": 1
- },
- {
-  "name": "农产品加工",
-  "pct": 3.5,
-  "leader": "欧福蛋业",
-  "leader_pct": 29.91,
-  "up_count": 37,
-  "down_count": 5
- },
- {
-  "name": "种植业与林业",
-  "pct": 3.29,
-  "leader": "亚盛集团",
-  "leader_pct": 10.0,
-  "up_count": 26,
-  "down_count": 4
- },
- {
-  "name": "医疗服务",
-  "pct": 3.08,
-  "leader": "奥浦迈",
-  "leader_pct": 20.0,
-  "up_count": 50,
-  "down_count": 6
- },
- {
   "name": "煤炭开采加工",
-  "pct": 2.96,
+  "pct": 3.35,
   "leader": "云煤能源",
-  "leader_pct": 10.1,
+  "leader_pct": 10.07,
   "up_count": 32,
   "down_count": 2
  },
  {
-  "name": "石油加工贸易",
-  "pct": 2.92,
-  "leader": "华锦股份",
-  "leader_pct": 10.02,
-  "up_count": 23,
-  "down_count": 4
- },
- {
-  "name": "化学原料",
-  "pct": 2.54,
-  "leader": "华昌化工",
+  "name": "港口航运",
+  "pct": 2.88,
+  "leader": "南京港",
   "leader_pct": 10.03,
-  "up_count": 51,
-  "down_count": 7
+  "up_count": 36,
+  "down_count": 0
  },
  {
-  "name": "综合",
-  "pct": 2.53,
-  "leader": "亚泰集团",
-  "leader_pct": 10.11,
-  "up_count": 16,
+  "name": "元件",
+  "pct": 2.2,
+  "leader": "胜业电气",
+  "leader_pct": 11.29,
+  "up_count": 47,
+  "down_count": 15
+ },
+ {
+  "name": "贵金属",
+  "pct": 2.09,
+  "leader": "湖南黄金",
+  "leader_pct": 10.02,
+  "up_count": 12,
   "down_count": 2
  },
  {
-  "name": "文化传媒",
-  "pct": 2.44,
-  "leader": "中信出版",
-  "leader_pct": 19.99,
-  "up_count": 74,
+  "name": "工业金属",
+  "pct": 1.72,
+  "leader": "精艺股份",
+  "leader_pct": 9.97,
+  "up_count": 41,
+  "down_count": 13
+ },
+ {
+  "name": "军工装备",
+  "pct": 1.71,
+  "leader": "中科海讯",
+  "leader_pct": 11.59,
+  "up_count": 60,
+  "down_count": 21
+ },
+ {
+  "name": "非金属材料",
+  "pct": 1.15,
+  "leader": "联瑞新材",
+  "leader_pct": 8.41,
+  "up_count": 10,
+  "down_count": 7
+ },
+ {
+  "name": "石油加工贸易",
+  "pct": 1.01,
+  "leader": "国创高新",
+  "leader_pct": 10.14,
+  "up_count": 17,
   "down_count": 10
+ },
+ {
+  "name": "电力",
+  "pct": 0.98,
+  "leader": "新中港",
+  "leader_pct": 9.99,
+  "up_count": 81,
+  "down_count": 23
+ },
+ {
+  "name": "橡胶制品",
+  "pct": 0.93,
+  "leader": "彤程新材",
+  "leader_pct": 10.0,
+  "up_count": 11,
+  "down_count": 11
  }
 ]

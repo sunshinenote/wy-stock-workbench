@@ -1,55 +1,55 @@
 {
- "date": "2026-09-08",
- "zt": 73,
- "dt": 0,
- "zb": 37,
- "zb_rate": 33.6,
- "max_lb": 4,
+ "date": "2026-09-09",
+ "zt": 48,
+ "dt": 7,
+ "zb": 27,
+ "zb_rate": 36.0,
+ "max_lb": 5,
  "lb_dist": [
   {
    "lb": 1,
-   "count": 55
+   "count": 33
   },
   {
    "lb": 2,
-   "count": 12
+   "count": 10
   },
   {
    "lb": 3,
-   "count": 3
+   "count": 4
   },
   {
-   "lb": 4,
-   "count": 3
+   "lb": 5,
+   "count": 1
   }
  ],
- "score": 61,
- "level": "发酵",
+ "score": 50,
+ "level": "复苏",
  "note": "",
  "industries": [
   {
-   "name": "农化制品",
-   "count": 8
-  },
-  {
-   "name": "出版",
-   "count": 4
-  },
-  {
    "name": "农产品加",
    "count": 4
-  },
-  {
-   "name": "综合Ⅱ",
-   "count": 3
   },
   {
    "name": "一般零售",
    "count": 3
   },
   {
-   "name": "化学原料",
+   "name": "航运港口",
    "count": 3
+  },
+  {
+   "name": "电网设备",
+   "count": 3
+  },
+  {
+   "name": "农化制品",
+   "count": 2
+  },
+  {
+   "name": "家居用品",
+   "count": 2
   }
  ]
 }
