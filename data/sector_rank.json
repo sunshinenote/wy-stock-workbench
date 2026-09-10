@@ -1,1 +1,82 @@
-[]
+[
+ {
+  "name": "银行",
+  "pct": 1.47,
+  "leader": "宁波银行",
+  "leader_pct": 3.49,
+  "up_count": 42,
+  "down_count": 0
+ },
+ {
+  "name": "厨卫电器",
+  "pct": 1.41,
+  "leader": "万和电气",
+  "leader_pct": 10.03,
+  "up_count": 4,
+  "down_count": 5
+ },
+ {
+  "name": "元件",
+  "pct": 1.31,
+  "leader": "逸豪新材",
+  "leader_pct": 15.29,
+  "up_count": 36,
+  "down_count": 27
+ },
+ {
+  "name": "多元金融",
+  "pct": 1.01,
+  "leader": "新力金融",
+  "leader_pct": 10.07,
+  "up_count": 19,
+  "down_count": 6
+ },
+ {
+  "name": "电力",
+  "pct": 0.93,
+  "leader": "华银电力",
+  "leader_pct": 10.06,
+  "up_count": 64,
+  "down_count": 41
+ },
+ {
+  "name": "证券",
+  "pct": 0.84,
+  "leader": "哈投股份",
+  "leader_pct": 5.26,
+  "up_count": 45,
+  "down_count": 5
+ },
+ {
+  "name": "风电设备",
+  "pct": 0.71,
+  "leader": "天顺风能",
+  "leader_pct": 10.03,
+  "up_count": 17,
+  "down_count": 15
+ },
+ {
+  "name": "燃气",
+  "pct": 0.56,
+  "leader": "美能能源",
+  "leader_pct": 10.05,
+  "up_count": 10,
+  "down_count": 16
+ },
+ {
+  "name": "保险",
+  "pct": 0.31,
+  "leader": "中国太保",
+  "leader_pct": 0.6,
+  "up_count": 4,
+  "down_count": 1
+ },
+ {
+  "name": "建筑材料",
+  "pct": 0.04,
+  "leader": "再升科技",
+  "leader_pct": 10.05,
+  "up_count": 21,
+  "down_count": 48
+ }
+]
