@@ -1,55 +1,55 @@
 {
- "date": "2026-09-09",
- "zt": 48,
- "dt": 7,
- "zb": 27,
- "zb_rate": 36.0,
- "max_lb": 5,
+ "date": "2026-09-10",
+ "zt": 35,
+ "dt": 11,
+ "zb": 22,
+ "zb_rate": 38.6,
+ "max_lb": 4,
  "lb_dist": [
   {
    "lb": 1,
-   "count": 33
+   "count": 26
   },
   {
    "lb": 2,
-   "count": 10
+   "count": 6
   },
   {
    "lb": 3,
-   "count": 4
+   "count": 2
   },
   {
-   "lb": 5,
+   "lb": 4,
    "count": 1
   }
  ],
- "score": 50,
- "level": "复苏",
- "note": "",
+ "score": 38,
+ "level": "冰点",
+ "note": "跌停家数较多，情绪走弱",
  "industries": [
   {
-   "name": "农产品加",
-   "count": 4
+   "name": "电力",
+   "count": 5
   },
   {
-   "name": "一般零售",
-   "count": 3
-  },
-  {
-   "name": "航运港口",
-   "count": 3
-  },
-  {
-   "name": "电网设备",
-   "count": 3
-  },
-  {
-   "name": "农化制品",
+   "name": "多元金融",
    "count": 2
   },
   {
-   "name": "家居用品",
+   "name": "玻璃玻纤",
    "count": 2
+  },
+  {
+   "name": "燃气Ⅱ",
+   "count": 2
+  },
+  {
+   "name": "元件",
+   "count": 2
+  },
+  {
+   "name": "旅游及景",
+   "count": 1
   }
  ]
 }
