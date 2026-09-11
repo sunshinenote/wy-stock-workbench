@@ -1,18 +1,18 @@
 {
- "date": "2026-09-10",
- "zt": 35,
- "dt": 11,
- "zb": 22,
- "zb_rate": 38.6,
+ "date": "2026-09-11",
+ "zt": 40,
+ "dt": 21,
+ "zb": 18,
+ "zb_rate": 31.0,
  "max_lb": 4,
  "lb_dist": [
   {
    "lb": 1,
-   "count": 26
+   "count": 33
   },
   {
    "lb": 2,
-   "count": 6
+   "count": 4
   },
   {
    "lb": 3,
@@ -23,33 +23,33 @@
    "count": 1
   }
  ],
- "score": 38,
- "level": "冰点",
+ "score": 42,
+ "level": "复苏",
  "note": "跌停家数较多，情绪走弱",
  "industries": [
   {
-   "name": "电力",
-   "count": 5
+   "name": "元件",
+   "count": 9
   },
   {
-   "name": "多元金融",
-   "count": 2
+   "name": "电力",
+   "count": 4
+  },
+  {
+   "name": "地面兵装",
+   "count": 3
+  },
+  {
+   "name": "通信设备",
+   "count": 3
   },
   {
    "name": "玻璃玻纤",
    "count": 2
   },
   {
-   "name": "燃气Ⅱ",
+   "name": "环境治理",
    "count": 2
-  },
-  {
-   "name": "元件",
-   "count": 2
-  },
-  {
-   "name": "旅游及景",
-   "count": 1
   }
  ]
 }

@@ -1,82 +1,82 @@
 [
  {
-  "name": "银行",
-  "pct": 1.47,
-  "leader": "宁波银行",
-  "leader_pct": 3.49,
-  "up_count": 42,
-  "down_count": 0
- },
- {
-  "name": "厨卫电器",
-  "pct": 1.41,
-  "leader": "万和电气",
-  "leader_pct": 10.03,
-  "up_count": 4,
-  "down_count": 5
- },
- {
   "name": "元件",
-  "pct": 1.31,
-  "leader": "逸豪新材",
-  "leader_pct": 15.29,
-  "up_count": 36,
-  "down_count": 27
- },
- {
-  "name": "多元金融",
-  "pct": 1.01,
-  "leader": "新力金融",
-  "leader_pct": 10.07,
-  "up_count": 19,
-  "down_count": 6
- },
- {
-  "name": "电力",
-  "pct": 0.93,
-  "leader": "华银电力",
-  "leader_pct": 10.06,
-  "up_count": 64,
-  "down_count": 41
- },
- {
-  "name": "证券",
-  "pct": 0.84,
-  "leader": "哈投股份",
-  "leader_pct": 5.26,
-  "up_count": 45,
-  "down_count": 5
- },
- {
-  "name": "风电设备",
-  "pct": 0.71,
-  "leader": "天顺风能",
-  "leader_pct": 10.03,
-  "up_count": 17,
+  "pct": 3.11,
+  "leader": "则成电子",
+  "leader_pct": 15.16,
+  "up_count": 48,
   "down_count": 15
  },
  {
-  "name": "燃气",
-  "pct": 0.56,
-  "leader": "美能能源",
-  "leader_pct": 10.05,
-  "up_count": 10,
-  "down_count": 16
+  "name": "通信设备",
+  "pct": 0.42,
+  "leader": "神宇股份",
+  "leader_pct": 19.98,
+  "up_count": 37,
+  "down_count": 53
  },
  {
-  "name": "保险",
-  "pct": 0.31,
-  "leader": "中国太保",
-  "leader_pct": 0.6,
+  "name": "影视院线",
+  "pct": 0.35,
+  "leader": "中视传媒",
+  "leader_pct": 10.02,
+  "up_count": 6,
+  "down_count": 14
+ },
+ {
+  "name": "军工电子",
+  "pct": 0.17,
+  "leader": "成电光信",
+  "leader_pct": 10.54,
+  "up_count": 26,
+  "down_count": 35
+ },
+ {
+  "name": "军工装备",
+  "pct": 0.01,
+  "leader": "光电股份",
+  "leader_pct": 10.02,
+  "up_count": 31,
+  "down_count": 51
+ },
+ {
+  "name": "黑色家电",
+  "pct": -0.04,
+  "leader": "高斯贝尔",
+  "leader_pct": 10.04,
   "up_count": 4,
-  "down_count": 1
+  "down_count": 5
  },
  {
-  "name": "建筑材料",
-  "pct": 0.04,
-  "leader": "再升科技",
-  "leader_pct": 10.05,
-  "up_count": 21,
-  "down_count": 48
+  "name": "电力",
+  "pct": -0.37,
+  "leader": "杭州热电",
+  "leader_pct": 10.0,
+  "up_count": 35,
+  "down_count": 70
+ },
+ {
+  "name": "风电设备",
+  "pct": -0.43,
+  "leader": "大金重工",
+  "leader_pct": 5.25,
+  "up_count": 12,
+  "down_count": 20
+ },
+ {
+  "name": "文化传媒",
+  "pct": -0.67,
+  "leader": "风语筑",
+  "leader_pct": 10.03,
+  "up_count": 16,
+  "down_count": 64
+ },
+ {
+  "name": "其他电子",
+  "pct": -0.89,
+  "leader": "远望谷",
+  "leader_pct": 9.99,
+  "up_count": 5,
+  "down_count": 29
  }
 ]
