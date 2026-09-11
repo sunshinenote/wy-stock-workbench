@@ -67,18 +67,26 @@
   {
    "code": "301429",
    "name": "森泰股份",
-   "count": 23,
+   "count": 24,
    "dec_count": 0,
    "first_date": "2026-06-08",
-   "last_date": "2026-09-01"
+   "last_date": "2026-09-10"
   },
   {
    "code": "301533",
    "name": "威马农机",
-   "count": 21,
+   "count": 23,
    "dec_count": 4,
    "first_date": "2026-07-24",
-   "last_date": "2026-09-09"
+   "last_date": "2026-09-10"
+  },
+  {
+   "code": "301089",
+   "name": "拓新药业",
+   "count": 20,
+   "dec_count": 0,
+   "first_date": "2026-07-17",
+   "last_date": "2026-09-10"
   },
   {
    "code": "002024",
@@ -87,14 +95,6 @@
    "dec_count": 0,
    "first_date": "2026-05-27",
    "last_date": "2026-08-06"
-  },
-  {
-   "code": "301089",
-   "name": "拓新药业",
-   "count": 18,
-   "dec_count": 0,
-   "first_date": "2026-07-17",
-   "last_date": "2026-09-09"
   },
   {
    "code": "603312",
