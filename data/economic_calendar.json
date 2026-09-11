@@ -267,7 +267,7 @@
   "importance": "中",
   "event": "中国9月14日上期所每日仓单变动-黄金(千克)",
   "forecast": "nan",
-  "previous": "nan"
+  "previous": ""
  },
  {
   "date": "2026-09-14",
@@ -276,7 +276,7 @@
   "importance": "中",
   "event": "中国9月14日上期所每日仓单变动-白银(千克)",
   "forecast": "nan",
-  "previous": "nan"
+  "previous": "9834.0"
  },
  {
   "date": "2026-09-14",
@@ -285,7 +285,7 @@
   "importance": "中",
   "event": "中国9月14日上期所每日仓单变动-原油(桶)",
   "forecast": "nan",
-  "previous": "nan"
+  "previous": ""
  },
  {
   "date": "2026-09-14",
@@ -294,7 +294,7 @@
   "importance": "中",
   "event": "中国9月14日上期所每日仓单变动-燃料油(吨)",
   "forecast": "nan",
-  "previous": "nan"
+  "previous": "-1000.0"
  },
  {
   "date": "2026-09-14",
@@ -303,7 +303,25 @@
   "importance": "中",
   "event": "中国9月14日上期所每日仓单变动-铜(吨)",
   "forecast": "nan",
-  "previous": "nan"
+  "previous": "-301.0"
+ },
+ {
+  "date": "2026-09-14",
+  "time": "16:00",
+  "country": "中国",
+  "importance": "中",
+  "event": "中国8月M0货币供应年率(%)",
+  "forecast": "nan",
+  "previous": "11.6"
+ },
+ {
+  "date": "2026-09-14",
+  "time": "16:00",
+  "country": "中国",
+  "importance": "中",
+  "event": "中国8月M1货币供应年率(%)",
+  "forecast": "nan",
+  "previous": "4.0"
  },
  {
   "date": "2026-09-14",
@@ -700,23 +718,5 @@
   "event": "新西兰8月电子卡零售销售月率(%)",
   "forecast": "nan",
   "previous": "1.3"
- },
- {
-  "date": "2026-09-15",
-  "time": "08:30",
-  "country": "澳大利亚",
-  "importance": "中",
-  "event": "澳大利亚截至9月13日当周ANZ消费者信心指数",
-  "forecast": "nan",
-  "previous": "71.9"
- },
- {
-  "date": "2026-09-15",
-  "time": "09:20",
-  "country": "中国",
-  "importance": "高",
-  "event": "中国9月15日中期借贷便利MLF操作规模(亿元)",
-  "forecast": "nan",
-  "previous": "nan"
  }
 ]
