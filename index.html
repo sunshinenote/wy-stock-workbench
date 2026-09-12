@@ -105,6 +105,13 @@ button.danger{color:var(--danger)}
 .rank-sum span{font-size:12px;color:var(--txt2)}
 .rank-pct{flex:none;width:62px;text-align:right;font-size:13px;font-weight:600;font-variant-numeric:tabular-nums}
 
+/* 高管增持两栏对比 */
+.exec-cmp{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.exec-col{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:10px 12px}
+.exec-col h4{font-size:14px;font-weight:600;display:flex;align-items:center;gap:6px;margin-bottom:2px}
+.exec-col .exec-sub{font-size:12px;color:var(--txt3);margin-bottom:6px}
+.exec-col .rank-row:last-child{border-bottom:none}
+
 /* sentiment thermometer */
 .senti-main{display:flex;align-items:center;gap:16px;background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:14px;margin-bottom:10px}
 .senti-score{flex:none;width:82px;height:82px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#fff;border:4px solid #999;color:#555}
@@ -259,6 +266,7 @@ svg text{font-family:inherit}
   .tbl.mobile-cards{display:block}
   .tbl.desktop{display:none}
   .stat .v{font-size:20px}
+  .exec-cmp{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -376,7 +384,7 @@ svg text{font-family:inherit}
     <div class="tbl-wrap" data-page-node-id="ITkesGLVJCFgPZEWqyDrzu">
       <table class="tbl" id="earnTbl" data-page-node-id="SDB7sQ62xapK9c1DzsDRAt"></table>
     </div>
-    <h3 data-page-node-id="HriqGBYeVfinYYpAgZ2OCQ">高管增持 · 近半年 ≥5 次 <span style="font-weight:400;font-size:12px;color:var(--txt3)" data-page-node-id="ZdDZ7wJs7TyVv5DLuNxzkv">内部人信号 · 含首次增持时间</span></h3>
+    <h3 data-page-node-id="HriqGBYeVfinYYpAgZ2OCQ">高管增持 · 两栏对比 <span style="font-weight:400;font-size:12px;color:var(--txt3)" data-page-node-id="ZdDZ7wJs7TyVv5DLuNxzkv">左=近半年 · 右=1年前~半年前 · ≥5次增持</span></h3>
     <div id="execHoldBox" data-page-node-id="9QGIIDSFuJZMxhMXdLO9QL"></div>
     <h3 data-page-node-id="gpzbHrERdJlde4nzvwmDAp">私募 / 公募增持 <span style="font-weight:400;font-size:12px;color:var(--txt3)" data-page-node-id="swZCeDI7hZclNrfgHXbJS2">机构季报 · 滞后提示</span></h3>
     <div id="instHoldBox" data-page-node-id="VfdnRC1So8zGtHZoSLTfVf"></div>
@@ -612,7 +620,8 @@ function demoData(){
       {name:'金莺',count:4,summary:{"新进":3,"增加":1,"不变":0,"减少":0},stocks:[{code:'002597',name:'金禾实业',change:'增加',value:2.23,shares:11393743,ann_date:'2026-08-29'},{code:'002250',name:'联化科技',change:'新进',value:1.85,shares:13511100,ann_date:'2026-08-26'},{code:'600740',name:'山西焦化',change:'新进',value:0.33,shares:10305400,ann_date:'2026-08-25'},{code:'003003',name:'天元股份',change:'新进',value:0.14,shares:1416200,ann_date:'2026-08-29'}]},
       {name:'刘佳',count:3,summary:{"新进":0,"增加":3,"不变":0,"减少":0},stocks:[{code:'600827',name:'百联股份',change:'增加',value:0.55,shares:7388591,ann_date:'2026-08-29'},{code:'300452',name:'山河药辅',change:'增加',value:0.26,shares:2224089,ann_date:'2026-08-22'},{code:'002678',name:'珠江钢琴',change:'增加',value:0.13,shares:2959871,ann_date:'2026-08-25'}]},
       {name:'付前军',count:3,summary:{"新进":0,"增加":2,"不变":1,"减少":0},stocks:[{code:'600712',name:'南宁百货',change:'增加',value:0.72,shares:15600000,ann_date:'2026-08-21'},{code:'000702',name:'正虹科技',change:'增加',value:0.49,shares:9830000,ann_date:'2026-08-26'},{code:'600076',name:'康欣新材',change:'不变',value:0.33,shares:9900000,ann_date:'2026-08-26'}]} ] },
-    execHold:{ stocks:[ {code:'002637',name:'赞宇科技',count:68,dec_count:0,first_date:'2026-03-19',last_date:'2026-08-24'},
+    execHold:{ prior_range:'2025-09-10 ~ 2026-03-13',
+      stocks:[ {code:'002637',name:'赞宇科技',count:68,dec_count:0,first_date:'2026-03-19',last_date:'2026-08-24'},
       {code:'002832',name:'比音勒芬',count:36,dec_count:0,first_date:'2026-03-06',last_date:'2026-07-28'},
       {code:'600328',name:'中盐化工',count:35,dec_count:0,first_date:'2026-05-15',last_date:'2026-08-07'},
       {code:'603098',name:'森特股份',count:33,dec_count:0,first_date:'2025-12-29',last_date:'2026-09-03'},
@@ -626,7 +635,22 @@ function demoData(){
       {code:'301089',name:'拓新药业',count:18,dec_count:0,first_date:'2026-07-17',last_date:'2026-09-09'},
       {code:'603312',name:'西典新能',count:18,dec_count:0,first_date:'2026-05-28',last_date:'2026-08-27'},
       {code:'603031',name:'安孚科技',count:18,dec_count:0,first_date:'2026-03-17',last_date:'2026-06-18'},
-      {code:'600873',name:'梅花生物',count:18,dec_count:0,first_date:'2026-04-22',last_date:'2026-04-30'} ] },
+      {code:'600873',name:'梅花生物',count:18,dec_count:0,first_date:'2026-04-22',last_date:'2026-04-30'} ],
+      prior:[ {code:'603098',name:'森特股份',count:38,dec_count:0,first_date:'2025-12-29',last_date:'2026-03-13'},
+      {code:'300304',name:'云意电气',count:31,dec_count:0,first_date:'2025-10-28',last_date:'2026-03-09'},
+      {code:'601916',name:'浙商银行',count:31,dec_count:0,first_date:'2025-09-16',last_date:'2025-12-16'},
+      {code:'000567',name:'海德股份',count:25,dec_count:0,first_date:'2025-09-18',last_date:'2025-11-04'},
+      {code:'600557',name:'康缘药业',count:24,dec_count:0,first_date:'2025-11-11',last_date:'2025-12-04'},
+      {code:'603299',name:'苏盐井神',count:19,dec_count:0,first_date:'2025-12-04',last_date:'2026-01-05'},
+      {code:'603132',name:'金徽股份',count:19,dec_count:0,first_date:'2025-09-16',last_date:'2025-10-16'},
+      {code:'002966',name:'苏州银行',count:19,dec_count:0,first_date:'2025-09-10',last_date:'2025-09-15'},
+      {code:'300760',name:'迈瑞医疗',count:18,dec_count:0,first_date:'2025-11-06',last_date:'2026-03-04'},
+      {code:'605338',name:'巴比食品',count:17,dec_count:0,first_date:'2025-09-24',last_date:'2026-03-02'},
+      {code:'601666',name:'平煤股份',count:16,dec_count:0,first_date:'2026-01-04',last_date:'2026-01-04'},
+      {code:'601665',name:'齐鲁银行',count:15,dec_count:0,first_date:'2025-09-17',last_date:'2025-12-15'},
+      {code:'688126',name:'沪硅产业',count:14,dec_count:0,first_date:'2025-11-28',last_date:'2025-12-30'},
+      {code:'300190',name:'维尔利',count:13,dec_count:0,first_date:'2025-10-10',last_date:'2026-03-09'},
+      {code:'002538',name:'ST司特',count:12,dec_count:0,first_date:'2025-09-16',last_date:'2025-11-21'} ] },
     instHold:{ report:'2026-06-30', prev:'2026-03-31',
       private:[ {code:'301557',name:'常友科技',count:6,consec:true},{code:'301680',name:'固德电材',count:6,consec:true},{code:'688755',name:'汉邦科技',count:6,consec:false},{code:'003026',name:'中晶科技',count:6,consec:true},{code:'301042',name:'安联锐视',count:5,consec:true},{code:'688583',name:'思看科技',count:5,consec:true},{code:'002961',name:'瑞达期货',count:5,consec:false},{code:'300084',name:'海默科技',count:4,consec:false},{code:'300607',name:'拓斯达',count:4,consec:false},{code:'301121',name:'紫建电子',count:4,consec:true},{code:'301209',name:'联合化学',count:4,consec:true},{code:'301590',name:'优优绿能',count:4,consec:false} ],
       public:[ {code:'301362',name:'民爆光电',count:7,consec:true},{code:'600757',name:'长江传媒',count:7,consec:true},{code:'600997',name:'开滦股份',count:7,consec:true},{code:'601038',name:'一拖股份',count:7,consec:true},{code:'300548',name:'长芯博创',count:6,consec:true},{code:'300820',name:'英杰电气',count:6,consec:true},{code:'300969',name:'恒帅股份',count:6,consec:true},{code:'301151',name:'冠龙节能',count:6,consec:true},{code:'301217',name:'铜冠铜箔',count:6,consec:true},{code:'301446',name:'福事特',count:6,consec:false},{code:'600105',name:'永鼎股份',count:6,consec:true},{code:'603115',name:'海星股份',count:6,consec:true} ] },
@@ -1094,15 +1118,21 @@ let curNs = '';
 function renderExecHold(){
   const d = DATA.execHold || {};
   const box = $('execHoldBox');
-  const stocks = (d.stocks||[]).slice(0,15);
-  if(!stocks.length){ box.innerHTML = '<div class="empty">暂无高管增持数据</div>'; return; }
-  const rows = stocks.map((s,i) => {
+  const recent = (d.stocks||[]).slice(0,15);
+  const prior = (d.prior||[]).slice(0,15);
+  if(!recent.length && !prior.length){ box.innerHTML = '<div class="empty">暂无高管增持数据</div>'; return; }
+  const rowHtml = (s,i) => {
     const m = s.first_date ? Math.floor((Date.now() - new Date(s.first_date).getTime()) / 2629800000) : null;
     const tag = m == null ? '—' : (m >= 24 ? '持续' + Math.floor(m/12) + '年+' : (m >= 12 ? '1年前开始' : (m >= 6 ? '半年前开始' : m + '个月前开始')));
     const cls = m == null ? 'blue' : (m < 6 ? 'red' : (m < 12 ? 'amber' : 'blue'));
-    return '<div class="rank-row"><span class="rank-no' + (i===0?' top':'') + '">' + (i+1) + '</span><div><div class="rank-name lk" onclick="showKline(\''+s.code+'\',\''+s.name+'\')">' + esc(s.name) + '</div><div class="rank-sub"><span class="lk" onclick="showKline(\''+s.code+'\',\''+s.name+'\')">'+esc(s.code)+'</span> · 本轮起点 ' + (s.first_date||'—') + ' · 近半年减持 ' + (s.dec_count||0) + '次</div></div><div class="rank-sum"><b style="color:var(--brand)">' + s.count + '</b> <span>次增/半年</span></div><span class="chip ' + cls + '" style="align-self:center">' + tag + '</span></div>';
-  }).join('');
-  box.innerHTML = '<div style="font-size:13px;color:var(--txt2);margin-bottom:4px">近半年增持 ≥5 次 且 减持 &lt;5 次 · 标签=本轮连续增持起点（间隔 &gt;60 天算中断）</div>' + rows;
+    return '<div class="rank-row"><span class="rank-no' + (i===0?' top':'') + '">' + (i+1) + '</span><div><div class="rank-name lk" onclick="showKline(\''+s.code+'\',\''+s.name+'\')">' + esc(s.name) + '</div><div class="rank-sub"><span class="lk" onclick="showKline(\''+s.code+'\',\''+s.name+'\')">'+esc(s.code)+'</span> · 起点 ' + (s.first_date||'—') + ' · 减持 ' + (s.dec_count||0) + '次</div></div><div class="rank-sum"><b style="color:var(--brand)">' + s.count + '</b> <span>次增/半年</span></div><span class="chip ' + cls + '" style="align-self:center">' + tag + '</span></div>';
+  };
+  const col = (title, sub, list) => '<div class="exec-col"><h4>' + title + '</h4><div class="exec-sub">' + sub + '</div>' + (list.length ? list.map(rowHtml).join('') : '<div class="empty">暂无数据</div>') + '</div>';
+  const rng = d.prior_range || '半年前 ~ 一年前';
+  box.innerHTML = '<div class="exec-cmp">'
+    + col('近半年（0~6个月）', '增持 ≥5 次 且 减持 &lt;5 次 · 本轮连续增持起点', recent)
+    + col('1年前~半年前（6~12个月）', rng + ' · 增持 ≥5 次 且 减持 &lt;5 次', prior)
+    + '</div><div style="font-size:12px;color:var(--txt3);margin-top:4px">口径：高管增减持公告 · 相邻增持间隔 &gt;60 天视为中断</div>';
 }
 function renderInstHold(){
   const d = DATA.instHold || {};

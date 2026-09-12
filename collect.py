@@ -44,12 +44,28 @@ INDEX_MAP = [  # (名称, 腾讯代码)
 ]
 
 
-def safe(fn):
-    try:
-        return fn()
-    except Exception as e:
-        print(f"[WARN] {fn.__name__} 失败: {type(e).__name__} {str(e)[:100]}")
-        return None
+def safe(fn, retries=3, backoff=2.0):
+    """执行采集函数，失败自动重试（指数退避）；多次仍失败返回 None，由调用方决定是否保留旧数据。
+    retries 次数、backoff 基础退避秒数可针对慢接口单独调整。"""
+    last_err = None
+    for attempt in range(1, retries + 1):
+        try:
+            return fn()
+        except Exception as e:
+            last_err = e
+            if attempt < retries:
+                time.sleep(backoff * attempt)
+    print(f"[WARN] {fn.__name__} 连续失败 {retries} 次: {type(last_err).__name__} {str(last_err)[:100]}")
+    return None
+
+
+def collect_save(name, fn):
+    """采集并落盘；采集失败(返回 None)时跳过写入、保留上次旧数据，避免偶发失败把数据清空。"""
+    data = safe(fn)
+    if data is None:
+        print(f"[SKIP] {name} 采集失败，保留旧数据")
+        return
+    save_json(name, data)
 
 
 def save_json(name, obj):
@@ -575,23 +591,25 @@ def collect_niusan():
 
 
 # ---------- 5.9 高管增持榜（近半年增持≥5次 且 减持<5次，追溯本轮连续增持首次日期） ----------
-def collect_exec_hold():
-    """近半年高管【增持≥5次 且 减持<5次】；并追溯本轮连续增持起点（间隔>60天视为中断）
+def _exec_rank(since, until, bounded=True):
+    """统计 [since, until] 窗口内的高管增持榜（增持≥5次 且 减持<5次）
 
     注意：旧实现 Step1 用 (CHANGE_SHARES>0) 过滤，只拉增持记录，
-    导致 dec_cnt 永远为 0、「减持<5次」条件形同虚设。这里改为拉近半年【全部】增减持记录，
+    导致 dec_cnt 永远为 0、「减持<5次」条件形同虚设。这里改为拉窗口内【全部】增减持记录，
     在内存中按正负分别计数（见下方 if shares>0 / elif shares<0 分支）。
+
+    bounded=True 时，连续增持起点只在该窗口内追溯（用于「1年前~半年前」历史窗口）；
+    bounded=False 时，起点可回溯到窗口之前（用于「近半年」窗口，还原本轮连续增持全貌）。
     """
     from collections import defaultdict
     url = "https://datacenter-web.eastmoney.com/api/data/v1/get"
-    half = (NOW - timedelta(days=180)).strftime("%Y-%m-%d")
     cols = "SECURITY_CODE,SECURITY_NAME,CHANGE_DATE,CHANGE_SHARES"
-    # Step1：拉近半年【全部】高管增减持记录（修复：必须包含减持，dec_cnt 才有意义）
+    # Step1：拉窗口内【全部】高管增减持记录（必须包含减持，dec_cnt 才有意义）
     records = []
     for page in range(1, 200):
         params = {
             "reportName": "RPT_EXECUTIVE_HOLD_DETAILS", "columns": cols,
-            "filter": f"(CHANGE_DATE>='{half}')",
+            "filter": f"(CHANGE_DATE>='{since}')(CHANGE_DATE<='{until}')",
             "pageSize": "500", "pageNumber": str(page),
             "sortColumns": "CHANGE_DATE", "sortTypes": "-1",
             "source": "WEB", "client": "WEB",
@@ -607,7 +625,7 @@ def collect_exec_hold():
         if len(data["data"]) < 500:
             break
     if not records:
-        return {}
+        return {"stocks": []}
     cnt, dec_cnt, last_date, names = defaultdict(int), defaultdict(int), {}, {}
     for row in records:
         code = str(row.get("SECURITY_CODE", "") or "")
@@ -625,11 +643,15 @@ def collect_exec_hold():
         elif shares < 0:
             dec_cnt[code] += 1
         names[code] = str(row.get("SECURITY_NAME", "") or "")
-    # 入选条件：近半年增持≥5次 且 减持<5次（过滤边增边减的内部人分歧股）
+    # 入选条件：窗口内增持≥5次 且 减持<5次（过滤边增边减的内部人分歧股）
     hot = {c: names.get(c, c) for c in cnt if cnt[c] >= 5 and dec_cnt[c] < 5}
 
     def _consec_first_date(code):
-        """拉该股全部增持记录，找【本轮连续增持】的起点（相邻间隔>60天视为中断）"""
+        """拉该股全部增持记录，找【连续增持】的起点（相邻间隔>60天视为中断）
+
+        bounded=True 时仅统计窗口 [since, until] 内的增持记录——在内存中过滤日期，
+        避免东财接口在「升序 sortTypes=1 + 日期区间」组合过滤下返回空集的坑。
+        """
         rows = []
         for page in range(1, 40):   # 修复：原 for page in (1,3) 跳过 page2，记录超500时漏算起点
             params = {
@@ -650,6 +672,8 @@ def collect_exec_hold():
             if len(data["data"]) < 500:
                 break
         dates = sorted({str(x.get("CHANGE_DATE", "") or "")[:10] for x in rows if x.get("CHANGE_DATE")})
+        if bounded:
+            dates = [d for d in dates if since <= d <= until]
         if not dates:
             return ""
         # 从最近一笔往前，找连续段起点（间隔 ≤ 60 天视为连续）
@@ -672,6 +696,27 @@ def collect_exec_hold():
         })
     result.sort(key=lambda x: x["count"], reverse=True)
     return {"stocks": result[:15]}
+
+
+def collect_exec_hold():
+    """高管增持榜：分「近半年」与「1年前~半年前」两栏对比
+
+    左栏（近半年 NOW-180d ~ NOW）：当前高管增持热度排名
+    右栏（1年前~半年前 NOW-365d ~ NOW-180d）：半年前~一年前的增持热度排名
+    两栏同一口径（增持≥5次 且 减持<5次），便于对比「现在谁在买」vs「半年前谁在买」。
+    """
+    half = (NOW - timedelta(days=180)).strftime("%Y-%m-%d")
+    year = (NOW - timedelta(days=365)).strftime("%Y-%m-%d")
+    half_prev = (NOW - timedelta(days=181)).strftime("%Y-%m-%d")  # 右栏截止日（避免与左栏边界重叠）
+    today = NOW.strftime("%Y-%m-%d")
+
+    recent = _exec_rank(half, today, bounded=False)    # 近半年：起点可回溯本轮更早
+    prior = _exec_rank(year, half_prev, bounded=True)  # 1年前~半年前：起点限定窗口内
+    return {
+        "stocks": recent.get("stocks", []),       # 保留原字段，向前兼容
+        "prior": prior.get("stocks", []),         # 新增：1年前~半年前
+        "prior_range": f"{year} ~ {half_prev}",   # 右栏时间区间说明
+    }
 
 
 # ---------- 5.10 私募/公募增持榜（十大流通股东，连续两期加仓标记） ----------
@@ -1061,61 +1106,27 @@ def collect_concepts_quotes():
 def main():
     print(f"=== 股票复盘工作台 · 数据采集 @ {NOW.strftime('%Y-%m-%d %H:%M:%S')} ===")
 
-    index_data = safe(collect_index) or []
-    save_json("index_snapshot.json", index_data)
+    # 各模块采集并落盘；失败自动重试，仍失败则保留上次旧数据（不覆盖为空）
+    collect_save("index_snapshot.json", collect_index)
+    collect_save("sector_rank.json", collect_sector)
+    collect_save("economic_calendar.json", collect_econ_calendar)
+    collect_save("unlock_calendar.json", collect_unlock)
+    collect_save("sentiment.json", collect_sentiment)
+    collect_save("fundflow.json", collect_fundflow)
+    collect_save("lhb.json", collect_lhb)
+    collect_save("valuation.json", collect_valuation)
+    collect_save("divyield.json", collect_divyield)
+    collect_save("niusan.json", collect_niusan)
+    collect_save("exec_hold.json", collect_exec_hold)
+    collect_save("inst_hold.json", collect_inst_hold)
+    collect_save("earnings.json", collect_earnings)
+    collect_save("research_rank.json", collect_research)
+    collect_save("retail_reduce.json", collect_retail_reduce)
+    collect_save("watchlist_quotes.json", collect_watchlist)
+    collect_save("concepts_quotes.json", collect_concepts_quotes)
+    collect_save("history.json", collect_history)
 
-    sector_data = safe(collect_sector) or []
-    save_json("sector_rank.json", sector_data)
-
-    econ_data = safe(collect_econ_calendar) or []
-    save_json("economic_calendar.json", econ_data)
-
-    unlock_data = safe(collect_unlock) or []
-    save_json("unlock_calendar.json", unlock_data)
-
-    sentiment_data = safe(collect_sentiment) or {}
-    save_json("sentiment.json", sentiment_data)
-
-    fundflow_data = safe(collect_fundflow) or {}
-    save_json("fundflow.json", fundflow_data)
-
-    lhb_data = safe(collect_lhb) or {}
-    save_json("lhb.json", lhb_data)
-
-    valuation_data = safe(collect_valuation) or {}
-    save_json("valuation.json", valuation_data)
-
-    divyield_data = safe(collect_divyield) or {}
-    save_json("divyield.json", divyield_data)
-
-    niusan_data = safe(collect_niusan) or {}
-    save_json("niusan.json", niusan_data)
-
-    exec_hold_data = safe(collect_exec_hold) or {}
-    save_json("exec_hold.json", exec_hold_data)
-
-    inst_hold_data = safe(collect_inst_hold) or {}
-    save_json("inst_hold.json", inst_hold_data)
-
-    earn_data = safe(collect_earnings) or []
-    save_json("earnings.json", earn_data)
-
-    research_data = safe(collect_research) or []
-    save_json("research_rank.json", research_data)
-
-    retail_data = safe(collect_retail_reduce) or {}
-    save_json("retail_reduce.json", retail_data)
-
-    wl_data = safe(collect_watchlist) or []
-    save_json("watchlist_quotes.json", wl_data)
-
-    concepts_q = safe(collect_concepts_quotes) or {}
-    save_json("concepts_quotes.json", concepts_q)
-
-    history = safe(collect_history) or []
-    save_json("history.json", history)
-
-    kline_map = safe(collect_kline) or {}
+    safe(collect_kline)  # K线由 collect_kline 内部写 data/kline/*.json
 
     save_json("last_update.json", {"time": NOW.strftime("%Y-%m-%d %H:%M:%S")})
     print("=== 采集完成 ===")

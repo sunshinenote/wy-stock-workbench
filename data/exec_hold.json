@@ -120,5 +120,128 @@
    "first_date": "2026-04-22",
    "last_date": "2026-04-30"
   }
- ]
+ ],
+ "prior": [
+  {
+   "code": "603098",
+   "name": "森特股份",
+   "count": 38,
+   "dec_count": 0,
+   "first_date": "2025-12-29",
+   "last_date": "2026-03-13"
+  },
+  {
+   "code": "300304",
+   "name": "云意电气",
+   "count": 31,
+   "dec_count": 0,
+   "first_date": "2025-10-28",
+   "last_date": "2026-03-09"
+  },
+  {
+   "code": "601916",
+   "name": "浙商银行",
+   "count": 31,
+   "dec_count": 0,
+   "first_date": "2025-09-16",
+   "last_date": "2025-12-16"
+  },
+  {
+   "code": "000567",
+   "name": "海德股份",
+   "count": 25,
+   "dec_count": 0,
+   "first_date": "2025-09-18",
+   "last_date": "2025-11-04"
+  },
+  {
+   "code": "600557",
+   "name": "康缘药业",
+   "count": 24,
+   "dec_count": 0,
+   "first_date": "2025-11-11",
+   "last_date": "2025-12-04"
+  },
+  {
+   "code": "603299",
+   "name": "苏盐井神",
+   "count": 19,
+   "dec_count": 0,
+   "first_date": "2025-12-04",
+   "last_date": "2026-01-05"
+  },
+  {
+   "code": "603132",
+   "name": "金徽股份",
+   "count": 19,
+   "dec_count": 0,
+   "first_date": "2025-09-16",
+   "last_date": "2025-10-16"
+  },
+  {
+   "code": "002966",
+   "name": "苏州银行",
+   "count": 19,
+   "dec_count": 0,
+   "first_date": "2025-09-10",
+   "last_date": "2025-09-15"
+  },
+  {
+   "code": "300760",
+   "name": "迈瑞医疗",
+   "count": 18,
+   "dec_count": 0,
+   "first_date": "2025-11-06",
+   "last_date": "2026-03-04"
+  },
+  {
+   "code": "605338",
+   "name": "巴比食品",
+   "count": 17,
+   "dec_count": 0,
+   "first_date": "2025-09-24",
+   "last_date": "2026-03-02"
+  },
+  {
+   "code": "601666",
+   "name": "平煤股份",
+   "count": 16,
+   "dec_count": 0,
+   "first_date": "2026-01-04",
+   "last_date": "2026-01-04"
+  },
+  {
+   "code": "601665",
+   "name": "齐鲁银行",
+   "count": 15,
+   "dec_count": 0,
+   "first_date": "2025-09-17",
+   "last_date": "2025-12-15"
+  },
+  {
+   "code": "688126",
+   "name": "沪硅产业",
+   "count": 14,
+   "dec_count": 0,
+   "first_date": "2025-11-28",
+   "last_date": "2025-12-30"
+  },
+  {
+   "code": "300190",
+   "name": "维尔利",
+   "count": 13,
+   "dec_count": 0,
+   "first_date": "2025-10-10",
+   "last_date": "2026-03-09"
+  },
+  {
+   "code": "002538",
+   "name": "ST司特",
+   "count": 12,
+   "dec_count": 0,
+   "first_date": "2025-09-16",
+   "last_date": "2025-11-21"
+  }
+ ],
+ "prior_range": "2025-09-10 ~ 2026-03-13"
 }
