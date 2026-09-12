@@ -6,8 +6,8 @@
    "pe": 19.6,
    "pe_pct": 2.9,
    "pb": 6.34,
-   "pb_pct": 6.7,
-   "avg_pct": 4.8,
+   "pb_pct": 6.4,
+   "avg_pct": 4.7,
    "state": "低估"
   },
   {
@@ -26,8 +26,8 @@
    "pe": 18.0,
    "pe_pct": 6.9,
    "pb": 4.03,
-   "pb_pct": 6.9,
-   "avg_pct": 6.9,
+   "pb_pct": 6.6,
+   "avg_pct": 6.8,
    "state": "低估"
   },
   {
@@ -36,27 +36,27 @@
    "pe": 6.2,
    "pe_pct": 0.1,
    "pb": 0.97,
-   "pb_pct": 20.1,
-   "avg_pct": 10.1,
+   "pb_pct": 20.4,
+   "avg_pct": 10.2,
    "state": "低估"
   },
   {
    "code": "600036",
    "name": "600036",
    "pe": 6.9,
-   "pe_pct": 30.1,
+   "pe_pct": 29.8,
    "pb": 0.91,
    "pb_pct": 14.9,
-   "avg_pct": 22.5,
+   "avg_pct": 22.4,
    "state": "偏低"
   },
   {
    "code": "000001",
    "name": "000001",
    "pe": 5.2,
-   "pe_pct": 28.7,
+   "pe_pct": 29.0,
    "pb": 0.49,
-   "pb_pct": 13.0,
+   "pb_pct": 12.9,
    "avg_pct": 20.9,
    "state": "偏低"
   },
@@ -74,10 +74,10 @@
    "code": "600900",
    "name": "600900",
    "pe": 19.2,
-   "pe_pct": 57.7,
+   "pe_pct": 57.0,
    "pb": 3.22,
    "pb_pct": 88.2,
-   "avg_pct": 73.0,
+   "avg_pct": 72.6,
    "state": "偏高"
   },
   {
@@ -86,18 +86,18 @@
    "pe": 26.0,
    "pe_pct": 20.0,
    "pb": 3.19,
-   "pb_pct": 29.5,
-   "avg_pct": 24.8,
+   "pb_pct": 29.7,
+   "avg_pct": 24.9,
    "state": "偏低"
   },
   {
    "code": "688981",
    "name": "688981",
    "pe": 139.5,
-   "pe_pct": 64.0,
-   "pb": null,
-   "pb_pct": null,
-   "avg_pct": 64.0,
+   "pe_pct": 64.3,
+   "pb": 5.86,
+   "pb_pct": 80.7,
+   "avg_pct": 72.5,
    "state": "偏高"
   }
  ]
