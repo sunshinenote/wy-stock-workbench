@@ -131,6 +131,14 @@
    "last_date": "2026-03-13"
   },
   {
+   "code": "601916",
+   "name": "浙商银行",
+   "count": 32,
+   "dec_count": 0,
+   "first_date": "2025-09-16",
+   "last_date": "2025-12-16"
+  },
+  {
    "code": "300304",
    "name": "云意电气",
    "count": 31,
@@ -139,12 +147,12 @@
    "last_date": "2026-03-09"
   },
   {
-   "code": "601916",
-   "name": "浙商银行",
-   "count": 31,
+   "code": "600557",
+   "name": "康缘药业",
+   "count": 25,
    "dec_count": 0,
-   "first_date": "2025-09-16",
-   "last_date": "2025-12-16"
+   "first_date": "2025-11-11",
+   "last_date": "2025-12-04"
   },
   {
    "code": "000567",
@@ -153,14 +161,6 @@
    "dec_count": 0,
    "first_date": "2025-09-18",
    "last_date": "2025-11-04"
-  },
-  {
-   "code": "600557",
-   "name": "康缘药业",
-   "count": 24,
-   "dec_count": 0,
-   "first_date": "2025-11-11",
-   "last_date": "2025-12-04"
   },
   {
    "code": "603299",
@@ -177,14 +177,6 @@
    "dec_count": 0,
    "first_date": "2025-09-16",
    "last_date": "2025-10-16"
-  },
-  {
-   "code": "002966",
-   "name": "苏州银行",
-   "count": 19,
-   "dec_count": 0,
-   "first_date": "2025-09-10",
-   "last_date": "2025-09-15"
   },
   {
    "code": "300760",
@@ -241,7 +233,15 @@
    "dec_count": 0,
    "first_date": "2025-09-16",
    "last_date": "2025-11-21"
+  },
+  {
+   "code": "600733",
+   "name": "北汽蓝谷",
+   "count": 11,
+   "dec_count": 0,
+   "first_date": "2026-01-27",
+   "last_date": "2026-01-30"
   }
  ],
- "prior_range": "2025-09-10 ~ 2026-03-13"
+ "prior_range": "2025-09-12 ~ 2026-03-15"
 }
