@@ -120,6 +120,17 @@ button.danger{color:var(--danger)}
 .lb-list{display:flex;flex-wrap:wrap}
 .theme-sec{margin-top:14px}
 .theme-sec h3{font-size:14px;font-weight:500;color:var(--txt);margin:0 0 8px}
+.theme-level-form{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:8px}
+.theme-level-form input[type=text]{flex:1;min-width:150px}
+.theme-level-form select{font-family:inherit;font-size:15px;border:1px solid var(--line2);border-radius:10px;padding:10px 12px;min-height:44px;background:#fff}
+.theme-level-legend{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px;font-size:12px}
+.tlvl-item{display:flex;align-items:center;gap:10px;border:1px solid var(--line);border-radius:10px;padding:9px 12px;margin-bottom:8px;background:var(--bg)}
+.tlvl-item .tlvl-chip{flex:none;font-size:12px;padding:2px 9px;border-radius:999px;font-weight:500}
+.tlvl-item .tlvl-name{font-size:15px;font-weight:600;color:var(--txt);flex:none}
+.tlvl-item .tlvl-note{flex:1;font-size:13px;color:var(--txt2);white-space:pre-wrap}
+.tlvl-item .tlvl-ts{flex:none;font-size:11px;color:var(--txt3)}
+.tlvl-item .tlvl-del{flex:none;font-size:12px;color:var(--txt3);background:transparent;border:1px solid var(--line);border-radius:6px;padding:3px 8px;cursor:pointer}
+.tlvl-item .tlvl-del:hover{color:var(--up);border-color:var(--up-soft)}
 
 /* sentiment thermometer */
 .senti-main{display:flex;align-items:center;gap:16px;background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:14px;margin-bottom:10px}
@@ -409,6 +420,23 @@ svg text{font-family:inherit}
     <h2 data-page-node-id="thmH2001">题材复盘 <span class="tag red" data-page-node-id="thmTag001">情绪 + 梯队</span></h2>
     <input class="concept-search" id="themeSearch" placeholder="搜索涨停股（名称 / 代码 / 行业 / 连板数）…" oninput="renderThemeReview()" data-page-node-id="thmSearch001">
     <div id="themeBox" data-page-node-id="thmBox001"></div>
+
+    <div class="theme-sec" data-page-node-id="thmLvSec001">
+      <h3 data-page-node-id="thmLvH3001">题材级别标注 <span style="font-weight:400;font-size:12px;color:var(--txt3)" data-page-node-id="thmLvHint001">人工判断主线级别 · 政策&gt;产业&gt;事件&gt;消息 · 仅存本地</span></h3>
+      <div class="theme-level-form" data-page-node-id="thmLvForm001">
+        <input type="text" id="themeLevelName" placeholder="题材名，如 人形机器人" data-page-node-id="thmLvName001">
+        <select id="themeLevelLv" data-page-node-id="thmLvLv001">
+          <option value="政策">政策级</option>
+          <option value="产业" selected>产业级</option>
+          <option value="事件">事件级</option>
+          <option value="消息">消息级</option>
+        </select>
+        <input type="text" id="themeLevelNote" placeholder="逻辑 / 催化（可选）" data-page-node-id="thmLvNote001">
+        <button class="btn-sm" onclick="addThemeLevel()" data-page-node-id="thmLvAdd001">标注</button>
+      </div>
+      <div class="theme-level-legend" data-page-node-id="thmLvLegend001"><span class="chip red">政策级 · 国家战略/规划</span><span class="chip amber">产业级 · 技术突破/涨价拐点</span><span class="chip blue">事件级 · 发布会/业绩</span><span class="chip">消息级 · 小作文/传闻</span></div>
+      <div id="themeLevelList" data-page-node-id="thmLvList001"></div>
+    </div>
   </section>
 </div>
 
@@ -505,7 +533,7 @@ svg text{font-family:inherit}
 
 <script>
 /* ================= 状态 ================= */
-const LS = { watch:'wb_stock_watch', cost:'wb_stock_cost', notes:'wb_stock_notes', flag:'wb_stock_init' };
+const LS = { watch:'wb_stock_watch', cost:'wb_stock_cost', notes:'wb_stock_notes', levels:'wb_theme_levels', flag:'wb_stock_init' };
 const $ = id => document.getElementById(id);
 let DATA = {};   // 采集的行情数据
 let todayStr = new Date().toISOString().slice(0,10);
@@ -1130,6 +1158,50 @@ function renderThemeReview(){
 
   box.innerHTML = html;
 }
+
+/* ================= 题材级别标注（人工判断主线级别，仅存本地） ================= */
+const THEME_LEVELS = [
+  { key:'政策', label:'政策级', color:'#d93a3a', bg:'var(--up-soft)', weight:4, desc:'国家战略/规划' },
+  { key:'产业', label:'产业级', color:'#BA7517', bg:'var(--warn-soft)', weight:3, desc:'技术突破/涨价拐点' },
+  { key:'事件', label:'事件级', color:'#185FA5', bg:'var(--brand-soft)', weight:2, desc:'发布会/业绩' },
+  { key:'消息', label:'消息级', color:'#6b7a8d', bg:'var(--bg)', weight:1, desc:'小作文/传闻' }
+];
+function levelMeta(l){ return THEME_LEVELS.find(t=>t.key===l) || THEME_LEVELS[3]; }
+function renderThemeLevels(){
+  const list = $('themeLevelList'); if(!list) return;
+  const arr = lsGet(LS.levels, []);
+  if(!arr.length){ list.innerHTML = '<div class="empty">还没有标注题材。看到某个方向在发酵时标注它的级别——级别越高，越可能走成主线。</div>'; return; }
+  const sorted = arr.slice().sort((a,b) => (levelMeta(b.level).weight - levelMeta(a.level).weight) || ((b.ts||0) - (a.ts||0)));
+  list.innerHTML = sorted.map(x => {
+    const m = levelMeta(x.level);
+    return '<div class="tlvl-item">' +
+      '<span class="tlvl-chip" style="background:' + m.bg + ';color:' + m.color + ';border:1px solid ' + (m.key==='消息' ? 'var(--line)' : 'transparent') + '">' + m.label + '</span>' +
+      '<span class="tlvl-name">' + esc(x.name) + '</span>' +
+      (x.note ? '<span class="tlvl-note">' + esc(x.note) + '</span>' : '') +
+      '<span class="tlvl-ts">' + (x.ts ? new Date(x.ts).toISOString().slice(0,10) : '') + '</span>' +
+      '<button class="tlvl-del" onclick="delThemeLevel(' + (x.ts||0) + ')">删除</button>' +
+      '</div>';
+  }).join('');
+}
+function addThemeLevel(){
+  const name = ($('themeLevelName').value || '').trim();
+  if(!name){ alert('请先填写题材名'); return; }
+  const level = $('themeLevelLv').value;
+  const note = ($('themeLevelNote').value || '').trim();
+  const ts = Date.now();
+  let arr = lsGet(LS.levels, []);
+  const idx = arr.findIndex(x=>x.name===name);
+  if(idx >= 0){ arr[idx].level = level; arr[idx].note = note; arr[idx].ts = ts; }
+  else arr.push({ name, level, note, ts });
+  lsSet(LS.levels, arr);
+  $('themeLevelName').value=''; $('themeLevelNote').value='';
+  renderThemeLevels();
+}
+function delThemeLevel(ts){
+  if(!confirm('删除这条题材标注？')) return;
+  lsSet(LS.levels, lsGet(LS.levels, []).filter(x=>x.ts!==ts));
+  renderThemeLevels();
+}
 function renderFundflow(){
   const f = DATA.fundflow || {};
   const box = $('fundflowBox');
@@ -1720,17 +1792,18 @@ function importData(ev){
       if(p.watch) lsSet(LS.watch, p.watch);
       if(p.cost) lsSet(LS.cost, p.cost);
       if(p.notes) lsSet(LS.notes, p.notes);
+      if(p.levels) lsSet(LS.levels, p.levels);
       renderAll();
-      alert('导入成功：自选 ' + (p.watch||[]).length + ' 条，笔记 ' + (p.notes||[]).length + ' 条');
+      alert('导入成功：自选 ' + (p.watch||[]).length + ' 条，笔记 ' + (p.notes||[]).length + ' 条，题材标注 ' + (p.levels||[]).length + ' 条');
     }catch(e){ alert('导入失败：不是有效的备份文件'); }
   };
   rd.readAsText(f);
   ev.target.value = '';
 }
-function askClearAll(){ $('clearModalMsg').textContent = '将删除本地的自选股、成本价与全部复盘笔记（' + lsGet(LS.notes,[]).length + ' 条），不可恢复。建议先「导出备份」。'; $('clearModal').classList.add('show'); }
+function askClearAll(){ $('clearModalMsg').textContent = '将删除本地的自选股、成本价、全部复盘笔记与题材级别标注（' + lsGet(LS.notes,[]).length + ' 条笔记 / ' + lsGet(LS.levels,[]).length + ' 条标注），不可恢复。建议先「导出备份」。'; $('clearModal').classList.add('show'); }
 function closeClearModal(){ $('clearModal').classList.remove('show'); }
 function doClearAll(){
-  localStorage.removeItem(LS.watch); localStorage.removeItem(LS.cost); localStorage.removeItem(LS.notes);
+  localStorage.removeItem(LS.watch); localStorage.removeItem(LS.cost); localStorage.removeItem(LS.notes); localStorage.removeItem(LS.levels);
   closeClearModal(); renderAll();
   alert('已清空本地个人数据');
 }
@@ -1822,7 +1895,7 @@ function renderConcepts(){
   const cnt = $('conceptCount'); if(cnt) cnt.textContent = shownConcept ? (shownConcept+' 个概念 · '+shownLeader+' 只龙头') : '';
 }
 
-function renderAll(){ renderToday(); renderAhead(); renderReview(); renderHotSummary(); renderSentiment(); renderThemeReview(); renderFundflow(); renderLhb(); renderResearch(); renderRetailReduce(); renderValuation(); renderDivyield(); renderExecHold(); renderInstHold(); renderNiusan(); renderLong(); renderNotes(); renderConcepts(); }
+function renderAll(){ renderToday(); renderAhead(); renderReview(); renderHotSummary(); renderSentiment(); renderThemeReview(); renderThemeLevels(); renderFundflow(); renderLhb(); renderResearch(); renderRetailReduce(); renderValuation(); renderDivyield(); renderExecHold(); renderInstHold(); renderNiusan(); renderLong(); renderNotes(); renderConcepts(); }
 /* ================= 启动 ================= */
 initNoteDate();
 restoreTab();
