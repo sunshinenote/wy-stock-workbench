@@ -112,6 +112,15 @@ button.danger{color:var(--danger)}
 .exec-col .exec-sub{font-size:12px;color:var(--txt3);margin-bottom:6px}
 .exec-col .rank-row:last-child{border-bottom:none}
 
+/* 题材复盘：连板梯队 */
+.lb-tier{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:10px 12px;margin-bottom:10px}
+.lb-head{display:flex;align-items:center;gap:8px;margin-bottom:6px}
+.lb-title{font-size:15px;font-weight:600;color:var(--txt)}
+.lb-count{font-size:12px;color:var(--txt3)}
+.lb-list{display:flex;flex-wrap:wrap}
+.theme-sec{margin-top:14px}
+.theme-sec h3{font-size:14px;font-weight:500;color:var(--txt);margin:0 0 8px}
+
 /* sentiment thermometer */
 .senti-main{display:flex;align-items:center;gap:16px;background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:14px;margin-bottom:10px}
 .senti-score{flex:none;width:82px;height:82px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#fff;border:4px solid #999;color:#555}
@@ -294,6 +303,7 @@ svg text{font-family:inherit}
   <button class="tab" data-tab="ahead" onclick="switchTab('ahead')" data-page-node-id="oI3bQtFC3GOqR6JIZk0a9q">大事前瞻</button>
   <button class="tab" data-tab="short" onclick="switchTab('short')" data-page-node-id="iXNtQrrt2bFXAEFSjLd6QY">短期机会</button>
   <button class="tab" data-tab="long" onclick="switchTab('long')" data-page-node-id="eg2SLmEPzf2zNJmHL9Zlg7">长期机会</button>
+  <button class="tab" data-tab="theme" onclick="switchTab('theme')" data-page-node-id="thmTab001">题材复盘</button>
   <button class="tab" data-tab="concepts" onclick="switchTab('concepts')" data-page-node-id="CTOGqtrEVcyrTrX12brQ9a">概念龙头</button>
 </nav>
 
@@ -390,6 +400,15 @@ svg text{font-family:inherit}
     <div id="instHoldBox" data-page-node-id="VfdnRC1So8zGtHZoSLTfVf"></div>
     <h3 data-page-node-id="6JvweQO2PpAUg3FD2CoWqH">牛散持仓追踪 <span style="font-weight:400;font-size:12px;color:var(--txt3)" data-page-node-id="WjDHm1XeBbReHP1lBs5AnU">季报披露完更新 · 新进/加仓标红</span></h3>
     <div id="niusanBox" data-page-node-id="OzDzt9Aio7Ewj7DmkKvA51"></div>
+  </section>
+</div>
+
+<!-- ============ 题材复盘 ============ -->
+<div class="tab-panel" id="panel-theme" data-page-node-id="thmPanel001">
+  <section class="card" data-page-node-id="thmCard001">
+    <h2 data-page-node-id="thmH2001">题材复盘 <span class="tag red" data-page-node-id="thmTag001">情绪 + 梯队</span></h2>
+    <input class="concept-search" id="themeSearch" placeholder="搜索涨停股（名称 / 代码 / 行业 / 连板数）…" oninput="renderThemeReview()" data-page-node-id="thmSearch001">
+    <div id="themeBox" data-page-node-id="thmBox001"></div>
   </section>
 </div>
 
@@ -559,7 +578,17 @@ function demoData(){
       {code:'300740',name:'水羊股份',sum:86,count:2,date:'2026-09-02',price:22.59,pct:-0.48} ],
     sentiment:{ date:daysFromNow(-1), zt:74, dt:4, zb:26, zb_rate:26, max_lb:4,
       lb_dist:[{lb:1,count:61},{lb:2,count:6},{lb:3,count:2},{lb:4,count:5}],
-      score:66, level:'发酵', note:'', industries:[{name:'元件',count:11},{name:'医疗服务',count:8},{name:'化学制药',count:6},{name:'通信设备',count:4},{name:'半导体',count:4},{name:'化学制品',count:3}] },
+      score:66, level:'发酵', note:'', industries:[{name:'元件',count:11},{name:'医疗服务',count:8},{name:'化学制药',count:6},{name:'通信设备',count:4},{name:'半导体',count:4},{name:'化学制品',count:3}],
+      zt_list:[
+        {code:'600576',name:'祥源文旅',lb:4,industry:'旅游酒店',fb_time:'09:25:00',zt_stat:'4/4'},
+        {code:'300308',name:'中际旭创',lb:3,industry:'通信设备',fb_time:'09:31:00',zt_stat:'3/3'},
+        {code:'300502',name:'新易盛',lb:2,industry:'通信设备',fb_time:'09:40:00',zt_stat:'2/2'},
+        {code:'002371',name:'北方华创',lb:2,industry:'半导体',fb_time:'09:35:00',zt_stat:'2/2'},
+        {code:'002463',name:'沪电股份',lb:1,industry:'元件',fb_time:'10:05:00',zt_stat:'1/1'},
+        {code:'603986',name:'兆易创新',lb:1,industry:'半导体',fb_time:'09:55:00',zt_stat:'1/1'},
+        {code:'600276',name:'恒瑞医药',lb:1,industry:'化学制药',fb_time:'10:20:00',zt_stat:'1/1'},
+        {code:'300760',name:'迈瑞医疗',lb:1,industry:'医疗服务',fb_time:'11:00:00',zt_stat:'1/1'}
+      ] },
     fundflow:{ industry_in:[ {name:'半导体',net:119.46,pct:3.37,leader:'兆易创新',leader_pct:8.32},
       {name:'化学制药',net:70.44,pct:4.4,leader:'恒瑞医药',leader_pct:4.82},
       {name:'医疗服务',net:45.63,pct:8.34,leader:'博腾股份',leader_pct:20.02},
@@ -1021,6 +1050,85 @@ function renderSentiment(){
     '</div>' +
     '<div style="font-size:13px;color:var(--txt2)">连板梯队：' + lbHtml + '</div>' +
     '<div class="senti-ind">涨停集中行业：' + indHtml + '</div>';
+}
+function renderThemeReview(){
+  const box = $('themeBox'); if(!box) return;
+  const s = DATA.sentiment || {};
+  if(!s || !s.date){ box.innerHTML = '<div class="empty">暂无情绪数据（交易日收盘后更新）</div>'; return; }
+  const colors = {冰点:'#6b7a8d',复苏:'#185FA5',发酵:'#BA7517',高潮:'#d93a3a',过热:'#8b1a1a'};
+  const c = colors[s.level] || '#555';
+  const q = (($('themeSearch') && $('themeSearch').value || '')).trim().toLowerCase();
+
+  // 1. 情绪概览
+  let html = '<div class="senti-main"><div class="senti-score" style="border-color:' + c + ';color:' + c + '"><b>' + s.score + '</b><span>情绪分</span></div>' +
+    '<div class="senti-info"><div><span class="senti-level" style="color:' + c + '">' + esc(s.level) + '</span><span class="senti-meta">' + esc(s.date) + ' · 最近交易日</span></div>' +
+    (s.note ? '<div class="senti-note">⚠ ' + esc(s.note) + '</div>' : '') + '</div></div>' +
+    '<div class="senti-grid">' + stat('涨停', s.zt, '家') + stat('跌停', s.dt, '家') + stat('炸板率', s.zb_rate + '%', s.zb + '家炸板') + stat('最高连板', s.max_lb, '板') + '</div>';
+
+  // 2. 连板梯队明细（按连板数降序分组）
+  const ztList = s.zt_list || [];
+  const byLb = {};
+  ztList.forEach(z => { (byLb[z.lb] = byLb[z.lb] || []).push(z); });
+  const lbs = Object.keys(byLb).map(Number).sort((a, b) => b - a);
+  const matchZt = z => !q || (z.name||'').toLowerCase().includes(q) || (z.code||'').includes(q) || (z.industry||'').toLowerCase().includes(q) || String(z.lb).includes(q);
+  if(lbs.length){
+    html += '<div class="theme-sec"><h3>连板梯队</h3>';
+    lbs.forEach(lb => {
+      const group = byLb[lb].filter(matchZt);
+      if(!group.length) return;
+      html += '<div class="lb-tier"><div class="lb-head"><span class="chip ' + (lb >= 3 ? 'red' : 'blue') + '">' + lb + '板</span><span class="lb-count">' + group.length + ' 只</span></div><div class="lb-list">';
+      group.forEach(z => {
+        html += '<span class="lchip" onclick="showKline(\'' + z.code + '\',\'' + z.name + '\')">' + esc(z.name) + ' <small>' + esc(z.industry || '') + '</small> <span class="code">' + esc(z.code) + '</span></span>';
+      });
+      html += '</div></div>';
+    });
+    html += '</div>';
+  } else {
+    html += '<div class="theme-sec"><h3>连板梯队</h3><div class="empty">涨停明细待采集更新（下次盘后采集自动生成）</div></div>';
+  }
+
+  // 3. 涨停集中行业
+  const inds = s.industries || [];
+  if(inds.length){
+    html += '<div class="theme-sec"><h3>涨停集中行业</h3><div class="senti-ind">' +
+      inds.map(i => '<span class="chip amber">' + esc(i.name) + ' ' + i.count + '家</span>').join('') + '</div></div>';
+  }
+
+  // 4. 板块强度对照：涨停家数 × 涨跌幅 × 资金流
+  const sector = DATA.sector || [];
+  if(sector.length){
+    const indCount = {}; inds.forEach(i => { indCount[i.name] = i.count; });
+    const flowMap = {};
+    (DATA.fundflow && DATA.fundflow.industry_in || []).forEach(x => { flowMap[x.name] = x.net; });
+    const merged = sector.map(x => ({ name:x.name, pct:x.pct, leader:x.leader, leader_pct:x.leader_pct, zt:indCount[x.name]||0, net:flowMap[x.name] }))
+      .sort((a,b) => (b.zt - a.zt) || (b.pct - a.pct));
+    const mergedRows = merged.slice(0, 10).map(x =>
+      '<tr><td><b>' + esc(x.name) + '</b></td>' +
+      '<td class="num ' + clsPct(x.pct) + '">' + fmtPct(x.pct) + '</td>' +
+      '<td class="num" style="color:' + (x.zt ? 'var(--up)' : 'var(--txt3)') + ';font-weight:600">' + (x.zt || 0) + '</td>' +
+      '<td class="num ' + (typeof x.net === 'number' && x.net >= 0 ? 'up' : 'down') + '">' + (typeof x.net === 'number' ? (x.net >= 0 ? '+' : '') + x.net + '亿' : '—') + '</td>' +
+      '<td style="color:var(--txt2)">' + esc(x.leader || '—') + (x.leader_pct ? ' <span class="' + clsPct(x.leader_pct) + '">' + fmtPct(x.leader_pct) + '</span>' : '') + '</td></tr>'
+    ).join('');
+    html += '<div class="theme-sec"><h3>板块强度对照 · 涨停 × 涨幅 × 资金</h3>' +
+      '<div class="tbl-wrap"><table class="tbl"><thead><tr><th>板块</th><th class="num">涨跌幅</th><th class="num">涨停</th><th class="num">净流入</th><th>领涨</th></tr></thead><tbody>' + mergedRows + '</tbody></table></div></div>';
+  }
+
+  // 5. 涨停个股明细表（受搜索过滤）
+  if(ztList.length){
+    const filtered = ztList.filter(matchZt).slice().sort((a,b) => b.lb - a.lb);
+    const rows = filtered.map(z =>
+      '<tr><td><b>' + esc(z.name) + '</b></td>' +
+      '<td style="color:var(--txt2)">' + esc(z.code) + '</td>' +
+      '<td class="num" style="color:' + (z.lb >= 2 ? 'var(--up)' : 'var(--txt)') + ';font-weight:600">' + z.lb + '板</td>' +
+      '<td>' + esc(z.industry || '—') + '</td>' +
+      '<td style="color:var(--txt3)">' + esc(z.fb_time || '—') + '</td>' +
+      '<td style="color:var(--txt3)">' + esc(z.zt_stat || '') + '</td></tr>'
+    ).join('');
+    html += '<div class="theme-sec"><h3>涨停个股明细（' + filtered.length + ' 只）</h3>' +
+      '<div class="tbl-wrap"><table class="tbl"><thead><tr><th>名称</th><th>代码</th><th class="num">连板</th><th>行业</th><th>首封时间</th><th>涨停统计</th></tr></thead><tbody>' + (rows || '<tr><td colspan="6" class="empty">无匹配涨停股</td></tr>') + '</tbody></table></div></div>';
+  }
+
+  box.innerHTML = html;
 }
 function renderFundflow(){
   const f = DATA.fundflow || {};
@@ -1628,7 +1736,7 @@ function doClearAll(){
 }
 
 /* ================= Tab 切换（Hash 路由：每个 Tab 是独立"页面"） ================= */
-const TAB_TITLES = { review:'今日复盘', ahead:'大事前瞻', short:'短期机会', long:'长期机会', concepts:'概念龙头' };
+const TAB_TITLES = { review:'今日复盘', ahead:'大事前瞻', short:'短期机会', long:'长期机会', theme:'题材复盘', concepts:'概念龙头' };
 function switchTab(name){
   if(!TAB_TITLES[name]) return;
   document.querySelectorAll('.tab').forEach(b => b.classList.toggle('active', b.dataset.tab === name));
@@ -1714,7 +1822,7 @@ function renderConcepts(){
   const cnt = $('conceptCount'); if(cnt) cnt.textContent = shownConcept ? (shownConcept+' 个概念 · '+shownLeader+' 只龙头') : '';
 }
 
-function renderAll(){ renderToday(); renderAhead(); renderReview(); renderHotSummary(); renderSentiment(); renderFundflow(); renderLhb(); renderResearch(); renderRetailReduce(); renderValuation(); renderDivyield(); renderExecHold(); renderInstHold(); renderNiusan(); renderLong(); renderNotes(); renderConcepts(); }
+function renderAll(){ renderToday(); renderAhead(); renderReview(); renderHotSummary(); renderSentiment(); renderThemeReview(); renderFundflow(); renderLhb(); renderResearch(); renderRetailReduce(); renderValuation(); renderDivyield(); renderExecHold(); renderInstHold(); renderNiusan(); renderLong(); renderNotes(); renderConcepts(); }
 /* ================= 启动 ================= */
 initNoteDate();
 restoreTab();

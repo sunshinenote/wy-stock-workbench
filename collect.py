@@ -263,11 +263,32 @@ def collect_sentiment():
     if "所属行业" in zt_df.columns:
         for name, cnt in zt_df["所属行业"].value_counts().head(6).items():
             industries.append({"name": str(name), "count": int(cnt)})
+    # 涨停个股明细（题材复盘：连板梯队 + 涨停股列表）
+    zt_list = []
+    for _, row in zt_df.iterrows():
+        try:
+            lb = int(float(row.get("连板数", 1) or 1))
+        except (ValueError, TypeError):
+            lb = 1
+        try:
+            turnover = round(float(row.get("换手率", 0) or 0), 2)
+        except (ValueError, TypeError):
+            turnover = 0.0
+        zt_list.append({
+            "code": str(row.get("代码", "") or ""),
+            "name": str(row.get("名称", "") or ""),
+            "lb": lb,
+            "industry": str(row.get("所属行业", "") or ""),
+            "fb_time": str(row.get("首次封板时间", "") or ""),
+            "zt_stat": str(row.get("涨停统计", "") or ""),
+            "turnover": turnover,
+        })
     return {
         "date": f"{date_str[:4]}-{date_str[4:6]}-{date_str[6:]}",
         "zt": zt, "dt": dt, "zb": zb, "zb_rate": zb_rate,
         "max_lb": max_lb, "lb_dist": [{"lb": k, "count": v} for k, v in sorted(lb_dist.items())],
         "score": score, "level": level, "note": note, "industries": industries,
+        "zt_list": zt_list,
     }
 
 
