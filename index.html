@@ -1118,8 +1118,15 @@ function renderThemeReview(){
   // 3. 涨停集中行业
   const inds = s.industries || [];
   if(inds.length){
-    html += '<div class="theme-sec"><h3>涨停集中行业</h3><div class="senti-ind">' +
-      inds.map(i => '<span class="chip amber">' + esc(i.name) + ' ' + i.count + '家</span>').join('') + '</div></div>';
+    const indChips = inds.map(i => {
+      const lv = matchThemeLevel(i.name);
+      if(lv){
+        const m = levelMeta(lv.level);
+        return '<span class="chip" style="background:' + m.bg + ';color:' + m.color + ';border-color:' + (lv.level === '消息' ? 'var(--line)' : 'transparent') + ';font-weight:600">' + esc(i.name) + ' ' + i.count + '家 · ' + m.label + '</span>';
+      }
+      return '<span class="chip amber">' + esc(i.name) + ' ' + i.count + '家</span>';
+    }).join('');
+    html += '<div class="theme-sec"><h3>涨停集中行业</h3><div class="senti-ind">' + indChips + '</div></div>';
   }
 
   // 4. 板块强度对照：涨停家数 × 涨跌幅 × 资金流
