@@ -1130,13 +1130,16 @@ function renderThemeReview(){
     (DATA.fundflow && DATA.fundflow.industry_in || []).forEach(x => { flowMap[x.name] = x.net; });
     const merged = sector.map(x => ({ name:x.name, pct:x.pct, leader:x.leader, leader_pct:x.leader_pct, zt:indCount[x.name]||0, net:flowMap[x.name] }))
       .sort((a,b) => (b.zt - a.zt) || (b.pct - a.pct));
-    const mergedRows = merged.slice(0, 10).map(x =>
-      '<tr><td><b>' + esc(x.name) + '</b></td>' +
-      '<td class="num ' + clsPct(x.pct) + '">' + fmtPct(x.pct) + '</td>' +
-      '<td class="num" style="color:' + (x.zt ? 'var(--up)' : 'var(--txt3)') + ';font-weight:600">' + (x.zt || 0) + '</td>' +
-      '<td class="num ' + (typeof x.net === 'number' && x.net >= 0 ? 'up' : 'down') + '">' + (typeof x.net === 'number' ? (x.net >= 0 ? '+' : '') + x.net + '亿' : '—') + '</td>' +
-      '<td style="color:var(--txt2)">' + esc(x.leader || '—') + (x.leader_pct ? ' <span class="' + clsPct(x.leader_pct) + '">' + fmtPct(x.leader_pct) + '</span>' : '') + '</td></tr>'
-    ).join('');
+    const mergedRows = merged.slice(0, 10).map(x => {
+      const lv = matchThemeLevel(x.name);
+      const rowBg = lv ? ' style="background:' + levelMeta(lv.level).bg + '"' : '';
+      const badge = lv ? ' <span class="chip" style="background:' + levelMeta(lv.level).bg + ';color:' + levelMeta(lv.level).color + ';border-color:' + (lv.level === '消息' ? 'var(--line)' : 'transparent') + ';font-weight:600">' + levelMeta(lv.level).label + '</span>' : '';
+      return '<tr' + rowBg + '><td><b>' + esc(x.name) + '</b>' + badge + '</td>' +
+        '<td class="num ' + clsPct(x.pct) + '">' + fmtPct(x.pct) + '</td>' +
+        '<td class="num" style="color:' + (x.zt ? 'var(--up)' : 'var(--txt3)') + ';font-weight:600">' + (x.zt || 0) + '</td>' +
+        '<td class="num ' + (typeof x.net === 'number' && x.net >= 0 ? 'up' : 'down') + '">' + (typeof x.net === 'number' ? (x.net >= 0 ? '+' : '') + x.net + '亿' : '—') + '</td>' +
+        '<td style="color:var(--txt2)">' + esc(x.leader || '—') + (x.leader_pct ? ' <span class="' + clsPct(x.leader_pct) + '">' + fmtPct(x.leader_pct) + '</span>' : '') + '</td></tr>';
+    }).join('');
     html += '<div class="theme-sec"><h3>板块强度对照 · 涨停 × 涨幅 × 资金</h3>' +
       '<div class="tbl-wrap"><table class="tbl"><thead><tr><th>板块</th><th class="num">涨跌幅</th><th class="num">涨停</th><th class="num">净流入</th><th>领涨</th></tr></thead><tbody>' + mergedRows + '</tbody></table></div></div>';
   }
@@ -1167,6 +1170,21 @@ const THEME_LEVELS = [
   { key:'消息', label:'消息级', color:'#6b7a8d', bg:'var(--bg)', weight:1, desc:'小作文/传闻' }
 ];
 function levelMeta(l){ return THEME_LEVELS.find(t=>t.key===l) || THEME_LEVELS[3]; }
+// 匹配板块/行业名与题材标注（精确优先，其次双向包含；命中多级取最高级）
+function matchThemeLevel(name){
+  const levels = lsGet(LS.levels, []);
+  if(!levels.length) return null;
+  const s = String(name || '').trim();
+  if(!s) return null;
+  let best = null;
+  levels.forEach(lv => {
+    const n = String(lv.name || '').trim();
+    if(!n) return;
+    const hit = (s === n) || (n.length >= 2 && (s.includes(n) || n.includes(s)));
+    if(hit && (!best || levelMeta(lv.level).weight > levelMeta(best.level).weight)) best = lv;
+  });
+  return best;
+}
 function renderThemeLevels(){
   const list = $('themeLevelList'); if(!list) return;
   const arr = lsGet(LS.levels, []);
