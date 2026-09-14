@@ -1,23 +1,23 @@
 [
  {
   "name": "医疗服务",
-  "pct": 4.05,
+  "pct": 3.99,
   "leader": "万邦医药",
   "leader_pct": 20.0,
-  "up_count": 51,
-  "down_count": 3
+  "up_count": 50,
+  "down_count": 4
  },
  {
   "name": "生物制品",
-  "pct": 3.05,
+  "pct": 2.96,
   "leader": "近岸蛋白",
   "leader_pct": 20.0,
   "up_count": 48,
-  "down_count": 6
+  "down_count": 7
  },
  {
   "name": "汽车整车",
-  "pct": 2.86,
+  "pct": 2.95,
   "leader": "安凯客车",
   "leader_pct": 10.14,
   "up_count": 20,
@@ -25,23 +25,23 @@
  },
  {
   "name": "元件",
-  "pct": 2.83,
+  "pct": 2.84,
   "leader": "满坤科技",
   "leader_pct": 20.0,
   "up_count": 45,
-  "down_count": 17
+  "down_count": 18
  },
  {
   "name": "汽车服务及其他",
-  "pct": 2.15,
+  "pct": 2.27,
   "leader": "征和工业",
-  "leader_pct": 8.03,
+  "leader_pct": 7.39,
   "up_count": 22,
-  "down_count": 3
+  "down_count": 2
  },
  {
   "name": "化学制药",
-  "pct": 1.91,
+  "pct": 1.85,
   "leader": "津药药业",
   "leader_pct": 10.09,
   "up_count": 144,
@@ -49,34 +49,34 @@
  },
  {
   "name": "电子化学品",
-  "pct": 1.78,
+  "pct": 1.77,
   "leader": "天通股份",
   "leader_pct": 10.01,
-  "up_count": 34,
-  "down_count": 8
- },
- {
-  "name": "自动化设备",
-  "pct": 1.67,
-  "leader": "高凯技术",
-  "leader_pct": 20.0,
-  "up_count": 73,
-  "down_count": 26
+  "up_count": 33,
+  "down_count": 9
  },
  {
   "name": "电池",
-  "pct": 1.64,
-  "leader": "美德乐",
-  "leader_pct": 9.56,
-  "up_count": 92,
-  "down_count": 14
+  "pct": 1.73,
+  "leader": "ST南都",
+  "leader_pct": 8.35,
+  "up_count": 89,
+  "down_count": 17
+ },
+ {
+  "name": "自动化设备",
+  "pct": 1.69,
+  "leader": "高凯技术",
+  "leader_pct": 20.0,
+  "up_count": 72,
+  "down_count": 26
  },
  {
   "name": "中药",
-  "pct": 1.58,
+  "pct": 1.6,
   "leader": "三力制药",
   "leader_pct": 9.97,
-  "up_count": 57,
-  "down_count": 10
+  "up_count": 58,
+  "down_count": 7
  }
 ]
