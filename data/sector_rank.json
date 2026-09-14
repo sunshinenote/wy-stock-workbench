@@ -1,82 +1,82 @@
 [
  {
-  "name": "元件",
-  "pct": 3.11,
-  "leader": "则成电子",
-  "leader_pct": 15.16,
+  "name": "医疗服务",
+  "pct": 4.05,
+  "leader": "万邦医药",
+  "leader_pct": 20.0,
+  "up_count": 51,
+  "down_count": 3
+ },
+ {
+  "name": "生物制品",
+  "pct": 3.05,
+  "leader": "近岸蛋白",
+  "leader_pct": 20.0,
   "up_count": 48,
-  "down_count": 15
+  "down_count": 6
  },
  {
-  "name": "通信设备",
-  "pct": 0.42,
-  "leader": "神宇股份",
-  "leader_pct": 19.98,
-  "up_count": 37,
-  "down_count": 53
+  "name": "汽车整车",
+  "pct": 2.86,
+  "leader": "安凯客车",
+  "leader_pct": 10.14,
+  "up_count": 20,
+  "down_count": 2
  },
  {
-  "name": "影视院线",
-  "pct": 0.35,
-  "leader": "中视传媒",
-  "leader_pct": 10.02,
-  "up_count": 6,
+  "name": "元件",
+  "pct": 2.83,
+  "leader": "满坤科技",
+  "leader_pct": 20.0,
+  "up_count": 45,
+  "down_count": 17
+ },
+ {
+  "name": "汽车服务及其他",
+  "pct": 2.15,
+  "leader": "征和工业",
+  "leader_pct": 8.03,
+  "up_count": 22,
+  "down_count": 3
+ },
+ {
+  "name": "化学制药",
+  "pct": 1.91,
+  "leader": "津药药业",
+  "leader_pct": 10.09,
+  "up_count": 144,
   "down_count": 14
  },
  {
-  "name": "军工电子",
-  "pct": 0.17,
-  "leader": "成电光信",
-  "leader_pct": 10.54,
-  "up_count": 26,
-  "down_count": 35
+  "name": "电子化学品",
+  "pct": 1.78,
+  "leader": "天通股份",
+  "leader_pct": 10.01,
+  "up_count": 34,
+  "down_count": 8
  },
  {
-  "name": "军工装备",
-  "pct": 0.01,
-  "leader": "光电股份",
-  "leader_pct": 10.02,
-  "up_count": 31,
-  "down_count": 51
+  "name": "自动化设备",
+  "pct": 1.67,
+  "leader": "高凯技术",
+  "leader_pct": 20.0,
+  "up_count": 73,
+  "down_count": 26
  },
  {
-  "name": "黑色家电",
-  "pct": -0.04,
-  "leader": "高斯贝尔",
-  "leader_pct": 10.04,
-  "up_count": 4,
-  "down_count": 5
+  "name": "电池",
+  "pct": 1.64,
+  "leader": "美德乐",
+  "leader_pct": 9.56,
+  "up_count": 92,
+  "down_count": 14
  },
  {
-  "name": "电力",
-  "pct": -0.37,
-  "leader": "杭州热电",
-  "leader_pct": 10.0,
-  "up_count": 35,
-  "down_count": 70
- },
- {
-  "name": "风电设备",
-  "pct": -0.43,
-  "leader": "大金重工",
-  "leader_pct": 5.25,
-  "up_count": 12,
-  "down_count": 20
- },
- {
-  "name": "文化传媒",
-  "pct": -0.67,
-  "leader": "风语筑",
-  "leader_pct": 10.03,
-  "up_count": 16,
-  "down_count": 64
- },
- {
-  "name": "其他电子",
-  "pct": -0.89,
-  "leader": "远望谷",
-  "leader_pct": 9.99,
-  "up_count": 5,
-  "down_count": 29
+  "name": "中药",
+  "pct": 1.58,
+  "leader": "三力制药",
+  "leader_pct": 9.97,
+  "up_count": 57,
+  "down_count": 10
  }
 ]
