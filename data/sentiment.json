@@ -2,8 +2,8 @@
  "date": "2026-09-14",
  "zt": 55,
  "dt": 16,
- "zb": 30,
- "zb_rate": 35.3,
+ "zb": 0,
+ "zb_rate": 0.0,
  "max_lb": 4,
  "lb_dist": [
   {
@@ -23,8 +23,8 @@
    "count": 1
   }
  ],
- "score": 50,
- "level": "复苏",
+ "score": 70,
+ "level": "高潮",
  "note": "跌停家数较多，情绪走弱",
  "industries": [
   {
