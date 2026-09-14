@@ -25,20 +25,20 @@
    "last_date": "2026-07-28"
   },
   {
+   "code": "002096",
+   "name": "易普力",
+   "count": 33,
+   "dec_count": 0,
+   "first_date": "2026-06-12",
+   "last_date": "2026-09-11"
+  },
+  {
    "code": "002568",
    "name": "百润股份",
    "count": 32,
    "dec_count": 0,
    "first_date": "2026-07-02",
    "last_date": "2026-09-04"
-  },
-  {
-   "code": "002096",
-   "name": "易普力",
-   "count": 32,
-   "dec_count": 0,
-   "first_date": "2026-06-12",
-   "last_date": "2026-07-22"
   },
   {
    "code": "603098",
@@ -59,34 +59,34 @@
   {
    "code": "002146",
    "name": "荣盛发展",
-   "count": 29,
+   "count": 30,
    "dec_count": 0,
    "first_date": "2026-06-30",
-   "last_date": "2026-08-31"
+   "last_date": "2026-09-11"
   },
   {
    "code": "301429",
    "name": "森泰股份",
-   "count": 24,
+   "count": 26,
    "dec_count": 0,
    "first_date": "2026-06-08",
-   "last_date": "2026-09-10"
+   "last_date": "2026-09-11"
   },
   {
    "code": "301533",
    "name": "威马农机",
-   "count": 23,
+   "count": 24,
    "dec_count": 4,
    "first_date": "2026-07-24",
-   "last_date": "2026-09-10"
+   "last_date": "2026-09-11"
   },
   {
    "code": "301089",
    "name": "拓新药业",
-   "count": 20,
+   "count": 22,
    "dec_count": 0,
    "first_date": "2026-07-17",
-   "last_date": "2026-09-10"
+   "last_date": "2026-09-11"
   },
   {
    "code": "002024",
@@ -113,12 +113,12 @@
    "last_date": "2026-04-30"
   },
   {
-   "code": "600684",
-   "name": "珠江股份",
+   "code": "601717",
+   "name": "中创智领",
    "count": 17,
    "dec_count": 0,
-   "first_date": "2026-06-23",
-   "last_date": "2026-07-08"
+   "first_date": "2026-07-17",
+   "last_date": "2026-09-11"
   }
  ],
  "prior": [
