@@ -125,47 +125,47 @@
   {
    "code": "603098",
    "name": "森特股份",
-   "count": 42,
+   "count": 39,
    "dec_count": 0,
    "first_date": "2025-12-29",
    "last_date": "2026-03-17"
   },
   {
-   "code": "601916",
-   "name": "浙商银行",
-   "count": 31,
-   "dec_count": 0,
-   "first_date": "2025-09-16",
-   "last_date": "2025-12-16"
-  },
-  {
    "code": "300304",
    "name": "云意电气",
-   "count": 29,
+   "count": 30,
    "dec_count": 0,
    "first_date": "2025-10-28",
    "last_date": "2026-03-09"
   },
   {
+   "code": "601916",
+   "name": "浙商银行",
+   "count": 30,
+   "dec_count": 0,
+   "first_date": "2025-09-16",
+   "last_date": "2025-12-16"
+  },
+  {
+   "code": "600557",
+   "name": "康缘药业",
+   "count": 26,
+   "dec_count": 0,
+   "first_date": "2025-11-11",
+   "last_date": "2025-12-04"
+  },
+  {
    "code": "000567",
    "name": "海德股份",
-   "count": 25,
+   "count": 26,
    "dec_count": 0,
    "first_date": "2025-09-18",
    "last_date": "2025-11-04"
   },
   {
-   "code": "600557",
-   "name": "康缘药业",
-   "count": 24,
-   "dec_count": 0,
-   "first_date": "2025-11-11",
-   "last_date": "2025-12-03"
-  },
-  {
    "code": "603132",
    "name": "金徽股份",
-   "count": 22,
+   "count": 20,
    "dec_count": 0,
    "first_date": "2025-09-16",
    "last_date": "2025-10-16"
@@ -181,7 +181,7 @@
   {
    "code": "603299",
    "name": "苏盐井神",
-   "count": 19,
+   "count": 18,
    "dec_count": 0,
    "first_date": "2025-12-04",
    "last_date": "2026-01-05"
@@ -189,7 +189,7 @@
   {
    "code": "605338",
    "name": "巴比食品",
-   "count": 17,
+   "count": 16,
    "dec_count": 0,
    "first_date": "2025-09-24",
    "last_date": "2026-03-02"
@@ -205,7 +205,7 @@
   {
    "code": "601665",
    "name": "齐鲁银行",
-   "count": 15,
+   "count": 16,
    "dec_count": 0,
    "first_date": "2025-09-17",
    "last_date": "2025-12-15"
@@ -227,21 +227,21 @@
    "last_date": "2026-03-09"
   },
   {
-   "code": "300592",
-   "name": "华凯易佰",
-   "count": 12,
-   "dec_count": 0,
-   "first_date": "2025-11-04",
-   "last_date": "2025-12-16"
-  },
-  {
    "code": "002538",
    "name": "ST司特",
-   "count": 12,
+   "count": 13,
    "dec_count": 0,
    "first_date": "2025-09-16",
    "last_date": "2025-11-21"
+  },
+  {
+   "code": "600733",
+   "name": "北汽蓝谷",
+   "count": 11,
+   "dec_count": 0,
+   "first_date": "2026-01-27",
+   "last_date": "2026-01-30"
   }
  ],
- "prior_range": "2025-09-14 ~ 2026-03-17"
+ "prior_range": "2025-09-15 ~ 2026-03-18"
 }
