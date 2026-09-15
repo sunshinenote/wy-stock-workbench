@@ -1,82 +1,82 @@
 [
  {
-  "name": "医疗服务",
-  "pct": 3.99,
-  "leader": "万邦医药",
-  "leader_pct": 20.0,
-  "up_count": 50,
-  "down_count": 4
- },
- {
-  "name": "生物制品",
-  "pct": 2.96,
-  "leader": "近岸蛋白",
-  "leader_pct": 20.0,
-  "up_count": 48,
-  "down_count": 7
- },
- {
-  "name": "汽车整车",
-  "pct": 2.95,
-  "leader": "安凯客车",
-  "leader_pct": 10.14,
-  "up_count": 20,
-  "down_count": 2
- },
- {
-  "name": "元件",
-  "pct": 2.84,
-  "leader": "满坤科技",
-  "leader_pct": 20.0,
-  "up_count": 45,
-  "down_count": 18
- },
- {
-  "name": "汽车服务及其他",
-  "pct": 2.27,
-  "leader": "征和工业",
-  "leader_pct": 7.39,
-  "up_count": 22,
-  "down_count": 2
- },
- {
-  "name": "化学制药",
-  "pct": 1.85,
-  "leader": "津药药业",
-  "leader_pct": 10.09,
-  "up_count": 144,
-  "down_count": 14
+  "name": "风电设备",
+  "pct": 4.08,
+  "leader": "振宏股份",
+  "leader_pct": 13.07,
+  "up_count": 26,
+  "down_count": 5
  },
  {
   "name": "电子化学品",
-  "pct": 1.77,
-  "leader": "天通股份",
+  "pct": 2.51,
+  "leader": "西陇科学",
   "leader_pct": 10.01,
-  "up_count": 33,
-  "down_count": 9
+  "up_count": 38,
+  "down_count": 4
+ },
+ {
+  "name": "半导体",
+  "pct": 1.32,
+  "leader": "气派科技",
+  "leader_pct": 15.93,
+  "up_count": 121,
+  "down_count": 66
+ },
+ {
+  "name": "小金属",
+  "pct": 0.74,
+  "leader": "翔鹭钨业",
+  "leader_pct": 9.06,
+  "up_count": 14,
+  "down_count": 15
  },
  {
   "name": "电池",
-  "pct": 1.73,
-  "leader": "ST南都",
-  "leader_pct": 8.35,
-  "up_count": 89,
-  "down_count": 17
+  "pct": 0.51,
+  "leader": "宏工科技",
+  "leader_pct": 15.03,
+  "up_count": 60,
+  "down_count": 46
  },
  {
-  "name": "自动化设备",
-  "pct": 1.69,
-  "leader": "高凯技术",
-  "leader_pct": 20.0,
-  "up_count": 72,
-  "down_count": 26
+  "name": "元件",
+  "pct": 0.37,
+  "leader": "华正新材",
+  "leader_pct": 10.0,
+  "up_count": 30,
+  "down_count": 33
  },
  {
-  "name": "中药",
-  "pct": 1.6,
-  "leader": "三力制药",
-  "leader_pct": 9.97,
-  "up_count": 58,
-  "down_count": 7
+  "name": "塑料制品",
+  "pct": -0.11,
+  "leader": "浙江众成",
+  "leader_pct": 10.04,
+  "up_count": 27,
+  "down_count": 50
+ },
+ {
+  "name": "煤炭开采加工",
+  "pct": -0.16,
+  "leader": "云煤能源",
+  "leader_pct": 7.08,
+  "up_count": 14,
+  "down_count": 20
+ },
+ {
+  "name": "金属新材料",
+  "pct": -0.19,
+  "leader": "春光集团",
+  "leader_pct": 5.62,
+  "up_count": 14,
+  "down_count": 20
+ },
+ {
+  "name": "黑色家电",
+  "pct": -0.28,
+  "leader": "九联科技",
+  "leader_pct": 2.47,
+  "up_count": 4,
+  "down_count": 5
  }
 ]
