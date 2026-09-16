@@ -1,82 +1,82 @@
 [
  {
-  "name": "风电设备",
-  "pct": 4.08,
-  "leader": "振宏股份",
-  "leader_pct": 13.07,
-  "up_count": 26,
-  "down_count": 5
+  "name": "半导体",
+  "pct": 4.79,
+  "leader": "有研硅",
+  "leader_pct": 20.0,
+  "up_count": 186,
+  "down_count": 1
+ },
+ {
+  "name": "其他电子",
+  "pct": 4.01,
+  "leader": "民德电子",
+  "leader_pct": 20.01,
+  "up_count": 31,
+  "down_count": 3
  },
  {
   "name": "电子化学品",
-  "pct": 2.51,
-  "leader": "西陇科学",
-  "leader_pct": 10.01,
-  "up_count": 38,
-  "down_count": 4
+  "pct": 3.71,
+  "leader": "德邦科技",
+  "leader_pct": 10.14,
+  "up_count": 41,
+  "down_count": 2
  },
  {
-  "name": "半导体",
-  "pct": 1.32,
-  "leader": "气派科技",
-  "leader_pct": 15.93,
-  "up_count": 121,
-  "down_count": 66
- },
- {
-  "name": "小金属",
-  "pct": 0.74,
-  "leader": "翔鹭钨业",
-  "leader_pct": 9.06,
+  "name": "贵金属",
+  "pct": 3.61,
+  "leader": "四川黄金",
+  "leader_pct": 6.41,
   "up_count": 14,
-  "down_count": 15
+  "down_count": 0
  },
  {
-  "name": "电池",
-  "pct": 0.51,
-  "leader": "宏工科技",
-  "leader_pct": 15.03,
-  "up_count": 60,
-  "down_count": 46
+  "name": "光学光电子",
+  "pct": 3.53,
+  "leader": "福光股份",
+  "leader_pct": 14.35,
+  "up_count": 100,
+  "down_count": 6
+ },
+ {
+  "name": "通信设备",
+  "pct": 3.42,
+  "leader": "致尚科技",
+  "leader_pct": 20.0,
+  "up_count": 83,
+  "down_count": 8
  },
  {
   "name": "元件",
-  "pct": 0.37,
-  "leader": "华正新材",
-  "leader_pct": 10.0,
-  "up_count": 30,
-  "down_count": 33
+  "pct": 3.23,
+  "leader": "威尔高",
+  "leader_pct": 20.0,
+  "up_count": 53,
+  "down_count": 10
  },
  {
-  "name": "塑料制品",
-  "pct": -0.11,
-  "leader": "浙江众成",
-  "leader_pct": 10.04,
-  "up_count": 27,
-  "down_count": 50
+  "name": "橡胶制品",
+  "pct": 3.16,
+  "leader": "远翔新材",
+  "leader_pct": 13.73,
+  "up_count": 21,
+  "down_count": 0
  },
  {
-  "name": "煤炭开采加工",
-  "pct": -0.16,
-  "leader": "云煤能源",
-  "leader_pct": 7.08,
-  "up_count": 14,
-  "down_count": 20
+  "name": "互联网电商",
+  "pct": 2.86,
+  "leader": "星徽股份",
+  "leader_pct": 20.0,
+  "up_count": 17,
+  "down_count": 2
  },
  {
-  "name": "金属新材料",
-  "pct": -0.19,
-  "leader": "春光集团",
-  "leader_pct": 5.62,
-  "up_count": 14,
-  "down_count": 20
- },
- {
-  "name": "黑色家电",
-  "pct": -0.28,
-  "leader": "九联科技",
-  "leader_pct": 2.47,
-  "up_count": 4,
-  "down_count": 5
+  "name": "非金属材料",
+  "pct": 2.56,
+  "leader": "金博股份",
+  "leader_pct": 6.9,
+  "up_count": 16,
+  "down_count": 1
  }
 ]
