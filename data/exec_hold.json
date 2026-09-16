@@ -3,10 +3,10 @@
   {
    "code": "002637",
    "name": "赞宇科技",
-   "count": 65,
+   "count": 66,
    "dec_count": 0,
    "first_date": "2026-03-19",
-   "last_date": "2026-09-14"
+   "last_date": "2026-09-15"
   },
   {
    "code": "600328",
@@ -83,10 +83,18 @@
   {
    "code": "301089",
    "name": "拓新药业",
-   "count": 22,
+   "count": 23,
    "dec_count": 0,
    "first_date": "2026-07-17",
-   "last_date": "2026-09-11"
+   "last_date": "2026-09-15"
+  },
+  {
+   "code": "601717",
+   "name": "中创智领",
+   "count": 19,
+   "dec_count": 0,
+   "first_date": "2026-07-17",
+   "last_date": "2026-09-15"
   },
   {
    "code": "002024",
@@ -95,14 +103,6 @@
    "dec_count": 0,
    "first_date": "2026-05-27",
    "last_date": "2026-08-06"
-  },
-  {
-   "code": "601717",
-   "name": "中创智领",
-   "count": 18,
-   "dec_count": 0,
-   "first_date": "2026-07-17",
-   "last_date": "2026-09-14"
   },
   {
    "code": "603312",
