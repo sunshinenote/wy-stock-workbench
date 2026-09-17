@@ -1,82 +1,82 @@
 [
  {
-  "name": "半导体",
-  "pct": 4.79,
-  "leader": "有研硅",
-  "leader_pct": 20.0,
-  "up_count": 186,
-  "down_count": 1
+  "name": "种植业与林业",
+  "pct": 3.33,
+  "leader": "秋乐种业",
+  "leader_pct": 15.94,
+  "up_count": 25,
+  "down_count": 5
  },
  {
-  "name": "其他电子",
-  "pct": 4.01,
-  "leader": "民德电子",
-  "leader_pct": 20.01,
-  "up_count": 31,
-  "down_count": 3
- },
- {
-  "name": "电子化学品",
-  "pct": 3.71,
-  "leader": "德邦科技",
-  "leader_pct": 10.14,
-  "up_count": 41,
-  "down_count": 2
- },
- {
-  "name": "贵金属",
-  "pct": 3.61,
-  "leader": "四川黄金",
-  "leader_pct": 6.41,
+  "name": "教育",
+  "pct": 2.6,
+  "leader": "ST豆神",
+  "leader_pct": 7.62,
   "up_count": 14,
-  "down_count": 0
- },
- {
-  "name": "光学光电子",
-  "pct": 3.53,
-  "leader": "福光股份",
-  "leader_pct": 14.35,
-  "up_count": 100,
-  "down_count": 6
- },
- {
-  "name": "通信设备",
-  "pct": 3.42,
-  "leader": "致尚科技",
-  "leader_pct": 20.0,
-  "up_count": 83,
-  "down_count": 8
- },
- {
-  "name": "元件",
-  "pct": 3.23,
-  "leader": "威尔高",
-  "leader_pct": 20.0,
-  "up_count": 53,
-  "down_count": 10
- },
- {
-  "name": "橡胶制品",
-  "pct": 3.16,
-  "leader": "远翔新材",
-  "leader_pct": 13.73,
-  "up_count": 21,
-  "down_count": 0
+  "down_count": 1
  },
  {
   "name": "互联网电商",
-  "pct": 2.86,
-  "leader": "星徽股份",
-  "leader_pct": 20.0,
-  "up_count": 17,
-  "down_count": 2
+  "pct": 2.2,
+  "leader": "跨境通",
+  "leader_pct": 9.91,
+  "up_count": 16,
+  "down_count": 4
  },
  {
-  "name": "非金属材料",
-  "pct": 2.56,
-  "leader": "金博股份",
-  "leader_pct": 6.9,
-  "up_count": 16,
-  "down_count": 1
+  "name": "汽车整车",
+  "pct": 2.04,
+  "leader": "众泰汽车",
+  "leader_pct": 10.23,
+  "up_count": 18,
+  "down_count": 4
+ },
+ {
+  "name": "风电设备",
+  "pct": 1.76,
+  "leader": "锡华科技",
+  "leader_pct": 9.99,
+  "up_count": 18,
+  "down_count": 14
+ },
+ {
+  "name": "文化传媒",
+  "pct": 1.68,
+  "leader": "龙版传媒",
+  "leader_pct": 9.97,
+  "up_count": 67,
+  "down_count": 16
+ },
+ {
+  "name": "生物制品",
+  "pct": 1.5,
+  "leader": "近岸蛋白",
+  "leader_pct": 18.75,
+  "up_count": 47,
+  "down_count": 8
+ },
+ {
+  "name": "医疗服务",
+  "pct": 1.45,
+  "leader": "南华生物",
+  "leader_pct": 10.04,
+  "up_count": 43,
+  "down_count": 11
+ },
+ {
+  "name": "影视院线",
+  "pct": 1.37,
+  "leader": "中视传媒",
+  "leader_pct": 7.64,
+  "up_count": 17,
+  "down_count": 3
+ },
+ {
+  "name": "农产品加工",
+  "pct": 1.31,
+  "leader": "金健米业",
+  "leader_pct": 9.97,
+  "up_count": 31,
+  "down_count": 10
  }
 ]
