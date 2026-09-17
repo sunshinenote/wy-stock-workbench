@@ -370,6 +370,15 @@
  },
  {
   "date": "2026-09-18",
+  "time": "16:06",
+  "country": "中国",
+  "importance": "中",
+  "event": "中国2025年东盟贸易指数",
+  "forecast": "nan",
+  "previous": "167.87"
+ },
+ {
+  "date": "2026-09-18",
   "time": "18:00",
   "country": "英国",
   "importance": "中",
@@ -709,14 +718,5 @@
   "event": "中国1-8月全国发电装机容量年率-年初至今(%)",
   "forecast": "nan",
   "previous": "11.0"
- },
- {
-  "date": "2026-09-21",
-  "time": "11:08",
-  "country": "中国",
-  "importance": "中",
-  "event": "中国1-8月发电装机容量之水核风太阳能-年初至今(万千瓦)",
-  "forecast": "nan",
-  "previous": "249688.0"
  }
 ]
