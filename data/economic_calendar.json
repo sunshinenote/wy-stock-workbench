@@ -230,7 +230,7 @@
   "country": "中国",
   "importance": "高",
   "event": "中国9月五年期贷款市场报价利率LPR(%)",
-  "forecast": "nan",
+  "forecast": "3.5",
   "previous": "3.5"
  },
  {
@@ -239,7 +239,7 @@
   "country": "中国",
   "importance": "高",
   "event": "中国9月一年期贷款市场报价利率LPR(%)",
-  "forecast": "nan",
+  "forecast": "3.0",
   "previous": "3.0"
  },
  {
@@ -401,7 +401,7 @@
   "country": "美国",
   "importance": "中",
   "event": "美国8月芝加哥联储全国活动指数变动",
-  "forecast": "nan",
+  "forecast": "-0.06",
   "previous": "-0.08"
  },
  {
