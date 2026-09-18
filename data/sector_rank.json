@@ -1,82 +1,82 @@
 [
  {
-  "name": "种植业与林业",
-  "pct": 3.33,
-  "leader": "秋乐种业",
-  "leader_pct": 15.94,
-  "up_count": 25,
-  "down_count": 5
- },
- {
-  "name": "教育",
-  "pct": 2.6,
-  "leader": "ST豆神",
-  "leader_pct": 7.62,
-  "up_count": 14,
-  "down_count": 1
- },
- {
-  "name": "互联网电商",
-  "pct": 2.2,
-  "leader": "跨境通",
-  "leader_pct": 9.91,
-  "up_count": 16,
+  "name": "半导体",
+  "pct": 4.31,
+  "leader": "托伦斯",
+  "leader_pct": 20.0,
+  "up_count": 184,
   "down_count": 4
  },
  {
-  "name": "汽车整车",
-  "pct": 2.04,
-  "leader": "众泰汽车",
-  "leader_pct": 10.23,
-  "up_count": 18,
+  "name": "其他电子",
+  "pct": 3.07,
+  "leader": "民德电子",
+  "leader_pct": 10.99,
+  "up_count": 34,
+  "down_count": 0
+ },
+ {
+  "name": "光伏设备",
+  "pct": 2.91,
+  "leader": "拉普拉斯",
+  "leader_pct": 11.26,
+  "up_count": 66,
+  "down_count": 6
+ },
+ {
+  "name": "其他电源设备",
+  "pct": 2.86,
+  "leader": "高特电子",
+  "leader_pct": 6.71,
+  "up_count": 31,
   "down_count": 4
  },
  {
-  "name": "风电设备",
-  "pct": 1.76,
-  "leader": "锡华科技",
-  "leader_pct": 9.99,
-  "up_count": 18,
-  "down_count": 14
+  "name": "专用设备",
+  "pct": 2.69,
+  "leader": "沈鼓集团",
+  "leader_pct": 177.74,
+  "up_count": 160,
+  "down_count": 37
  },
  {
-  "name": "文化传媒",
-  "pct": 1.68,
-  "leader": "龙版传媒",
-  "leader_pct": 9.97,
-  "up_count": 67,
-  "down_count": 16
+  "name": "电子化学品",
+  "pct": 2.61,
+  "leader": "广钢气体",
+  "leader_pct": 8.4,
+  "up_count": 39,
+  "down_count": 4
  },
  {
   "name": "生物制品",
-  "pct": 1.5,
-  "leader": "近岸蛋白",
-  "leader_pct": 18.75,
-  "up_count": 47,
-  "down_count": 8
+  "pct": 2.61,
+  "leader": "信诺维",
+  "leader_pct": 34.46,
+  "up_count": 50,
+  "down_count": 5
  },
  {
   "name": "医疗服务",
-  "pct": 1.45,
-  "leader": "南华生物",
-  "leader_pct": 10.04,
-  "up_count": 43,
-  "down_count": 11
- },
- {
-  "name": "影视院线",
-  "pct": 1.37,
-  "leader": "中视传媒",
-  "leader_pct": 7.64,
-  "up_count": 17,
-  "down_count": 3
- },
- {
-  "name": "农产品加工",
-  "pct": 1.31,
-  "leader": "金健米业",
-  "leader_pct": 9.97,
-  "up_count": 31,
+  "pct": 2.54,
+  "leader": "泓博医药",
+  "leader_pct": 10.76,
+  "up_count": 46,
   "down_count": 10
+ },
+ {
+  "name": "家居用品",
+  "pct": 2.37,
+  "leader": "家联科技",
+  "leader_pct": 10.32,
+  "up_count": 79,
+  "down_count": 17
+ },
+ {
+  "name": "通信设备",
+  "pct": 2.35,
+  "leader": "浩瀚深度",
+  "leader_pct": 20.02,
+  "up_count": 79,
+  "down_count": 12
  }
 ]
