@@ -1,82 +1,82 @@
 [
  {
-  "name": "半导体",
-  "pct": 4.31,
-  "leader": "托伦斯",
+  "name": "医疗服务",
+  "pct": 5.1,
+  "leader": "诺禾致源",
   "leader_pct": 20.0,
-  "up_count": 184,
-  "down_count": 4
+  "up_count": 55,
+  "down_count": 1
  },
  {
-  "name": "其他电子",
-  "pct": 3.07,
-  "leader": "民德电子",
-  "leader_pct": 10.99,
-  "up_count": 34,
-  "down_count": 0
- },
- {
-  "name": "光伏设备",
-  "pct": 2.91,
-  "leader": "拉普拉斯",
-  "leader_pct": 11.26,
-  "up_count": 66,
-  "down_count": 6
- },
- {
-  "name": "其他电源设备",
-  "pct": 2.86,
-  "leader": "高特电子",
-  "leader_pct": 6.71,
-  "up_count": 31,
-  "down_count": 4
- },
- {
-  "name": "专用设备",
-  "pct": 2.69,
-  "leader": "沈鼓集团",
-  "leader_pct": 177.74,
-  "up_count": 160,
-  "down_count": 37
- },
- {
-  "name": "电子化学品",
-  "pct": 2.61,
-  "leader": "广钢气体",
-  "leader_pct": 8.4,
-  "up_count": 39,
+  "name": "化学制药",
+  "pct": 4.67,
+  "leader": "峆一药业",
+  "leader_pct": 29.91,
+  "up_count": 154,
   "down_count": 4
  },
  {
   "name": "生物制品",
-  "pct": 2.61,
-  "leader": "信诺维",
-  "leader_pct": 34.46,
-  "up_count": 50,
-  "down_count": 5
+  "pct": 4.64,
+  "leader": "近岸蛋白",
+  "leader_pct": 20.0,
+  "up_count": 55,
+  "down_count": 1
  },
  {
-  "name": "医疗服务",
-  "pct": 2.54,
-  "leader": "泓博医药",
-  "leader_pct": 10.76,
-  "up_count": 46,
-  "down_count": 10
+  "name": "房地产",
+  "pct": 3.68,
+  "leader": "绿地控股",
+  "leader_pct": 10.35,
+  "up_count": 80,
+  "down_count": 6
  },
  {
-  "name": "家居用品",
-  "pct": 2.37,
-  "leader": "家联科技",
-  "leader_pct": 10.32,
-  "up_count": 79,
-  "down_count": 17
+  "name": "医疗器械",
+  "pct": 3.43,
+  "leader": "透景生命",
+  "leader_pct": 19.99,
+  "up_count": 131,
+  "down_count": 8
  },
  {
-  "name": "通信设备",
-  "pct": 2.35,
-  "leader": "浩瀚深度",
-  "leader_pct": 20.02,
-  "up_count": 79,
-  "down_count": 12
+  "name": "农产品加工",
+  "pct": 3.31,
+  "leader": "乖宝宠物",
+  "leader_pct": 11.0,
+  "up_count": 41,
+  "down_count": 2
+ },
+ {
+  "name": "中药",
+  "pct": 3.26,
+  "leader": "华森制药",
+  "leader_pct": 10.03,
+  "up_count": 66,
+  "down_count": 2
+ },
+ {
+  "name": "油气开采及服务",
+  "pct": 2.91,
+  "leader": "海油工程",
+  "leader_pct": 7.76,
+  "up_count": 17,
+  "down_count": 1
+ },
+ {
+  "name": "零售",
+  "pct": 2.91,
+  "leader": "南宁百货",
+  "leader_pct": 10.09,
+  "up_count": 69,
+  "down_count": 2
+ },
+ {
+  "name": "旅游及酒店",
+  "pct": 2.83,
+  "leader": "大连圣亚",
+  "leader_pct": 10.01,
+  "up_count": 35,
+  "down_count": 0
  }
 ]
