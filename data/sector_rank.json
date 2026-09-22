@@ -1,82 +1,82 @@
 [
  {
-  "name": "医疗服务",
-  "pct": 5.1,
-  "leader": "诺禾致源",
-  "leader_pct": 20.0,
-  "up_count": 55,
-  "down_count": 1
+  "name": "文化传媒",
+  "pct": 3.15,
+  "leader": "智度股份",
+  "leader_pct": 10.04,
+  "up_count": 79,
+  "down_count": 5
  },
  {
-  "name": "化学制药",
-  "pct": 4.67,
-  "leader": "峆一药业",
-  "leader_pct": 29.91,
-  "up_count": 154,
-  "down_count": 4
- },
- {
-  "name": "生物制品",
-  "pct": 4.64,
-  "leader": "近岸蛋白",
-  "leader_pct": 20.0,
-  "up_count": 55,
-  "down_count": 1
- },
- {
-  "name": "房地产",
-  "pct": 3.68,
-  "leader": "绿地控股",
-  "leader_pct": 10.35,
-  "up_count": 80,
-  "down_count": 6
- },
- {
-  "name": "医疗器械",
-  "pct": 3.43,
-  "leader": "透景生命",
-  "leader_pct": 19.99,
-  "up_count": 131,
+  "name": "通信服务",
+  "pct": 1.98,
+  "leader": "二六三",
+  "leader_pct": 9.94,
+  "up_count": 35,
   "down_count": 8
  },
  {
-  "name": "农产品加工",
-  "pct": 3.31,
-  "leader": "乖宝宠物",
-  "leader_pct": 11.0,
-  "up_count": 41,
-  "down_count": 2
+  "name": "生物制品",
+  "pct": 1.92,
+  "leader": "义翘神州",
+  "leader_pct": 16.09,
+  "up_count": 38,
+  "down_count": 17
  },
  {
-  "name": "中药",
-  "pct": 3.26,
-  "leader": "华森制药",
-  "leader_pct": 10.03,
-  "up_count": 66,
-  "down_count": 2
+  "name": "IT服务",
+  "pct": 1.88,
+  "leader": "光云科技",
+  "leader_pct": 13.91,
+  "up_count": 100,
+  "down_count": 26
  },
  {
-  "name": "油气开采及服务",
-  "pct": 2.91,
-  "leader": "海油工程",
-  "leader_pct": 7.76,
-  "up_count": 17,
-  "down_count": 1
+  "name": "小家电",
+  "pct": 1.74,
+  "leader": "奥佳华",
+  "leader_pct": 10.08,
+  "up_count": 23,
+  "down_count": 3
  },
  {
-  "name": "零售",
-  "pct": 2.91,
-  "leader": "南宁百货",
-  "leader_pct": 10.09,
-  "up_count": 69,
-  "down_count": 2
+  "name": "互联网电商",
+  "pct": 1.66,
+  "leader": "焦点科技",
+  "leader_pct": 6.9,
+  "up_count": 14,
+  "down_count": 4
  },
  {
-  "name": "旅游及酒店",
-  "pct": 2.83,
-  "leader": "大连圣亚",
-  "leader_pct": 10.01,
+  "name": "软件开发",
+  "pct": 1.66,
+  "leader": "延华智能",
+  "leader_pct": 10.04,
+  "up_count": 104,
+  "down_count": 32
+ },
+ {
+  "name": "元件",
+  "pct": 1.28,
+  "leader": "贤丰控股",
+  "leader_pct": 10.07,
   "up_count": 35,
-  "down_count": 0
+  "down_count": 28
+ },
+ {
+  "name": "教育",
+  "pct": 1.23,
+  "leader": "科德教育",
+  "leader_pct": 6.63,
+  "up_count": 10,
+  "down_count": 3
+ },
+ {
+  "name": "计算机设备",
+  "pct": 1.13,
+  "leader": "旋极信息",
+  "leader_pct": 20.0,
+  "up_count": 52,
+  "down_count": 31
  }
 ]
