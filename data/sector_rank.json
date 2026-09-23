@@ -1,82 +1,82 @@
 [
  {
-  "name": "文化传媒",
-  "pct": 3.15,
-  "leader": "智度股份",
-  "leader_pct": 10.04,
-  "up_count": 79,
+  "name": "非金属材料",
+  "pct": 2.21,
+  "leader": "太力科技",
+  "leader_pct": 12.79,
+  "up_count": 12,
   "down_count": 5
  },
  {
-  "name": "通信服务",
-  "pct": 1.98,
-  "leader": "二六三",
-  "leader_pct": 9.94,
-  "up_count": 35,
-  "down_count": 8
- },
- {
-  "name": "生物制品",
-  "pct": 1.92,
-  "leader": "义翘神州",
-  "leader_pct": 16.09,
-  "up_count": 38,
-  "down_count": 17
- },
- {
-  "name": "IT服务",
-  "pct": 1.88,
-  "leader": "光云科技",
-  "leader_pct": 13.91,
-  "up_count": 100,
-  "down_count": 26
- },
- {
-  "name": "小家电",
-  "pct": 1.74,
-  "leader": "奥佳华",
-  "leader_pct": 10.08,
-  "up_count": 23,
-  "down_count": 3
- },
- {
-  "name": "互联网电商",
-  "pct": 1.66,
-  "leader": "焦点科技",
-  "leader_pct": 6.9,
-  "up_count": 14,
+  "name": "厨卫电器",
+  "pct": 1.53,
+  "leader": "亿田智能",
+  "leader_pct": 12.13,
+  "up_count": 5,
   "down_count": 4
  },
  {
-  "name": "软件开发",
-  "pct": 1.66,
-  "leader": "延华智能",
-  "leader_pct": 10.04,
-  "up_count": 104,
-  "down_count": 32
- },
- {
   "name": "元件",
-  "pct": 1.28,
-  "leader": "贤丰控股",
-  "leader_pct": 10.07,
+  "pct": 1.5,
+  "leader": "澳弘电子",
+  "leader_pct": 10.01,
+  "up_count": 44,
+  "down_count": 19
+ },
+ {
+  "name": "半导体",
+  "pct": 1.35,
+  "leader": "慧智微",
+  "leader_pct": 20.03,
+  "up_count": 121,
+  "down_count": 66
+ },
+ {
+  "name": "电子化学品",
+  "pct": 1.31,
+  "leader": "同宇新材",
+  "leader_pct": 8.65,
   "up_count": 35,
-  "down_count": 28
+  "down_count": 7
  },
  {
-  "name": "教育",
-  "pct": 1.23,
-  "leader": "科德教育",
-  "leader_pct": 6.63,
-  "up_count": 10,
-  "down_count": 3
+  "name": "生物制品",
+  "pct": 1.3,
+  "leader": "欧林生物",
+  "leader_pct": 12.99,
+  "up_count": 31,
+  "down_count": 23
  },
  {
-  "name": "计算机设备",
-  "pct": 1.13,
-  "leader": "旋极信息",
+  "name": "其他电子",
+  "pct": 1.27,
+  "leader": "富信科技",
+  "leader_pct": 16.21,
+  "up_count": 23,
+  "down_count": 11
+ },
+ {
+  "name": "通用设备",
+  "pct": 0.95,
+  "leader": "莱伯泰科",
   "leader_pct": 20.0,
-  "up_count": 52,
-  "down_count": 31
+  "up_count": 135,
+  "down_count": 114
+ },
+ {
+  "name": "医疗服务",
+  "pct": 0.9,
+  "leader": "益诺思",
+  "leader_pct": 14.41,
+  "up_count": 34,
+  "down_count": 21
+ },
+ {
+  "name": "其他社会服务",
+  "pct": 0.75,
+  "leader": "安邦护卫",
+  "leader_pct": 10.0,
+  "up_count": 23,
+  "down_count": 16
  }
 ]
