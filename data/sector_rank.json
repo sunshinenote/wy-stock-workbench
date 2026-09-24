@@ -1,82 +1,82 @@
 [
  {
-  "name": "非金属材料",
-  "pct": 2.21,
-  "leader": "太力科技",
-  "leader_pct": 12.79,
-  "up_count": 12,
+  "name": "风电设备",
+  "pct": 2.65,
+  "leader": "洛轴股份",
+  "leader_pct": 19.99,
+  "up_count": 23,
+  "down_count": 9
+ },
+ {
+  "name": "纺织制造",
+  "pct": 1.56,
+  "leader": "华茂股份",
+  "leader_pct": 10.11,
+  "up_count": 24,
+  "down_count": 9
+ },
+ {
+  "name": "教育",
+  "pct": 0.83,
+  "leader": "科德教育",
+  "leader_pct": 10.28,
+  "up_count": 9,
   "down_count": 5
  },
  {
-  "name": "厨卫电器",
-  "pct": 1.53,
-  "leader": "亿田智能",
-  "leader_pct": 12.13,
-  "up_count": 5,
-  "down_count": 4
- },
- {
-  "name": "元件",
-  "pct": 1.5,
-  "leader": "澳弘电子",
-  "leader_pct": 10.01,
-  "up_count": 44,
-  "down_count": 19
- },
- {
-  "name": "半导体",
-  "pct": 1.35,
-  "leader": "慧智微",
-  "leader_pct": 20.03,
-  "up_count": 121,
-  "down_count": 66
- },
- {
-  "name": "电子化学品",
-  "pct": 1.31,
-  "leader": "同宇新材",
-  "leader_pct": 8.65,
-  "up_count": 35,
-  "down_count": 7
- },
- {
-  "name": "生物制品",
-  "pct": 1.3,
-  "leader": "欧林生物",
-  "leader_pct": 12.99,
-  "up_count": 31,
-  "down_count": 23
- },
- {
-  "name": "其他电子",
-  "pct": 1.27,
-  "leader": "富信科技",
-  "leader_pct": 16.21,
-  "up_count": 23,
-  "down_count": 11
- },
- {
-  "name": "通用设备",
-  "pct": 0.95,
-  "leader": "莱伯泰科",
-  "leader_pct": 20.0,
-  "up_count": 135,
-  "down_count": 114
- },
- {
-  "name": "医疗服务",
-  "pct": 0.9,
-  "leader": "益诺思",
-  "leader_pct": 14.41,
-  "up_count": 34,
-  "down_count": 21
- },
- {
-  "name": "其他社会服务",
-  "pct": 0.75,
-  "leader": "安邦护卫",
-  "leader_pct": 10.0,
-  "up_count": 23,
+  "name": "港口航运",
+  "pct": 0.69,
+  "leader": "厦门港务",
+  "leader_pct": 9.98,
+  "up_count": 16,
   "down_count": 16
+ },
+ {
+  "name": "煤炭开采加工",
+  "pct": 0.61,
+  "leader": "云煤能源",
+  "leader_pct": 10.04,
+  "up_count": 19,
+  "down_count": 13
+ },
+ {
+  "name": "物流",
+  "pct": 0.47,
+  "leader": "三羊马",
+  "leader_pct": 10.01,
+  "up_count": 27,
+  "down_count": 22
+ },
+ {
+  "name": "工程机械",
+  "pct": 0.45,
+  "leader": "铁拓机械",
+  "leader_pct": 19.35,
+  "up_count": 13,
+  "down_count": 22
+ },
+ {
+  "name": "银行",
+  "pct": 0.3,
+  "leader": "重庆银行",
+  "leader_pct": 2.04,
+  "up_count": 25,
+  "down_count": 14
+ },
+ {
+  "name": "服装家纺",
+  "pct": 0.14,
+  "leader": "泰慕士",
+  "leader_pct": 10.01,
+  "up_count": 30,
+  "down_count": 41
+ },
+ {
+  "name": "小家电",
+  "pct": 0.1,
+  "leader": "奥佳华",
+  "leader_pct": 10.04,
+  "up_count": 9,
+  "down_count": 15
  }
 ]
