@@ -1,82 +1,82 @@
 [
  {
+  "name": "汽车整车",
+  "pct": 1.72,
+  "leader": "江淮汽车",
+  "leader_pct": 9.99,
+  "up_count": 15,
+  "down_count": 7
+ },
+ {
+  "name": "小家电",
+  "pct": 1.2,
+  "leader": "鸿智科技",
+  "leader_pct": 10.88,
+  "up_count": 16,
+  "down_count": 10
+ },
+ {
   "name": "风电设备",
-  "pct": 2.65,
+  "pct": 0.84,
   "leader": "洛轴股份",
-  "leader_pct": 19.99,
-  "up_count": 23,
-  "down_count": 9
- },
- {
-  "name": "纺织制造",
-  "pct": 1.56,
-  "leader": "华茂股份",
-  "leader_pct": 10.11,
-  "up_count": 24,
-  "down_count": 9
- },
- {
-  "name": "教育",
-  "pct": 0.83,
-  "leader": "科德教育",
-  "leader_pct": 10.28,
-  "up_count": 9,
-  "down_count": 5
- },
- {
-  "name": "港口航运",
-  "pct": 0.69,
-  "leader": "厦门港务",
-  "leader_pct": 9.98,
+  "leader_pct": 14.46,
   "up_count": 16,
   "down_count": 16
  },
  {
-  "name": "煤炭开采加工",
-  "pct": 0.61,
-  "leader": "云煤能源",
-  "leader_pct": 10.04,
-  "up_count": 19,
-  "down_count": 13
+  "name": "养殖业",
+  "pct": 0.2,
+  "leader": "东瑞股份",
+  "leader_pct": 10.03,
+  "up_count": 17,
+  "down_count": 16
  },
  {
-  "name": "物流",
-  "pct": 0.47,
-  "leader": "三羊马",
-  "leader_pct": 10.01,
-  "up_count": 27,
-  "down_count": 22
+  "name": "油气开采及服务",
+  "pct": -0.01,
+  "leader": "博迈科",
+  "leader_pct": 5.15,
+  "up_count": 7,
+  "down_count": 12
  },
  {
-  "name": "工程机械",
-  "pct": 0.45,
-  "leader": "铁拓机械",
-  "leader_pct": 19.35,
-  "up_count": 13,
-  "down_count": 22
+  "name": "生物制品",
+  "pct": -0.08,
+  "leader": "赛伦生物",
+  "leader_pct": 8.98,
+  "up_count": 21,
+  "down_count": 32
+ },
+ {
+  "name": "饮料制造",
+  "pct": -0.1,
+  "leader": "会稽山",
+  "leader_pct": 9.99,
+  "up_count": 24,
+  "down_count": 23
+ },
+ {
+  "name": "电力",
+  "pct": -0.14,
+  "leader": "浙江新能",
+  "leader_pct": 10.07,
+  "up_count": 47,
+  "down_count": 58
  },
  {
   "name": "银行",
-  "pct": 0.3,
-  "leader": "重庆银行",
-  "leader_pct": 2.04,
-  "up_count": 25,
-  "down_count": 14
+  "pct": -0.21,
+  "leader": "浦发银行",
+  "leader_pct": 1.78,
+  "up_count": 12,
+  "down_count": 27
  },
  {
-  "name": "服装家纺",
-  "pct": 0.14,
-  "leader": "泰慕士",
-  "leader_pct": 10.01,
-  "up_count": 30,
-  "down_count": 41
- },
- {
-  "name": "小家电",
-  "pct": 0.1,
-  "leader": "奥佳华",
-  "leader_pct": 10.04,
-  "up_count": 9,
-  "down_count": 15
+  "name": "中药",
+  "pct": -0.22,
+  "leader": "ST万邦",
+  "leader_pct": 10.0,
+  "up_count": 35,
+  "down_count": 32
  }
 ]

@@ -3,10 +3,18 @@
   {
    "code": "002637",
    "name": "赞宇科技",
-   "count": 51,
+   "count": 49,
    "dec_count": 0,
    "first_date": "2026-03-19",
    "last_date": "2026-09-18"
+  },
+  {
+   "code": "603098",
+   "name": "森特股份",
+   "count": 35,
+   "dec_count": 0,
+   "first_date": "2025-12-29",
+   "last_date": "2026-09-24"
   },
   {
    "code": "600328",
@@ -15,14 +23,6 @@
    "dec_count": 0,
    "first_date": "2026-05-15",
    "last_date": "2026-08-07"
-  },
-  {
-   "code": "603098",
-   "name": "森特股份",
-   "count": 34,
-   "dec_count": 0,
-   "first_date": "2025-12-29",
-   "last_date": "2026-09-23"
   },
   {
    "code": "002096",
@@ -45,7 +45,7 @@
    "name": "百润股份",
    "count": 32,
    "dec_count": 0,
-   "first_date": "2026-07-02",
+   "first_date": "",
    "last_date": "2026-09-04"
   },
   {
@@ -125,66 +125,74 @@
   {
    "code": "603098",
    "name": "森特股份",
-   "count": 43,
+   "count": 44,
    "dec_count": 0,
    "first_date": "2025-12-29",
    "last_date": "2026-03-23"
   },
   {
-   "code": "600557",
-   "name": "康缘药业",
-   "count": 29,
-   "dec_count": 0,
-   "first_date": "2025-11-11",
-   "last_date": "2025-12-04"
-  },
-  {
    "code": "300304",
    "name": "云意电气",
-   "count": 26,
+   "count": 30,
    "dec_count": 0,
    "first_date": "2025-10-28",
    "last_date": "2026-03-09"
   },
   {
+   "code": "600557",
+   "name": "康缘药业",
+   "count": 27,
+   "dec_count": 0,
+   "first_date": "2025-11-11",
+   "last_date": "2025-12-04"
+  },
+  {
    "code": "002637",
    "name": "赞宇科技",
-   "count": 24,
+   "count": 26,
    "dec_count": 0,
    "first_date": "2026-03-19",
-   "last_date": "2026-03-26"
+   "last_date": "2026-03-31"
   },
   {
    "code": "601916",
    "name": "浙商银行",
    "count": 23,
    "dec_count": 0,
-   "first_date": "2025-09-25",
+   "first_date": "2025-09-29",
    "last_date": "2025-12-16"
+  },
+  {
+   "code": "300760",
+   "name": "迈瑞医疗",
+   "count": 21,
+   "dec_count": 0,
+   "first_date": "2025-11-06",
+   "last_date": "2026-03-31"
   },
   {
    "code": "000567",
    "name": "海德股份",
    "count": 21,
    "dec_count": 0,
-   "first_date": "2025-09-26",
+   "first_date": "2025-10-13",
    "last_date": "2025-11-04"
+  },
+  {
+   "code": "300190",
+   "name": "维尔利",
+   "count": 18,
+   "dec_count": 0,
+   "first_date": "2025-10-10",
+   "last_date": "2026-03-31"
   },
   {
    "code": "603299",
    "name": "苏盐井神",
-   "count": 19,
+   "count": 17,
    "dec_count": 0,
    "first_date": "2025-12-04",
    "last_date": "2026-01-05"
-  },
-  {
-   "code": "300760",
-   "name": "迈瑞医疗",
-   "count": 18,
-   "dec_count": 0,
-   "first_date": "2025-11-06",
-   "last_date": "2026-03-04"
   },
   {
    "code": "601666",
@@ -195,36 +203,20 @@
    "last_date": "2026-01-04"
   },
   {
-   "code": "688126",
-   "name": "沪硅产业",
-   "count": 16,
-   "dec_count": 0,
-   "first_date": "2025-11-28",
-   "last_date": "2025-12-30"
-  },
-  {
-   "code": "300190",
-   "name": "维尔利",
-   "count": 14,
-   "dec_count": 0,
-   "first_date": "2025-10-10",
-   "last_date": "2026-03-27"
-  },
-  {
    "code": "605338",
    "name": "巴比食品",
-   "count": 13,
+   "count": 15,
    "dec_count": 0,
-   "first_date": "2025-09-25",
+   "first_date": "2025-10-09",
    "last_date": "2026-03-02"
   },
   {
-   "code": "600733",
-   "name": "北汽蓝谷",
-   "count": 12,
+   "code": "688126",
+   "name": "沪硅产业",
+   "count": 14,
    "dec_count": 0,
-   "first_date": "2026-01-27",
-   "last_date": "2026-01-30"
+   "first_date": "2025-11-28",
+   "last_date": "2025-12-29"
   },
   {
    "code": "002517",
@@ -235,13 +227,21 @@
    "last_date": "2026-03-23"
   },
   {
-   "code": "600763",
-   "name": "通策医疗",
-   "count": 10,
+   "code": "601128",
+   "name": "常熟银行",
+   "count": 11,
    "dec_count": 0,
-   "first_date": "2026-02-13",
-   "last_date": "2026-03-27"
+   "first_date": "2026-01-15",
+   "last_date": "2026-03-23"
+  },
+  {
+   "code": "600733",
+   "name": "北汽蓝谷",
+   "count": 11,
+   "dec_count": 0,
+   "first_date": "2026-01-27",
+   "last_date": "2026-01-30"
   }
  ],
- "prior_range": "2025-09-25 ~ 2026-03-28"
+ "prior_range": "2025-09-28 ~ 2026-03-31"
 }
