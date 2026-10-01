@@ -1,1 +1,152 @@
-{}
+{
+ "report": "2026-06-30",
+ "prev": "2026-03-31",
+ "private": [
+  {
+   "code": "920165",
+   "name": "珈凯生物",
+   "count": 8,
+   "consec": false
+  },
+  {
+   "code": "003026",
+   "name": "中晶科技",
+   "count": 6,
+   "consec": true
+  },
+  {
+   "code": "301557",
+   "name": "常友科技",
+   "count": 6,
+   "consec": true
+  },
+  {
+   "code": "301680",
+   "name": "固德电材",
+   "count": 6,
+   "consec": true
+  },
+  {
+   "code": "688755",
+   "name": "汉邦科技",
+   "count": 6,
+   "consec": false
+  },
+  {
+   "code": "920125",
+   "name": "鸿仕达",
+   "count": 6,
+   "consec": true
+  },
+  {
+   "code": "002961",
+   "name": "瑞达期货",
+   "count": 5,
+   "consec": false
+  },
+  {
+   "code": "301042",
+   "name": "安联锐视",
+   "count": 5,
+   "consec": true
+  },
+  {
+   "code": "920126",
+   "name": "永大股份",
+   "count": 5,
+   "consec": false
+  },
+  {
+   "code": "688583",
+   "name": "思看科技",
+   "count": 5,
+   "consec": true
+  },
+  {
+   "code": "920128",
+   "name": "胜业电气",
+   "count": 5,
+   "consec": false
+  },
+  {
+   "code": "920220",
+   "name": "朗信电气",
+   "count": 5,
+   "consec": false
+  }
+ ],
+ "public": [
+  {
+   "code": "600757",
+   "name": "长江传媒",
+   "count": 7,
+   "consec": true
+  },
+  {
+   "code": "600997",
+   "name": "开滦股份",
+   "count": 7,
+   "consec": true
+  },
+  {
+   "code": "601038",
+   "name": "一拖股份",
+   "count": 7,
+   "consec": true
+  },
+  {
+   "code": "301362",
+   "name": "民爆光电",
+   "count": 7,
+   "consec": true
+  },
+  {
+   "code": "301151",
+   "name": "冠龙节能",
+   "count": 6,
+   "consec": true
+  },
+  {
+   "code": "603115",
+   "name": "海星股份",
+   "count": 6,
+   "consec": true
+  },
+  {
+   "code": "688603",
+   "name": "天承科技",
+   "count": 6,
+   "consec": true
+  },
+  {
+   "code": "002222",
+   "name": "福晶科技",
+   "count": 6,
+   "consec": false
+  },
+  {
+   "code": "300820",
+   "name": "英杰电气",
+   "count": 6,
+   "consec": true
+  },
+  {
+   "code": "300969",
+   "name": "恒帅股份",
+   "count": 6,
+   "consec": true
+  },
+  {
+   "code": "688796",
+   "name": "百奥赛图",
+   "count": 6,
+   "consec": true
+  },
+  {
+   "code": "301217",
+   "name": "铜冠铜箔",
+   "count": 6,
+   "consec": true
+  }
+ ]
+}
