@@ -1,126 +1,5 @@
 {
- "stocks": [
-  {
-   "code": "002637",
-   "name": "赞宇科技",
-   "count": 47,
-   "dec_count": 0,
-   "first_date": "2026-03-19",
-   "last_date": "2026-09-18"
-  },
-  {
-   "code": "603098",
-   "name": "森特股份",
-   "count": 37,
-   "dec_count": 0,
-   "first_date": "2025-12-29",
-   "last_date": "2026-09-29"
-  },
-  {
-   "code": "600328",
-   "name": "中盐化工",
-   "count": 35,
-   "dec_count": 0,
-   "first_date": "2026-05-15",
-   "last_date": "2026-08-07"
-  },
-  {
-   "code": "002146",
-   "name": "荣盛发展",
-   "count": 33,
-   "dec_count": 0,
-   "first_date": "2026-06-30",
-   "last_date": "2026-09-29"
-  },
-  {
-   "code": "002096",
-   "name": "易普力",
-   "count": 33,
-   "dec_count": 0,
-   "first_date": "2026-06-12",
-   "last_date": "2026-09-11"
-  },
-  {
-   "code": "002568",
-   "name": "百润股份",
-   "count": 32,
-   "dec_count": 0,
-   "first_date": "2026-07-02",
-   "last_date": "2026-09-04"
-  },
-  {
-   "code": "002601",
-   "name": "龙佰集团",
-   "count": 31,
-   "dec_count": 0,
-   "first_date": "2026-06-08",
-   "last_date": "2026-07-28"
-  },
-  {
-   "code": "002832",
-   "name": "比音勒芬",
-   "count": 28,
-   "dec_count": 0,
-   "first_date": "2026-03-06",
-   "last_date": "2026-07-28"
-  },
-  {
-   "code": "301429",
-   "name": "森泰股份",
-   "count": 27,
-   "dec_count": 0,
-   "first_date": "2026-06-08",
-   "last_date": "2026-09-21"
-  },
-  {
-   "code": "301089",
-   "name": "拓新药业",
-   "count": 26,
-   "dec_count": 0,
-   "first_date": "2026-07-17",
-   "last_date": "2026-09-29"
-  },
-  {
-   "code": "301533",
-   "name": "威马农机",
-   "count": 24,
-   "dec_count": 4,
-   "first_date": "2026-07-24",
-   "last_date": "2026-09-11"
-  },
-  {
-   "code": "600165",
-   "name": "宁科生物",
-   "count": 22,
-   "dec_count": 0,
-   "first_date": "2026-09-03",
-   "last_date": "2026-09-24"
-  },
-  {
-   "code": "601717",
-   "name": "中创智领",
-   "count": 21,
-   "dec_count": 0,
-   "first_date": "2026-07-17",
-   "last_date": "2026-09-17"
-  },
-  {
-   "code": "002024",
-   "name": "ST易购",
-   "count": 19,
-   "dec_count": 0,
-   "first_date": "2026-05-27",
-   "last_date": "2026-08-06"
-  },
-  {
-   "code": "000078",
-   "name": "ST海王",
-   "count": 18,
-   "dec_count": 0,
-   "first_date": "2026-06-24",
-   "last_date": "2026-09-21"
-  }
- ],
+ "stocks": [],
  "prior": [
   {
    "code": "603098",
@@ -135,7 +14,7 @@
    "name": "云意电气",
    "count": 31,
    "dec_count": 0,
-   "first_date": "2025-10-28",
+   "first_date": "",
    "last_date": "2026-03-09"
   },
   {
@@ -243,5 +122,5 @@
    "last_date": "2026-04-02"
   }
  ],
- "prior_range": "2025-10-01 ~ 2026-04-03"
+ "prior_range": "2025-10-02 ~ 2026-04-04"
 }
