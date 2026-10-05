@@ -57,20 +57,20 @@
    "last_date": "2026-07-28"
   },
   {
-   "code": "002832",
-   "name": "比音勒芬",
-   "count": 28,
-   "dec_count": 0,
-   "first_date": "2026-03-06",
-   "last_date": "2026-07-28"
-  },
-  {
    "code": "301429",
    "name": "森泰股份",
    "count": 27,
    "dec_count": 0,
    "first_date": "2026-06-08",
    "last_date": "2026-09-21"
+  },
+  {
+   "code": "002832",
+   "name": "比音勒芬",
+   "count": 27,
+   "dec_count": 0,
+   "first_date": "2026-03-06",
+   "last_date": "2026-07-28"
   },
   {
    "code": "301089",
@@ -125,7 +125,7 @@
   {
    "code": "603098",
    "name": "森特股份",
-   "count": 44,
+   "count": 40,
    "dec_count": 0,
    "first_date": "2025-12-29",
    "last_date": "2026-03-23"
@@ -133,7 +133,7 @@
   {
    "code": "300304",
    "name": "云意电气",
-   "count": 31,
+   "count": 30,
    "dec_count": 0,
    "first_date": "2025-10-28",
    "last_date": "2026-03-09"
@@ -149,50 +149,50 @@
   {
    "code": "600557",
    "name": "康缘药业",
-   "count": 24,
+   "count": 26,
    "dec_count": 0,
    "first_date": "2025-11-11",
-   "last_date": "2025-12-03"
+   "last_date": "2025-12-04"
   },
   {
    "code": "300760",
    "name": "迈瑞医疗",
-   "count": 23,
+   "count": 25,
    "dec_count": 0,
    "first_date": "2025-11-06",
    "last_date": "2026-04-03"
   },
   {
+   "code": "000567",
+   "name": "海德股份",
+   "count": 20,
+   "dec_count": 0,
+   "first_date": "2025-10-13",
+   "last_date": "2025-11-04"
+  },
+  {
    "code": "300190",
    "name": "维尔利",
-   "count": 20,
+   "count": 19,
    "dec_count": 0,
    "first_date": "2025-10-10",
    "last_date": "2026-04-02"
   },
   {
-   "code": "603299",
-   "name": "苏盐井神",
-   "count": 19,
-   "dec_count": 0,
-   "first_date": "2025-12-04",
-   "last_date": "2026-01-05"
-  },
-  {
    "code": "601916",
    "name": "浙商银行",
-   "count": 19,
+   "count": 18,
    "dec_count": 0,
    "first_date": "2025-10-24",
    "last_date": "2025-12-16"
   },
   {
-   "code": "000567",
-   "name": "海德股份",
-   "count": 19,
+   "code": "603299",
+   "name": "苏盐井神",
+   "count": 17,
    "dec_count": 0,
-   "first_date": "2025-10-13",
-   "last_date": "2025-11-04"
+   "first_date": "2025-12-04",
+   "last_date": "2026-01-05"
   },
   {
    "code": "601666",
@@ -216,32 +216,32 @@
    "count": 13,
    "dec_count": 0,
    "first_date": "2025-10-09",
-   "last_date": "2026-02-26"
-  },
-  {
-   "code": "300592",
-   "name": "华凯易佰",
-   "count": 13,
-   "dec_count": 0,
-   "first_date": "2025-11-04",
-   "last_date": "2025-12-16"
+   "last_date": "2026-03-02"
   },
   {
    "code": "002832",
    "name": "比音勒芬",
-   "count": 11,
+   "count": 12,
    "dec_count": 0,
    "first_date": "2026-03-06",
-   "last_date": "2026-04-03"
+   "last_date": "2026-04-07"
   },
   {
-   "code": "002382",
-   "name": "蓝帆医疗",
-   "count": 11,
+   "code": "603031",
+   "name": "安孚科技",
+   "count": 12,
    "dec_count": 0,
-   "first_date": "2026-03-20",
-   "last_date": "2026-04-02"
+   "first_date": "2026-03-17",
+   "last_date": "2026-03-31"
+  },
+  {
+   "code": "300592",
+   "name": "华凯易佰",
+   "count": 12,
+   "dec_count": 0,
+   "first_date": "2025-11-04",
+   "last_date": "2025-12-16"
   }
  ],
- "prior_range": "2025-10-02 ~ 2026-04-04"
+ "prior_range": "2025-10-05 ~ 2026-04-07"
 }
