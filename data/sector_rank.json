@@ -1,82 +1,82 @@
 [
  {
-  "name": "生物制品",
-  "pct": 4.63,
-  "leader": "康希诺",
-  "leader_pct": 20.0,
-  "up_count": 53,
-  "down_count": 2
- },
- {
-  "name": "医疗服务",
-  "pct": 3.11,
-  "leader": "南模生物",
-  "leader_pct": 19.87,
-  "up_count": 50,
-  "down_count": 6
- },
- {
-  "name": "白酒",
-  "pct": 2.82,
-  "leader": "金徽酒",
-  "leader_pct": 9.99,
-  "up_count": 19,
-  "down_count": 0
- },
- {
-  "name": "种植业与林业",
-  "pct": 2.43,
-  "leader": "海南橡胶",
-  "leader_pct": 10.02,
-  "up_count": 23,
-  "down_count": 6
- },
- {
-  "name": "化学制药",
-  "pct": 2.11,
-  "leader": "键凯科技",
-  "leader_pct": 11.09,
-  "up_count": 140,
-  "down_count": 16
- },
- {
-  "name": "饮料制造",
-  "pct": 1.91,
-  "leader": "古越龙山",
-  "leader_pct": 10.04,
-  "up_count": 37,
-  "down_count": 8
- },
- {
-  "name": "机场航运",
-  "pct": 1.76,
-  "leader": "华夏航空",
-  "leader_pct": 4.08,
-  "up_count": 13,
-  "down_count": 0
- },
- {
-  "name": "汽车整车",
-  "pct": 1.57,
-  "leader": "江淮汽车",
-  "leader_pct": 5.49,
-  "up_count": 20,
-  "down_count": 2
- },
- {
-  "name": "燃气",
-  "pct": 1.49,
-  "leader": "凯添燃气",
-  "leader_pct": 4.83,
-  "up_count": 26,
+  "name": "油气开采及服务",
+  "pct": 3.6,
+  "leader": "科力股份",
+  "leader_pct": 9.85,
+  "up_count": 18,
   "down_count": 1
  },
  {
+  "name": "电池",
+  "pct": 3.44,
+  "leader": "力王股份",
+  "leader_pct": 29.96,
+  "up_count": 87,
+  "down_count": 20
+ },
+ {
+  "name": "燃气",
+  "pct": 2.44,
+  "leader": "国新能源",
+  "leader_pct": 10.0,
+  "up_count": 25,
+  "down_count": 2
+ },
+ {
+  "name": "煤炭开采加工",
+  "pct": 2.14,
+  "leader": "安泰集团",
+  "leader_pct": 9.9,
+  "up_count": 32,
+  "down_count": 2
+ },
+ {
+  "name": "港口航运",
+  "pct": 2.04,
+  "leader": "中远海能",
+  "leader_pct": 10.02,
+  "up_count": 32,
+  "down_count": 3
+ },
+ {
+  "name": "电力",
+  "pct": 1.23,
+  "leader": "广西能源",
+  "leader_pct": 9.96,
+  "up_count": 85,
+  "down_count": 23
+ },
+ {
+  "name": "石油加工贸易",
+  "pct": 0.96,
+  "leader": "东方盛虹",
+  "leader_pct": 4.73,
+  "up_count": 20,
+  "down_count": 7
+ },
+ {
+  "name": "化学原料",
+  "pct": 0.85,
+  "leader": "善水科技",
+  "leader_pct": 9.99,
+  "up_count": 37,
+  "down_count": 20
+ },
+ {
   "name": "银行",
-  "pct": 1.46,
+  "pct": 0.85,
   "leader": "浦发银行",
-  "leader_pct": 3.27,
-  "up_count": 42,
-  "down_count": 0
+  "leader_pct": 2.32,
+  "up_count": 37,
+  "down_count": 3
+ },
+ {
+  "name": "贸易",
+  "pct": 0.75,
+  "leader": "中信金属",
+  "leader_pct": 3.03,
+  "up_count": 11,
+  "down_count": 3
  }
 ]
