@@ -9,19 +9,19 @@
    "last_date": "2026-09-18"
   },
   {
+   "code": "603098",
+   "name": "森特股份",
+   "count": 39,
+   "dec_count": 0,
+   "first_date": "2025-12-29",
+   "last_date": "2026-10-08"
+  },
+  {
    "code": "002146",
    "name": "荣盛发展",
    "count": 38,
    "dec_count": 0,
    "first_date": "2026-06-30",
-   "last_date": "2026-09-30"
-  },
-  {
-   "code": "603098",
-   "name": "森特股份",
-   "count": 38,
-   "dec_count": 0,
-   "first_date": "2025-12-29",
    "last_date": "2026-09-30"
   },
   {
@@ -81,20 +81,20 @@
    "last_date": "2026-07-28"
   },
   {
+   "code": "600165",
+   "name": "宁科生物",
+   "count": 24,
+   "dec_count": 0,
+   "first_date": "2026-09-03",
+   "last_date": "2026-10-09"
+  },
+  {
    "code": "301533",
    "name": "威马农机",
    "count": 24,
    "dec_count": 4,
    "first_date": "2026-07-24",
    "last_date": "2026-09-11"
-  },
-  {
-   "code": "600165",
-   "name": "宁科生物",
-   "count": 22,
-   "dec_count": 0,
-   "first_date": "2026-09-03",
-   "last_date": "2026-09-24"
   },
   {
    "code": "601717",
@@ -243,5 +243,5 @@
    "last_date": "2026-04-08"
   }
  ],
- "prior_range": "2025-10-08 ~ 2026-04-10"
+ "prior_range": "2025-10-09 ~ 2026-04-11"
 }
