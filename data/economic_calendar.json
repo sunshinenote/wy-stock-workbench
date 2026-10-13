@@ -33,7 +33,7 @@
   "importance": "中",
   "event": "美国10月13日iShares白银持仓变动-每日(吨)",
   "forecast": "nan",
-  "previous": "nan"
+  "previous": "-16.86"
  },
  {
   "date": "2026-10-14",
@@ -42,7 +42,7 @@
   "importance": "中",
   "event": "美国10月12日COMEX黄金库存-每日更新(百盎司)",
   "forecast": "nan",
-  "previous": "nan"
+  "previous": "234772.72"
  },
  {
   "date": "2026-10-14",
@@ -60,7 +60,7 @@
   "importance": "中",
   "event": "美国10月13日iShares白银持仓-每日更新(吨)",
   "forecast": "nan",
-  "previous": "nan"
+  "previous": "15346.67"
  },
  {
   "date": "2026-10-14",
@@ -96,7 +96,7 @@
   "importance": "中",
   "event": "美国10月12日NYMEX铂金库存-每日更新(百盎司)",
   "forecast": "nan",
-  "previous": "nan"
+  "previous": "3109.4"
  },
  {
   "date": "2026-10-14",
@@ -105,7 +105,7 @@
   "importance": "中",
   "event": "美国10月12日NYMEX钯金库存变动-每日(百盎司)",
   "forecast": "nan",
-  "previous": "nan"
+  "previous": ""
  },
  {
   "date": "2026-10-14",
@@ -123,7 +123,7 @@
   "importance": "中",
   "event": "美国10月12日COMEX黄金库存变动-每日(百盎司)",
   "forecast": "nan",
-  "previous": "nan"
+  "previous": "-1.93"
  },
  {
   "date": "2026-10-14",
@@ -132,7 +132,7 @@
   "importance": "中",
   "event": "美国10月12日NYMEX钯金库存-每日更新(百盎司)",
   "forecast": "nan",
-  "previous": "nan"
+  "previous": "2499.46"
  },
  {
   "date": "2026-10-14",
@@ -141,7 +141,7 @@
   "importance": "中",
   "event": "美国10月13日SPDR黄金持仓-每日更新(吨)",
   "forecast": "nan",
-  "previous": "nan"
+  "previous": "1055.41"
  },
  {
   "date": "2026-10-14",
@@ -150,7 +150,7 @@
   "importance": "中",
   "event": "美国10月12日COMEX白银库存变动-每日(百盎司)",
   "forecast": "nan",
-  "previous": "nan"
+  "previous": "-19348.46"
  },
  {
   "date": "2026-10-14",
@@ -375,7 +375,7 @@
   "importance": "中",
   "event": "中国10月14日上期所每日仓单变动-黄金(千克)",
   "forecast": "nan",
-  "previous": "nan"
+  "previous": ""
  },
  {
   "date": "2026-10-14",
@@ -402,7 +402,7 @@
   "importance": "中",
   "event": "中国10月14日上期所每日仓单变动-白银(千克)",
   "forecast": "nan",
-  "previous": "nan"
+  "previous": "-2595.0"
  },
  {
   "date": "2026-10-14",
@@ -411,7 +411,7 @@
   "importance": "中",
   "event": "中国10月14日上期所每日仓单变动-铜(吨)",
   "forecast": "nan",
-  "previous": "nan"
+  "previous": "622.0"
  },
  {
   "date": "2026-10-14",
@@ -630,93 +630,93 @@
   "previous": "0.2"
  },
  {
-  "date": "2026-10-17",
-  "time": "01:00",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国截至10月16日当周石油钻井总数(口)",
-  "forecast": "nan",
-  "previous": "462.0"
- },
- {
-  "date": "2026-10-17",
-  "time": "01:00",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国截至10月16日当周混杂钻井总数(口)",
-  "forecast": "nan",
-  "previous": "9.0"
- },
- {
-  "date": "2026-10-17",
-  "time": "01:00",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国截至10月16日当周全美钻井总数(口)",
-  "forecast": "nan",
-  "previous": "603.0"
- },
- {
-  "date": "2026-10-17",
-  "time": "01:00",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国截至10月16日当周天然气钻井总数(口)",
-  "forecast": "nan",
-  "previous": "132.0"
- },
- {
-  "date": "2026-10-17",
-  "time": "01:00",
-  "country": "北美洲",
+  "date": "2026-10-15",
+  "time": "01:30",
+  "country": "巴西",
   "importance": "低",
-  "event": "北美洲截至10月16日当周总钻井总数(口)",
+  "event": "巴西截至10月5日当周外汇流-月初至周期日(亿美元)",
   "forecast": "nan",
-  "previous": "825.0"
+  "previous": "-2.67"
  },
  {
-  "date": "2026-10-17",
-  "time": "01:00",
-  "country": "加拿大",
-  "importance": "低",
-  "event": "加拿大截至10月16日当周总钻井数量(口)",
-  "forecast": "nan",
-  "previous": "222.0"
- },
- {
-  "date": "2026-10-17",
-  "time": "01:00",
-  "country": "北美洲",
-  "importance": "低",
-  "event": "北美洲截至10月16日当周墨西哥湾总钻井总数(口)",
-  "forecast": "nan",
-  "previous": "11.0"
- },
- {
-  "date": "2026-10-17",
-  "time": "04:00",
+  "date": "2026-10-15",
+  "time": "04:30",
   "country": "美国",
   "importance": "中",
-  "event": "美国8月国际资本净流入(亿美元)",
-  "forecast": "nan",
-  "previous": "837.0"
+  "event": "美国截至10月9日当周API汽油库存变动(万桶)",
+  "forecast": "-80.0",
+  "previous": "-140.0"
  },
  {
-  "date": "2026-10-17",
-  "time": "04:00",
+  "date": "2026-10-15",
+  "time": "04:30",
   "country": "美国",
   "importance": "中",
-  "event": "美国8月外资净买入长期证券(亿美元)",
+  "event": "美国截至10月9日当周API库欣原油库存变动(万桶)",
   "forecast": "nan",
-  "previous": "-279.0"
+  "previous": "86.6"
  },
  {
-  "date": "2026-10-17",
-  "time": "04:00",
+  "date": "2026-10-15",
+  "time": "04:30",
   "country": "美国",
   "importance": "中",
-  "event": "美国8月长期资本净流入(亿美元)",
+  "event": "美国截至10月9日当周API每周成品油进口(万桶)",
   "forecast": "nan",
-  "previous": "-279.0"
+  "previous": "nan"
+ },
+ {
+  "date": "2026-10-15",
+  "time": "04:30",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国截至10月9日当周API原油库存变动(万桶)",
+  "forecast": "190.0",
+  "previous": "-210.0"
+ },
+ {
+  "date": "2026-10-15",
+  "time": "04:30",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国截至10月9日当周API每周投产原油量(万桶)",
+  "forecast": "nan",
+  "previous": "nan"
+ },
+ {
+  "date": "2026-10-15",
+  "time": "04:30",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国截至10月9日当周API每周取暖油库存(万桶)",
+  "forecast": "nan",
+  "previous": "nan"
+ },
+ {
+  "date": "2026-10-15",
+  "time": "04:30",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国截至10月9日当周API馏分油库存变动(万桶)",
+  "forecast": "-200.0",
+  "previous": "46.1"
+ },
+ {
+  "date": "2026-10-15",
+  "time": "04:30",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国截至10月9日当周API每周原油进口(万桶)",
+  "forecast": "nan",
+  "previous": "nan"
+ },
+ {
+  "date": "2026-10-15",
+  "time": "06:30",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国10月13日NYMEX铂金库存变动-每日(百盎司)",
+  "forecast": "nan",
+  "previous": "nan"
  }
 ]
