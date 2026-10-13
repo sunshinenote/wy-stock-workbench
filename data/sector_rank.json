@@ -1,82 +1,82 @@
 [
  {
-  "name": "影视院线",
-  "pct": 3.67,
-  "leader": "欢瑞世纪",
+  "name": "元件",
+  "pct": 5.03,
+  "leader": "迅捷兴",
+  "leader_pct": 20.0,
+  "up_count": 59,
+  "down_count": 4
+ },
+ {
+  "name": "互联网电商",
+  "pct": 3.38,
+  "leader": "丽人丽妆",
+  "leader_pct": 10.02,
+  "up_count": 18,
+  "down_count": 1
+ },
+ {
+  "name": "军工装备",
+  "pct": 3.24,
+  "leader": "国科军工",
+  "leader_pct": 12.24,
+  "up_count": 79,
+  "down_count": 3
+ },
+ {
+  "name": "旅游及酒店",
+  "pct": 2.55,
+  "leader": "天府文旅",
+  "leader_pct": 10.03,
+  "up_count": 31,
+  "down_count": 3
+ },
+ {
+  "name": "零售",
+  "pct": 1.77,
+  "leader": "中兴商业",
   "leader_pct": 10.1,
-  "up_count": 15,
-  "down_count": 5
- },
- {
-  "name": "文化传媒",
-  "pct": 2.37,
-  "leader": "果麦文化",
-  "leader_pct": 20.01,
   "up_count": 57,
-  "down_count": 26
- },
- {
-  "name": "风电设备",
-  "pct": 2.34,
-  "leader": "振宏股份",
-  "leader_pct": 13.94,
-  "up_count": 24,
-  "down_count": 8
- },
- {
-  "name": "银行",
-  "pct": 1.99,
-  "leader": "渝农商行",
-  "leader_pct": 4.95,
-  "up_count": 42,
-  "down_count": 0
- },
- {
-  "name": "游戏",
-  "pct": 0.86,
-  "leader": "名臣健康",
-  "leader_pct": 6.86,
-  "up_count": 16,
-  "down_count": 7
- },
- {
-  "name": "汽车整车",
-  "pct": 0.43,
-  "leader": "赛力斯",
-  "leader_pct": 10.0,
-  "up_count": 13,
-  "down_count": 9
- },
- {
-  "name": "保险",
-  "pct": 0.42,
-  "leader": "中国太保",
-  "leader_pct": 1.35,
-  "up_count": 3,
-  "down_count": 2
- },
- {
-  "name": "公路铁路运输",
-  "pct": 0.41,
-  "leader": "深高速",
-  "leader_pct": 5.16,
-  "up_count": 17,
   "down_count": 13
  },
  {
-  "name": "光伏设备",
-  "pct": 0.2,
-  "leader": "首航新能",
-  "leader_pct": 20.0,
-  "up_count": 30,
-  "down_count": 43
+  "name": "石油加工贸易",
+  "pct": 1.75,
+  "leader": "和顺石油",
+  "leader_pct": 10.02,
+  "up_count": 21,
+  "down_count": 5
  },
  {
-  "name": "证券",
-  "pct": 0.09,
-  "leader": "国泰海通",
-  "leader_pct": 2.32,
-  "up_count": 24,
-  "down_count": 22
+  "name": "通信设备",
+  "pct": 1.45,
+  "leader": "华脉科技",
+  "leader_pct": 10.03,
+  "up_count": 66,
+  "down_count": 25
+ },
+ {
+  "name": "军工电子",
+  "pct": 1.43,
+  "leader": "高凌信息",
+  "leader_pct": 9.17,
+  "up_count": 45,
+  "down_count": 16
+ },
+ {
+  "name": "贸易",
+  "pct": 1.4,
+  "leader": "凯瑞德",
+  "leader_pct": 5.32,
+  "up_count": 12,
+  "down_count": 2
+ },
+ {
+  "name": "贵金属",
+  "pct": 1.3,
+  "leader": "四川黄金",
+  "leader_pct": 3.46,
+  "up_count": 13,
+  "down_count": 0
  }
 ]
