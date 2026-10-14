@@ -1,82 +1,82 @@
 [
  {
-  "name": "元件",
-  "pct": 5.03,
-  "leader": "迅捷兴",
-  "leader_pct": 20.0,
-  "up_count": 59,
-  "down_count": 4
- },
- {
-  "name": "互联网电商",
-  "pct": 3.38,
-  "leader": "丽人丽妆",
-  "leader_pct": 10.02,
+  "name": "油气开采及服务",
+  "pct": 2.92,
+  "leader": "中海油服",
+  "leader_pct": 6.56,
   "up_count": 18,
   "down_count": 1
  },
  {
-  "name": "军工装备",
-  "pct": 3.24,
-  "leader": "国科军工",
-  "leader_pct": 12.24,
-  "up_count": 79,
-  "down_count": 3
- },
- {
-  "name": "旅游及酒店",
-  "pct": 2.55,
-  "leader": "天府文旅",
-  "leader_pct": 10.03,
-  "up_count": 31,
-  "down_count": 3
- },
- {
-  "name": "零售",
-  "pct": 1.77,
-  "leader": "中兴商业",
-  "leader_pct": 10.1,
-  "up_count": 57,
-  "down_count": 13
- },
- {
-  "name": "石油加工贸易",
-  "pct": 1.75,
-  "leader": "和顺石油",
-  "leader_pct": 10.02,
-  "up_count": 21,
+  "name": "游戏",
+  "pct": 2.62,
+  "leader": "富春股份",
+  "leader_pct": 20.07,
+  "up_count": 17,
   "down_count": 5
  },
  {
-  "name": "通信设备",
-  "pct": 1.45,
-  "leader": "华脉科技",
-  "leader_pct": 10.03,
-  "up_count": 66,
+  "name": "影视院线",
+  "pct": 1.68,
+  "leader": "慈文传媒",
+  "leader_pct": 10.05,
+  "up_count": 14,
+  "down_count": 6
+ },
+ {
+  "name": "文化传媒",
+  "pct": 1.48,
+  "leader": "果麦文化",
+  "leader_pct": 14.49,
+  "up_count": 58,
   "down_count": 25
  },
  {
-  "name": "军工电子",
-  "pct": 1.43,
-  "leader": "高凌信息",
-  "leader_pct": 9.17,
-  "up_count": 45,
-  "down_count": 16
+  "name": "煤炭开采加工",
+  "pct": 1.27,
+  "leader": "安泰集团",
+  "leader_pct": 10.03,
+  "up_count": 21,
+  "down_count": 13
  },
  {
-  "name": "贸易",
-  "pct": 1.4,
-  "leader": "凯瑞德",
-  "leader_pct": 5.32,
-  "up_count": 12,
-  "down_count": 2
+  "name": "燃气",
+  "pct": 0.93,
+  "leader": "美能能源",
+  "leader_pct": 9.97,
+  "up_count": 20,
+  "down_count": 7
  },
  {
-  "name": "贵金属",
-  "pct": 1.3,
-  "leader": "四川黄金",
-  "leader_pct": 3.46,
-  "up_count": 13,
-  "down_count": 0
+  "name": "公路铁路运输",
+  "pct": 0.84,
+  "leader": "龙江交通",
+  "leader_pct": 9.97,
+  "up_count": 23,
+  "down_count": 8
+ },
+ {
+  "name": "教育",
+  "pct": 0.51,
+  "leader": "*ST开元",
+  "leader_pct": 20.16,
+  "up_count": 7,
+  "down_count": 8
+ },
+ {
+  "name": "港口航运",
+  "pct": 0.46,
+  "leader": "青岛港",
+  "leader_pct": 4.09,
+  "up_count": 21,
+  "down_count": 13
+ },
+ {
+  "name": "元件",
+  "pct": 0.24,
+  "leader": "满坤科技",
+  "leader_pct": 18.32,
+  "up_count": 23,
+  "down_count": 39
  }
 ]
