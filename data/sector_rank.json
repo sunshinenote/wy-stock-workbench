@@ -1,82 +1,82 @@
 [
  {
+  "name": "军工装备",
+  "pct": 5.61,
+  "leader": "晟楠科技",
+  "leader_pct": 29.98,
+  "up_count": 80,
+  "down_count": 1
+ },
+ {
+  "name": "军工电子",
+  "pct": 2.87,
+  "leader": "华力创通",
+  "leader_pct": 20.04,
+  "up_count": 55,
+  "down_count": 6
+ },
+ {
+  "name": "汽车零部件",
+  "pct": 2.37,
+  "leader": "捷众科技",
+  "leader_pct": 30.0,
+  "up_count": 238,
+  "down_count": 37
+ },
+ {
+  "name": "化学纤维",
+  "pct": 2.26,
+  "leader": "中复神鹰",
+  "leader_pct": 11.31,
+  "up_count": 26,
+  "down_count": 3
+ },
+ {
+  "name": "汽车整车",
+  "pct": 1.98,
+  "leader": "江淮汽车",
+  "leader_pct": 9.98,
+  "up_count": 21,
+  "down_count": 1
+ },
+ {
   "name": "白酒",
-  "pct": 1.22,
+  "pct": 1.95,
   "leader": "皇台酒业",
-  "leader_pct": 10.04,
-  "up_count": 11,
-  "down_count": 7
- },
- {
-  "name": "证券",
-  "pct": 0.32,
-  "leader": "华林证券",
-  "leader_pct": 10.01,
+  "leader_pct": 6.81,
   "up_count": 19,
-  "down_count": 25
+  "down_count": 0
  },
  {
-  "name": "保险",
-  "pct": -0.22,
-  "leader": "中国平安",
-  "leader_pct": 1.07,
-  "up_count": 3,
+  "name": "贵金属",
+  "pct": 1.94,
+  "leader": "招金黄金",
+  "leader_pct": 4.18,
+  "up_count": 14,
+  "down_count": 0
+ },
+ {
+  "name": "电机",
+  "pct": 1.93,
+  "leader": "中电电机",
+  "leader_pct": 5.86,
+  "up_count": 24,
   "down_count": 2
  },
  {
-  "name": "厨卫电器",
-  "pct": -0.38,
-  "leader": "万和电气",
-  "leader_pct": 10.06,
-  "up_count": 2,
+  "name": "房地产",
+  "pct": 1.9,
+  "leader": "粤宏远A",
+  "leader_pct": 10.1,
+  "up_count": 78,
   "down_count": 7
  },
  {
-  "name": "元件",
-  "pct": -0.48,
-  "leader": "金禄电子",
-  "leader_pct": 20.0,
-  "up_count": 21,
-  "down_count": 41
- },
- {
-  "name": "银行",
-  "pct": -1.09,
-  "leader": "交通银行",
-  "leader_pct": 1.75,
-  "up_count": 7,
-  "down_count": 35
- },
- {
-  "name": "医疗服务",
-  "pct": -1.13,
-  "leader": "南模生物",
-  "leader_pct": 13.94,
-  "up_count": 10,
-  "down_count": 46
- },
- {
-  "name": "化学制药",
-  "pct": -1.39,
-  "leader": "联亚药业",
-  "leader_pct": 401.71,
-  "up_count": 23,
-  "down_count": 135
- },
- {
-  "name": "中药",
-  "pct": -1.41,
-  "leader": "精华制药",
-  "leader_pct": 1.15,
-  "up_count": 10,
-  "down_count": 56
- },
- {
-  "name": "机场航运",
-  "pct": -1.45,
-  "leader": "春秋航空",
-  "leader_pct": 1.04,
-  "up_count": 1,
-  "down_count": 12
+  "name": "建筑材料",
+  "pct": 1.84,
+  "leader": "福建水泥",
+  "leader_pct": 10.06,
+  "up_count": 57,
+  "down_count": 15
  }
 ]

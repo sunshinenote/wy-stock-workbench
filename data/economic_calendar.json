@@ -1,572 +1,5 @@
 [
  {
-  "date": "2026-10-16",
-  "time": "00:00",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国截至10月5日当周EIA每周投产原油量变动(万桶)",
-  "forecast": "nan",
-  "previous": "22.3"
- },
- {
-  "date": "2026-10-16",
-  "time": "00:00",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国截至10月5日当周EIA俄克拉荷马州-库欣原油库存(万桶)",
-  "forecast": "nan",
-  "previous": "44.4"
- },
- {
-  "date": "2026-10-16",
-  "time": "00:00",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国截至10月5日当周EIA每周馏分油产量变动(万桶)",
-  "forecast": "nan",
-  "previous": "28.7"
- },
- {
-  "date": "2026-10-16",
-  "time": "00:00",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国截至10月5日当周EIA每周新配方汽油库存变动(万桶)",
-  "forecast": "nan",
-  "previous": "-0.1"
- },
- {
-  "date": "2026-10-16",
-  "time": "00:00",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国截至10月5日当周DOE燃料乙醇总产量(万桶/日)",
-  "forecast": "nan",
-  "previous": "105.3"
- },
- {
-  "date": "2026-10-16",
-  "time": "00:00",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国截至10月5日当周DOE燃料乙醇库存(万桶)",
-  "forecast": "nan",
-  "previous": "2374.3"
- },
- {
-  "date": "2026-10-16",
-  "time": "00:00",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国截至10月5日当周DOE蒸馏油引伸需求(万桶/日)",
-  "forecast": "nan",
-  "previous": "541.4"
- },
- {
-  "date": "2026-10-16",
-  "time": "00:00",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国截至10月5日当周EIA原油总产量(万桶/日)",
-  "forecast": "nan",
-  "previous": "1397.9"
- },
- {
-  "date": "2026-10-16",
-  "time": "00:00",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国截至10月5日当周EIA每周汽油产量变动(万桶)",
-  "forecast": "nan",
-  "previous": "-11.7"
- },
- {
-  "date": "2026-10-16",
-  "time": "00:00",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国截至10月5日当周EIA精炼油库存变动(万桶)",
-  "forecast": "-156.0",
-  "previous": "-4.2"
- },
- {
-  "date": "2026-10-16",
-  "time": "00:00",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国截至10月5日当周DOE汽油引伸需求(万桶/日)",
-  "forecast": "nan",
-  "previous": "959.96"
- },
- {
-  "date": "2026-10-16",
-  "time": "00:00",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国截至10月5日当周EIA汽油库存变动(万桶)",
-  "forecast": "-80.0",
-  "previous": "38.2"
- },
- {
-  "date": "2026-10-16",
-  "time": "00:00",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国截至10月5日当周EIA精炼厂设备利用率(%)",
-  "forecast": "92.2",
-  "previous": "92.7"
- },
- {
-  "date": "2026-10-16",
-  "time": "00:00",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国截至10月5日当周EIA每周原油进口变动(万桶)",
-  "forecast": "nan",
-  "previous": "-5.3"
- },
- {
-  "date": "2026-10-16",
-  "time": "00:00",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国截至10月5日当周EIA每周取暖油库存(万桶)",
-  "forecast": "nan",
-  "previous": "66.8"
- },
- {
-  "date": "2026-10-16",
-  "time": "00:00",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国截至10月5日当周EIA每周成品油进口变动(万桶)",
-  "forecast": "nan",
-  "previous": "-5.4"
- },
- {
-  "date": "2026-10-16",
-  "time": "00:00",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国截至10月5日当周DOE原油引伸需求(万桶/日)",
-  "forecast": "nan",
-  "previous": "2127.4"
- },
- {
-  "date": "2026-10-16",
-  "time": "00:00",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国截至10月5日当周EIA精炼厂设备利用率变动(%)",
-  "forecast": "-0.5",
-  "previous": "0.2"
- },
- {
-  "date": "2026-10-16",
-  "time": "00:00",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国截至10月5日当周EIA原油库存变动(万桶)",
-  "forecast": "-28.8",
-  "previous": "-318.6"
- },
- {
-  "date": "2026-10-16",
-  "time": "03:00",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国9月政府预算(亿美元)",
-  "forecast": "-280.0",
-  "previous": "-1670.0"
- },
- {
-  "date": "2026-10-16",
-  "time": "04:30",
-  "country": "美国",
-  "importance": "高",
-  "event": "美国截至10月14日美联储资产负债表(万亿美元)",
-  "forecast": "nan",
-  "previous": "6.8"
- },
- {
-  "date": "2026-10-16",
-  "time": "04:30",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国截至10月10日当周外国央行持有美国国债(亿美元)",
-  "forecast": "nan",
-  "previous": "-168.73"
- },
- {
-  "date": "2026-10-16",
-  "time": "05:00",
-  "country": "韩国",
-  "importance": "低",
-  "event": "韩国9月进口物价指数月率(%)",
-  "forecast": "nan",
-  "previous": "-2.4"
- },
- {
-  "date": "2026-10-16",
-  "time": "05:00",
-  "country": "韩国",
-  "importance": "低",
-  "event": "韩国9月出口物价指数月率(%)",
-  "forecast": "nan",
-  "previous": "-3.7"
- },
- {
-  "date": "2026-10-16",
-  "time": "05:00",
-  "country": "韩国",
-  "importance": "低",
-  "event": "韩国9月进口物价指数年率(%)",
-  "forecast": "nan",
-  "previous": "15.6"
- },
- {
-  "date": "2026-10-16",
-  "time": "05:00",
-  "country": "韩国",
-  "importance": "低",
-  "event": "韩国9月出口物价指数年率(%)",
-  "forecast": "nan",
-  "previous": "42.4"
- },
- {
-  "date": "2026-10-16",
-  "time": "05:30",
-  "country": "新西兰",
-  "importance": "低",
-  "event": "新西兰9月BNZ企业制造业PMI",
-  "forecast": "nan",
-  "previous": "53.1"
- },
- {
-  "date": "2026-10-16",
-  "time": "06:30",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国10月15日SPDR黄金持仓变动-每日(吨)",
-  "forecast": "nan",
-  "previous": ""
- },
- {
-  "date": "2026-10-16",
-  "time": "06:30",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国10月14日NYMEX钯金库存-每日更新(百盎司)",
-  "forecast": "nan",
-  "previous": "2499.46"
- },
- {
-  "date": "2026-10-16",
-  "time": "06:30",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国10月14日NYMEX铂金库存-每日更新(百盎司)",
-  "forecast": "nan",
-  "previous": "3109.4"
- },
- {
-  "date": "2026-10-16",
-  "time": "06:30",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国10月15日iShares白银持仓-每日更新(吨)",
-  "forecast": "nan",
-  "previous": "15371.95"
- },
- {
-  "date": "2026-10-16",
-  "time": "06:30",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国10月14日COMEX黄金库存变动-每日(百盎司)",
-  "forecast": "nan",
-  "previous": "-10.15"
- },
- {
-  "date": "2026-10-16",
-  "time": "06:30",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国10月15日SPDR黄金持仓-每日更新(吨)",
-  "forecast": "nan",
-  "previous": "1054.2"
- },
- {
-  "date": "2026-10-16",
-  "time": "06:30",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国10月15日iShares黄金持仓-每日更新(吨)",
-  "forecast": "nan",
-  "previous": "463.05"
- },
- {
-  "date": "2026-10-16",
-  "time": "06:30",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国10月14日COMEX白银库存变动-每日(百盎司)",
-  "forecast": "nan",
-  "previous": "11935.66"
- },
- {
-  "date": "2026-10-16",
-  "time": "06:30",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国10月15日iShares白银持仓变动-每日(吨)",
-  "forecast": "nan",
-  "previous": "12.64"
- },
- {
-  "date": "2026-10-16",
-  "time": "06:30",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国10月14日NYMEX铂金库存变动-每日(百盎司)",
-  "forecast": "nan",
-  "previous": ""
- },
- {
-  "date": "2026-10-16",
-  "time": "06:30",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国10月14日COMEX黄金库存-每日更新(百盎司)",
-  "forecast": "nan",
-  "previous": "234760.96"
- },
- {
-  "date": "2026-10-16",
-  "time": "06:30",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国10月14日NYMEX钯金库存变动-每日(百盎司)",
-  "forecast": "nan",
-  "previous": ""
- },
- {
-  "date": "2026-10-16",
-  "time": "06:30",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国10月14日COMEX白银库存-每日更新(百盎司)",
-  "forecast": "nan",
-  "previous": "3332010.34"
- },
- {
-  "date": "2026-10-16",
-  "time": "06:30",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国10月15日iShares黄金持仓变动-每日(吨)",
-  "forecast": "nan",
-  "previous": "-0.46"
- },
- {
-  "date": "2026-10-16",
-  "time": "10:26",
-  "country": "中国",
-  "importance": "中",
-  "event": "中国9月商业银行结售汇-银行代客(亿元人民币)",
-  "forecast": "nan",
-  "previous": "3524.0"
- },
- {
-  "date": "2026-10-16",
-  "time": "11:00",
-  "country": "中国",
-  "importance": "中",
-  "event": "中国9月柴油出口量-能源(万吨)",
-  "forecast": "nan",
-  "previous": "133.0"
- },
- {
-  "date": "2026-10-16",
-  "time": "11:00",
-  "country": "中国",
-  "importance": "中",
-  "event": "中国9月管道天然气进口量-能源(万吨)",
-  "forecast": "nan",
-  "previous": "517.0"
- },
- {
-  "date": "2026-10-16",
-  "time": "11:00",
-  "country": "中国",
-  "importance": "中",
-  "event": "中国9月液化天然气进口量-能源(万吨)",
-  "forecast": "nan",
-  "previous": "516.0"
- },
- {
-  "date": "2026-10-16",
-  "time": "15:10",
-  "country": "中国",
-  "importance": "中",
-  "event": "中国10月16日上期所每日仓单变动-原油(桶)",
-  "forecast": "nan",
-  "previous": "nan"
- },
- {
-  "date": "2026-10-16",
-  "time": "15:10",
-  "country": "中国",
-  "importance": "中",
-  "event": "中国10月16日上期所每日仓单变动-燃料油(吨)",
-  "forecast": "nan",
-  "previous": "nan"
- },
- {
-  "date": "2026-10-16",
-  "time": "15:10",
-  "country": "中国",
-  "importance": "中",
-  "event": "中国10月16日上期所每日仓单变动-铜(吨)",
-  "forecast": "nan",
-  "previous": "nan"
- },
- {
-  "date": "2026-10-16",
-  "time": "15:10",
-  "country": "中国",
-  "importance": "中",
-  "event": "中国10月16日上期所每日仓单变动-黄金(千克)",
-  "forecast": "nan",
-  "previous": "nan"
- },
- {
-  "date": "2026-10-16",
-  "time": "15:10",
-  "country": "中国",
-  "importance": "中",
-  "event": "中国10月16日上期所每日仓单变动-白银(千克)",
-  "forecast": "nan",
-  "previous": "nan"
- },
- {
-  "date": "2026-10-16",
-  "time": "16:18",
-  "country": "中国",
-  "importance": "中",
-  "event": "中国2025年与共建一带一路国家贸易指数",
-  "forecast": "nan",
-  "previous": "198.0"
- },
- {
-  "date": "2026-10-16",
-  "time": "17:00",
-  "country": "欧元区",
-  "importance": "中",
-  "event": "欧元区9月季调后贸易帐(亿欧元)",
-  "forecast": "nan",
-  "previous": "50.31"
- },
- {
-  "date": "2026-10-16",
-  "time": "17:00",
-  "country": "欧元区",
-  "importance": "中",
-  "event": "欧元区9月核心调和CPI年率-未季调终值(%)",
-  "forecast": "2.2",
-  "previous": "2.2"
- },
- {
-  "date": "2026-10-16",
-  "time": "17:00",
-  "country": "欧元区",
-  "importance": "中",
-  "event": "欧元区9月调和CPI年率-未季调终值(%)",
-  "forecast": "3.8",
-  "previous": "3.8"
- },
- {
-  "date": "2026-10-16",
-  "time": "20:30",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国9月进口物价指数月率(%)",
-  "forecast": "0.8",
-  "previous": "0.7"
- },
- {
-  "date": "2026-10-16",
-  "time": "20:30",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国9月出口物价指数年率(%)",
-  "forecast": "nan",
-  "previous": "8.6"
- },
- {
-  "date": "2026-10-16",
-  "time": "20:30",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国9月出口物价指数月率(%)",
-  "forecast": "1.0",
-  "previous": "0.6"
- },
- {
-  "date": "2026-10-16",
-  "time": "20:30",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国9月进口物价指数年率(%)",
-  "forecast": "nan",
-  "previous": "7.0"
- },
- {
-  "date": "2026-10-16",
-  "time": "21:15",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国9月产能利用率(%)",
-  "forecast": "76.5",
-  "previous": "76.3"
- },
- {
-  "date": "2026-10-16",
-  "time": "21:15",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国9月工业产出年率-季调后(%)",
-  "forecast": "nan",
-  "previous": "1.42"
- },
- {
-  "date": "2026-10-16",
-  "time": "21:15",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国9月工业产出月率(%)",
-  "forecast": "0.4",
-  "previous": ""
- },
- {
-  "date": "2026-10-16",
-  "time": "21:15",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国9月制造业产能利用率(%)",
-  "forecast": "nan",
-  "previous": "75.7"
- },
- {
-  "date": "2026-10-16",
-  "time": "21:15",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国9月制造业产出月率(%)",
-  "forecast": "0.3",
-  "previous": "-0.3"
- },
- {
   "date": "2026-10-17",
   "time": "01:00",
   "country": "美国",
@@ -631,6 +64,15 @@
  },
  {
   "date": "2026-10-17",
+  "time": "03:00",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国9月政府预算(亿美元)",
+  "forecast": "-280.0",
+  "previous": "-1670.0"
+ },
+ {
+  "date": "2026-10-17",
   "time": "04:00",
   "country": "美国",
   "importance": "中",
@@ -672,7 +114,7 @@
   "importance": "中",
   "event": "美国10月15日NYMEX铂金库存变动-每日(百盎司)",
   "forecast": "nan",
-  "previous": "nan"
+  "previous": "12.4"
  },
  {
   "date": "2026-10-17",
@@ -681,7 +123,7 @@
   "importance": "中",
   "event": "美国10月16日iShares黄金持仓变动-每日(吨)",
   "forecast": "nan",
-  "previous": "nan"
+  "previous": "0.06"
  },
  {
   "date": "2026-10-17",
@@ -690,7 +132,7 @@
   "importance": "中",
   "event": "美国10月15日COMEX白银库存-每日更新(百盎司)",
   "forecast": "nan",
-  "previous": "nan"
+  "previous": "3338018.95"
  },
  {
   "date": "2026-10-17",
@@ -699,7 +141,7 @@
   "importance": "中",
   "event": "美国10月16日SPDR黄金持仓变动-每日(吨)",
   "forecast": "nan",
-  "previous": "nan"
+  "previous": "-0.29"
  },
  {
   "date": "2026-10-17",
@@ -708,7 +150,7 @@
   "importance": "中",
   "event": "美国10月16日iShares黄金持仓-每日更新(吨)",
   "forecast": "nan",
-  "previous": "nan"
+  "previous": "463.11"
  },
  {
   "date": "2026-10-17",
@@ -717,6 +159,564 @@
   "importance": "中",
   "event": "美国10月16日iShares白银持仓-每日更新(吨)",
   "forecast": "nan",
+  "previous": "15508.16"
+ },
+ {
+  "date": "2026-10-17",
+  "time": "06:30",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国10月15日COMEX白银库存变动-每日(百盎司)",
+  "forecast": "nan",
+  "previous": "6008.61"
+ },
+ {
+  "date": "2026-10-17",
+  "time": "06:30",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国10月15日NYMEX铂金库存-每日更新(百盎司)",
+  "forecast": "nan",
+  "previous": "3121.8"
+ },
+ {
+  "date": "2026-10-17",
+  "time": "06:30",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国10月16日iShares白银持仓变动-每日(吨)",
+  "forecast": "nan",
+  "previous": "136.21"
+ },
+ {
+  "date": "2026-10-17",
+  "time": "06:30",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国10月15日COMEX黄金库存变动-每日(百盎司)",
+  "forecast": "nan",
+  "previous": "-166.54"
+ },
+ {
+  "date": "2026-10-17",
+  "time": "06:30",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国10月15日NYMEX钯金库存变动-每日(百盎司)",
+  "forecast": "nan",
+  "previous": "-0.96"
+ },
+ {
+  "date": "2026-10-17",
+  "time": "06:30",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国10月16日SPDR黄金持仓-每日更新(吨)",
+  "forecast": "nan",
+  "previous": "1053.91"
+ },
+ {
+  "date": "2026-10-17",
+  "time": "06:30",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国10月15日NYMEX钯金库存-每日更新(百盎司)",
+  "forecast": "nan",
+  "previous": "2498.51"
+ },
+ {
+  "date": "2026-10-17",
+  "time": "06:30",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国10月15日COMEX黄金库存-每日更新(百盎司)",
+  "forecast": "nan",
+  "previous": "234594.6"
+ },
+ {
+  "date": "2026-10-17",
+  "time": "11:00",
+  "country": "中国",
+  "importance": "中",
+  "event": "中国9月管道天然气进口量-能源(万吨)",
+  "forecast": "nan",
+  "previous": "517.0"
+ },
+ {
+  "date": "2026-10-17",
+  "time": "11:00",
+  "country": "中国",
+  "importance": "中",
+  "event": "中国9月液化天然气进口量-能源(万吨)",
+  "forecast": "nan",
+  "previous": "516.0"
+ },
+ {
+  "date": "2026-10-17",
+  "time": "11:00",
+  "country": "中国",
+  "importance": "中",
+  "event": "中国9月柴油出口量-能源(万吨)",
+  "forecast": "nan",
+  "previous": "133.0"
+ },
+ {
+  "date": "2026-10-19",
+  "time": "05:30",
+  "country": "新西兰",
+  "importance": "低",
+  "event": "新西兰9月BNZ服务业表现指数",
+  "forecast": "nan",
+  "previous": "51.2"
+ },
+ {
+  "date": "2026-10-19",
+  "time": "05:45",
+  "country": "新西兰",
+  "importance": "中",
+  "event": "新西兰9月贸易帐(亿纽元)",
+  "forecast": "nan",
+  "previous": "-13.49"
+ },
+ {
+  "date": "2026-10-19",
+  "time": "05:45",
+  "country": "新西兰",
+  "importance": "低",
+  "event": "新西兰9月十二个月贸易帐(亿纽元)",
+  "forecast": "nan",
+  "previous": "-54.4"
+ },
+ {
+  "date": "2026-10-19",
+  "time": "05:45",
+  "country": "新西兰",
+  "importance": "低",
+  "event": "新西兰9月出口(亿纽元)",
+  "forecast": "nan",
+  "previous": "66.6"
+ },
+ {
+  "date": "2026-10-19",
+  "time": "05:45",
+  "country": "新西兰",
+  "importance": "低",
+  "event": "新西兰9月进口(亿纽元)",
+  "forecast": "nan",
+  "previous": "80.0"
+ },
+ {
+  "date": "2026-10-19",
+  "time": "07:01",
+  "country": "英国",
+  "importance": "低",
+  "event": "英国10月Rightmove平均房屋要价指数月率(%)",
+  "forecast": "nan",
+  "previous": "0.7"
+ },
+ {
+  "date": "2026-10-19",
+  "time": "10:00",
+  "country": "中国",
+  "importance": "高",
+  "event": "中国第三季度GDP年率-年初至今(%)",
+  "forecast": "nan",
+  "previous": "4.7"
+ },
+ {
+  "date": "2026-10-19",
+  "time": "10:00",
+  "country": "中国",
+  "importance": "高",
+  "event": "中国第三季度GDP总量-单季度(亿元)",
+  "forecast": "nan",
+  "previous": "361511.0"
+ },
+ {
+  "date": "2026-10-19",
+  "time": "10:00",
+  "country": "中国",
+  "importance": "高",
+  "event": "中国第三季度GDP年率-单季度(%)",
+  "forecast": "4.4",
+  "previous": "4.3"
+ },
+ {
+  "date": "2026-10-19",
+  "time": "10:00",
+  "country": "中国",
+  "importance": "高",
+  "event": "中国第三季度GDP季率-单季度(%)",
+  "forecast": "1.1",
+  "previous": "0.9"
+ },
+ {
+  "date": "2026-10-19",
+  "time": "10:00",
+  "country": "中国",
+  "importance": "中",
+  "event": "中国9月社会消费品零售总额月率(%)",
+  "forecast": "nan",
+  "previous": "-0.13"
+ },
+ {
+  "date": "2026-10-19",
+  "time": "10:00",
+  "country": "中国",
+  "importance": "中",
+  "event": "中国9月城镇固定资产投资年率-年初至今(%)",
+  "forecast": "-7.3",
+  "previous": "-7.2"
+ },
+ {
+  "date": "2026-10-19",
+  "time": "10:00",
+  "country": "中国",
+  "importance": "中",
+  "event": "中国9月规模以上工业增加值年率-年初至今(%)",
+  "forecast": "nan",
+  "previous": "5.3"
+ },
+ {
+  "date": "2026-10-19",
+  "time": "10:00",
+  "country": "中国",
+  "importance": "中",
+  "event": "中国9月社会消费品零售总额年率(%)",
+  "forecast": "0.6",
+  "previous": "0.4"
+ },
+ {
+  "date": "2026-10-19",
+  "time": "10:00",
+  "country": "中国",
+  "importance": "中",
+  "event": "中国9月规模以上工业增加值月率-单月(%)",
+  "forecast": "nan",
+  "previous": "0.54"
+ },
+ {
+  "date": "2026-10-19",
+  "time": "10:00",
+  "country": "中国",
+  "importance": "中",
+  "event": "中国9月社会消费品零售总额年率-年初至今(%)",
+  "forecast": "nan",
+  "previous": "1.13"
+ },
+ {
+  "date": "2026-10-19",
+  "time": "10:00",
+  "country": "中国",
+  "importance": "中",
+  "event": "中国9月城镇固定资产投资月率(%)",
+  "forecast": "nan",
+  "previous": "-0.5"
+ },
+ {
+  "date": "2026-10-19",
+  "time": "10:00",
+  "country": "中国",
+  "importance": "中",
+  "event": "中国9月城镇调查失业率(%)",
+  "forecast": "nan",
+  "previous": "5.3"
+ },
+ {
+  "date": "2026-10-19",
+  "time": "10:00",
+  "country": "中国",
+  "importance": "中",
+  "event": "中国9月规模以上工业增加值年率-单月(%)",
+  "forecast": "5.5",
+  "previous": "5.2"
+ },
+ {
+  "date": "2026-10-19",
+  "time": "15:10",
+  "country": "中国",
+  "importance": "中",
+  "event": "中国10月19日上期所每日仓单变动-黄金(千克)",
+  "forecast": "nan",
+  "previous": "900.0"
+ },
+ {
+  "date": "2026-10-19",
+  "time": "15:10",
+  "country": "中国",
+  "importance": "中",
+  "event": "中国10月19日上期所每日仓单变动-原油(桶)",
+  "forecast": "nan",
+  "previous": ""
+ },
+ {
+  "date": "2026-10-19",
+  "time": "15:10",
+  "country": "中国",
+  "importance": "中",
+  "event": "中国10月19日上期所每日仓单变动-燃料油(吨)",
+  "forecast": "nan",
+  "previous": "-550.0"
+ },
+ {
+  "date": "2026-10-19",
+  "time": "15:10",
+  "country": "中国",
+  "importance": "中",
+  "event": "中国10月19日上期所每日仓单变动-铜(吨)",
+  "forecast": "nan",
+  "previous": "1453.0"
+ },
+ {
+  "date": "2026-10-19",
+  "time": "15:10",
+  "country": "中国",
+  "importance": "中",
+  "event": "中国10月19日上期所每日仓单变动-白银(千克)",
+  "forecast": "nan",
+  "previous": "-12335.0"
+ },
+ {
+  "date": "2026-10-19",
+  "time": "16:26",
+  "country": "中国",
+  "importance": "中",
+  "event": "中国9月商业银行结售汇-银行代客(亿元人民币)",
+  "forecast": "nan",
+  "previous": "3524.0"
+ },
+ {
+  "date": "2026-10-19",
+  "time": "18:00",
+  "country": "英国",
+  "importance": "中",
+  "event": "英国10月CBI零售销售差值",
+  "forecast": "nan",
+  "previous": "-55.0"
+ },
+ {
+  "date": "2026-10-19",
+  "time": "22:00",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国10月NAHB房产市场指数",
+  "forecast": "nan",
+  "previous": "32.0"
+ },
+ {
+  "date": "2026-10-19",
+  "time": "23:30",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国10月19日3个月期国债竞拍-投标倍数(亿美元)",
+  "forecast": "nan",
+  "previous": "2.68"
+ },
+ {
+  "date": "2026-10-19",
+  "time": "23:30",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国10月19日6个月期国债竞拍-中标利率(%)",
+  "forecast": "nan",
+  "previous": "4.2"
+ },
+ {
+  "date": "2026-10-19",
+  "time": "23:30",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国10月19日6个月期国债竞拍-投标倍数(亿美元)",
+  "forecast": "nan",
+  "previous": "2.76"
+ },
+ {
+  "date": "2026-10-19",
+  "time": "23:30",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国10月19日3个月期国债竞拍-高配置百分比(%)",
+  "forecast": "nan",
+  "previous": "36.71"
+ },
+ {
+  "date": "2026-10-19",
+  "time": "23:30",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国10月19日3个月期国债竞拍-总金额(亿美元)",
+  "forecast": "nan",
+  "previous": "1004.05"
+ },
+ {
+  "date": "2026-10-19",
+  "time": "23:30",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国10月19日3个月期国债竞拍-中标利率(%)",
+  "forecast": "nan",
+  "previous": "4.09"
+ },
+ {
+  "date": "2026-10-19",
+  "time": "23:30",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国10月19日6个月期国债竞拍-总金额(亿美元)",
+  "forecast": "nan",
+  "previous": "866.65"
+ },
+ {
+  "date": "2026-10-19",
+  "time": "23:30",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国10月19日6个月期国债竞拍-高配置百分比(%)",
+  "forecast": "nan",
+  "previous": "78.17"
+ },
+ {
+  "date": "2026-10-20",
+  "time": "06:30",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国10月16日NYMEX钯金库存变动-每日(百盎司)",
+  "forecast": "nan",
   "previous": "nan"
+ },
+ {
+  "date": "2026-10-20",
+  "time": "06:30",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国10月16日NYMEX铂金库存变动-每日(百盎司)",
+  "forecast": "nan",
+  "previous": "nan"
+ },
+ {
+  "date": "2026-10-20",
+  "time": "06:30",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国10月19日iShares白银持仓变动-每日(吨)",
+  "forecast": "nan",
+  "previous": "nan"
+ },
+ {
+  "date": "2026-10-20",
+  "time": "06:30",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国10月16日NYMEX铂金库存-每日更新(百盎司)",
+  "forecast": "nan",
+  "previous": "nan"
+ },
+ {
+  "date": "2026-10-20",
+  "time": "06:30",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国10月19日SPDR黄金持仓变动-每日(吨)",
+  "forecast": "nan",
+  "previous": "nan"
+ },
+ {
+  "date": "2026-10-20",
+  "time": "06:30",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国10月16日COMEX黄金库存-每日更新(百盎司)",
+  "forecast": "nan",
+  "previous": "nan"
+ },
+ {
+  "date": "2026-10-20",
+  "time": "06:30",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国10月16日COMEX白银库存变动-每日(百盎司)",
+  "forecast": "nan",
+  "previous": "nan"
+ },
+ {
+  "date": "2026-10-20",
+  "time": "06:30",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国10月16日NYMEX钯金库存-每日更新(百盎司)",
+  "forecast": "nan",
+  "previous": "nan"
+ },
+ {
+  "date": "2026-10-20",
+  "time": "06:30",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国10月16日COMEX黄金库存变动-每日(百盎司)",
+  "forecast": "nan",
+  "previous": "nan"
+ },
+ {
+  "date": "2026-10-20",
+  "time": "06:30",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国10月16日COMEX白银库存-每日更新(百盎司)",
+  "forecast": "nan",
+  "previous": "nan"
+ },
+ {
+  "date": "2026-10-20",
+  "time": "06:30",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国10月19日iShares黄金持仓-每日更新(吨)",
+  "forecast": "nan",
+  "previous": "nan"
+ },
+ {
+  "date": "2026-10-20",
+  "time": "06:30",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国10月19日iShares黄金持仓变动-每日(吨)",
+  "forecast": "nan",
+  "previous": "nan"
+ },
+ {
+  "date": "2026-10-20",
+  "time": "06:30",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国10月19日iShares白银持仓-每日更新(吨)",
+  "forecast": "nan",
+  "previous": "nan"
+ },
+ {
+  "date": "2026-10-20",
+  "time": "06:30",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国10月19日SPDR黄金持仓-每日更新(吨)",
+  "forecast": "nan",
+  "previous": "nan"
+ },
+ {
+  "date": "2026-10-20",
+  "time": "08:30",
+  "country": "澳大利亚",
+  "importance": "中",
+  "event": "澳大利亚截至10月18日当周ANZ消费者信心指数",
+  "forecast": "nan",
+  "previous": "68.0"
+ },
+ {
+  "date": "2026-10-20",
+  "time": "08:30",
+  "country": "澳大利亚",
+  "importance": "低",
+  "event": "澳大利亚截至10月18日当周ANZ消费者对未来2年通胀预期",
+  "forecast": "nan",
+  "previous": "6.1"
  }
 ]
