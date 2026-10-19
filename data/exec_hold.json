@@ -3,10 +3,42 @@
   {
    "code": "600165",
    "name": "宁科生物",
-   "count": 28,
+   "count": 30,
    "dec_count": 0,
    "first_date": "2026-09-03",
    "last_date": "2026-10-16"
+  },
+  {
+   "code": "301089",
+   "name": "拓新药业",
+   "count": 27,
+   "dec_count": 0,
+   "first_date": "2026-07-17",
+   "last_date": "2026-10-15"
+  },
+  {
+   "code": "301533",
+   "name": "威马农机",
+   "count": 24,
+   "dec_count": 4,
+   "first_date": "2026-07-24",
+   "last_date": "2026-09-11"
+  },
+  {
+   "code": "603098",
+   "name": "森特股份",
+   "count": 20,
+   "dec_count": 0,
+   "first_date": "2025-12-29",
+   "last_date": "2026-10-15"
+  },
+  {
+   "code": "002146",
+   "name": "荣盛发展",
+   "count": 20,
+   "dec_count": 0,
+   "first_date": "2026-06-30",
+   "last_date": "2026-09-30"
   },
   {
    "code": "603768",
@@ -17,6 +49,22 @@
    "last_date": "2026-10-14"
   },
   {
+   "code": "920168",
+   "name": "通宝光电",
+   "count": 19,
+   "dec_count": 0,
+   "first_date": "2026-07-23",
+   "last_date": "2026-10-14"
+  },
+  {
+   "code": "002568",
+   "name": "百润股份",
+   "count": 19,
+   "dec_count": 0,
+   "first_date": "2026-07-02",
+   "last_date": "2026-09-04"
+  },
+  {
    "code": "002296",
    "name": "辉煌科技",
    "count": 18,
@@ -25,12 +73,28 @@
    "last_date": "2026-10-09"
   },
   {
-   "code": "301089",
-   "name": "拓新药业",
-   "count": 15,
+   "code": "301267",
+   "name": "华厦眼科",
+   "count": 16,
+   "dec_count": 0,
+   "first_date": "2026-09-02",
+   "last_date": "2026-10-15"
+  },
+  {
+   "code": "601717",
+   "name": "中创智领",
+   "count": 16,
    "dec_count": 0,
    "first_date": "2026-07-17",
-   "last_date": "2026-10-15"
+   "last_date": "2026-09-17"
+  },
+  {
+   "code": "300806",
+   "name": "斯迪克",
+   "count": 16,
+   "dec_count": 0,
+   "first_date": "2026-07-31",
+   "last_date": "2026-09-07"
   },
   {
    "code": "300685",
@@ -41,22 +105,6 @@
    "last_date": "2026-10-14"
   },
   {
-   "code": "301267",
-   "name": "华厦眼科",
-   "count": 14,
-   "dec_count": 0,
-   "first_date": "2026-09-02",
-   "last_date": "2026-10-15"
-  },
-  {
-   "code": "603098",
-   "name": "森特股份",
-   "count": 14,
-   "dec_count": 0,
-   "first_date": "2025-12-29",
-   "last_date": "2026-10-15"
-  },
-  {
    "code": "603960",
    "name": "克来机电",
    "count": 13,
@@ -65,60 +113,12 @@
    "last_date": "2026-09-29"
   },
   {
-   "code": "300636",
-   "name": "同和药业",
-   "count": 11,
+   "code": "000078",
+   "name": "ST海王",
+   "count": 13,
    "dec_count": 0,
-   "first_date": "2026-09-23",
-   "last_date": "2026-10-16"
-  },
-  {
-   "code": "002146",
-   "name": "荣盛发展",
-   "count": 9,
-   "dec_count": 0,
-   "first_date": "2026-06-30",
-   "last_date": "2026-09-30"
-  },
-  {
-   "code": "601717",
-   "name": "中创智领",
-   "count": 9,
-   "dec_count": 0,
-   "first_date": "2026-07-17",
-   "last_date": "2026-09-17"
-  },
-  {
-   "code": "600022",
-   "name": "山东钢铁",
-   "count": 8,
-   "dec_count": 0,
-   "first_date": "2026-09-23",
-   "last_date": "2026-10-16"
-  },
-  {
-   "code": "688575",
-   "name": "亚辉龙",
-   "count": 8,
-   "dec_count": 0,
-   "first_date": "2026-06-17",
-   "last_date": "2026-10-16"
-  },
-  {
-   "code": "301316",
-   "name": "慧博云通",
-   "count": 8,
-   "dec_count": 0,
-   "first_date": "2026-09-04",
-   "last_date": "2026-10-14"
-  },
-  {
-   "code": "601005",
-   "name": "重庆钢铁",
-   "count": 8,
-   "dec_count": 0,
-   "first_date": "2026-07-01",
-   "last_date": "2026-09-24"
+   "first_date": "2026-06-24",
+   "last_date": "2026-09-21"
   }
  ],
  "prior": [

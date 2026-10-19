@@ -1,6 +1,79 @@
 {
- "industry_in": [],
- "industry_out": [],
+ "industry_in": [
+  {
+   "name": "银行",
+   "net": 48.74,
+   "pct": 1.55,
+   "leader": "苏州银行",
+   "leader_pct": 3.89
+  },
+  {
+   "name": "通信设备",
+   "net": 23.23,
+   "pct": 0.36,
+   "leader": "宇特光电",
+   "leader_pct": 17.48
+  },
+  {
+   "name": "自动化设备",
+   "net": 17.85,
+   "pct": 0.87,
+   "leader": "宇树科技",
+   "leader_pct": 16.15
+  },
+  {
+   "name": "电力",
+   "net": 16.53,
+   "pct": 0.44,
+   "leader": "晶科科技",
+   "leader_pct": 10.15
+  },
+  {
+   "name": "消费电子",
+   "net": 15.14,
+   "pct": 0.45,
+   "leader": "朗特智能",
+   "leader_pct": 15.2
+  },
+  {
+   "name": "军工装备",
+   "net": 14.22,
+   "pct": 1.4,
+   "leader": "甘化科工",
+   "leader_pct": 10.03
+  },
+  {
+   "name": "元件",
+   "net": 12.46,
+   "pct": 0.51,
+   "leader": "四会富仕",
+   "leader_pct": 19.99
+  },
+  {
+   "name": "汽车零部件",
+   "net": 11.34,
+   "pct": 0.95,
+   "leader": "正强股份",
+   "leader_pct": 20.01
+  }
+ ],
+ "industry_out": [
+  {
+   "name": "化学制药",
+   "net": -9.21,
+   "pct": -1.42
+  },
+  {
+   "name": "文化传媒",
+   "net": -9.41,
+   "pct": -1.21
+  },
+  {
+   "name": "房地产",
+   "net": -9.86,
+   "pct": -2.19
+  }
+ ],
  "stock_in": [
   {
    "code": "600519",
