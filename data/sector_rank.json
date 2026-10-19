@@ -1,82 +1,82 @@
 [
  {
-  "name": "军工装备",
-  "pct": 5.61,
-  "leader": "晟楠科技",
-  "leader_pct": 29.98,
-  "up_count": 80,
-  "down_count": 1
- },
- {
-  "name": "军工电子",
-  "pct": 2.87,
-  "leader": "华力创通",
-  "leader_pct": 20.04,
-  "up_count": 55,
-  "down_count": 6
- },
- {
-  "name": "汽车零部件",
-  "pct": 2.37,
-  "leader": "捷众科技",
-  "leader_pct": 30.0,
-  "up_count": 238,
-  "down_count": 37
- },
- {
-  "name": "化学纤维",
-  "pct": 2.26,
-  "leader": "中复神鹰",
-  "leader_pct": 11.31,
-  "up_count": 26,
-  "down_count": 3
- },
- {
-  "name": "汽车整车",
-  "pct": 1.98,
-  "leader": "江淮汽车",
-  "leader_pct": 9.98,
-  "up_count": 21,
-  "down_count": 1
- },
- {
-  "name": "白酒",
-  "pct": 1.95,
-  "leader": "皇台酒业",
-  "leader_pct": 6.81,
-  "up_count": 19,
-  "down_count": 0
- },
- {
-  "name": "贵金属",
-  "pct": 1.94,
-  "leader": "招金黄金",
-  "leader_pct": 4.18,
-  "up_count": 14,
-  "down_count": 0
- },
- {
-  "name": "电机",
-  "pct": 1.93,
-  "leader": "中电电机",
-  "leader_pct": 5.86,
-  "up_count": 24,
+  "name": "厨卫电器",
+  "pct": 2.8,
+  "leader": "亿田智能",
+  "leader_pct": 18.34,
+  "up_count": 7,
   "down_count": 2
  },
  {
-  "name": "房地产",
-  "pct": 1.9,
-  "leader": "粤宏远A",
-  "leader_pct": 10.1,
-  "up_count": 78,
-  "down_count": 7
+  "name": "电机",
+  "pct": 1.66,
+  "leader": "兆威机电",
+  "leader_pct": 10.0,
+  "up_count": 17,
+  "down_count": 8
  },
  {
-  "name": "建筑材料",
-  "pct": 1.84,
-  "leader": "福建水泥",
-  "leader_pct": 10.06,
-  "up_count": 57,
-  "down_count": 15
+  "name": "银行",
+  "pct": 1.55,
+  "leader": "苏州银行",
+  "leader_pct": 3.89,
+  "up_count": 42,
+  "down_count": 0
+ },
+ {
+  "name": "军工装备",
+  "pct": 1.4,
+  "leader": "甘化科工",
+  "leader_pct": 10.03,
+  "up_count": 62,
+  "down_count": 19
+ },
+ {
+  "name": "黑色家电",
+  "pct": 1.06,
+  "leader": "高斯贝尔",
+  "leader_pct": 3.53,
+  "up_count": 6,
+  "down_count": 2
+ },
+ {
+  "name": "汽车零部件",
+  "pct": 0.95,
+  "leader": "正强股份",
+  "leader_pct": 20.01,
+  "up_count": 159,
+  "down_count": 109
+ },
+ {
+  "name": "贵金属",
+  "pct": 0.89,
+  "leader": "赤峰黄金",
+  "leader_pct": 3.73,
+  "up_count": 10,
+  "down_count": 4
+ },
+ {
+  "name": "自动化设备",
+  "pct": 0.87,
+  "leader": "宇树科技",
+  "leader_pct": 16.15,
+  "up_count": 52,
+  "down_count": 44
+ },
+ {
+  "name": "保险",
+  "pct": 0.66,
+  "leader": "中国太保",
+  "leader_pct": 1.5,
+  "up_count": 4,
+  "down_count": 1
+ },
+ {
+  "name": "IT服务",
+  "pct": 0.63,
+  "leader": "海天瑞声",
+  "leader_pct": 12.38,
+  "up_count": 75,
+  "down_count": 51
  }
 ]
