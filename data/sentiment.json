@@ -1,467 +1,543 @@
 {
- "date": "2026-10-19",
- "zt": 46,
- "dt": 22,
- "zb": 21,
- "zb_rate": 31.3,
- "max_lb": 3,
+ "date": "2026-10-20",
+ "zt": 54,
+ "dt": 6,
+ "zb": 29,
+ "zb_rate": 34.9,
+ "max_lb": 4,
  "lb_dist": [
   {
    "lb": 1,
-   "count": 35
+   "count": 40
   },
   {
    "lb": 2,
-   "count": 9
+   "count": 8
   },
   {
    "lb": 3,
-   "count": 2
+   "count": 5
+  },
+  {
+   "lb": 4,
+   "count": 1
   }
  ],
- "score": 41,
+ "score": 49,
  "level": "复苏",
- "note": "跌停家数较多，情绪走弱",
+ "note": "",
  "industries": [
   {
-   "name": "汽车零部",
-   "count": 10
-  },
-  {
-   "name": "塑料",
-   "count": 4
-  },
-  {
    "name": "通用设备",
+   "count": 6
+  },
+  {
+   "name": "汽车零部",
    "count": 3
   },
   {
-   "name": "家居用品",
+   "name": "照明设备",
    "count": 3
   },
   {
-   "name": "电力",
+   "name": "化学制药",
    "count": 3
   },
   {
-   "name": "元件",
+   "name": "通信设备",
+   "count": 3
+  },
+  {
+   "name": "消费电子",
    "count": 3
   }
  ],
  "zt_list": [
   {
-   "code": "002724",
-   "name": "海洋王",
-   "lb": 2,
-   "industry": "照明设备",
-   "fb_time": "092500",
-   "zt_stat": "2/2",
-   "turnover": 1.17
-  },
-  {
-   "code": "002929",
-   "name": "润建股份",
+   "code": "002835",
+   "name": "同为股份",
    "lb": 1,
-   "industry": "通信服务",
+   "industry": "计算机设",
    "fb_time": "092500",
    "zt_stat": "1/1",
-   "turnover": 2.32
+   "turnover": 1.88
   },
   {
    "code": "003029",
    "name": "吉大正元",
-   "lb": 3,
+   "lb": 4,
    "industry": "软件开发",
    "fb_time": "092500",
-   "zt_stat": "3/3",
-   "turnover": 4.11
+   "zt_stat": "4/4",
+   "turnover": 24.16
   },
   {
-   "code": "600148",
-   "name": "长春一东",
-   "lb": 2,
-   "industry": "汽车零部",
-   "fb_time": "092501",
-   "zt_stat": "2/2",
-   "turnover": 1.51
-  },
-  {
-   "code": "600267",
-   "name": "海正药业",
+   "code": "600661",
+   "name": "昂立教育",
    "lb": 1,
-   "industry": "化学制药",
-   "fb_time": "092501",
+   "industry": "教育",
+   "fb_time": "092500",
    "zt_stat": "1/1",
-   "turnover": 0.83
-  },
-  {
-   "code": "600860",
-   "name": "京城股份",
-   "lb": 2,
-   "industry": "通用设备",
-   "fb_time": "092501",
-   "zt_stat": "2/2",
-   "turnover": 1.55
-  },
-  {
-   "code": "603197",
-   "name": "保隆科技",
-   "lb": 2,
-   "industry": "汽车零部",
-   "fb_time": "092501",
-   "zt_stat": "2/2",
-   "turnover": 1.87
+   "turnover": 5.35
   },
   {
    "code": "600178",
    "name": "东安动力",
-   "lb": 2,
-   "industry": "汽车零部",
-   "fb_time": "093002",
-   "zt_stat": "2/2",
-   "turnover": 3.36
-  },
-  {
-   "code": "603348",
-   "name": "文灿股份",
-   "lb": 2,
-   "industry": "汽车零部",
-   "fb_time": "093006",
-   "zt_stat": "2/2",
-   "turnover": 2.98
-  },
-  {
-   "code": "000576",
-   "name": "甘化科工",
-   "lb": 2,
-   "industry": "地面兵装",
-   "fb_time": "093009",
-   "zt_stat": "2/2",
-   "turnover": 13.42
-  },
-  {
-   "code": "002085",
-   "name": "万丰奥威",
-   "lb": 2,
-   "industry": "汽车零部",
-   "fb_time": "093124",
-   "zt_stat": "2/2",
-   "turnover": 4.82
-  },
-  {
-   "code": "002626",
-   "name": "金达威",
-   "lb": 1,
-   "industry": "食品加工",
-   "fb_time": "093145",
-   "zt_stat": "1/1",
-   "turnover": 5.83
-  },
-  {
-   "code": "002368",
-   "name": "太极股份",
-   "lb": 1,
-   "industry": "IT服务Ⅱ",
-   "fb_time": "093215",
-   "zt_stat": "1/1",
-   "turnover": 2.05
-  },
-  {
-   "code": "001323",
-   "name": "慕思股份",
-   "lb": 1,
-   "industry": "家居用品",
-   "fb_time": "093951",
-   "zt_stat": "1/1",
-   "turnover": 1.05
-  },
-  {
-   "code": "603188",
-   "name": "亚邦股份",
-   "lb": 1,
-   "industry": "化学制品",
-   "fb_time": "094332",
-   "zt_stat": "1/1",
-   "turnover": 16.44
-  },
-  {
-   "code": "603693",
-   "name": "江苏新能",
-   "lb": 1,
-   "industry": "电力",
-   "fb_time": "100248",
-   "zt_stat": "1/1",
-   "turnover": 3.15
-  },
-  {
-   "code": "600032",
-   "name": "浙江新能",
-   "lb": 1,
-   "industry": "电力",
-   "fb_time": "101146",
-   "zt_stat": "1/1",
-   "turnover": 2.48
-  },
-  {
-   "code": "301666",
-   "name": "大普微-UW",
-   "lb": 1,
-   "industry": "计算机设",
-   "fb_time": "102500",
-   "zt_stat": "1/1",
-   "turnover": 21.83
-  },
-  {
-   "code": "600686",
-   "name": "金龙汽车",
-   "lb": 1,
-   "industry": "商用车",
-   "fb_time": "102818",
-   "zt_stat": "1/1",
-   "turnover": 4.87
-  },
-  {
-   "code": "002889",
-   "name": "东方嘉盛",
    "lb": 3,
-   "industry": "物流",
-   "fb_time": "103733",
+   "industry": "汽车零部",
+   "fb_time": "092501",
    "zt_stat": "3/3",
-   "turnover": 20.48
+   "turnover": 1.62
   },
   {
-   "code": "603330",
-   "name": "天洋新材",
+   "code": "600293",
+   "name": "三峡新材",
    "lb": 1,
-   "industry": "塑料",
-   "fb_time": "103924",
-   "zt_stat": "1/1",
-   "turnover": 7.51
-  },
-  {
-   "code": "301591",
-   "name": "肯特股份",
-   "lb": 1,
-   "industry": "塑料",
-   "fb_time": "104042",
-   "zt_stat": "1/1",
-   "turnover": 34.21
-  },
-  {
-   "code": "002886",
-   "name": "沃特股份",
-   "lb": 1,
-   "industry": "塑料",
-   "fb_time": "104433",
-   "zt_stat": "1/1",
-   "turnover": 14.49
-  },
-  {
-   "code": "600487",
-   "name": "亨通光电",
-   "lb": 1,
-   "industry": "通信设备",
-   "fb_time": "104713",
-   "zt_stat": "1/1",
-   "turnover": 8.22
-  },
-  {
-   "code": "601778",
-   "name": "晶科科技",
-   "lb": 1,
-   "industry": "电力",
-   "fb_time": "104753",
-   "zt_stat": "1/1",
-   "turnover": 5.37
-  },
-  {
-   "code": "001216",
-   "name": "华瓷股份",
-   "lb": 1,
-   "industry": "家居用品",
-   "fb_time": "104836",
+   "industry": "玻璃玻纤",
+   "fb_time": "092502",
    "zt_stat": "4/2",
-   "turnover": 17.43
-  },
-  {
-   "code": "600329",
-   "name": "达仁堂",
-   "lb": 1,
-   "industry": "中药Ⅱ",
-   "fb_time": "105240",
-   "zt_stat": "1/1",
-   "turnover": 2.31
-  },
-  {
-   "code": "300852",
-   "name": "四会富仕",
-   "lb": 1,
-   "industry": "元件",
-   "fb_time": "105445",
-   "zt_stat": "1/1",
-   "turnover": 17.12
-  },
-  {
-   "code": "605258",
-   "name": "协和电子",
-   "lb": 1,
-   "industry": "元件",
-   "fb_time": "105544",
-   "zt_stat": "1/1",
-   "turnover": 11.15
-  },
-  {
-   "code": "605058",
-   "name": "澳弘电子",
-   "lb": 1,
-   "industry": "元件",
-   "fb_time": "105630",
-   "zt_stat": "21/12",
-   "turnover": 16.62
-  },
-  {
-   "code": "605488",
-   "name": "福莱新材",
-   "lb": 1,
-   "industry": "塑料",
-   "fb_time": "112102",
-   "zt_stat": "1/1",
-   "turnover": 2.8
-  },
-  {
-   "code": "300798",
-   "name": "锦鸡股份",
-   "lb": 1,
-   "industry": "化学制品",
-   "fb_time": "130039",
-   "zt_stat": "1/1",
-   "turnover": 22.68
-  },
-  {
-   "code": "603626",
-   "name": "科森科技",
-   "lb": 1,
-   "industry": "消费电子",
-   "fb_time": "132427",
-   "zt_stat": "1/1",
-   "turnover": 7.01
-  },
-  {
-   "code": "603859",
-   "name": "能科科技",
-   "lb": 1,
-   "industry": "IT服务Ⅱ",
-   "fb_time": "133034",
-   "zt_stat": "1/1",
-   "turnover": 2.92
-  },
-  {
-   "code": "002164",
-   "name": "宁波东力",
-   "lb": 1,
-   "industry": "通用设备",
-   "fb_time": "133506",
-   "zt_stat": "1/1",
-   "turnover": 10.48
+   "turnover": 0.83
   },
   {
    "code": "603278",
    "name": "大业股份",
+   "lb": 3,
+   "industry": "通用设备",
+   "fb_time": "092502",
+   "zt_stat": "3/3",
+   "turnover": 2.47
+  },
+  {
+   "code": "001323",
+   "name": "慕思股份",
+   "lb": 2,
+   "industry": "家居用品",
+   "fb_time": "093003",
+   "zt_stat": "2/2",
+   "turnover": 1.87
+  },
+  {
+   "code": "002479",
+   "name": "富春环保",
+   "lb": 1,
+   "industry": "电力",
+   "fb_time": "093009",
+   "zt_stat": "1/1",
+   "turnover": 1.66
+  },
+  {
+   "code": "600148",
+   "name": "长春一东",
+   "lb": 3,
+   "industry": "汽车零部",
+   "fb_time": "093010",
+   "zt_stat": "3/3",
+   "turnover": 22.0
+  },
+  {
+   "code": "605488",
+   "name": "福莱新材",
+   "lb": 2,
+   "industry": "塑料",
+   "fb_time": "093011",
+   "zt_stat": "2/2",
+   "turnover": 1.61
+  },
+  {
+   "code": "002724",
+   "name": "海洋王",
+   "lb": 3,
+   "industry": "照明设备",
+   "fb_time": "093018",
+   "zt_stat": "3/3",
+   "turnover": 10.85
+  },
+  {
+   "code": "600267",
+   "name": "海正药业",
+   "lb": 2,
+   "industry": "化学制药",
+   "fb_time": "093031",
+   "zt_stat": "2/2",
+   "turnover": 4.92
+  },
+  {
+   "code": "600860",
+   "name": "京城股份",
+   "lb": 3,
+   "industry": "通用设备",
+   "fb_time": "093041",
+   "zt_stat": "3/3",
+   "turnover": 11.49
+  },
+  {
+   "code": "002181",
+   "name": "粤 传 媒",
+   "lb": 1,
+   "industry": "出版",
+   "fb_time": "093048",
+   "zt_stat": "1/1",
+   "turnover": 3.99
+  },
+  {
+   "code": "002076",
+   "name": "星光股份",
+   "lb": 1,
+   "industry": "照明设备",
+   "fb_time": "093139",
+   "zt_stat": "3/2",
+   "turnover": 18.34
+  },
+  {
+   "code": "002242",
+   "name": "九阳股份",
+   "lb": 1,
+   "industry": "小家电",
+   "fb_time": "093239",
+   "zt_stat": "12/7",
+   "turnover": 15.52
+  },
+  {
+   "code": "002164",
+   "name": "宁波东力",
    "lb": 2,
    "industry": "通用设备",
-   "fb_time": "133617",
+   "fb_time": "093445",
    "zt_stat": "2/2",
-   "turnover": 14.04
+   "turnover": 12.99
   },
   {
-   "code": "301119",
-   "name": "正强股份",
+   "code": "002088",
+   "name": "鲁阳节能",
    "lb": 1,
-   "industry": "汽车零部",
-   "fb_time": "133730",
+   "industry": "装修建材",
+   "fb_time": "093451",
    "zt_stat": "1/1",
-   "turnover": 6.47
+   "turnover": 2.29
   },
   {
-   "code": "603040",
-   "name": "新坐标",
+   "code": "603386",
+   "name": "骏亚科技",
    "lb": 1,
-   "industry": "汽车零部",
-   "fb_time": "135054",
+   "industry": "元件",
+   "fb_time": "093614",
+   "zt_stat": "6/3",
+   "turnover": 7.86
+  },
+  {
+   "code": "002347",
+   "name": "泰尔股份",
+   "lb": 1,
+   "industry": "通用设备",
+   "fb_time": "093745",
    "zt_stat": "1/1",
-   "turnover": 2.02
+   "turnover": 8.13
+  },
+  {
+   "code": "920641",
+   "name": "格利尔",
+   "lb": 1,
+   "industry": "照明设备",
+   "fb_time": "093929",
+   "zt_stat": "1/1",
+   "turnover": 13.42
+  },
+  {
+   "code": "002313",
+   "name": "日海智能",
+   "lb": 1,
+   "industry": "通信设备",
+   "fb_time": "094009",
+   "zt_stat": "1/1",
+   "turnover": 4.17
+  },
+  {
+   "code": "920096",
+   "name": "嘉晨智能",
+   "lb": 1,
+   "industry": "自动化设",
+   "fb_time": "094314",
+   "zt_stat": "1/1",
+   "turnover": 21.17
+  },
+  {
+   "code": "603626",
+   "name": "科森科技",
+   "lb": 2,
+   "industry": "消费电子",
+   "fb_time": "094409",
+   "zt_stat": "2/2",
+   "turnover": 6.63
   },
   {
    "code": "301313",
    "name": "凡拓数创",
-   "lb": 1,
+   "lb": 2,
    "industry": "数字媒体",
-   "fb_time": "135121",
+   "fb_time": "095109",
+   "zt_stat": "2/2",
+   "turnover": 31.55
+  },
+  {
+   "code": "001239",
+   "name": "永达股份",
+   "lb": 1,
+   "industry": "工程机械",
+   "fb_time": "100124",
    "zt_stat": "1/1",
-   "turnover": 31.98
+   "turnover": 4.9
   },
   {
    "code": "603119",
    "name": "浙江荣泰",
-   "lb": 1,
+   "lb": 2,
    "industry": "汽车零部",
-   "fb_time": "135223",
-   "zt_stat": "1/1",
-   "turnover": 2.51
+   "fb_time": "100302",
+   "zt_stat": "2/2",
+   "turnover": 3.24
   },
   {
-   "code": "603286",
-   "name": "日盈电子",
+   "code": "603236",
+   "name": "移远通信",
    "lb": 1,
-   "industry": "汽车零部",
-   "fb_time": "135226",
+   "industry": "通信设备",
+   "fb_time": "100444",
    "zt_stat": "1/1",
-   "turnover": 4.21
+   "turnover": 7.27
   },
   {
-   "code": "003021",
-   "name": "兆威机电",
+   "code": "300466",
+   "name": "赛摩智能",
    "lb": 1,
-   "industry": "电机Ⅱ",
-   "fb_time": "140830",
+   "industry": "通用设备",
+   "fb_time": "100609",
    "zt_stat": "1/1",
-   "turnover": 2.46
+   "turnover": 7.84
   },
   {
-   "code": "605255",
-   "name": "天普股份",
+   "code": "603341",
+   "name": "龙旗科技",
    "lb": 1,
-   "industry": "汽车零部",
-   "fb_time": "142858",
+   "industry": "消费电子",
+   "fb_time": "100956",
    "zt_stat": "1/1",
-   "turnover": 0.8
+   "turnover": 9.74
   },
   {
-   "code": "688507",
-   "name": "索辰科技",
+   "code": "300115",
+   "name": "长盈精密",
    "lb": 1,
-   "industry": "软件开发",
-   "fb_time": "143120",
+   "industry": "消费电子",
+   "fb_time": "101809",
    "zt_stat": "1/1",
-   "turnover": 14.98
+   "turnover": 6.87
   },
   {
-   "code": "001211",
-   "name": "双枪科技",
+   "code": "002881",
+   "name": "美格智能",
    "lb": 1,
-   "industry": "家居用品",
-   "fb_time": "144145",
+   "industry": "通信设备",
+   "fb_time": "101839",
    "zt_stat": "1/1",
-   "turnover": 12.52
+   "turnover": 9.16
   },
   {
-   "code": "002343",
-   "name": "慈文传媒",
+   "code": "603407",
+   "name": "长裕集团",
    "lb": 1,
-   "industry": "影视院线",
-   "fb_time": "145133",
-   "zt_stat": "7/6",
-   "turnover": 46.52
+   "industry": "化学原料",
+   "fb_time": "102026",
+   "zt_stat": "1/1",
+   "turnover": 10.76
+  },
+  {
+   "code": "002403",
+   "name": "爱仕达",
+   "lb": 1,
+   "industry": "小家电",
+   "fb_time": "102333",
+   "zt_stat": "1/1",
+   "turnover": 9.73
+  },
+  {
+   "code": "001388",
+   "name": "信通电子",
+   "lb": 1,
+   "industry": "电网设备",
+   "fb_time": "102945",
+   "zt_stat": "1/1",
+   "turnover": 8.44
+  },
+  {
+   "code": "605389",
+   "name": "长龄液压",
+   "lb": 1,
+   "industry": "工程机械",
+   "fb_time": "103131",
+   "zt_stat": "1/1",
+   "turnover": 0.68
+  },
+  {
+   "code": "603068",
+   "name": "博通集成",
+   "lb": 1,
+   "industry": "半导体",
+   "fb_time": "103340",
+   "zt_stat": "1/1",
+   "turnover": 8.28
+  },
+  {
+   "code": "001283",
+   "name": "豪鹏科技",
+   "lb": 1,
+   "industry": "电池",
+   "fb_time": "103442",
+   "zt_stat": "1/1",
+   "turnover": 7.46
+  },
+  {
+   "code": "300244",
+   "name": "迪安诊断",
+   "lb": 1,
+   "industry": "医疗服务",
+   "fb_time": "103930",
+   "zt_stat": "1/1",
+   "turnover": 17.61
+  },
+  {
+   "code": "688608",
+   "name": "恒玄科技",
+   "lb": 1,
+   "industry": "半导体",
+   "fb_time": "104747",
+   "zt_stat": "1/1",
+   "turnover": 5.6
+  },
+  {
+   "code": "603893",
+   "name": "瑞芯微",
+   "lb": 1,
+   "industry": "半导体",
+   "fb_time": "104955",
+   "zt_stat": "1/1",
+   "turnover": 4.96
+  },
+  {
+   "code": "605177",
+   "name": "东亚药业",
+   "lb": 1,
+   "industry": "化学制药",
+   "fb_time": "105008",
+   "zt_stat": "1/1",
+   "turnover": 6.7
+  },
+  {
+   "code": "001288",
+   "name": "运机集团",
+   "lb": 1,
+   "industry": "专用设备",
+   "fb_time": "110624",
+   "zt_stat": "1/1",
+   "turnover": 3.65
+  },
+  {
+   "code": "603696",
+   "name": "安记食品",
+   "lb": 1,
+   "industry": "调味发酵",
+   "fb_time": "112113",
+   "zt_stat": "1/1",
+   "turnover": 4.46
+  },
+  {
+   "code": "603657",
+   "name": "春光科技",
+   "lb": 1,
+   "industry": "家电零部",
+   "fb_time": "112600",
+   "zt_stat": "1/1",
+   "turnover": 3.55
+  },
+  {
+   "code": "603683",
+   "name": "晶华新材",
+   "lb": 1,
+   "industry": "化学制品",
+   "fb_time": "112758",
+   "zt_stat": "1/1",
+   "turnover": 8.71
+  },
+  {
+   "code": "603400",
+   "name": "华之杰",
+   "lb": 1,
+   "industry": "通用设备",
+   "fb_time": "130018",
+   "zt_stat": "1/1",
+   "turnover": 11.55
+  },
+  {
+   "code": "002940",
+   "name": "昂利康",
+   "lb": 1,
+   "industry": "化学制药",
+   "fb_time": "130600",
+   "zt_stat": "1/1",
+   "turnover": 8.07
+  },
+  {
+   "code": "002596",
+   "name": "海南瑞泽",
+   "lb": 1,
+   "industry": "水泥",
+   "fb_time": "132545",
+   "zt_stat": "1/1",
+   "turnover": 6.62
+  },
+  {
+   "code": "603366",
+   "name": "日出东方",
+   "lb": 1,
+   "industry": "厨卫电器",
+   "fb_time": "132611",
+   "zt_stat": "1/1",
+   "turnover": 8.99
+  },
+  {
+   "code": "002696",
+   "name": "百洋股份",
+   "lb": 1,
+   "industry": "饲料",
+   "fb_time": "134051",
+   "zt_stat": "8/6",
+   "turnover": 28.67
+  },
+  {
+   "code": "603636",
+   "name": "南威软件",
+   "lb": 1,
+   "industry": "IT服务Ⅱ",
+   "fb_time": "141333",
+   "zt_stat": "3/2",
+   "turnover": 13.73
+  },
+  {
+   "code": "688004",
+   "name": "博汇科技",
+   "lb": 1,
+   "industry": "IT服务Ⅱ",
+   "fb_time": "141711",
+   "zt_stat": "1/1",
+   "turnover": 12.83
+  },
+  {
+   "code": "002929",
+   "name": "润建股份",
+   "lb": 2,
+   "industry": "通信服务",
+   "fb_time": "142000",
+   "zt_stat": "2/2",
+   "turnover": 15.45
   }
  ]
 }

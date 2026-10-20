@@ -1,82 +1,82 @@
 [
  {
-  "name": "厨卫电器",
-  "pct": 2.8,
-  "leader": "亿田智能",
-  "leader_pct": 18.34,
-  "up_count": 7,
-  "down_count": 2
- },
- {
-  "name": "电机",
-  "pct": 1.66,
-  "leader": "兆威机电",
-  "leader_pct": 10.0,
-  "up_count": 17,
-  "down_count": 8
- },
- {
-  "name": "银行",
-  "pct": 1.55,
-  "leader": "苏州银行",
-  "leader_pct": 3.89,
-  "up_count": 42,
-  "down_count": 0
- },
- {
-  "name": "军工装备",
-  "pct": 1.4,
-  "leader": "甘化科工",
-  "leader_pct": 10.03,
-  "up_count": 62,
-  "down_count": 19
- },
- {
-  "name": "黑色家电",
-  "pct": 1.06,
-  "leader": "高斯贝尔",
-  "leader_pct": 3.53,
-  "up_count": 6,
-  "down_count": 2
- },
- {
-  "name": "汽车零部件",
-  "pct": 0.95,
-  "leader": "正强股份",
-  "leader_pct": 20.01,
-  "up_count": 159,
-  "down_count": 109
- },
- {
-  "name": "贵金属",
-  "pct": 0.89,
-  "leader": "赤峰黄金",
-  "leader_pct": 3.73,
-  "up_count": 10,
-  "down_count": 4
- },
- {
   "name": "自动化设备",
-  "pct": 0.87,
-  "leader": "宇树科技",
-  "leader_pct": 16.15,
-  "up_count": 52,
-  "down_count": 44
+  "pct": 4.09,
+  "leader": "嘉晨智能",
+  "leader_pct": 29.98,
+  "up_count": 93,
+  "down_count": 6
  },
  {
-  "name": "保险",
-  "pct": 0.66,
-  "leader": "中国太保",
-  "leader_pct": 1.5,
-  "up_count": 4,
-  "down_count": 1
+  "name": "消费电子",
+  "pct": 3.37,
+  "leader": "长盈精密",
+  "leader_pct": 19.99,
+  "up_count": 89,
+  "down_count": 7
+ },
+ {
+  "name": "半导体",
+  "pct": 2.92,
+  "leader": "恒玄科技",
+  "leader_pct": 20.0,
+  "up_count": 165,
+  "down_count": 25
  },
  {
   "name": "IT服务",
-  "pct": 0.63,
-  "leader": "海天瑞声",
-  "leader_pct": 12.38,
-  "up_count": 75,
-  "down_count": 51
+  "pct": 2.83,
+  "leader": "博汇科技",
+  "leader_pct": 20.01,
+  "up_count": 119,
+  "down_count": 9
+ },
+ {
+  "name": "医疗服务",
+  "pct": 2.72,
+  "leader": "迪安诊断",
+  "leader_pct": 19.99,
+  "up_count": 47,
+  "down_count": 9
+ },
+ {
+  "name": "软件开发",
+  "pct": 2.72,
+  "leader": "索辰科技",
+  "leader_pct": 13.1,
+  "up_count": 122,
+  "down_count": 16
+ },
+ {
+  "name": "其他电子",
+  "pct": 2.58,
+  "leader": "润欣科技",
+  "leader_pct": 7.12,
+  "up_count": 33,
+  "down_count": 0
+ },
+ {
+  "name": "非金属材料",
+  "pct": 2.56,
+  "leader": "宁新新材",
+  "leader_pct": 8.38,
+  "up_count": 14,
+  "down_count": 2
+ },
+ {
+  "name": "通用设备",
+  "pct": 2.55,
+  "leader": "赛摩智能",
+  "leader_pct": 20.0,
+  "up_count": 219,
+  "down_count": 32
+ },
+ {
+  "name": "工程机械",
+  "pct": 2.47,
+  "leader": "万通液压",
+  "leader_pct": 11.59,
+  "up_count": 29,
+  "down_count": 7
  }
 ]
