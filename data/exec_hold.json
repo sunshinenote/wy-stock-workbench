@@ -14,7 +14,7 @@
    "count": 43,
    "dec_count": 0,
    "first_date": "2025-12-29",
-   "last_date": "2026-10-19"
+   "last_date": "2026-10-20"
   },
   {
    "code": "002146",
@@ -97,28 +97,28 @@
    "last_date": "2026-09-11"
   },
   {
+   "code": "600141",
+   "name": "兴发集团",
+   "count": 22,
+   "dec_count": 0,
+   "first_date": "2026-10-21",
+   "last_date": "2026-10-21"
+  },
+  {
+   "code": "920168",
+   "name": "通宝光电",
+   "count": 21,
+   "dec_count": 0,
+   "first_date": "2026-07-23",
+   "last_date": "2026-10-19"
+  },
+  {
    "code": "601717",
    "name": "中创智领",
    "count": 21,
    "dec_count": 0,
    "first_date": "2026-07-17",
    "last_date": "2026-09-17"
-  },
-  {
-   "code": "603768",
-   "name": "常青股份",
-   "count": 20,
-   "dec_count": 0,
-   "first_date": "2026-09-07",
-   "last_date": "2026-10-20"
-  },
-  {
-   "code": "920168",
-   "name": "通宝光电",
-   "count": 20,
-   "dec_count": 0,
-   "first_date": "2026-07-23",
-   "last_date": "2026-10-16"
   }
  ],
  "prior": [
@@ -128,15 +128,7 @@
    "count": 44,
    "dec_count": 0,
    "first_date": "2025-12-29",
-   "last_date": "2026-04-22"
-  },
-  {
-   "code": "600557",
-   "name": "康缘药业",
-   "count": 30,
-   "dec_count": 0,
-   "first_date": "2025-11-11",
-   "last_date": "2025-12-04"
+   "last_date": "2026-04-23"
   },
   {
    "code": "300304",
@@ -155,9 +147,17 @@
    "last_date": "2026-04-03"
   },
   {
+   "code": "600557",
+   "name": "康缘药业",
+   "count": 26,
+   "dec_count": 0,
+   "first_date": "2025-11-11",
+   "last_date": "2025-12-04"
+  },
+  {
    "code": "300760",
    "name": "迈瑞医疗",
-   "count": 24,
+   "count": 25,
    "dec_count": 0,
    "first_date": "2025-11-06",
    "last_date": "2026-04-09"
@@ -171,20 +171,20 @@
    "last_date": "2026-01-05"
   },
   {
-   "code": "000567",
-   "name": "海德股份",
-   "count": 19,
-   "dec_count": 0,
-   "first_date": "2025-10-21",
-   "last_date": "2025-11-04"
-  },
-  {
    "code": "601916",
    "name": "浙商银行",
-   "count": 18,
+   "count": 19,
    "dec_count": 0,
    "first_date": "2025-10-24",
    "last_date": "2025-12-16"
+  },
+  {
+   "code": "000567",
+   "name": "海德股份",
+   "count": 18,
+   "dec_count": 0,
+   "first_date": "2025-10-21",
+   "last_date": "2025-11-03"
   },
   {
    "code": "601666",
@@ -219,12 +219,12 @@
    "last_date": "2026-04-09"
   },
   {
-   "code": "301260",
-   "name": "格力博",
+   "code": "600763",
+   "name": "通策医疗",
    "count": 12,
    "dec_count": 0,
-   "first_date": "2026-03-03",
-   "last_date": "2026-04-13"
+   "first_date": "2026-02-13",
+   "last_date": "2026-04-23"
   },
   {
    "code": "600765",
@@ -243,5 +243,5 @@
    "last_date": "2026-04-08"
   }
  ],
- "prior_range": "2025-10-20 ~ 2026-04-22"
+ "prior_range": "2025-10-21 ~ 2026-04-23"
 }
