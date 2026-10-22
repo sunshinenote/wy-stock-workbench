@@ -1,82 +1,82 @@
 [
  {
-  "name": "文化传媒",
-  "pct": 2.1,
-  "leader": "兆讯传媒",
-  "leader_pct": 19.98,
-  "up_count": 62,
-  "down_count": 19
- },
- {
-  "name": "养殖业",
-  "pct": 1.98,
-  "leader": "东瑞股份",
-  "leader_pct": 9.99,
-  "up_count": 30,
-  "down_count": 4
- },
- {
-  "name": "IT服务",
-  "pct": 1.83,
-  "leader": "慧辰股份",
+  "name": "电机",
+  "pct": 4.3,
+  "leader": "华阳智能",
   "leader_pct": 20.0,
-  "up_count": 98,
-  "down_count": 27
- },
- {
-  "name": "影视院线",
-  "pct": 1.36,
-  "leader": "文投控股",
-  "leader_pct": 10.0,
-  "up_count": 12,
+  "up_count": 18,
   "down_count": 7
  },
  {
-  "name": "其他电子",
-  "pct": 1.3,
-  "leader": "富信科技",
-  "leader_pct": 7.61,
-  "up_count": 22,
-  "down_count": 9
+  "name": "工程机械",
+  "pct": 0.47,
+  "leader": "山河智能",
+  "leader_pct": 10.0,
+  "up_count": 18,
+  "down_count": 17
  },
  {
-  "name": "通信服务",
-  "pct": 1.23,
-  "leader": "润建股份",
-  "leader_pct": 9.99,
-  "up_count": 30,
-  "down_count": 12
+  "name": "石油加工贸易",
+  "pct": -0.74,
+  "leader": "博汇股份",
+  "leader_pct": 20.0,
+  "up_count": 6,
+  "down_count": 20
  },
  {
-  "name": "通信设备",
-  "pct": 1.21,
-  "leader": "致尚科技",
-  "leader_pct": 17.12,
-  "up_count": 52,
-  "down_count": 38
+  "name": "银行",
+  "pct": -0.87,
+  "leader": "工商银行",
+  "leader_pct": 1.66,
+  "up_count": 7,
+  "down_count": 34
  },
  {
-  "name": "农产品加工",
-  "pct": 1.14,
-  "leader": "东方海洋",
-  "leader_pct": 10.14,
-  "up_count": 27,
-  "down_count": 13
+  "name": "美容护理",
+  "pct": -1.04,
+  "leader": "锦波生物",
+  "leader_pct": 6.31,
+  "up_count": 7,
+  "down_count": 26
  },
  {
-  "name": "光学光电子",
-  "pct": 0.86,
-  "leader": "利亚德",
-  "leader_pct": 20.04,
-  "up_count": 57,
-  "down_count": 46
+  "name": "证券",
+  "pct": -1.13,
+  "leader": "华鑫股份",
+  "leader_pct": 3.02,
+  "up_count": 3,
+  "down_count": 45
  },
  {
-  "name": "电子化学品",
-  "pct": 0.73,
-  "leader": "莱特光电",
-  "leader_pct": 13.32,
-  "up_count": 20,
-  "down_count": 23
+  "name": "轨交设备",
+  "pct": -1.14,
+  "leader": "金鹰重工",
+  "leader_pct": 5.26,
+  "up_count": 7,
+  "down_count": 22
+ },
+ {
+  "name": "保险",
+  "pct": -1.21,
+  "leader": "中国人寿",
+  "leader_pct": -0.21,
+  "up_count": 0,
+  "down_count": 5
+ },
+ {
+  "name": "公路铁路运输",
+  "pct": -1.44,
+  "leader": "皖通高速",
+  "leader_pct": 1.87,
+  "up_count": 3,
+  "down_count": 29
+ },
+ {
+  "name": "机场航运",
+  "pct": -1.45,
+  "leader": "中国东航",
+  "leader_pct": 0.32,
+  "up_count": 2,
+  "down_count": 11
  }
 ]
