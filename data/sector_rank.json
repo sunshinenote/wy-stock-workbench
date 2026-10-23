@@ -1,82 +1,82 @@
 [
  {
   "name": "电机",
-  "pct": 4.3,
+  "pct": 5.3,
   "leader": "华阳智能",
   "leader_pct": 20.0,
-  "up_count": 18,
+  "up_count": 26,
+  "down_count": 0
+ },
+ {
+  "name": "自动化设备",
+  "pct": 5.08,
+  "leader": "宇树科技",
+  "leader_pct": 20.0,
+  "up_count": 92,
   "down_count": 7
  },
  {
-  "name": "工程机械",
-  "pct": 0.47,
-  "leader": "山河智能",
-  "leader_pct": 10.0,
-  "up_count": 18,
-  "down_count": 17
- },
- {
-  "name": "石油加工贸易",
-  "pct": -0.74,
-  "leader": "博汇股份",
-  "leader_pct": 20.0,
-  "up_count": 6,
-  "down_count": 20
- },
- {
-  "name": "银行",
-  "pct": -0.87,
-  "leader": "工商银行",
-  "leader_pct": 1.66,
-  "up_count": 7,
-  "down_count": 34
- },
- {
-  "name": "美容护理",
-  "pct": -1.04,
-  "leader": "锦波生物",
-  "leader_pct": 6.31,
-  "up_count": 7,
-  "down_count": 26
- },
- {
-  "name": "证券",
-  "pct": -1.13,
-  "leader": "华鑫股份",
-  "leader_pct": 3.02,
-  "up_count": 3,
-  "down_count": 45
- },
- {
-  "name": "轨交设备",
-  "pct": -1.14,
-  "leader": "金鹰重工",
-  "leader_pct": 5.26,
-  "up_count": 7,
-  "down_count": 22
- },
- {
-  "name": "保险",
-  "pct": -1.21,
-  "leader": "中国人寿",
-  "leader_pct": -0.21,
-  "up_count": 0,
-  "down_count": 5
- },
- {
-  "name": "公路铁路运输",
-  "pct": -1.44,
-  "leader": "皖通高速",
-  "leader_pct": 1.87,
-  "up_count": 3,
-  "down_count": 29
- },
- {
-  "name": "机场航运",
-  "pct": -1.45,
-  "leader": "中国东航",
-  "leader_pct": 0.32,
-  "up_count": 2,
+  "name": "软件开发",
+  "pct": 4.88,
+  "leader": "众诚科技",
+  "leader_pct": 30.0,
+  "up_count": 127,
   "down_count": 11
+ },
+ {
+  "name": "影视院线",
+  "pct": 4.11,
+  "leader": "中广天择",
+  "leader_pct": 10.01,
+  "up_count": 18,
+  "down_count": 2
+ },
+ {
+  "name": "IT服务",
+  "pct": 3.95,
+  "leader": "海天瑞声",
+  "leader_pct": 20.0,
+  "up_count": 116,
+  "down_count": 12
+ },
+ {
+  "name": "半导体",
+  "pct": 3.65,
+  "leader": "粤芯半导体",
+  "leader_pct": 20.01,
+  "up_count": 174,
+  "down_count": 15
+ },
+ {
+  "name": "电池",
+  "pct": 3.62,
+  "leader": "利元亨",
+  "leader_pct": 16.04,
+  "up_count": 105,
+  "down_count": 2
+ },
+ {
+  "name": "游戏",
+  "pct": 3.61,
+  "leader": "宝通科技",
+  "leader_pct": 14.42,
+  "up_count": 21,
+  "down_count": 1
+ },
+ {
+  "name": "工程机械",
+  "pct": 3.54,
+  "leader": "南方路机",
+  "leader_pct": 10.01,
+  "up_count": 34,
+  "down_count": 2
+ },
+ {
+  "name": "黑色家电",
+  "pct": 3.22,
+  "leader": "创维数字",
+  "leader_pct": 9.99,
+  "up_count": 9,
+  "down_count": 0
  }
 ]
