@@ -1,82 +1,82 @@
 [
  {
-  "name": "电机",
-  "pct": 1.68,
-  "leader": "凯中精密",
-  "leader_pct": 10.03,
-  "up_count": 14,
-  "down_count": 12
- },
- {
-  "name": "银行",
-  "pct": 1.34,
-  "leader": "沪农商行",
-  "leader_pct": 4.22,
-  "up_count": 40,
-  "down_count": 1
- },
- {
-  "name": "零售",
-  "pct": 0.38,
-  "leader": "茂业商业",
-  "leader_pct": 10.1,
-  "up_count": 26,
-  "down_count": 41
- },
- {
-  "name": "港口航运",
-  "pct": 0.08,
-  "leader": "中谷物流",
-  "leader_pct": 9.96,
-  "up_count": 12,
-  "down_count": 23
- },
- {
-  "name": "煤炭开采加工",
-  "pct": -0.21,
-  "leader": "安泰集团",
-  "leader_pct": 3.25,
-  "up_count": 16,
-  "down_count": 17
- },
- {
-  "name": "燃气",
-  "pct": -0.31,
-  "leader": "胜通能源",
-  "leader_pct": 9.99,
-  "up_count": 6,
-  "down_count": 19
- },
- {
-  "name": "保险",
-  "pct": -0.42,
-  "leader": "中国平安",
-  "leader_pct": -0.02,
-  "up_count": 0,
-  "down_count": 3
- },
- {
-  "name": "汽车整车",
-  "pct": -0.43,
-  "leader": "曙光股份",
-  "leader_pct": 9.89,
-  "up_count": 5,
-  "down_count": 18
- },
- {
-  "name": "机场航运",
-  "pct": -0.59,
-  "leader": "南方航空",
-  "leader_pct": 0.63,
-  "up_count": 5,
+  "name": "半导体",
+  "pct": 4.85,
+  "leader": "富瀚微",
+  "leader_pct": 20.0,
+  "up_count": 183,
   "down_count": 7
  },
  {
-  "name": "公路铁路运输",
-  "pct": -0.73,
-  "leader": "龙江交通",
-  "leader_pct": 2.99,
-  "up_count": 11,
-  "down_count": 20
+  "name": "自动化设备",
+  "pct": 4.66,
+  "leader": "田中精机",
+  "leader_pct": 19.05,
+  "up_count": 92,
+  "down_count": 6
+ },
+ {
+  "name": "非金属材料",
+  "pct": 4.5,
+  "leader": "长江材料",
+  "leader_pct": 10.01,
+  "up_count": 16,
+  "down_count": 1
+ },
+ {
+  "name": "医疗服务",
+  "pct": 4.27,
+  "leader": "诺禾致源",
+  "leader_pct": 18.11,
+  "up_count": 48,
+  "down_count": 7
+ },
+ {
+  "name": "电子化学品",
+  "pct": 4.1,
+  "leader": "中石科技",
+  "leader_pct": 14.42,
+  "up_count": 44,
+  "down_count": 0
+ },
+ {
+  "name": "元件",
+  "pct": 4.05,
+  "leader": "一博科技",
+  "leader_pct": 13.29,
+  "up_count": 61,
+  "down_count": 1
+ },
+ {
+  "name": "其他电子",
+  "pct": 3.97,
+  "leader": "东南电子",
+  "leader_pct": 20.0,
+  "up_count": 33,
+  "down_count": 1
+ },
+ {
+  "name": "影视院线",
+  "pct": 3.85,
+  "leader": "百纳千成",
+  "leader_pct": 20.0,
+  "up_count": 18,
+  "down_count": 2
+ },
+ {
+  "name": "塑料制品",
+  "pct": 3.68,
+  "leader": "斯迪克",
+  "leader_pct": 20.0,
+  "up_count": 72,
+  "down_count": 6
+ },
+ {
+  "name": "通用设备",
+  "pct": 3.63,
+  "leader": "恒工精密",
+  "leader_pct": 20.0,
+  "up_count": 223,
+  "down_count": 30
  }
 ]
