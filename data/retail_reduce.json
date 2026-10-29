@@ -9,28 +9,8 @@
    "change": 34779,
    "ratio": 55.59,
    "avg_cap": 56.0,
-   "pct": 4.87,
+   "pct": 2.65,
    "price": 31.0
-  },
-  {
-   "code": "001365",
-   "name": "天海电子",
-   "holder_num": 46615,
-   "change": 49913,
-   "ratio": 51.71,
-   "avg_cap": 44.3,
-   "pct": 5.39,
-   "price": 39.3
-  },
-  {
-   "code": "300661",
-   "name": "圣邦股份",
-   "holder_num": 44628,
-   "change": 35593,
-   "ratio": 44.37,
-   "avg_cap": 200.3,
-   "pct": 6.9,
-   "price": 143.48
   },
   {
    "code": "688813",
@@ -39,88 +19,8 @@
    "change": 10936,
    "ratio": 43.99,
    "avg_cap": 241.3,
-   "pct": 3.22,
+   "pct": -7.19,
    "price": 210.0
-  },
-  {
-   "code": "688808",
-   "name": "联讯仪器",
-   "holder_num": 13928,
-   "change": 9127,
-   "ratio": 39.59,
-   "avg_cap": 1711.8,
-   "pct": 5.98,
-   "price": 2322.33
-  },
-  {
-   "code": "002350",
-   "name": "北京科锐",
-   "holder_num": 30137,
-   "change": 19682,
-   "ratio": 39.51,
-   "avg_cap": 24.3,
-   "pct": 2.01,
-   "price": 13.51
-  },
-  {
-   "code": "600885",
-   "name": "宏发股份",
-   "holder_num": 44656,
-   "change": 28502,
-   "ratio": 38.96,
-   "avg_cap": 119.5,
-   "pct": 0.0,
-   "price": 34.49
-  },
-  {
-   "code": "002317",
-   "name": "众生药业",
-   "holder_num": 69037,
-   "change": 41967,
-   "ratio": 37.81,
-   "avg_cap": 30.2,
-   "pct": -0.59,
-   "price": 24.57
-  },
-  {
-   "code": "300163",
-   "name": "先锋新材",
-   "holder_num": 18424,
-   "change": 10921,
-   "ratio": 37.22,
-   "avg_cap": 13.7,
-   "pct": 1.61,
-   "price": 5.34
-  },
-  {
-   "code": "603803",
-   "name": "瑞斯康达",
-   "holder_num": 43826,
-   "change": 25616,
-   "ratio": 36.89,
-   "avg_cap": 11.4,
-   "pct": 1.57,
-   "price": 11.74
-  },
-  {
-   "code": "300345",
-   "name": "华民股份",
-   "holder_num": 28108,
-   "change": 16230,
-   "ratio": 36.61,
-   "avg_cap": 12.1,
-   "pct": 2.89,
-   "price": 5.84
-  },
-  {
-   "code": "603376",
-   "name": "大明电子",
-   "holder_num": 16158,
-   "change": 8520,
-   "ratio": 34.52,
-   "avg_cap": 61.3,
-   "pct": -1.75,
-   "price": 24.78
   },
   {
    "code": "605050",
@@ -129,7 +29,7 @@
    "change": 8763,
    "ratio": 34.12,
    "avg_cap": 27.3,
-   "pct": 3.75,
+   "pct": -2.21,
    "price": 9.36
   },
   {
@@ -139,78 +39,8 @@
    "change": 7112,
    "ratio": 33.73,
    "avg_cap": 47.3,
-   "pct": 1.22,
+   "pct": -4.79,
    "price": 38.42
-  },
-  {
-   "code": "600227",
-   "name": "赤天化",
-   "holder_num": 106259,
-   "change": 53501,
-   "ratio": 33.49,
-   "avg_cap": 3.9,
-   "pct": 0.93,
-   "price": 2.44
-  },
-  {
-   "code": "603092",
-   "name": "德力佳",
-   "holder_num": 15338,
-   "change": 7697,
-   "ratio": 33.41,
-   "avg_cap": 140.7,
-   "pct": 1.47,
-   "price": 53.97
-  },
-  {
-   "code": "603777",
-   "name": "来伊份",
-   "holder_num": 19535,
-   "change": 9721,
-   "ratio": 33.23,
-   "avg_cap": 26.6,
-   "pct": 0.22,
-   "price": 15.53
-  },
-  {
-   "code": "300834",
-   "name": "星辉环材",
-   "holder_num": 13188,
-   "change": 6259,
-   "ratio": 32.18,
-   "avg_cap": 61.4,
-   "pct": 2.81,
-   "price": 41.8
-  },
-  {
-   "code": "300553",
-   "name": "集智股份",
-   "holder_num": 10231,
-   "change": 4453,
-   "ratio": 30.33,
-   "avg_cap": 66.6,
-   "pct": 6.01,
-   "price": 61.39
-  },
-  {
-   "code": "300813",
-   "name": "泰林生物",
-   "holder_num": 10852,
-   "change": 4674,
-   "ratio": 30.1,
-   "avg_cap": 21.3,
-   "pct": 4.05,
-   "price": 19.09
-  },
-  {
-   "code": "603301",
-   "name": "振德医疗",
-   "holder_num": 8152,
-   "change": 3505,
-   "ratio": 30.07,
-   "avg_cap": 282.1,
-   "pct": 1.47,
-   "price": 87.16
   },
   {
    "code": "600546",
@@ -219,7 +49,7 @@
    "change": 17174,
    "ratio": 29.99,
    "avg_cap": 54.0,
-   "pct": 0.0,
+   "pct": 0.74,
    "price": 10.93
   },
   {
@@ -229,7 +59,7 @@
    "change": 18451,
    "ratio": 29.72,
    "avg_cap": 17.1,
-   "pct": -0.48,
+   "pct": -0.24,
    "price": 4.35
   },
   {
@@ -239,7 +69,7 @@
    "change": 7363,
    "ratio": 29.68,
    "avg_cap": 223.2,
-   "pct": 2.1,
+   "pct": -2.06,
    "price": 89.09
   },
   {
@@ -249,58 +79,228 @@
    "change": 77801,
    "ratio": 29.13,
    "avg_cap": 6.5,
-   "pct": 0.58,
+   "pct": -0.77,
    "price": 6.25
   },
   {
-   "code": "600135",
-   "name": "乐凯胶片",
-   "holder_num": 30458,
-   "change": 12442,
-   "ratio": 29.0,
-   "avg_cap": 14.5,
-   "pct": 1.33,
-   "price": 7.99
-  },
-  {
-   "code": "688288",
-   "name": "鸿泉技术",
-   "holder_num": 6291,
-   "change": 2536,
-   "ratio": 28.73,
+   "code": "603165",
+   "name": "荣晟环保",
+   "holder_num": 14452,
+   "change": 5053,
+   "ratio": 25.91,
    "avg_cap": 28.2,
-   "pct": 0.98,
-   "price": 17.77
+   "pct": -0.73,
+   "price": 13.03
   },
   {
-   "code": "300335",
-   "name": "迪森股份",
-   "holder_num": 26804,
-   "change": 10289,
-   "ratio": 27.74,
-   "avg_cap": 8.7,
-   "pct": 1.83,
-   "price": 4.87
+   "code": "600149",
+   "name": "廊坊发展",
+   "holder_num": 31682,
+   "change": 11032,
+   "ratio": 25.83,
+   "avg_cap": 5.4,
+   "pct": -1.53,
+   "price": 4.49
   },
   {
-   "code": "002310",
-   "name": "东方新能",
-   "holder_num": 164336,
-   "change": 62088,
-   "ratio": 27.42,
-   "avg_cap": 8.7,
-   "pct": 0.99,
-   "price": 2.39
+   "code": "603580",
+   "name": "艾艾精工",
+   "holder_num": 3129,
+   "change": 1088,
+   "ratio": 25.8,
+   "avg_cap": 101.8,
+   "pct": -5.55,
+   "price": 24.38
   },
   {
-   "code": "600815",
-   "name": "厦工股份",
-   "holder_num": 55431,
-   "change": 20556,
-   "ratio": 27.05,
-   "avg_cap": 8.2,
-   "pct": 0.67,
-   "price": 2.57
+   "code": "688802",
+   "name": "沐曦股份",
+   "holder_num": 21578,
+   "change": 7121,
+   "ratio": 24.81,
+   "avg_cap": 1535.8,
+   "pct": -6.58,
+   "price": 828.3
+  },
+  {
+   "code": "600691",
+   "name": "潞化科技",
+   "holder_num": 58167,
+   "change": 18912,
+   "ratio": 24.54,
+   "avg_cap": 9.0,
+   "pct": -2.95,
+   "price": 2.21
+  },
+  {
+   "code": "603083",
+   "name": "剑桥科技",
+   "holder_num": 97031,
+   "change": 30809,
+   "ratio": 24.1,
+   "avg_cap": 72.4,
+   "pct": -10.0,
+   "price": 254.87
+  },
+  {
+   "code": "605155",
+   "name": "西大门",
+   "holder_num": 7981,
+   "change": 2502,
+   "ratio": 23.87,
+   "avg_cap": 28.4,
+   "pct": -2.19,
+   "price": 11.84
+  },
+  {
+   "code": "600756",
+   "name": "浪潮软件",
+   "holder_num": 67160,
+   "change": 20959,
+   "ratio": 23.78,
+   "avg_cap": 6.4,
+   "pct": -2.98,
+   "price": 12.24
+  },
+  {
+   "code": "603358",
+   "name": "华达科技",
+   "holder_num": 20114,
+   "change": 6124,
+   "ratio": 23.34,
+   "avg_cap": 101.6,
+   "pct": -1.67,
+   "price": 43.5
+  },
+  {
+   "code": "600996",
+   "name": "贵广网络",
+   "holder_num": 45817,
+   "change": 13937,
+   "ratio": 23.32,
+   "avg_cap": 18.9,
+   "pct": -3.15,
+   "price": 6.94
+  },
+  {
+   "code": "603697",
+   "name": "有友食品",
+   "holder_num": 18446,
+   "change": 5399,
+   "ratio": 22.64,
+   "avg_cap": 22.2,
+   "pct": 0.32,
+   "price": 9.59
+  },
+  {
+   "code": "603098",
+   "name": "森特股份",
+   "holder_num": 24567,
+   "change": 6955,
+   "ratio": 22.06,
+   "avg_cap": 23.2,
+   "pct": -1.57,
+   "price": 10.55
+  },
+  {
+   "code": "603280",
+   "name": "南方路机",
+   "holder_num": 13008,
+   "change": 3580,
+   "ratio": 21.58,
+   "avg_cap": 20.7,
+   "pct": -9.99,
+   "price": 24.8
+  },
+  {
+   "code": "300118",
+   "name": "东方日升",
+   "holder_num": 103591,
+   "change": 28212,
+   "ratio": 21.4,
+   "avg_cap": 13.7,
+   "pct": -0.25,
+   "price": 12.45
+  },
+  {
+   "code": "600403",
+   "name": "大有能源",
+   "holder_num": 57731,
+   "change": 15387,
+   "ratio": 21.04,
+   "avg_cap": 21.9,
+   "pct": 2.7,
+   "price": 5.29
+  },
+  {
+   "code": "603023",
+   "name": "威帝股份",
+   "holder_num": 27086,
+   "change": 7118,
+   "ratio": 20.81,
+   "avg_cap": 7.7,
+   "pct": -2.52,
+   "price": 3.73
+  },
+  {
+   "code": "600408",
+   "name": "安泰集团",
+   "holder_num": 94647,
+   "change": 24534,
+   "ratio": 20.59,
+   "avg_cap": 2.5,
+   "pct": -4.17,
+   "price": 2.38
+  },
+  {
+   "code": "688790",
+   "name": "昂瑞微",
+   "holder_num": 10377,
+   "change": 2580,
+   "ratio": 19.91,
+   "avg_cap": 128.4,
+   "pct": -2.91,
+   "price": 133.83
+  },
+  {
+   "code": "603169",
+   "name": "兰石重装",
+   "holder_num": 75641,
+   "change": 18622,
+   "ratio": 19.76,
+   "avg_cap": 12.2,
+   "pct": -0.36,
+   "price": 7.08
+  },
+  {
+   "code": "600007",
+   "name": "中国国贸",
+   "holder_num": 12116,
+   "change": 2931,
+   "ratio": 19.48,
+   "avg_cap": 157.8,
+   "pct": -0.94,
+   "price": 18.98
+  },
+  {
+   "code": "600097",
+   "name": "开创国际",
+   "holder_num": 15618,
+   "change": 3598,
+   "ratio": 18.72,
+   "avg_cap": 12.0,
+   "pct": -1.59,
+   "price": 7.78
+  },
+  {
+   "code": "301139",
+   "name": "元道退",
+   "holder_num": 15376,
+   "change": 3439,
+   "ratio": 18.28,
+   "avg_cap": 3.4,
+   "pct": null,
+   "price": 4.36
   }
  ]
 }

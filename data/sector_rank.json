@@ -1,82 +1,82 @@
 [
  {
-  "name": "半导体",
-  "pct": 4.85,
-  "leader": "富瀚微",
-  "leader_pct": 20.0,
-  "up_count": 183,
-  "down_count": 7
- },
- {
-  "name": "自动化设备",
-  "pct": 4.66,
-  "leader": "田中精机",
-  "leader_pct": 19.05,
-  "up_count": 92,
-  "down_count": 6
- },
- {
-  "name": "非金属材料",
-  "pct": 4.5,
-  "leader": "长江材料",
-  "leader_pct": 10.01,
-  "up_count": 16,
-  "down_count": 1
- },
- {
-  "name": "医疗服务",
-  "pct": 4.27,
-  "leader": "诺禾致源",
-  "leader_pct": 18.11,
-  "up_count": 48,
-  "down_count": 7
- },
- {
-  "name": "电子化学品",
-  "pct": 4.1,
-  "leader": "中石科技",
-  "leader_pct": 14.42,
-  "up_count": 44,
-  "down_count": 0
- },
- {
-  "name": "元件",
-  "pct": 4.05,
-  "leader": "一博科技",
-  "leader_pct": 13.29,
-  "up_count": 61,
-  "down_count": 1
- },
- {
-  "name": "其他电子",
-  "pct": 3.97,
-  "leader": "东南电子",
-  "leader_pct": 20.0,
-  "up_count": 33,
-  "down_count": 1
- },
- {
-  "name": "影视院线",
-  "pct": 3.85,
-  "leader": "百纳千成",
-  "leader_pct": 20.0,
-  "up_count": 18,
+  "name": "银行",
+  "pct": 1.98,
+  "leader": "青岛银行",
+  "leader_pct": 8.02,
+  "up_count": 40,
   "down_count": 2
  },
  {
-  "name": "塑料制品",
-  "pct": 3.68,
-  "leader": "斯迪克",
-  "leader_pct": 20.0,
-  "up_count": 72,
-  "down_count": 6
+  "name": "风电设备",
+  "pct": 1.64,
+  "leader": "飞沃科技",
+  "leader_pct": 17.09,
+  "up_count": 18,
+  "down_count": 13
  },
  {
-  "name": "通用设备",
-  "pct": 3.63,
-  "leader": "恒工精密",
-  "leader_pct": 20.0,
-  "up_count": 223,
-  "down_count": 30
+  "name": "保险",
+  "pct": 1.61,
+  "leader": "中国太保",
+  "leader_pct": 3.88,
+  "up_count": 4,
+  "down_count": 1
+ },
+ {
+  "name": "煤炭开采加工",
+  "pct": 0.73,
+  "leader": "开滦股份",
+  "leader_pct": 10.0,
+  "up_count": 22,
+  "down_count": 11
+ },
+ {
+  "name": "公路铁路运输",
+  "pct": 0.39,
+  "leader": "龙江交通",
+  "leader_pct": 10.06,
+  "up_count": 16,
+  "down_count": 12
+ },
+ {
+  "name": "影视院线",
+  "pct": 0.35,
+  "leader": "文投控股",
+  "leader_pct": 10.19,
+  "up_count": 10,
+  "down_count": 10
+ },
+ {
+  "name": "白酒",
+  "pct": 0.04,
+  "leader": "山西汾酒",
+  "leader_pct": 5.0,
+  "up_count": 9,
+  "down_count": 10
+ },
+ {
+  "name": "机场航运",
+  "pct": -0.05,
+  "leader": "华夏航空",
+  "leader_pct": 2.08,
+  "up_count": 6,
+  "down_count": 7
+ },
+ {
+  "name": "旅游及酒店",
+  "pct": -0.26,
+  "leader": "祥源文旅",
+  "leader_pct": 10.02,
+  "up_count": 9,
+  "down_count": 26
+ },
+ {
+  "name": "食品加工制造",
+  "pct": -0.29,
+  "leader": "巴比食品",
+  "leader_pct": 10.03,
+  "up_count": 28,
+  "down_count": 37
  }
 ]

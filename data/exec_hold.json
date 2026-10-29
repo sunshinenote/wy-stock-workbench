@@ -17,20 +17,20 @@
    "last_date": "2026-10-23"
   },
   {
+   "code": "301089",
+   "name": "拓新药业",
+   "count": 39,
+   "dec_count": 0,
+   "first_date": "2026-07-17",
+   "last_date": "2026-10-28"
+  },
+  {
    "code": "002146",
    "name": "荣盛发展",
    "count": 38,
    "dec_count": 0,
    "first_date": "2026-06-30",
    "last_date": "2026-09-30"
-  },
-  {
-   "code": "301089",
-   "name": "拓新药业",
-   "count": 37,
-   "dec_count": 0,
-   "first_date": "2026-07-17",
-   "last_date": "2026-10-27"
   },
   {
    "code": "600165",
@@ -123,52 +123,12 @@
  ],
  "prior": [
   {
-   "code": "603098",
-   "name": "森特股份",
-   "count": 44,
-   "dec_count": 0,
-   "first_date": "2025-12-29",
-   "last_date": "2026-04-24"
-  },
-  {
    "code": "002637",
    "name": "赞宇科技",
-   "count": 32,
+   "count": 28,
    "dec_count": 0,
    "first_date": "2026-03-19",
    "last_date": "2026-04-03"
-  },
-  {
-   "code": "300304",
-   "name": "云意电气",
-   "count": 30,
-   "dec_count": 0,
-   "first_date": "2025-10-28",
-   "last_date": "2026-04-29"
-  },
-  {
-   "code": "300760",
-   "name": "迈瑞医疗",
-   "count": 26,
-   "dec_count": 0,
-   "first_date": "2025-11-06",
-   "last_date": "2026-04-09"
-  },
-  {
-   "code": "600557",
-   "name": "康缘药业",
-   "count": 25,
-   "dec_count": 0,
-   "first_date": "2025-11-11",
-   "last_date": "2025-12-04"
-  },
-  {
-   "code": "603299",
-   "name": "苏盐井神",
-   "count": 19,
-   "dec_count": 0,
-   "first_date": "2025-12-04",
-   "last_date": "2026-01-05"
   },
   {
    "code": "600873",
@@ -179,69 +139,109 @@
    "last_date": "2026-04-30"
   },
   {
-   "code": "601916",
-   "name": "浙商银行",
-   "count": 17,
-   "dec_count": 0,
-   "first_date": "2025-11-07",
-   "last_date": "2025-12-16"
-  },
-  {
-   "code": "300190",
-   "name": "维尔利",
-   "count": 16,
-   "dec_count": 0,
-   "first_date": "2025-11-21",
-   "last_date": "2026-04-08"
-  },
-  {
-   "code": "601666",
-   "name": "平煤股份",
-   "count": 16,
-   "dec_count": 0,
-   "first_date": "2026-01-04",
-   "last_date": "2026-01-04"
-  },
-  {
-   "code": "002832",
-   "name": "比音勒芬",
-   "count": 15,
-   "dec_count": 0,
-   "first_date": "2026-03-06",
-   "last_date": "2026-04-09"
-  },
-  {
-   "code": "688126",
-   "name": "沪硅产业",
-   "count": 14,
-   "dec_count": 0,
-   "first_date": "2025-11-28",
-   "last_date": "2025-12-30"
-  },
-  {
-   "code": "301260",
-   "name": "格力博",
-   "count": 13,
-   "dec_count": 0,
-   "first_date": "2026-03-03",
-   "last_date": "2026-04-13"
-  },
-  {
-   "code": "600763",
-   "name": "通策医疗",
-   "count": 12,
-   "dec_count": 0,
-   "first_date": "2026-02-13",
-   "last_date": "2026-04-23"
-  },
-  {
    "code": "002382",
    "name": "蓝帆医疗",
    "count": 12,
    "dec_count": 0,
    "first_date": "2026-03-20",
    "last_date": "2026-04-08"
+  },
+  {
+   "code": "600771",
+   "name": "广誉远",
+   "count": 10,
+   "dec_count": 0,
+   "first_date": "2026-03-27",
+   "last_date": "2026-04-03"
+  },
+  {
+   "code": "603681",
+   "name": "永冠新材",
+   "count": 9,
+   "dec_count": 0,
+   "first_date": "2026-03-25",
+   "last_date": "2026-04-10"
+  },
+  {
+   "code": "002832",
+   "name": "比音勒芬",
+   "count": 9,
+   "dec_count": 0,
+   "first_date": "2026-03-06",
+   "last_date": "2026-04-09"
+  },
+  {
+   "code": "600763",
+   "name": "通策医疗",
+   "count": 8,
+   "dec_count": 0,
+   "first_date": "2026-02-13",
+   "last_date": "2026-04-23"
+  },
+  {
+   "code": "301260",
+   "name": "格力博",
+   "count": 8,
+   "dec_count": 0,
+   "first_date": "2026-03-03",
+   "last_date": "2026-04-13"
+  },
+  {
+   "code": "300190",
+   "name": "维尔利",
+   "count": 8,
+   "dec_count": 0,
+   "first_date": "2025-11-21",
+   "last_date": "2026-04-08"
+  },
+  {
+   "code": "300760",
+   "name": "迈瑞医疗",
+   "count": 7,
+   "dec_count": 0,
+   "first_date": "2025-11-06",
+   "last_date": "2026-04-09"
+  },
+  {
+   "code": "600637",
+   "name": "东方明珠",
+   "count": 7,
+   "dec_count": 0,
+   "first_date": "2026-04-03",
+   "last_date": "2026-04-03"
+  },
+  {
+   "code": "000915",
+   "name": "华特达因",
+   "count": 6,
+   "dec_count": 0,
+   "first_date": "2026-04-24",
+   "last_date": "2026-04-24"
+  },
+  {
+   "code": "600633",
+   "name": "浙数文化",
+   "count": 6,
+   "dec_count": 0,
+   "first_date": "2026-04-01",
+   "last_date": "2026-04-01"
+  },
+  {
+   "code": "603098",
+   "name": "森特股份",
+   "count": 5,
+   "dec_count": 0,
+   "first_date": "2025-12-29",
+   "last_date": "2026-04-24"
+  },
+  {
+   "code": "600765",
+   "name": "中航重机",
+   "count": 5,
+   "dec_count": 0,
+   "first_date": "2026-03-16",
+   "last_date": "2026-04-07"
   }
  ],
- "prior_range": "2025-10-28 ~ 2026-04-30"
+ "prior_range": "2025-10-29 ~ 2026-05-01"
 }
