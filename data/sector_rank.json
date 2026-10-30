@@ -1,82 +1,82 @@
 [
  {
-  "name": "银行",
-  "pct": 1.98,
-  "leader": "青岛银行",
-  "leader_pct": 8.02,
-  "up_count": 40,
-  "down_count": 2
- },
- {
-  "name": "风电设备",
-  "pct": 1.64,
-  "leader": "飞沃科技",
-  "leader_pct": 17.09,
-  "up_count": 18,
-  "down_count": 13
- },
- {
-  "name": "保险",
-  "pct": 1.61,
-  "leader": "中国太保",
-  "leader_pct": 3.88,
-  "up_count": 4,
-  "down_count": 1
- },
- {
-  "name": "煤炭开采加工",
-  "pct": 0.73,
-  "leader": "开滦股份",
-  "leader_pct": 10.0,
-  "up_count": 22,
-  "down_count": 11
- },
- {
-  "name": "公路铁路运输",
-  "pct": 0.39,
-  "leader": "龙江交通",
-  "leader_pct": 10.06,
-  "up_count": 16,
-  "down_count": 12
- },
- {
-  "name": "影视院线",
-  "pct": 0.35,
-  "leader": "文投控股",
-  "leader_pct": 10.19,
-  "up_count": 10,
-  "down_count": 10
- },
- {
   "name": "白酒",
-  "pct": 0.04,
-  "leader": "山西汾酒",
-  "leader_pct": 5.0,
-  "up_count": 9,
+  "pct": 5.28,
+  "leader": "皇台酒业",
+  "leader_pct": 10.01,
+  "up_count": 18,
+  "down_count": 0
+ },
+ {
+  "name": "医疗服务",
+  "pct": 1.56,
+  "leader": "万邦医药",
+  "leader_pct": 20.0,
+  "up_count": 32,
+  "down_count": 23
+ },
+ {
+  "name": "港口航运",
+  "pct": 1.44,
+  "leader": "锦江航运",
+  "leader_pct": 10.03,
+  "up_count": 24,
+  "down_count": 7
+ },
+ {
+  "name": "银行",
+  "pct": 0.77,
+  "leader": "西安银行",
+  "leader_pct": 8.63,
+  "up_count": 29,
   "down_count": 10
  },
  {
   "name": "机场航运",
-  "pct": -0.05,
-  "leader": "华夏航空",
-  "leader_pct": 2.08,
-  "up_count": 6,
-  "down_count": 7
+  "pct": 0.76,
+  "leader": "春秋航空",
+  "leader_pct": 4.86,
+  "up_count": 10,
+  "down_count": 2
  },
  {
-  "name": "旅游及酒店",
-  "pct": -0.26,
-  "leader": "祥源文旅",
-  "leader_pct": 10.02,
-  "up_count": 9,
-  "down_count": 26
+  "name": "饮料制造",
+  "pct": 0.21,
+  "leader": "新乳业",
+  "leader_pct": 10.01,
+  "up_count": 27,
+  "down_count": 18
+ },
+ {
+  "name": "医药商业",
+  "pct": 0.21,
+  "leader": "百洋医药",
+  "leader_pct": 14.84,
+  "up_count": 16,
+  "down_count": 16
+ },
+ {
+  "name": "中药",
+  "pct": -0.03,
+  "leader": "羚锐制药",
+  "leader_pct": 10.0,
+  "up_count": 35,
+  "down_count": 30
  },
  {
   "name": "食品加工制造",
-  "pct": -0.29,
-  "leader": "巴比食品",
-  "leader_pct": 10.03,
-  "up_count": 28,
-  "down_count": 37
+  "pct": -0.1,
+  "leader": "黑芝麻",
+  "leader_pct": 10.08,
+  "up_count": 31,
+  "down_count": 34
+ },
+ {
+  "name": "旅游及酒店",
+  "pct": -0.28,
+  "leader": "首旅酒店",
+  "leader_pct": 10.0,
+  "up_count": 12,
+  "down_count": 23
  }
 ]
