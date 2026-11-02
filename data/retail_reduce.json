@@ -1,66 +1,306 @@
 {
- "report": "2026-06-30",
- "prev": "2026-03-31",
+ "report": "2026-09-30",
+ "prev": "2026-06-30",
  "stocks": [
   {
-   "code": "301139",
-   "name": "元道退",
-   "holder_num": 15376,
-   "change": 3439,
-   "ratio": 18.28,
-   "avg_cap": 3.4,
-   "pct": null,
-   "price": 4.36
+   "code": "001248",
+   "name": "华润新能源",
+   "holder_num": 361703,
+   "change": 1272451,
+   "ratio": 77.87,
+   "avg_cap": 42.5,
+   "pct": 1.36,
+   "price": 11.54
   },
   {
-   "code": "688613",
-   "name": "奥精医疗",
-   "holder_num": 9455,
-   "change": 1220,
-   "ratio": 11.43,
-   "avg_cap": 20.4,
-   "pct": -6.17,
-   "price": 14.11
+   "code": "688825",
+   "name": "长鑫科技",
+   "holder_num": 794770,
+   "change": 2661894,
+   "ratio": 77.01,
+   "avg_cap": 468.0,
+   "pct": -0.19,
+   "price": 54.79
   },
   {
-   "code": "601916",
-   "name": "浙商银行",
-   "holder_num": 196093,
-   "change": 17495,
-   "ratio": 8.19,
-   "avg_cap": 28.9,
-   "pct": 0.68,
-   "price": 2.63
+   "code": "601123",
+   "name": "马矿股份",
+   "holder_num": 52361,
+   "change": 94814,
+   "ratio": 64.42,
+   "avg_cap": 39.4,
+   "pct": 1.33,
+   "price": 16.72
   },
   {
-   "code": "688981",
-   "name": "中芯国际",
-   "holder_num": 287089,
-   "change": 22450,
-   "ratio": 7.25,
-   "avg_cap": 140.9,
-   "pct": -4.17,
-   "price": 158.82
+   "code": "001399",
+   "name": "惠科股份",
+   "holder_num": 180350,
+   "change": 250202,
+   "ratio": 58.11,
+   "avg_cap": 87.4,
+   "pct": 2.91,
+   "price": 21.27
   },
   {
-   "code": "688185",
-   "name": "康希诺",
-   "holder_num": 15985,
-   "change": 492,
-   "ratio": 2.99,
-   "avg_cap": 36.5,
-   "pct": -1.42,
-   "price": 50.99
+   "code": "603468",
+   "name": "津富士达",
+   "holder_num": 28844,
+   "change": 37661,
+   "ratio": 56.63,
+   "avg_cap": 31.4,
+   "pct": 1.09,
+   "price": 21.98
   },
   {
-   "code": "601066",
-   "name": "中信建投",
-   "holder_num": 136318,
-   "change": 2571,
-   "ratio": 1.85,
-   "avg_cap": 138.5,
-   "pct": -1.51,
-   "price": 29.07
+   "code": "688806",
+   "name": "泰诺麦博",
+   "holder_num": 19179,
+   "change": 24593,
+   "ratio": 56.18,
+   "avg_cap": 73.6,
+   "pct": 1.91,
+   "price": 30.67
+  },
+  {
+   "code": "688785",
+   "name": "恒运昌",
+   "holder_num": 5044,
+   "change": 4720,
+   "ratio": 48.34,
+   "avg_cap": 465.1,
+   "pct": 7.38,
+   "price": 346.48
+  },
+  {
+   "code": "688801",
+   "name": "燧原科技",
+   "holder_num": 15147,
+   "change": 13738,
+   "ratio": 47.56,
+   "avg_cap": 1194.4,
+   "pct": 2.48,
+   "price": 420.4
+  },
+  {
+   "code": "688835",
+   "name": "高凯技术",
+   "holder_num": 12925,
+   "change": 11340,
+   "ratio": 46.73,
+   "avg_cap": 263.3,
+   "pct": 9.03,
+   "price": 340.47
+  },
+  {
+   "code": "300721",
+   "name": "怡达股份",
+   "holder_num": 21768,
+   "change": 18512,
+   "ratio": 45.96,
+   "avg_cap": 15.1,
+   "pct": 6.68,
+   "price": 19.93
+  },
+  {
+   "code": "601091",
+   "name": "沈鼓集团",
+   "holder_num": 173334,
+   "change": 141055,
+   "ratio": 44.87,
+   "avg_cap": 41.5,
+   "pct": 0.17,
+   "price": 23.15
+  },
+  {
+   "code": "002648",
+   "name": "卫星化学",
+   "holder_num": 79191,
+   "change": 64217,
+   "ratio": 44.78,
+   "avg_cap": 112.8,
+   "pct": -0.32,
+   "price": 26.51
+  },
+  {
+   "code": "688816",
+   "name": "易思维",
+   "holder_num": 7393,
+   "change": 5642,
+   "ratio": 43.28,
+   "avg_cap": 62.6,
+   "pct": 5.15,
+   "price": 46.26
+  },
+  {
+   "code": "301697",
+   "name": "贝特利",
+   "holder_num": 30746,
+   "change": 23425,
+   "ratio": 43.24,
+   "avg_cap": 22.4,
+   "pct": 2.41,
+   "price": 26.26
+  },
+  {
+   "code": "603203",
+   "name": "快克智能",
+   "holder_num": 37211,
+   "change": 27131,
+   "ratio": 42.17,
+   "avg_cap": 37.0,
+   "pct": 2.33,
+   "price": 41.74
+  },
+  {
+   "code": "603228",
+   "name": "景旺电子",
+   "holder_num": 72782,
+   "change": 51833,
+   "ratio": 41.59,
+   "avg_cap": 139.4,
+   "pct": -2.19,
+   "price": 101.21
+  },
+  {
+   "code": "000798",
+   "name": "中水渔业",
+   "holder_num": 30394,
+   "change": 21625,
+   "ratio": 41.57,
+   "avg_cap": 11.8,
+   "pct": 2.1,
+   "price": 9.79
+  },
+  {
+   "code": "603324",
+   "name": "盛剑科技",
+   "holder_num": 14616,
+   "change": 9881,
+   "ratio": 40.34,
+   "avg_cap": 25.0,
+   "pct": 3.72,
+   "price": 24.21
+  },
+  {
+   "code": "688809",
+   "name": "强一股份",
+   "holder_num": 10679,
+   "change": 6965,
+   "ratio": 39.48,
+   "avg_cap": 592.8,
+   "pct": 0.77,
+   "price": 488.64
+  },
+  {
+   "code": "001220",
+   "name": "世盟股份",
+   "holder_num": 11126,
+   "change": 7198,
+   "ratio": 39.28,
+   "avg_cap": 25.9,
+   "pct": 1.95,
+   "price": 31.28
+  },
+  {
+   "code": "603175",
+   "name": "超颖电子",
+   "holder_num": 10645,
+   "change": 6800,
+   "ratio": 38.98,
+   "avg_cap": 428.8,
+   "pct": 2.16,
+   "price": 104.45
+  },
+  {
+   "code": "688828",
+   "name": "国仪公司",
+   "holder_num": 16774,
+   "change": 10661,
+   "ratio": 38.86,
+   "avg_cap": 197.2,
+   "pct": 6.09,
+   "price": 82.68
+  },
+  {
+   "code": "002674",
+   "name": "兴业科技",
+   "holder_num": 23257,
+   "change": 14244,
+   "ratio": 37.98,
+   "avg_cap": 25.2,
+   "pct": 0.75,
+   "price": 19.82
+  },
+  {
+   "code": "603956",
+   "name": "威派格",
+   "holder_num": 29431,
+   "change": 17113,
+   "ratio": 36.77,
+   "avg_cap": 13.3,
+   "pct": 3.71,
+   "price": 6.88
+  },
+  {
+   "code": "003004",
+   "name": "声迅股份",
+   "holder_num": 7336,
+   "change": 4209,
+   "ratio": 36.46,
+   "avg_cap": 67.2,
+   "pct": 1.54,
+   "price": 60.22
+  },
+  {
+   "code": "605358",
+   "name": "立昂微",
+   "holder_num": 160934,
+   "change": 91392,
+   "ratio": 36.22,
+   "avg_cap": 21.8,
+   "pct": 3.03,
+   "price": 45.36
+  },
+  {
+   "code": "600562",
+   "name": "国睿科技",
+   "holder_num": 31636,
+   "change": 17893,
+   "ratio": 36.13,
+   "avg_cap": 105.2,
+   "pct": 3.63,
+   "price": 26.81
+  },
+  {
+   "code": "002876",
+   "name": "三利谱",
+   "holder_num": 18909,
+   "change": 10625,
+   "ratio": 35.98,
+   "avg_cap": 28.8,
+   "pct": 3.84,
+   "price": 31.3
+  },
+  {
+   "code": "603893",
+   "name": "瑞芯微",
+   "holder_num": 60072,
+   "change": 33513,
+   "ratio": 35.81,
+   "avg_cap": 151.9,
+   "pct": 1.44,
+   "price": 215.57
+  },
+  {
+   "code": "688325",
+   "name": "赛微微电",
+   "holder_num": 4866,
+   "change": 2699,
+   "ratio": 35.68,
+   "avg_cap": 191.0,
+   "pct": -5.72,
+   "price": 107.5
   }
  ]
 }

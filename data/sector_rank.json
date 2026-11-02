@@ -1,82 +1,82 @@
 [
  {
-  "name": "白酒",
-  "pct": 5.28,
-  "leader": "皇台酒业",
-  "leader_pct": 10.01,
-  "up_count": 18,
+  "name": "影视院线",
+  "pct": 9.36,
+  "leader": "捷成股份",
+  "leader_pct": 20.0,
+  "up_count": 19,
+  "down_count": 1
+ },
+ {
+  "name": "游戏",
+  "pct": 8.91,
+  "leader": "富春股份",
+  "leader_pct": 14.58,
+  "up_count": 23,
   "down_count": 0
  },
  {
-  "name": "医疗服务",
-  "pct": 1.56,
-  "leader": "万邦医药",
+  "name": "文化传媒",
+  "pct": 8.31,
+  "leader": "海看股份",
   "leader_pct": 20.0,
-  "up_count": 32,
-  "down_count": 23
- },
- {
-  "name": "港口航运",
-  "pct": 1.44,
-  "leader": "锦江航运",
-  "leader_pct": 10.03,
-  "up_count": 24,
-  "down_count": 7
- },
- {
-  "name": "银行",
-  "pct": 0.77,
-  "leader": "西安银行",
-  "leader_pct": 8.63,
-  "up_count": 29,
-  "down_count": 10
- },
- {
-  "name": "机场航运",
-  "pct": 0.76,
-  "leader": "春秋航空",
-  "leader_pct": 4.86,
-  "up_count": 10,
+  "up_count": 83,
   "down_count": 2
  },
  {
-  "name": "饮料制造",
-  "pct": 0.21,
-  "leader": "新乳业",
-  "leader_pct": 10.01,
-  "up_count": 27,
-  "down_count": 18
+  "name": "软件开发",
+  "pct": 6.61,
+  "leader": "银之杰",
+  "leader_pct": 20.02,
+  "up_count": 134,
+  "down_count": 5
  },
  {
-  "name": "医药商业",
-  "pct": 0.21,
-  "leader": "百洋医药",
-  "leader_pct": 14.84,
-  "up_count": 16,
-  "down_count": 16
+  "name": "IT服务",
+  "pct": 5.31,
+  "leader": "华是科技",
+  "leader_pct": 19.99,
+  "up_count": 124,
+  "down_count": 5
  },
  {
-  "name": "中药",
-  "pct": -0.03,
-  "leader": "羚锐制药",
-  "leader_pct": 10.0,
-  "up_count": 35,
-  "down_count": 30
+  "name": "教育",
+  "pct": 5.3,
+  "leader": "ST豆神",
+  "leader_pct": 20.15,
+  "up_count": 14,
+  "down_count": 1
  },
  {
-  "name": "食品加工制造",
-  "pct": -0.1,
-  "leader": "黑芝麻",
-  "leader_pct": 10.08,
-  "up_count": 31,
-  "down_count": 34
+  "name": "白酒",
+  "pct": 4.95,
+  "leader": "水井坊",
+  "leader_pct": 10.02,
+  "up_count": 18,
+  "down_count": 1
  },
  {
-  "name": "旅游及酒店",
-  "pct": -0.28,
-  "leader": "首旅酒店",
-  "leader_pct": 10.0,
-  "up_count": 12,
-  "down_count": 23
+  "name": "证券",
+  "pct": 4.48,
+  "leader": "国金证券",
+  "leader_pct": 10.03,
+  "up_count": 48,
+  "down_count": 0
+ },
+ {
+  "name": "计算机设备",
+  "pct": 4.11,
+  "leader": "维宏股份",
+  "leader_pct": 20.0,
+  "up_count": 78,
+  "down_count": 4
+ },
+ {
+  "name": "互联网电商",
+  "pct": 4.06,
+  "leader": "壹网壹创",
+  "leader_pct": 9.41,
+  "up_count": 19,
+  "down_count": 1
  }
 ]
