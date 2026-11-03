@@ -1,82 +1,82 @@
 [
  {
-  "name": "影视院线",
-  "pct": 9.36,
-  "leader": "捷成股份",
-  "leader_pct": 20.0,
-  "up_count": 19,
-  "down_count": 1
- },
- {
-  "name": "游戏",
-  "pct": 8.91,
-  "leader": "富春股份",
-  "leader_pct": 14.58,
-  "up_count": 23,
+  "name": "保险",
+  "pct": 2.67,
+  "leader": "中国太保",
+  "leader_pct": 4.03,
+  "up_count": 5,
   "down_count": 0
  },
  {
-  "name": "文化传媒",
-  "pct": 8.31,
-  "leader": "海看股份",
+  "name": "机场航运",
+  "pct": 2.01,
+  "leader": "华夏航空",
+  "leader_pct": 5.7,
+  "up_count": 13,
+  "down_count": 0
+ },
+ {
+  "name": "养殖业",
+  "pct": 1.89,
+  "leader": "巨星农牧",
+  "leader_pct": 6.9,
+  "up_count": 30,
+  "down_count": 6
+ },
+ {
+  "name": "贸易",
+  "pct": 1.81,
+  "leader": "中成股份",
+  "leader_pct": 10.01,
+  "up_count": 10,
+  "down_count": 3
+ },
+ {
+  "name": "电池",
+  "pct": 1.64,
+  "leader": "尚水智能",
   "leader_pct": 20.0,
-  "up_count": 83,
-  "down_count": 2
- },
- {
-  "name": "软件开发",
-  "pct": 6.61,
-  "leader": "银之杰",
-  "leader_pct": 20.02,
-  "up_count": 134,
-  "down_count": 5
- },
- {
-  "name": "IT服务",
-  "pct": 5.31,
-  "leader": "华是科技",
-  "leader_pct": 19.99,
-  "up_count": 124,
-  "down_count": 5
- },
- {
-  "name": "教育",
-  "pct": 5.3,
-  "leader": "ST豆神",
-  "leader_pct": 20.15,
-  "up_count": 14,
-  "down_count": 1
+  "up_count": 78,
+  "down_count": 29
  },
  {
   "name": "白酒",
-  "pct": 4.95,
-  "leader": "水井坊",
-  "leader_pct": 10.02,
-  "up_count": 18,
-  "down_count": 1
- },
- {
-  "name": "证券",
-  "pct": 4.48,
-  "leader": "国金证券",
-  "leader_pct": 10.03,
-  "up_count": 48,
-  "down_count": 0
- },
- {
-  "name": "计算机设备",
-  "pct": 4.11,
-  "leader": "维宏股份",
-  "leader_pct": 20.0,
-  "up_count": 78,
+  "pct": 1.57,
+  "leader": "皇台酒业",
+  "leader_pct": 10.0,
+  "up_count": 15,
   "down_count": 4
  },
  {
-  "name": "互联网电商",
-  "pct": 4.06,
-  "leader": "壹网壹创",
-  "leader_pct": 9.41,
-  "up_count": 19,
-  "down_count": 1
+  "name": "游戏",
+  "pct": 1.45,
+  "leader": "大晟文化",
+  "leader_pct": 10.07,
+  "up_count": 14,
+  "down_count": 7
+ },
+ {
+  "name": "影视院线",
+  "pct": 1.44,
+  "leader": "华智数媒",
+  "leader_pct": 16.28,
+  "up_count": 7,
+  "down_count": 12
+ },
+ {
+  "name": "农产品加工",
+  "pct": 1.36,
+  "leader": "东方海洋",
+  "leader_pct": 9.97,
+  "up_count": 28,
+  "down_count": 10
+ },
+ {
+  "name": "钢铁",
+  "pct": 1.33,
+  "leader": "马矿股份",
+  "leader_pct": 10.0,
+  "up_count": 35,
+  "down_count": 6
  }
 ]
