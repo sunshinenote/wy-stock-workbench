@@ -1,82 +1,82 @@
 [
  {
-  "name": "保险",
-  "pct": 2.67,
-  "leader": "中国太保",
-  "leader_pct": 4.03,
-  "up_count": 5,
-  "down_count": 0
- },
- {
-  "name": "机场航运",
-  "pct": 2.01,
-  "leader": "华夏航空",
-  "leader_pct": 5.7,
-  "up_count": 13,
-  "down_count": 0
- },
- {
-  "name": "养殖业",
-  "pct": 1.89,
-  "leader": "巨星农牧",
-  "leader_pct": 6.9,
-  "up_count": 30,
-  "down_count": 6
- },
- {
-  "name": "贸易",
-  "pct": 1.81,
-  "leader": "中成股份",
-  "leader_pct": 10.01,
-  "up_count": 10,
-  "down_count": 3
- },
- {
-  "name": "电池",
-  "pct": 1.64,
-  "leader": "尚水智能",
+  "name": "半导体",
+  "pct": 10.55,
+  "leader": "京仪装备",
   "leader_pct": 20.0,
-  "up_count": 78,
-  "down_count": 29
+  "up_count": 188,
+  "down_count": 2
  },
  {
-  "name": "白酒",
-  "pct": 1.57,
-  "leader": "皇台酒业",
-  "leader_pct": 10.0,
-  "up_count": 15,
-  "down_count": 4
- },
- {
-  "name": "游戏",
-  "pct": 1.45,
-  "leader": "大晟文化",
-  "leader_pct": 10.07,
+  "name": "贵金属",
+  "pct": 10.08,
+  "leader": "晓程科技",
+  "leader_pct": 19.99,
   "up_count": 14,
-  "down_count": 7
+  "down_count": 0
  },
  {
-  "name": "影视院线",
-  "pct": 1.44,
-  "leader": "华智数媒",
-  "leader_pct": 16.28,
-  "up_count": 7,
-  "down_count": 12
+  "name": "电子化学品",
+  "pct": 9.0,
+  "leader": "兴福电子",
+  "leader_pct": 17.25,
+  "up_count": 43,
+  "down_count": 1
  },
  {
-  "name": "农产品加工",
-  "pct": 1.36,
-  "leader": "东方海洋",
-  "leader_pct": 9.97,
-  "up_count": 28,
-  "down_count": 10
+  "name": "元件",
+  "pct": 7.14,
+  "leader": "三环集团",
+  "leader_pct": 14.77,
+  "up_count": 62,
+  "down_count": 1
  },
  {
-  "name": "钢铁",
-  "pct": 1.33,
-  "leader": "马矿股份",
-  "leader_pct": 10.0,
-  "up_count": 35,
-  "down_count": 6
+  "name": "自动化设备",
+  "pct": 6.04,
+  "leader": "高凯技术",
+  "leader_pct": 20.0,
+  "up_count": 97,
+  "down_count": 1
+ },
+ {
+  "name": "其他电子",
+  "pct": 5.88,
+  "leader": "富信科技",
+  "leader_pct": 11.55,
+  "up_count": 33,
+  "down_count": 1
+ },
+ {
+  "name": "通信设备",
+  "pct": 5.73,
+  "leader": "蘅东光",
+  "leader_pct": 21.8,
+  "up_count": 92,
+  "down_count": 1
+ },
+ {
+  "name": "其他电源设备",
+  "pct": 5.25,
+  "leader": "新雷能",
+  "leader_pct": 16.5,
+  "up_count": 34,
+  "down_count": 1
+ },
+ {
+  "name": "非金属材料",
+  "pct": 5.06,
+  "leader": "联瑞新材",
+  "leader_pct": 14.41,
+  "up_count": 16,
+  "down_count": 0
+ },
+ {
+  "name": "光伏设备",
+  "pct": 5.04,
+  "leader": "贝特利",
+  "leader_pct": 20.02,
+  "up_count": 68,
+  "down_count": 3
  }
 ]
