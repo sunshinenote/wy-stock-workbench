@@ -1,82 +1,82 @@
 [
  {
-  "name": "半导体",
-  "pct": 10.55,
-  "leader": "京仪装备",
-  "leader_pct": 20.0,
-  "up_count": 188,
-  "down_count": 2
+  "name": "光伏设备",
+  "pct": 8.02,
+  "leader": "酉立智能",
+  "leader_pct": 29.99,
+  "up_count": 71,
+  "down_count": 0
  },
  {
   "name": "贵金属",
-  "pct": 10.08,
-  "leader": "晓程科技",
-  "leader_pct": 19.99,
+  "pct": 4.95,
+  "leader": "四川黄金",
+  "leader_pct": 9.55,
   "up_count": 14,
   "down_count": 0
  },
  {
-  "name": "电子化学品",
-  "pct": 9.0,
-  "leader": "兴福电子",
-  "leader_pct": 17.25,
-  "up_count": 43,
+  "name": "影视院线",
+  "pct": 4.57,
+  "leader": "慈文传媒",
+  "leader_pct": 10.03,
+  "up_count": 19,
   "down_count": 1
  },
  {
-  "name": "元件",
-  "pct": 7.14,
-  "leader": "三环集团",
-  "leader_pct": 14.77,
-  "up_count": 62,
+  "name": "能源金属",
+  "pct": 4.27,
+  "leader": "博迁新材",
+  "leader_pct": 6.32,
+  "up_count": 13,
   "down_count": 1
  },
  {
-  "name": "自动化设备",
-  "pct": 6.04,
-  "leader": "高凯技术",
-  "leader_pct": 20.0,
-  "up_count": 97,
-  "down_count": 1
+  "name": "文化传媒",
+  "pct": 4.21,
+  "leader": "福石控股",
+  "leader_pct": 20.05,
+  "up_count": 82,
+  "down_count": 2
  },
  {
-  "name": "其他电子",
-  "pct": 5.88,
-  "leader": "富信科技",
-  "leader_pct": 11.55,
-  "up_count": 33,
-  "down_count": 1
- },
- {
-  "name": "通信设备",
-  "pct": 5.73,
-  "leader": "蘅东光",
-  "leader_pct": 21.8,
-  "up_count": 92,
-  "down_count": 1
- },
- {
-  "name": "其他电源设备",
-  "pct": 5.25,
-  "leader": "新雷能",
-  "leader_pct": 16.5,
-  "up_count": 34,
-  "down_count": 1
- },
- {
-  "name": "非金属材料",
-  "pct": 5.06,
-  "leader": "联瑞新材",
-  "leader_pct": 14.41,
-  "up_count": 16,
+  "name": "互联网电商",
+  "pct": 4.21,
+  "leader": "狮头股份",
+  "leader_pct": 9.99,
+  "up_count": 19,
   "down_count": 0
  },
  {
-  "name": "光伏设备",
-  "pct": 5.04,
-  "leader": "贝特利",
-  "leader_pct": 20.02,
-  "up_count": 68,
+  "name": "通信服务",
+  "pct": 3.96,
+  "leader": "润泽科技",
+  "leader_pct": 11.59,
+  "up_count": 40,
   "down_count": 3
+ },
+ {
+  "name": "电池",
+  "pct": 3.78,
+  "leader": "鹏辉能源",
+  "leader_pct": 11.97,
+  "up_count": 103,
+  "down_count": 4
+ },
+ {
+  "name": "消费电子",
+  "pct": 3.59,
+  "leader": "精研科技",
+  "leader_pct": 20.01,
+  "up_count": 91,
+  "down_count": 5
+ },
+ {
+  "name": "IT服务",
+  "pct": 3.58,
+  "leader": "青云科技",
+  "leader_pct": 20.01,
+  "up_count": 124,
+  "down_count": 5
  }
 ]
