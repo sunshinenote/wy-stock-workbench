@@ -441,281 +441,281 @@
   "previous": "0.6"
  },
  {
-  "date": "2026-11-11",
-  "time": "01:00",
+  "date": "2026-11-10",
+  "time": "00:00",
   "country": "美国",
   "importance": "中",
-  "event": "美国11月EIA月报预估-当年布伦特原油价格(美元/桶)",
+  "event": "美国10月纽约联储3年通胀预期(%)",
   "forecast": "nan",
-  "previous": "96.32"
+  "previous": "3.3"
  },
  {
-  "date": "2026-11-11",
-  "time": "01:00",
+  "date": "2026-11-10",
+  "time": "00:00",
   "country": "美国",
   "importance": "中",
-  "event": "美国11月EIA月报展望-次年干天然气产量(亿立方英尺/日)",
+  "event": "美国11月纽约联储1年汽油通胀预期(%)",
   "forecast": "nan",
-  "previous": "1161.0"
+  "previous": "4.79983"
  },
  {
-  "date": "2026-11-11",
-  "time": "01:00",
+  "date": "2026-11-10",
+  "time": "00:00",
   "country": "美国",
   "importance": "中",
-  "event": "美国11月EIA月报预估-当年WTI原油价格(美元/桶)",
+  "event": "美国11月纽约联储1年黄金涨幅预期(%)",
   "forecast": "nan",
-  "previous": "88.21"
+  "previous": "5.157961"
  },
  {
-  "date": "2026-11-11",
-  "time": "01:00",
+  "date": "2026-11-10",
+  "time": "00:00",
   "country": "美国",
   "importance": "中",
-  "event": "美国11月EIA月报预估-次年WTI原油价格(美元/桶)",
+  "event": "美国11月纽约联储未来3个月无法偿最低债平均预期(%)",
   "forecast": "nan",
-  "previous": "79.74"
+  "previous": "12.195913"
  },
  {
-  "date": "2026-11-11",
-  "time": "01:00",
+  "date": "2026-11-10",
+  "time": "00:00",
   "country": "美国",
   "importance": "中",
-  "event": "美国11月EIA月报展望-当年美国原油产量(万桶/日)",
+  "event": "美国10月纽约联储1年家庭支出增长预期(%)",
   "forecast": "nan",
-  "previous": "1387.0"
+  "previous": "5.5"
  },
  {
-  "date": "2026-11-11",
-  "time": "01:00",
+  "date": "2026-11-10",
+  "time": "00:00",
   "country": "美国",
   "importance": "中",
-  "event": "美国11月EIA月报预估-次年布伦特原油价格(美元/桶)",
+  "event": "美国11月纽约联储1年家庭支出增长预期(%)",
   "forecast": "nan",
-  "previous": "83.74"
+  "previous": "5.50851"
  },
  {
-  "date": "2026-11-11",
-  "time": "01:00",
+  "date": "2026-11-10",
+  "time": "00:00",
   "country": "美国",
   "importance": "中",
-  "event": "美国11月EIA月报展望-当年干天然气产量(亿立方英尺/日)",
+  "event": "美国11月纽约联储1年房价通胀预期(%)",
   "forecast": "nan",
-  "previous": "1122.0"
+  "previous": "3.046946"
  },
  {
-  "date": "2026-11-11",
-  "time": "01:00",
+  "date": "2026-11-10",
+  "time": "00:00",
   "country": "美国",
   "importance": "中",
-  "event": "美国11月EIA月报预估-次年天然气价格(美元/千立方英尺)",
+  "event": "美国11月纽约联储3年通胀预期(%)",
   "forecast": "nan",
-  "previous": "3.29"
+  "previous": "3.25033"
  },
  {
-  "date": "2026-11-11",
-  "time": "01:00",
+  "date": "2026-11-10",
+  "time": "00:00",
   "country": "美国",
   "importance": "中",
-  "event": "美国11月EIA月报展望-次年美国原油产量(万桶/日)",
+  "event": "美国11月纽约联储1年通胀预期(%)",
   "forecast": "nan",
-  "previous": "1430.0"
+  "previous": "3.902743"
  },
  {
-  "date": "2026-11-11",
-  "time": "01:00",
+  "date": "2026-11-10",
+  "time": "00:00",
   "country": "美国",
   "importance": "中",
-  "event": "美国11月EIA月报预估-当年天然气价格(美元/千立方英尺)",
+  "event": "美国10月纽约联储1年汽油通胀预期(%)",
   "forecast": "nan",
-  "previous": "3.61"
+  "previous": "4.8"
  },
  {
-  "date": "2026-11-11",
-  "time": "02:00",
+  "date": "2026-11-10",
+  "time": "00:00",
   "country": "美国",
   "importance": "中",
-  "event": "美国11月10日10年期国债竞拍-总金额(亿美元)",
-  "forecast": "nan",
-  "previous": "390.0"
- },
- {
-  "date": "2026-11-11",
-  "time": "02:00",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国11月10日10年期国债竞拍-中标利率(%)",
-  "forecast": "nan",
-  "previous": "5.3"
- },
- {
-  "date": "2026-11-11",
-  "time": "02:00",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国11月10日10年期国债竞拍-投标倍数(倍)",
-  "forecast": "nan",
-  "previous": "2.77"
- },
- {
-  "date": "2026-11-11",
-  "time": "02:00",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国11月10日10年期国债竞拍-高配置百分比(%)",
-  "forecast": "nan",
-  "previous": "57.6"
- },
- {
-  "date": "2026-11-11",
-  "time": "02:00",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国11月10日10年期国债竞拍-高收益率(%)",
-  "forecast": "nan",
-  "previous": "5.3"
- },
- {
-  "date": "2026-11-11",
-  "time": "05:30",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国截至11月6日当周API原油库存变动(万桶)",
-  "forecast": "nan",
-  "previous": "-526.7"
- },
- {
-  "date": "2026-11-11",
-  "time": "05:30",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国截至11月6日当周API每周原油进口(万桶)",
-  "forecast": "nan",
-  "previous": "46.3"
- },
- {
-  "date": "2026-11-11",
-  "time": "05:30",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国截至11月6日当周API每周投产原油量(万桶)",
-  "forecast": "nan",
-  "previous": "19.5"
- },
- {
-  "date": "2026-11-11",
-  "time": "05:30",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国截至11月6日当周API库欣原油库存变动(万桶)",
-  "forecast": "nan",
-  "previous": "51.1"
- },
- {
-  "date": "2026-11-11",
-  "time": "05:30",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国截至11月6日当周API每周取暖油库存(万桶)",
-  "forecast": "nan",
-  "previous": "-27.0"
- },
- {
-  "date": "2026-11-11",
-  "time": "05:30",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国截至11月6日当周API汽油库存变动(万桶)",
-  "forecast": "nan",
-  "previous": "142.7"
- },
- {
-  "date": "2026-11-11",
-  "time": "05:30",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国截至11月6日当周API馏分油库存变动(万桶)",
-  "forecast": "nan",
-  "previous": "-119.2"
- },
- {
-  "date": "2026-11-11",
-  "time": "05:30",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国截至11月6日当周API每周成品油进口(万桶)",
+  "event": "美国10月纽约联储1年黄金涨幅预期(%)",
   "forecast": "nan",
   "previous": "5.2"
  },
  {
-  "date": "2026-11-11",
+  "date": "2026-11-10",
+  "time": "00:00",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国10月纽约联储1年房价通胀预期(%)",
+  "forecast": "nan",
+  "previous": "3.0"
+ },
+ {
+  "date": "2026-11-10",
+  "time": "00:00",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国10月纽约联储1年家庭收入增长预期(%)",
+  "forecast": "nan",
+  "previous": "3.1"
+ },
+ {
+  "date": "2026-11-10",
+  "time": "00:00",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国10月纽约联储1年通胀预期(%)",
+  "forecast": "3.78",
+  "previous": "3.9"
+ },
+ {
+  "date": "2026-11-10",
+  "time": "00:00",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国11月纽约联储1年家庭收入增长预期(%)",
+  "forecast": "nan",
+  "previous": "3.121219"
+ },
+ {
+  "date": "2026-11-10",
+  "time": "00:00",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国10月纽约联储未来3个月无法偿最低债平均预期(%)",
+  "forecast": "nan",
+  "previous": "12.2"
+ },
+ {
+  "date": "2026-11-10",
+  "time": "00:30",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国11月9日3个月期国债竞拍-总金额(亿美元)",
+  "forecast": "nan",
+  "previous": "1009.13"
+ },
+ {
+  "date": "2026-11-10",
+  "time": "00:30",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国11月9日6个月期国债竞拍-总金额(亿美元)",
+  "forecast": "nan",
+  "previous": "871.05"
+ },
+ {
+  "date": "2026-11-10",
+  "time": "00:30",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国11月9日6个月期国债竞拍-中标利率(%)",
+  "forecast": "nan",
+  "previous": "4.15"
+ },
+ {
+  "date": "2026-11-10",
+  "time": "00:30",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国11月9日3个月期国债竞拍-投标倍数(亿美元)",
+  "forecast": "nan",
+  "previous": "2.88"
+ },
+ {
+  "date": "2026-11-10",
+  "time": "00:30",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国11月9日3个月期国债竞拍-中标利率(%)",
+  "forecast": "nan",
+  "previous": "4.04"
+ },
+ {
+  "date": "2026-11-10",
+  "time": "00:30",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国11月9日6个月期国债竞拍-高配置百分比(%)",
+  "forecast": "nan",
+  "previous": "49.23"
+ },
+ {
+  "date": "2026-11-10",
+  "time": "00:30",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国11月9日6个月期国债竞拍-投标倍数(亿美元)",
+  "forecast": "nan",
+  "previous": "2.89"
+ },
+ {
+  "date": "2026-11-10",
+  "time": "00:30",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国11月9日3个月期国债竞拍-高配置百分比(%)",
+  "forecast": "nan",
+  "previous": "64.28"
+ },
+ {
+  "date": "2026-11-10",
+  "time": "02:00",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国11月9日3年期国债竞拍-投标倍数(亿美元)",
+  "forecast": "nan",
+  "previous": "2.62"
+ },
+ {
+  "date": "2026-11-10",
+  "time": "02:00",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国11月9日3年期国债竞拍-高配置百分比(%)",
+  "forecast": "nan",
+  "previous": "8.35"
+ },
+ {
+  "date": "2026-11-10",
+  "time": "02:00",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国11月9日3年期国债竞拍-总金额(亿美元)",
+  "forecast": "nan",
+  "previous": "580.0"
+ },
+ {
+  "date": "2026-11-10",
+  "time": "02:00",
+  "country": "美国",
+  "importance": "中",
+  "event": "美国11月9日3年期国债竞拍-高收益率(%)",
+  "forecast": "nan",
+  "previous": "4.93"
+ },
+ {
+  "date": "2026-11-10",
   "time": "06:30",
   "country": "美国",
   "importance": "中",
-  "event": "美国11月10日SPDR黄金持仓变动-每日(吨)",
+  "event": "美国11月9日SPDR黄金持仓-每日更新(吨)",
   "forecast": "nan",
   "previous": "nan"
  },
  {
-  "date": "2026-11-11",
+  "date": "2026-11-10",
   "time": "06:30",
   "country": "美国",
   "importance": "中",
-  "event": "美国11月9日NYMEX铂金库存-每日更新(百盎司)",
+  "event": "美国11月9日iShares白银持仓-每日更新(吨)",
   "forecast": "nan",
   "previous": "nan"
  },
  {
-  "date": "2026-11-11",
+  "date": "2026-11-10",
   "time": "06:30",
   "country": "美国",
   "importance": "中",
-  "event": "美国11月10日iShares黄金持仓-每日更新(吨)",
-  "forecast": "nan",
-  "previous": "nan"
- },
- {
-  "date": "2026-11-11",
-  "time": "06:30",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国11月10日iShares白银持仓变动-每日(吨)",
-  "forecast": "nan",
-  "previous": "nan"
- },
- {
-  "date": "2026-11-11",
-  "time": "06:30",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国11月9日COMEX黄金库存-每日更新(百盎司)",
-  "forecast": "nan",
-  "previous": "nan"
- },
- {
-  "date": "2026-11-11",
-  "time": "06:30",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国11月9日NYMEX钯金库存-每日更新(百盎司)",
-  "forecast": "nan",
-  "previous": "nan"
- },
- {
-  "date": "2026-11-11",
-  "time": "06:30",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国11月9日COMEX白银库存变动-每日(百盎司)",
-  "forecast": "nan",
-  "previous": "nan"
- },
- {
-  "date": "2026-11-11",
-  "time": "06:30",
-  "country": "美国",
-  "importance": "中",
-  "event": "美国11月9日COMEX黄金库存变动-每日(百盎司)",
+  "event": "美国11月9日iShares黄金持仓-每日更新(吨)",
   "forecast": "nan",
   "previous": "nan"
  }
