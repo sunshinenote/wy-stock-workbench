@@ -1,82 +1,82 @@
 [
  {
-  "name": "种植业与林业",
-  "pct": 1.67,
-  "leader": "秋乐种业",
-  "leader_pct": 11.54,
-  "up_count": 18,
-  "down_count": 10
+  "name": "燃气",
+  "pct": 3.58,
+  "leader": "东方环宇",
+  "leader_pct": 10.03,
+  "up_count": 25,
+  "down_count": 2
  },
  {
-  "name": "银行",
-  "pct": 0.99,
-  "leader": "沪农商行",
-  "leader_pct": 4.27,
-  "up_count": 37,
-  "down_count": 3
+  "name": "煤炭开采加工",
+  "pct": 3.53,
+  "leader": "郑州煤电",
+  "leader_pct": 10.0,
+  "up_count": 33,
+  "down_count": 1
  },
  {
-  "name": "公路铁路运输",
-  "pct": 0.98,
-  "leader": "龙江交通",
-  "leader_pct": 10.12,
-  "up_count": 22,
+  "name": "元件",
+  "pct": 2.57,
+  "leader": "奥士康",
+  "leader_pct": 10.0,
+  "up_count": 56,
   "down_count": 7
  },
  {
-  "name": "电力",
-  "pct": 0.76,
-  "leader": "新能股份",
-  "leader_pct": 10.02,
-  "up_count": 59,
-  "down_count": 39
- },
- {
-  "name": "农产品加工",
-  "pct": 0.04,
-  "leader": "东方海洋",
-  "leader_pct": 9.97,
-  "up_count": 15,
-  "down_count": 26
- },
- {
-  "name": "养殖业",
-  "pct": 0.03,
-  "leader": "天山生物",
-  "leader_pct": 12.73,
-  "up_count": 10,
-  "down_count": 26
- },
- {
   "name": "厨卫电器",
-  "pct": -0.03,
+  "pct": 2.44,
   "leader": "日出东方",
-  "leader_pct": 10.04,
-  "up_count": 3,
+  "leader_pct": 10.01,
+  "up_count": 8,
+  "down_count": 1
+ },
+ {
+  "name": "通信设备",
+  "pct": 1.78,
+  "leader": "通则康威",
+  "leader_pct": 20.0,
+  "up_count": 72,
+  "down_count": 21
+ },
+ {
+  "name": "军工电子",
+  "pct": 1.52,
+  "leader": "智明达",
+  "leader_pct": 5.71,
+  "up_count": 56,
   "down_count": 6
  },
  {
-  "name": "燃气",
-  "pct": -0.32,
-  "leader": "东方环宇",
-  "leader_pct": 6.38,
-  "up_count": 11,
-  "down_count": 13
+  "name": "小金属",
+  "pct": 1.52,
+  "leader": "金钛股份",
+  "leader_pct": 12.75,
+  "up_count": 15,
+  "down_count": 12
  },
  {
-  "name": "保险",
-  "pct": -0.48,
-  "leader": "中国平安",
-  "leader_pct": 0.28,
-  "up_count": 1,
-  "down_count": 4
+  "name": "消费电子",
+  "pct": 1.26,
+  "leader": "信维通信",
+  "leader_pct": 12.77,
+  "up_count": 63,
+  "down_count": 30
  },
  {
-  "name": "纺织制造",
-  "pct": -0.51,
-  "leader": "浙文影业",
-  "leader_pct": 9.96,
-  "up_count": 9,
-  "down_count": 24
+  "name": "汽车零部件",
+  "pct": 1.23,
+  "leader": "德尔股份",
+  "leader_pct": 12.63,
+  "up_count": 178,
+  "down_count": 90
+ },
+ {
+  "name": "通用设备",
+  "pct": 1.16,
+  "leader": "祥明智能",
+  "leader_pct": 20.0,
+  "up_count": 158,
+  "down_count": 91
  }
 ]
