@@ -1,82 +1,82 @@
 [
  {
-  "name": "燃气",
-  "pct": 3.58,
-  "leader": "东方环宇",
-  "leader_pct": 10.03,
-  "up_count": 25,
-  "down_count": 2
- },
- {
-  "name": "煤炭开采加工",
-  "pct": 3.53,
-  "leader": "郑州煤电",
-  "leader_pct": 10.0,
-  "up_count": 33,
+  "name": "影视院线",
+  "pct": 7.05,
+  "leader": "华智数媒",
+  "leader_pct": 19.98,
+  "up_count": 19,
   "down_count": 1
  },
  {
-  "name": "元件",
-  "pct": 2.57,
-  "leader": "奥士康",
-  "leader_pct": 10.0,
-  "up_count": 56,
-  "down_count": 7
+  "name": "游戏",
+  "pct": 4.81,
+  "leader": "中青宝",
+  "leader_pct": 20.0,
+  "up_count": 23,
+  "down_count": 0
  },
  {
-  "name": "厨卫电器",
-  "pct": 2.44,
-  "leader": "日出东方",
-  "leader_pct": 10.01,
+  "name": "消费电子",
+  "pct": 4.35,
+  "leader": "博硕科技",
+  "leader_pct": 16.06,
+  "up_count": 93,
+  "down_count": 3
+ },
+ {
+  "name": "黑色家电",
+  "pct": 4.32,
+  "leader": "辰奕智能",
+  "leader_pct": 13.42,
   "up_count": 8,
   "down_count": 1
  },
  {
+  "name": "文化传媒",
+  "pct": 4.07,
+  "leader": "纵横通信",
+  "leader_pct": 10.02,
+  "up_count": 81,
+  "down_count": 4
+ },
+ {
+  "name": "光学光电子",
+  "pct": 4.0,
+  "leader": "视涯科技",
+  "leader_pct": 20.0,
+  "up_count": 103,
+  "down_count": 2
+ },
+ {
+  "name": "自动化设备",
+  "pct": 3.61,
+  "leader": "瑞松科技",
+  "leader_pct": 12.3,
+  "up_count": 95,
+  "down_count": 5
+ },
+ {
+  "name": "其他电子",
+  "pct": 3.1,
+  "leader": "好利科技",
+  "leader_pct": 7.0,
+  "up_count": 34,
+  "down_count": 0
+ },
+ {
+  "name": "半导体",
+  "pct": 2.95,
+  "leader": "富瀚微",
+  "leader_pct": 20.01,
+  "up_count": 174,
+  "down_count": 15
+ },
+ {
   "name": "通信设备",
-  "pct": 1.78,
-  "leader": "通则康威",
+  "pct": 2.82,
+  "leader": "科瑞思",
   "leader_pct": 20.0,
-  "up_count": 72,
-  "down_count": 21
- },
- {
-  "name": "军工电子",
-  "pct": 1.52,
-  "leader": "智明达",
-  "leader_pct": 5.71,
-  "up_count": 56,
-  "down_count": 6
- },
- {
-  "name": "小金属",
-  "pct": 1.52,
-  "leader": "金钛股份",
-  "leader_pct": 12.75,
-  "up_count": 15,
-  "down_count": 12
- },
- {
-  "name": "消费电子",
-  "pct": 1.26,
-  "leader": "信维通信",
-  "leader_pct": 12.77,
-  "up_count": 63,
-  "down_count": 30
- },
- {
-  "name": "汽车零部件",
-  "pct": 1.23,
-  "leader": "德尔股份",
-  "leader_pct": 12.63,
-  "up_count": 178,
-  "down_count": 90
- },
- {
-  "name": "通用设备",
-  "pct": 1.16,
-  "leader": "祥明智能",
-  "leader_pct": 20.0,
-  "up_count": 158,
-  "down_count": 91
+  "up_count": 85,
+  "down_count": 8
  }
 ]

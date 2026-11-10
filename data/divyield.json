@@ -41,6 +41,14 @@
    "total_div": 155.5
   },
   {
+   "code": "002818",
+   "name": "富森美",
+   "year_avg": 5.24,
+   "div_count": 15,
+   "list_years": 10.0,
+   "total_div": 47.2
+  },
+  {
    "code": "601088",
    "name": "中国神华",
    "year_avg": 5.17,
@@ -71,14 +79,6 @@
    "div_count": 40,
    "list_years": 26.0,
    "total_div": 123.7
-  },
-  {
-   "code": "601006",
-   "name": "大秦铁路",
-   "year_avg": 4.91,
-   "div_count": 20,
-   "list_years": 20.3,
-   "total_div": 93.2
   }
  ],
  "mine": [
