@@ -3,10 +3,10 @@
   {
    "code": "603098",
    "name": "森特股份",
-   "count": 49,
+   "count": 50,
    "dec_count": 0,
    "first_date": "2025-12-29",
-   "last_date": "2026-11-09"
+   "last_date": "2026-11-10"
   },
   {
    "code": "002637",
@@ -89,6 +89,14 @@
    "last_date": "2026-09-21"
   },
   {
+   "code": "601717",
+   "name": "中创智领",
+   "count": 26,
+   "dec_count": 0,
+   "first_date": "2026-07-17",
+   "last_date": "2026-11-10"
+  },
+  {
    "code": "920168",
    "name": "通宝光电",
    "count": 26,
@@ -105,14 +113,6 @@
    "last_date": "2026-07-28"
   },
   {
-   "code": "601717",
-   "name": "中创智领",
-   "count": 24,
-   "dec_count": 0,
-   "first_date": "2026-07-17",
-   "last_date": "2026-11-06"
-  },
-  {
    "code": "301533",
    "name": "威马农机",
    "count": 24,
@@ -125,7 +125,7 @@
   {
    "code": "603098",
    "name": "森特股份",
-   "count": 46,
+   "count": 48,
    "dec_count": 0,
    "first_date": "2025-12-29",
    "last_date": "2026-05-06"
@@ -141,31 +141,31 @@
   {
    "code": "300304",
    "name": "云意电气",
-   "count": 28,
+   "count": 27,
    "dec_count": 0,
-   "first_date": "2025-11-10",
+   "first_date": "2025-11-11",
    "last_date": "2026-04-29"
+  },
+  {
+   "code": "600557",
+   "name": "康缘药业",
+   "count": 24,
+   "dec_count": 0,
+   "first_date": "2025-11-11",
+   "last_date": "2025-12-03"
   },
   {
    "code": "300760",
    "name": "迈瑞医疗",
-   "count": 25,
+   "count": 22,
    "dec_count": 0,
    "first_date": "2025-11-27",
    "last_date": "2026-04-09"
   },
   {
-   "code": "600557",
-   "name": "康缘药业",
-   "count": 25,
-   "dec_count": 0,
-   "first_date": "2025-11-11",
-   "last_date": "2025-12-04"
-  },
-  {
    "code": "603299",
    "name": "苏盐井神",
-   "count": 19,
+   "count": 20,
    "dec_count": 0,
    "first_date": "2025-12-04",
    "last_date": "2026-01-05"
@@ -177,14 +177,6 @@
    "dec_count": 0,
    "first_date": "2026-04-22",
    "last_date": "2026-04-30"
-  },
-  {
-   "code": "601916",
-   "name": "浙商银行",
-   "count": 18,
-   "dec_count": 0,
-   "first_date": "2025-11-10",
-   "last_date": "2025-12-16"
   },
   {
    "code": "300190",
@@ -203,9 +195,25 @@
    "last_date": "2026-01-04"
   },
   {
+   "code": "601916",
+   "name": "浙商银行",
+   "count": 16,
+   "dec_count": 0,
+   "first_date": "2025-11-18",
+   "last_date": "2025-12-16"
+  },
+  {
+   "code": "600765",
+   "name": "中航重机",
+   "count": 15,
+   "dec_count": 0,
+   "first_date": "2026-03-16",
+   "last_date": "2026-05-14"
+  },
+  {
    "code": "002832",
    "name": "比音勒芬",
-   "count": 15,
+   "count": 14,
    "dec_count": 0,
    "first_date": "2026-03-06",
    "last_date": "2026-04-09"
@@ -233,15 +241,7 @@
    "dec_count": 0,
    "first_date": "2026-03-03",
    "last_date": "2026-04-13"
-  },
-  {
-   "code": "600765",
-   "name": "中航重机",
-   "count": 12,
-   "dec_count": 0,
-   "first_date": "2026-03-16",
-   "last_date": "2026-04-08"
   }
  ],
- "prior_range": "2025-11-10 ~ 2026-05-13"
+ "prior_range": "2025-11-11 ~ 2026-05-14"
 }
