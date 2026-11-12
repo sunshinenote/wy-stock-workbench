@@ -1,82 +1,82 @@
 [
  {
-  "name": "元件",
-  "pct": 5.01,
-  "leader": "南亚新材",
-  "leader_pct": 12.46,
-  "up_count": 62,
-  "down_count": 1
- },
- {
-  "name": "通信设备",
-  "pct": 4.91,
-  "leader": "宇特光电",
-  "leader_pct": 29.99,
-  "up_count": 84,
-  "down_count": 9
- },
- {
-  "name": "自动化设备",
-  "pct": 3.14,
-  "leader": "杰普特",
-  "leader_pct": 14.91,
-  "up_count": 85,
-  "down_count": 15
- },
- {
-  "name": "半导体",
-  "pct": 3.09,
-  "leader": "利扬芯片",
-  "leader_pct": 20.01,
-  "up_count": 176,
-  "down_count": 13
- },
- {
-  "name": "游戏",
-  "pct": 3.03,
-  "leader": "凯撒文化",
-  "leader_pct": 10.06,
-  "up_count": 19,
-  "down_count": 4
- },
- {
-  "name": "电子化学品",
-  "pct": 2.99,
-  "leader": "中石科技",
-  "leader_pct": 10.06,
-  "up_count": 39,
-  "down_count": 5
- },
- {
   "name": "燃气",
-  "pct": 2.87,
-  "leader": "胜利股份",
-  "leader_pct": 10.13,
+  "pct": 0.95,
+  "leader": "东方环宇",
+  "leader_pct": 9.99,
+  "up_count": 16,
+  "down_count": 11
+ },
+ {
+  "name": "白酒",
+  "pct": 0.79,
+  "leader": "皇台酒业",
+  "leader_pct": 10.03,
+  "up_count": 8,
+  "down_count": 11
+ },
+ {
+  "name": "医疗服务",
+  "pct": 0.3,
+  "leader": "澳洋健康",
+  "leader_pct": 10.08,
+  "up_count": 23,
+  "down_count": 32
+ },
+ {
+  "name": "养殖业",
+  "pct": 0.27,
+  "leader": "好当家",
+  "leader_pct": 10.22,
+  "up_count": 15,
+  "down_count": 19
+ },
+ {
+  "name": "饮料制造",
+  "pct": 0.15,
+  "leader": "泉阳泉",
+  "leader_pct": 5.24,
   "up_count": 22,
-  "down_count": 3
+  "down_count": 24
  },
  {
-  "name": "塑料制品",
-  "pct": 2.36,
-  "leader": "唯科科技",
-  "leader_pct": 11.96,
-  "up_count": 62,
-  "down_count": 15
+  "name": "零售",
+  "pct": 0.07,
+  "leader": "广百股份",
+  "leader_pct": 10.07,
+  "up_count": 32,
+  "down_count": 38
  },
  {
-  "name": "其他电子",
-  "pct": 2.3,
-  "leader": "富信科技",
-  "leader_pct": 7.46,
-  "up_count": 31,
-  "down_count": 2
+  "name": "银行",
+  "pct": 0.02,
+  "leader": "工商银行",
+  "leader_pct": 1.88,
+  "up_count": 19,
+  "down_count": 19
  },
  {
-  "name": "通用设备",
-  "pct": 2.16,
-  "leader": "同飞股份",
-  "leader_pct": 20.0,
-  "up_count": 203,
-  "down_count": 43
+  "name": "农产品加工",
+  "pct": -0.09,
+  "leader": "东方海洋",
+  "leader_pct": 10.02,
+  "up_count": 16,
+  "down_count": 25
+ },
+ {
+  "name": "军工装备",
+  "pct": -0.15,
+  "leader": "北方长龙",
+  "leader_pct": 11.45,
+  "up_count": 32,
+  "down_count": 50
+ },
+ {
+  "name": "公路铁路运输",
+  "pct": -0.18,
+  "leader": "龙江交通",
+  "leader_pct": 10.02,
+  "up_count": 9,
+  "down_count": 20
  }
 ]
