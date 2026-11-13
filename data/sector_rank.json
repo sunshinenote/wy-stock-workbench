@@ -1,82 +1,82 @@
 [
  {
-  "name": "燃气",
-  "pct": 0.95,
-  "leader": "东方环宇",
-  "leader_pct": 9.99,
-  "up_count": 16,
-  "down_count": 11
- },
- {
-  "name": "白酒",
-  "pct": 0.79,
-  "leader": "皇台酒业",
-  "leader_pct": 10.03,
-  "up_count": 8,
-  "down_count": 11
- },
- {
-  "name": "医疗服务",
-  "pct": 0.3,
-  "leader": "澳洋健康",
-  "leader_pct": 10.08,
-  "up_count": 23,
-  "down_count": 32
- },
- {
-  "name": "养殖业",
-  "pct": 0.27,
-  "leader": "好当家",
-  "leader_pct": 10.22,
-  "up_count": 15,
-  "down_count": 19
- },
- {
-  "name": "饮料制造",
-  "pct": 0.15,
-  "leader": "泉阳泉",
-  "leader_pct": 5.24,
-  "up_count": 22,
-  "down_count": 24
- },
- {
-  "name": "零售",
-  "pct": 0.07,
-  "leader": "广百股份",
-  "leader_pct": 10.07,
-  "up_count": 32,
-  "down_count": 38
+  "name": "影视院线",
+  "pct": 4.37,
+  "leader": "幸福蓝海",
+  "leader_pct": 20.01,
+  "up_count": 13,
+  "down_count": 7
  },
  {
   "name": "银行",
-  "pct": 0.02,
-  "leader": "工商银行",
-  "leader_pct": 1.88,
+  "pct": 1.43,
+  "leader": "青岛银行",
+  "leader_pct": 3.65,
+  "up_count": 40,
+  "down_count": 0
+ },
+ {
+  "name": "保险",
+  "pct": 1.2,
+  "leader": "中国人寿",
+  "leader_pct": 1.9,
+  "up_count": 5,
+  "down_count": 0
+ },
+ {
+  "name": "白酒",
+  "pct": 0.89,
+  "leader": "古井贡酒",
+  "leader_pct": 5.86,
+  "up_count": 11,
+  "down_count": 7
+ },
+ {
+  "name": "养殖业",
+  "pct": 0.87,
+  "leader": "好当家",
+  "leader_pct": 10.08,
   "up_count": 19,
-  "down_count": 19
+  "down_count": 16
  },
  {
-  "name": "农产品加工",
-  "pct": -0.09,
-  "leader": "东方海洋",
-  "leader_pct": 10.02,
-  "up_count": 16,
-  "down_count": 25
+  "name": "黑色家电",
+  "pct": 0.65,
+  "leader": "辰奕智能",
+  "leader_pct": 8.22,
+  "up_count": 5,
+  "down_count": 4
  },
  {
-  "name": "军工装备",
-  "pct": -0.15,
-  "leader": "北方长龙",
-  "leader_pct": 11.45,
-  "up_count": 32,
-  "down_count": 50
+  "name": "煤炭开采加工",
+  "pct": -0.53,
+  "leader": "陕西煤业",
+  "leader_pct": 2.55,
+  "up_count": 11,
+  "down_count": 22
  },
  {
-  "name": "公路铁路运输",
-  "pct": -0.18,
-  "leader": "龙江交通",
-  "leader_pct": 10.02,
-  "up_count": 9,
-  "down_count": 20
+  "name": "通信服务",
+  "pct": -0.56,
+  "leader": "北纬科技",
+  "leader_pct": 9.96,
+  "up_count": 13,
+  "down_count": 30
+ },
+ {
+  "name": "游戏",
+  "pct": -0.56,
+  "leader": "凯撒文化",
+  "leader_pct": 10.0,
+  "up_count": 5,
+  "down_count": 17
+ },
+ {
+  "name": "汽车整车",
+  "pct": -0.6,
+  "leader": "宇通客车",
+  "leader_pct": 3.59,
+  "up_count": 6,
+  "down_count": 16
  }
 ]
