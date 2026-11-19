@@ -1,82 +1,82 @@
 [
  {
-  "name": "通信服务",
-  "pct": 4.08,
-  "leader": "广脉科技",
-  "leader_pct": 30.0,
-  "up_count": 36,
-  "down_count": 6
- },
- {
-  "name": "元件",
-  "pct": 2.65,
-  "leader": "生益电子",
-  "leader_pct": 18.53,
-  "up_count": 54,
-  "down_count": 9
- },
- {
-  "name": "港口航运",
-  "pct": 1.06,
-  "leader": "招商轮船",
-  "leader_pct": 5.94,
-  "up_count": 25,
-  "down_count": 6
- },
- {
-  "name": "IT服务",
-  "pct": 0.84,
-  "leader": "宏景科技",
-  "leader_pct": 20.0,
-  "up_count": 58,
-  "down_count": 67
- },
- {
-  "name": "通信设备",
-  "pct": 0.81,
-  "leader": "武汉凡谷",
-  "leader_pct": 10.05,
-  "up_count": 56,
-  "down_count": 37
- },
- {
-  "name": "汽车整车",
-  "pct": 0.6,
-  "leader": "众泰汽车",
-  "leader_pct": 9.87,
-  "up_count": 10,
-  "down_count": 11
- },
- {
-  "name": "白色家电",
-  "pct": 0.46,
-  "leader": "宏海科技",
-  "leader_pct": 10.53,
-  "up_count": 20,
-  "down_count": 23
- },
- {
-  "name": "黑色家电",
-  "pct": 0.41,
-  "leader": "四川长虹",
-  "leader_pct": 10.08,
-  "up_count": 4,
+  "name": "机场航运",
+  "pct": 0.72,
+  "leader": "吉祥航空",
+  "leader_pct": 3.04,
+  "up_count": 8,
   "down_count": 5
  },
  {
-  "name": "公路铁路运输",
-  "pct": 0.37,
-  "leader": "龙江交通",
-  "leader_pct": 7.17,
-  "up_count": 16,
-  "down_count": 13
+  "name": "证券",
+  "pct": -0.05,
+  "leader": "国信证券",
+  "leader_pct": 1.66,
+  "up_count": 27,
+  "down_count": 19
  },
  {
-  "name": "其他电源设备",
-  "pct": 0.36,
-  "leader": "动力源",
+  "name": "电子化学品",
+  "pct": -0.06,
+  "leader": "格林达",
   "leader_pct": 10.0,
-  "up_count": 17,
-  "down_count": 16
+  "up_count": 15,
+  "down_count": 28
+ },
+ {
+  "name": "银行",
+  "pct": -0.62,
+  "leader": "苏州银行",
+  "leader_pct": 1.69,
+  "up_count": 10,
+  "down_count": 30
+ },
+ {
+  "name": "保险",
+  "pct": -0.74,
+  "leader": "中国平安",
+  "leader_pct": 0.48,
+  "up_count": 1,
+  "down_count": 4
+ },
+ {
+  "name": "半导体",
+  "pct": -0.8,
+  "leader": "蓝箭电子",
+  "leader_pct": 20.0,
+  "up_count": 62,
+  "down_count": 127
+ },
+ {
+  "name": "贵金属",
+  "pct": -0.98,
+  "leader": "西部黄金",
+  "leader_pct": 2.67,
+  "up_count": 3,
+  "down_count": 11
+ },
+ {
+  "name": "食品加工制造",
+  "pct": -1.13,
+  "leader": "ST交昂",
+  "leader_pct": 9.98,
+  "up_count": 15,
+  "down_count": 51
+ },
+ {
+  "name": "港口航运",
+  "pct": -1.18,
+  "leader": "招商港口",
+  "leader_pct": 1.92,
+  "up_count": 5,
+  "down_count": 29
+ },
+ {
+  "name": "黑色家电",
+  "pct": -1.3,
+  "leader": "四川长虹",
+  "leader_pct": 1.41,
+  "up_count": 3,
+  "down_count": 6
  }
 ]
