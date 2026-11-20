@@ -1,82 +1,82 @@
 [
  {
-  "name": "机场航运",
-  "pct": 0.72,
-  "leader": "吉祥航空",
-  "leader_pct": 3.04,
-  "up_count": 8,
-  "down_count": 5
- },
- {
-  "name": "证券",
-  "pct": -0.05,
-  "leader": "国信证券",
-  "leader_pct": 1.66,
-  "up_count": 27,
-  "down_count": 19
- },
- {
-  "name": "电子化学品",
-  "pct": -0.06,
-  "leader": "格林达",
-  "leader_pct": 10.0,
-  "up_count": 15,
-  "down_count": 28
+  "name": "保险",
+  "pct": 0.39,
+  "leader": "中国太保",
+  "leader_pct": 1.6,
+  "up_count": 3,
+  "down_count": 2
  },
  {
   "name": "银行",
-  "pct": -0.62,
-  "leader": "苏州银行",
-  "leader_pct": 1.69,
-  "up_count": 10,
-  "down_count": 30
+  "pct": 0.21,
+  "leader": "工商银行",
+  "leader_pct": 3.3,
+  "up_count": 23,
+  "down_count": 19
  },
  {
-  "name": "保险",
-  "pct": -0.74,
-  "leader": "中国平安",
-  "leader_pct": 0.48,
-  "up_count": 1,
-  "down_count": 4
- },
- {
-  "name": "半导体",
-  "pct": -0.8,
-  "leader": "蓝箭电子",
+  "name": "元件",
+  "pct": -0.82,
+  "leader": "满坤科技",
   "leader_pct": 20.0,
-  "up_count": 62,
-  "down_count": 127
- },
- {
-  "name": "贵金属",
-  "pct": -0.98,
-  "leader": "西部黄金",
-  "leader_pct": 2.67,
-  "up_count": 3,
-  "down_count": 11
- },
- {
-  "name": "食品加工制造",
-  "pct": -1.13,
-  "leader": "ST交昂",
-  "leader_pct": 9.98,
-  "up_count": 15,
-  "down_count": 51
+  "up_count": 22,
+  "down_count": 40
  },
  {
   "name": "港口航运",
-  "pct": -1.18,
-  "leader": "招商港口",
-  "leader_pct": 1.92,
-  "up_count": 5,
+  "pct": -1.12,
+  "leader": "锦江航运",
+  "leader_pct": 3.42,
+  "up_count": 10,
+  "down_count": 24
+ },
+ {
+  "name": "养殖业",
+  "pct": -1.25,
+  "leader": "好当家",
+  "leader_pct": 10.0,
+  "up_count": 9,
+  "down_count": 27
+ },
+ {
+  "name": "证券",
+  "pct": -1.32,
+  "leader": "申万宏源",
+  "leader_pct": 1.4,
+  "up_count": 6,
+  "down_count": 42
+ },
+ {
+  "name": "煤炭开采加工",
+  "pct": -1.39,
+  "leader": "安泰集团",
+  "leader_pct": 3.81,
+  "up_count": 4,
   "down_count": 29
  },
  {
-  "name": "黑色家电",
-  "pct": -1.3,
-  "leader": "四川长虹",
-  "leader_pct": 1.41,
-  "up_count": 3,
-  "down_count": 6
+  "name": "种植业与林业",
+  "pct": -2.0,
+  "leader": "万向德农",
+  "leader_pct": 9.98,
+  "up_count": 4,
+  "down_count": 25
+ },
+ {
+  "name": "机场航运",
+  "pct": -2.06,
+  "leader": "上海机场",
+  "leader_pct": 0.69,
+  "up_count": 1,
+  "down_count": 12
+ },
+ {
+  "name": "公路铁路运输",
+  "pct": -2.08,
+  "leader": "重庆路桥",
+  "leader_pct": 3.61,
+  "up_count": 6,
+  "down_count": 26
  }
 ]
