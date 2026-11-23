@@ -13,7 +13,7 @@
    "name": "粤高速A",
    "year_avg": 6.41,
    "div_count": 52,
-   "list_years": 28.7,
+   "list_years": 28.8,
    "total_div": 179.6
   },
   {
@@ -69,7 +69,7 @@
    "name": "深赤湾A",
    "year_avg": 5.09,
    "div_count": 45,
-   "list_years": 33.5,
+   "list_years": 33.6,
    "total_div": 132.3
   },
   {
@@ -143,14 +143,14 @@
    "name": "宁德时代",
    "year_avg": 0.91,
    "div_count": 10,
-   "list_years": 8.4
+   "list_years": 8.5
   },
   {
    "code": "688981",
    "name": "中芯国际",
    "year_avg": 0.0,
    "div_count": 0,
-   "list_years": 6.3
+   "list_years": 6.4
   }
  ]
 }

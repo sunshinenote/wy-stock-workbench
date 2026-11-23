@@ -1,82 +1,82 @@
 [
  {
-  "name": "保险",
-  "pct": 0.39,
-  "leader": "中国太保",
-  "leader_pct": 1.6,
-  "up_count": 3,
-  "down_count": 2
+  "name": "影视院线",
+  "pct": 7.41,
+  "leader": "幸福蓝海",
+  "leader_pct": 11.51,
+  "up_count": 19,
+  "down_count": 0
  },
  {
-  "name": "银行",
-  "pct": 0.21,
-  "leader": "工商银行",
-  "leader_pct": 3.3,
-  "up_count": 23,
-  "down_count": 19
+  "name": "自动化设备",
+  "pct": 6.65,
+  "leader": "华晟智能",
+  "leader_pct": 66.24,
+  "up_count": 101,
+  "down_count": 0
+ },
+ {
+  "name": "电机",
+  "pct": 6.22,
+  "leader": "华阳智能",
+  "leader_pct": 20.0,
+  "up_count": 26,
+  "down_count": 0
+ },
+ {
+  "name": "医疗服务",
+  "pct": 5.9,
+  "leader": "博腾股份",
+  "leader_pct": 13.08,
+  "up_count": 54,
+  "down_count": 1
  },
  {
   "name": "元件",
-  "pct": -0.82,
-  "leader": "满坤科技",
+  "pct": 5.22,
+  "leader": "逸豪新材",
+  "leader_pct": 15.27,
+  "up_count": 61,
+  "down_count": 2
+ },
+ {
+  "name": "通用设备",
+  "pct": 4.96,
+  "leader": "汉威科技",
+  "leader_pct": 20.01,
+  "up_count": 247,
+  "down_count": 8
+ },
+ {
+  "name": "游戏",
+  "pct": 4.88,
+  "leader": "盛天网络",
+  "leader_pct": 10.87,
+  "up_count": 23,
+  "down_count": 0
+ },
+ {
+  "name": "贵金属",
+  "pct": 4.83,
+  "leader": "晓程科技",
+  "leader_pct": 10.04,
+  "up_count": 14,
+  "down_count": 0
+ },
+ {
+  "name": "文化传媒",
+  "pct": 4.77,
+  "leader": "果麦文化",
   "leader_pct": 20.0,
-  "up_count": 22,
-  "down_count": 40
+  "up_count": 77,
+  "down_count": 8
  },
  {
-  "name": "港口航运",
-  "pct": -1.12,
-  "leader": "锦江航运",
-  "leader_pct": 3.42,
-  "up_count": 10,
-  "down_count": 24
- },
- {
-  "name": "养殖业",
-  "pct": -1.25,
-  "leader": "好当家",
-  "leader_pct": 10.0,
-  "up_count": 9,
-  "down_count": 27
- },
- {
-  "name": "证券",
-  "pct": -1.32,
-  "leader": "申万宏源",
-  "leader_pct": 1.4,
-  "up_count": 6,
-  "down_count": 42
- },
- {
-  "name": "煤炭开采加工",
-  "pct": -1.39,
-  "leader": "安泰集团",
-  "leader_pct": 3.81,
-  "up_count": 4,
-  "down_count": 29
- },
- {
-  "name": "种植业与林业",
-  "pct": -2.0,
-  "leader": "万向德农",
-  "leader_pct": 9.98,
-  "up_count": 4,
-  "down_count": 25
- },
- {
-  "name": "机场航运",
-  "pct": -2.06,
-  "leader": "上海机场",
-  "leader_pct": 0.69,
-  "up_count": 1,
-  "down_count": 12
- },
- {
-  "name": "公路铁路运输",
-  "pct": -2.08,
-  "leader": "重庆路桥",
-  "leader_pct": 3.61,
-  "up_count": 6,
-  "down_count": 26
+  "name": "塑料制品",
+  "pct": 4.71,
+  "leader": "瑞丰高材",
+  "leader_pct": 20.0,
+  "up_count": 75,
+  "down_count": 2
  }
 ]
