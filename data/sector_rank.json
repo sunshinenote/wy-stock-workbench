@@ -1,82 +1,82 @@
 [
  {
-  "name": "影视院线",
-  "pct": 7.41,
-  "leader": "幸福蓝海",
-  "leader_pct": 11.51,
-  "up_count": 19,
+  "name": "能源金属",
+  "pct": 2.23,
+  "leader": "腾远钴业",
+  "leader_pct": 14.23,
+  "up_count": 8,
+  "down_count": 6
+ },
+ {
+  "name": "保险",
+  "pct": 2.08,
+  "leader": "中国人寿",
+  "leader_pct": 3.12,
+  "up_count": 5,
   "down_count": 0
  },
  {
-  "name": "自动化设备",
-  "pct": 6.65,
-  "leader": "华晟智能",
-  "leader_pct": 66.24,
-  "up_count": 101,
-  "down_count": 0
+  "name": "消费电子",
+  "pct": 2.06,
+  "leader": "奥尼电子",
+  "leader_pct": 20.01,
+  "up_count": 72,
+  "down_count": 24
+ },
+ {
+  "name": "小家电",
+  "pct": 1.44,
+  "leader": "九阳股份",
+  "leader_pct": 10.01,
+  "up_count": 16,
+  "down_count": 10
+ },
+ {
+  "name": "影视院线",
+  "pct": 1.38,
+  "leader": "文投控股",
+  "leader_pct": 10.18,
+  "up_count": 10,
+  "down_count": 9
+ },
+ {
+  "name": "军工装备",
+  "pct": 1.27,
+  "leader": "利君股份",
+  "leader_pct": 9.95,
+  "up_count": 63,
+  "down_count": 18
+ },
+ {
+  "name": "家居用品",
+  "pct": 1.16,
+  "leader": "艾芬达",
+  "leader_pct": 20.01,
+  "up_count": 47,
+  "down_count": 50
+ },
+ {
+  "name": "半导体",
+  "pct": 1.07,
+  "leader": "芯导科技",
+  "leader_pct": 10.74,
+  "up_count": 127,
+  "down_count": 58
  },
  {
   "name": "电机",
-  "pct": 6.22,
-  "leader": "华阳智能",
-  "leader_pct": 20.0,
-  "up_count": 26,
-  "down_count": 0
+  "pct": 0.97,
+  "leader": "鸣志电器",
+  "leader_pct": 6.96,
+  "up_count": 17,
+  "down_count": 9
  },
  {
-  "name": "医疗服务",
-  "pct": 5.9,
-  "leader": "博腾股份",
-  "leader_pct": 13.08,
-  "up_count": 54,
-  "down_count": 1
- },
- {
-  "name": "元件",
-  "pct": 5.22,
-  "leader": "逸豪新材",
-  "leader_pct": 15.27,
-  "up_count": 61,
-  "down_count": 2
- },
- {
-  "name": "通用设备",
-  "pct": 4.96,
-  "leader": "汉威科技",
-  "leader_pct": 20.01,
-  "up_count": 247,
-  "down_count": 8
- },
- {
-  "name": "游戏",
-  "pct": 4.88,
-  "leader": "盛天网络",
-  "leader_pct": 10.87,
-  "up_count": 23,
-  "down_count": 0
- },
- {
-  "name": "贵金属",
-  "pct": 4.83,
-  "leader": "晓程科技",
-  "leader_pct": 10.04,
-  "up_count": 14,
-  "down_count": 0
- },
- {
-  "name": "文化传媒",
-  "pct": 4.77,
-  "leader": "果麦文化",
-  "leader_pct": 20.0,
-  "up_count": 77,
-  "down_count": 8
- },
- {
-  "name": "塑料制品",
-  "pct": 4.71,
-  "leader": "瑞丰高材",
-  "leader_pct": 20.0,
-  "up_count": 75,
-  "down_count": 2
+  "name": "自动化设备",
+  "pct": 0.95,
+  "leader": "逸飞激光",
+  "leader_pct": 12.93,
+  "up_count": 65,
+  "down_count": 35
  }
 ]
