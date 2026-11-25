@@ -11,7 +11,7 @@
   {
    "code": "603098",
    "name": "森特股份",
-   "count": 45,
+   "count": 44,
    "dec_count": 0,
    "first_date": "2025-12-29",
    "last_date": "2026-11-19"
@@ -73,20 +73,20 @@
    "last_date": "2026-07-28"
   },
   {
+   "code": "601005",
+   "name": "重庆钢铁",
+   "count": 30,
+   "dec_count": 0,
+   "first_date": "2026-07-01",
+   "last_date": "2026-11-23"
+  },
+  {
    "code": "601717",
    "name": "中创智领",
    "count": 29,
    "dec_count": 0,
    "first_date": "2026-07-17",
    "last_date": "2026-11-12"
-  },
-  {
-   "code": "601005",
-   "name": "重庆钢铁",
-   "count": 28,
-   "dec_count": 0,
-   "first_date": "2026-07-01",
-   "last_date": "2026-11-20"
   },
   {
    "code": "600141",
@@ -128,7 +128,7 @@
    "count": 56,
    "dec_count": 0,
    "first_date": "2025-12-29",
-   "last_date": "2026-05-27"
+   "last_date": "2026-05-28"
   },
   {
    "code": "002637",
@@ -141,7 +141,7 @@
   {
    "code": "300760",
    "name": "迈瑞医疗",
-   "count": 28,
+   "count": 25,
    "dec_count": 0,
    "first_date": "2025-11-27",
    "last_date": "2026-05-27"
@@ -149,7 +149,7 @@
   {
    "code": "300304",
    "name": "云意电气",
-   "count": 27,
+   "count": 25,
    "dec_count": 0,
    "first_date": "2025-12-17",
    "last_date": "2026-05-26"
@@ -165,10 +165,18 @@
   {
    "code": "002832",
    "name": "比音勒芬",
-   "count": 19,
+   "count": 21,
    "dec_count": 0,
    "first_date": "2026-03-06",
-   "last_date": "2026-05-27"
+   "last_date": "2026-05-28"
+  },
+  {
+   "code": "603299",
+   "name": "苏盐井神",
+   "count": 19,
+   "dec_count": 0,
+   "first_date": "2025-12-04",
+   "last_date": "2026-01-05"
   },
   {
    "code": "600873",
@@ -179,36 +187,12 @@
    "last_date": "2026-04-30"
   },
   {
-   "code": "603299",
-   "name": "苏盐井神",
-   "count": 17,
-   "dec_count": 0,
-   "first_date": "2025-12-04",
-   "last_date": "2026-01-05"
-  },
-  {
    "code": "601666",
    "name": "平煤股份",
    "count": 16,
    "dec_count": 0,
    "first_date": "2026-01-04",
    "last_date": "2026-01-04"
-  },
-  {
-   "code": "300190",
-   "name": "维尔利",
-   "count": 15,
-   "dec_count": 0,
-   "first_date": "2025-12-15",
-   "last_date": "2026-04-08"
-  },
-  {
-   "code": "002517",
-   "name": "恺英网络",
-   "count": 15,
-   "dec_count": 0,
-   "first_date": "2026-03-13",
-   "last_date": "2026-03-23"
   },
   {
    "code": "600765",
@@ -219,20 +203,28 @@
    "last_date": "2026-05-27"
   },
   {
-   "code": "601916",
-   "name": "浙商银行",
+   "code": "600637",
+   "name": "东方明珠",
    "count": 14,
    "dec_count": 0,
-   "first_date": "2025-11-24",
-   "last_date": "2025-12-16"
+   "first_date": "2026-04-03",
+   "last_date": "2026-04-03"
   },
   {
-   "code": "601128",
-   "name": "常熟银行",
-   "count": 12,
+   "code": "300190",
+   "name": "维尔利",
+   "count": 13,
    "dec_count": 0,
-   "first_date": "2026-01-15",
-   "last_date": "2026-05-06"
+   "first_date": "2025-12-15",
+   "last_date": "2026-04-08"
+  },
+  {
+   "code": "688126",
+   "name": "沪硅产业",
+   "count": 13,
+   "dec_count": 0,
+   "first_date": "2025-11-28",
+   "last_date": "2025-12-30"
   },
   {
    "code": "600763",
@@ -241,7 +233,15 @@
    "dec_count": 0,
    "first_date": "2026-02-13",
    "last_date": "2026-04-23"
+  },
+  {
+   "code": "301260",
+   "name": "格力博",
+   "count": 12,
+   "dec_count": 0,
+   "first_date": "2026-03-03",
+   "last_date": "2026-04-13"
   }
  ],
- "prior_range": "2025-11-24 ~ 2026-05-27"
+ "prior_range": "2025-11-25 ~ 2026-05-28"
 }
