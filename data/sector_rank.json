@@ -1,82 +1,82 @@
 [
  {
-  "name": "医药商业",
-  "pct": 0.87,
-  "leader": "ST海王",
-  "leader_pct": 10.28,
-  "up_count": 17,
-  "down_count": 14
+  "name": "贵金属",
+  "pct": 4.22,
+  "leader": "招金黄金",
+  "leader_pct": 8.41,
+  "up_count": 14,
+  "down_count": 0
  },
  {
-  "name": "旅游及酒店",
-  "pct": 0.58,
-  "leader": "祥源文旅",
-  "leader_pct": 4.18,
-  "up_count": 19,
-  "down_count": 14
- },
- {
-  "name": "中药",
-  "pct": 0.44,
-  "leader": "桂林三金",
-  "leader_pct": 10.03,
-  "up_count": 39,
-  "down_count": 27
- },
- {
-  "name": "零售",
-  "pct": 0.32,
-  "leader": "中央商场",
-  "leader_pct": 10.16,
-  "up_count": 34,
-  "down_count": 30
- },
- {
-  "name": "银行",
-  "pct": -0.02,
-  "leader": "交通银行",
-  "leader_pct": 1.78,
-  "up_count": 17,
-  "down_count": 22
- },
- {
-  "name": "化学制药",
-  "pct": -0.13,
-  "leader": "康芝药业",
-  "leader_pct": 20.05,
-  "up_count": 50,
-  "down_count": 108
- },
- {
-  "name": "白酒",
-  "pct": -0.54,
-  "leader": "山西汾酒",
-  "leader_pct": 3.74,
-  "up_count": 5,
-  "down_count": 13
- },
- {
-  "name": "教育",
-  "pct": -0.77,
-  "leader": "*ST开元",
-  "leader_pct": 10.2,
-  "up_count": 5,
-  "down_count": 10
+  "name": "元件",
+  "pct": 3.94,
+  "leader": "金禄电子",
+  "leader_pct": 19.39,
+  "up_count": 56,
+  "down_count": 7
  },
  {
   "name": "煤炭开采加工",
-  "pct": -0.79,
-  "leader": "淮北矿业",
-  "leader_pct": 2.16,
-  "up_count": 8,
-  "down_count": 24
+  "pct": 2.46,
+  "leader": "昊华能源",
+  "leader_pct": 5.77,
+  "up_count": 34,
+  "down_count": 0
  },
  {
-  "name": "饮料制造",
-  "pct": -0.81,
-  "leader": "欢乐家",
-  "leader_pct": 5.98,
-  "up_count": 13,
-  "down_count": 32
+  "name": "油气开采及服务",
+  "pct": 2.29,
+  "leader": "中曼石油",
+  "leader_pct": 4.84,
+  "up_count": 18,
+  "down_count": 1
+ },
+ {
+  "name": "造纸",
+  "pct": 1.74,
+  "leader": "岳阳林纸",
+  "leader_pct": 10.1,
+  "up_count": 16,
+  "down_count": 7
+ },
+ {
+  "name": "化学原料",
+  "pct": 1.4,
+  "leader": "善水科技",
+  "leader_pct": 20.0,
+  "up_count": 37,
+  "down_count": 17
+ },
+ {
+  "name": "黑色家电",
+  "pct": 1.27,
+  "leader": "辰奕智能",
+  "leader_pct": 8.82,
+  "up_count": 6,
+  "down_count": 2
+ },
+ {
+  "name": "种植业与林业",
+  "pct": 1.22,
+  "leader": "敦煌种业",
+  "leader_pct": 4.86,
+  "up_count": 22,
+  "down_count": 5
+ },
+ {
+  "name": "通信服务",
+  "pct": 1.06,
+  "leader": "中嘉博创",
+  "leader_pct": 10.14,
+  "up_count": 24,
+  "down_count": 18
+ },
+ {
+  "name": "零售",
+  "pct": 1.03,
+  "leader": "杭州解百",
+  "leader_pct": 10.06,
+  "up_count": 41,
+  "down_count": 29
  }
 ]
