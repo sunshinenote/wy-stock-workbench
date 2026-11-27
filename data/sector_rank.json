@@ -1,82 +1,82 @@
 [
  {
-  "name": "贵金属",
-  "pct": 4.22,
-  "leader": "招金黄金",
-  "leader_pct": 8.41,
-  "up_count": 14,
+  "name": "半导体",
+  "pct": 14.97,
+  "leader": "中科仪",
+  "leader_pct": 26.0,
+  "up_count": 190,
   "down_count": 0
  },
  {
-  "name": "元件",
-  "pct": 3.94,
-  "leader": "金禄电子",
-  "leader_pct": 19.39,
-  "up_count": 56,
-  "down_count": 7
+  "name": "电子化学品",
+  "pct": 14.53,
+  "leader": "菲沃泰",
+  "leader_pct": 20.03,
+  "up_count": 44,
+  "down_count": 0
  },
  {
-  "name": "煤炭开采加工",
-  "pct": 2.46,
-  "leader": "昊华能源",
-  "leader_pct": 5.77,
+  "name": "通信设备",
+  "pct": 11.46,
+  "leader": "蘅东光",
+  "leader_pct": 23.03,
+  "up_count": 93,
+  "down_count": 0
+ },
+ {
+  "name": "软件开发",
+  "pct": 11.42,
+  "leader": "艾融软件",
+  "leader_pct": 30.0,
+  "up_count": 139,
+  "down_count": 0
+ },
+ {
+  "name": "IT服务",
+  "pct": 11.36,
+  "leader": "汉鑫科技",
+  "leader_pct": 29.97,
+  "up_count": 128,
+  "down_count": 1
+ },
+ {
+  "name": "元件",
+  "pct": 11.22,
+  "leader": "弘信电子",
+  "leader_pct": 18.83,
+  "up_count": 63,
+  "down_count": 0
+ },
+ {
+  "name": "其他电子",
+  "pct": 11.22,
+  "leader": "赛英电子",
+  "leader_pct": 18.3,
   "up_count": 34,
   "down_count": 0
  },
  {
-  "name": "油气开采及服务",
-  "pct": 2.29,
-  "leader": "中曼石油",
-  "leader_pct": 4.84,
-  "up_count": 18,
-  "down_count": 1
- },
- {
-  "name": "造纸",
-  "pct": 1.74,
-  "leader": "岳阳林纸",
-  "leader_pct": 10.1,
-  "up_count": 16,
-  "down_count": 7
- },
- {
-  "name": "化学原料",
-  "pct": 1.4,
-  "leader": "善水科技",
+  "name": "自动化设备",
+  "pct": 11.19,
+  "leader": "田中精机",
   "leader_pct": 20.0,
-  "up_count": 37,
-  "down_count": 17
+  "up_count": 101,
+  "down_count": 0
  },
  {
-  "name": "黑色家电",
-  "pct": 1.27,
-  "leader": "辰奕智能",
-  "leader_pct": 8.82,
-  "up_count": 6,
-  "down_count": 2
+  "name": "军工电子",
+  "pct": 10.21,
+  "leader": "科思科技",
+  "leader_pct": 20.02,
+  "up_count": 62,
+  "down_count": 0
  },
  {
-  "name": "种植业与林业",
-  "pct": 1.22,
-  "leader": "敦煌种业",
-  "leader_pct": 4.86,
-  "up_count": 22,
-  "down_count": 5
- },
- {
-  "name": "通信服务",
-  "pct": 1.06,
-  "leader": "中嘉博创",
-  "leader_pct": 10.14,
-  "up_count": 24,
-  "down_count": 18
- },
- {
-  "name": "零售",
-  "pct": 1.03,
-  "leader": "杭州解百",
-  "leader_pct": 10.06,
-  "up_count": 41,
-  "down_count": 29
+  "name": "消费电子",
+  "pct": 10.21,
+  "leader": "胜蓝股份",
+  "leader_pct": 20.0,
+  "up_count": 95,
+  "down_count": 1
  }
 ]
